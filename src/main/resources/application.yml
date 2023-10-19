@@ -1,0 +1,21 @@
+spring:
+  datasource:
+    url: "jdbc:postgresql://localhost:5432/UAZ-prod"
+    username: "postgres"
+    password: "qwerty"
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    show-sql: false
+    generate-ddl: false
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        default_schema: "inventory"
+        jdbc:
+          lob:
+            non_contextual_creation: true
+    database: postgresql
+    database-platform: "org.hibernate.dialect.PostgreSQL10Dialect"
+server:
+  port: 8080
