@@ -4,43 +4,135 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="63d29c66-ea9a-40cb-a3d4-b579f5e1bd53" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/SiteUazApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/controllers/MainController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/gsap/CSSRulePlugin.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/gsap/CSSRulePlugin.min.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/gsap/CustomEase.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/gsap/CustomEase.min.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/gsap/Draggable.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/gsap/Draggable.min.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/gsap/EasePack.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/gsap/EasePack.min.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/gsap/EaselPlugin.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/gsap/EaselPlugin.min.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/gsap/Flip.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/gsap/Flip.min.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/gsap/MotionPathPlugin.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/gsap/MotionPathPlugin.min.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/gsap/Observer.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/gsap/Observer.min.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/gsap/PixiPlugin.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/gsap/PixiPlugin.min.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/gsap/ScrollToPlugin.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/gsap/ScrollToPlugin.min.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/gsap/ScrollTrigger.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/gsap/ScrollTrigger.min.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/gsap/TextPlugin.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/gsap/TextPlugin.min.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/gsap/gsap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/gsap/gsap.min.js.map" afterDir="false" />
+    <list default="true" id="63d29c66-ea9a-40cb-a3d4-b579f5e1bd53" name="Changes" comment="Unresolved">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/StyleSheets/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/bootstrap/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/bootstrap/css/bootstrap.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/bootstrap/css/bootstrap.rtl.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/bootstrap/css/bootstrap.rtl.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/bootstrap/js/bootstrap.bundle.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/bootstrap/js/bootstrap.bundle.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/fancybox-3.0/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/fancybox-3.0/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/fancybox-3.0/bower.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/fancybox-3.0/dist/jquery-3.6.4.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/fancybox-3.0/dist/jquery.fancybox.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/fancybox-3.0/dist/jquery.fancybox.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/fancybox-3.0/dist/jquery.fancybox.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/fancybox-3.0/dist/jquery.fancybox.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/fancybox-3.0/docs/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/fancybox-3.0/gulpfile.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/fancybox-3.0/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/fancybox-3.0/src/css/core.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/fancybox-3.0/src/css/fullscreen.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/fancybox-3.0/src/css/slideshow.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/fancybox-3.0/src/css/thumbs.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/fancybox-3.0/src/js/core.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/fancybox-3.0/src/js/fullscreen.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/fancybox-3.0/src/js/guestures.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/fancybox-3.0/src/js/hash.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/fancybox-3.0/src/js/media.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/fancybox-3.0/src/js/slideshow.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/fancybox-3.0/src/js/thumbs.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/Logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/Name.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/carousel_img/kitay.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/carousel_img/monetka.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/carousel_img/ordinka.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/carousel_img/vdnh.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/history_img/adm_zdanie.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/history_img/adm_zdanie2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/history_img/aleksandrov_a_g.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/history_img/aleksandrovskiy_b_a.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/history_img/efim_slavskiy.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/history_img/kabanov_a_t.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/history_img/klub_linino.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/history_img/korpus_lenino.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/history_img/korpus_lenino2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/history_img/korpus_lenino3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/history_img/korpus_lenino4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/history_img/korpus_lenino5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/history_img/korpus_lenino6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/history_img/lebedev_v_f.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/history_img/letn_smena1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/history_img/letn_smena2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/history_img/nikulin_v_m.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/history_img/pankov_n_d.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/history_img/podduvalov_m_n.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/history_img/puganov_s_a.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/history_img/spalkorpus_lenino.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/history_img/stolovaya_lenino.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/history_img/zaezd_lenino.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/history_img/zavtrak_lenino.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/history_img/zhadushkin_v_n.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/house_black.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/house_white.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/projects_img/kitay/20230427_112856.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/projects_img/kitay/20230427_112856_min.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/projects_img/kitay/20230427_113057.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/projects_img/kitay/20230427_113057_min.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/projects_img/kitay/20230427_113359.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/projects_img/kitay/20230427_113359_min.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/projects_img/kitay/20230427_113404.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/projects_img/kitay/20230427_113404_min.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/projects_img/kitay/20230427_113433.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/projects_img/kitay/20230427_113433_min.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/projects_img/kitay/20230427_113508.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/projects_img/kitay/20230427_113508_min.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/projects_img/kitay/prew_kitay.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/projects_img/monetka/IMG_6040.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/projects_img/monetka/IMG_6040_min.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/projects_img/monetka/IMG_6042.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/projects_img/monetka/IMG_6042_min.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/projects_img/monetka/IMG_6043.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/projects_img/monetka/IMG_6043_min.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/projects_img/monetka/IMG_6044.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/projects_img/monetka/IMG_6044_min.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/projects_img/monetka/IMG_6045.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/projects_img/monetka/IMG_6045_min.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/projects_img/monetka/IMG_6046.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/projects_img/monetka/IMG_6046_min.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/projects_img/monetka/IMG_6049.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/projects_img/monetka/IMG_6049_min.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/projects_img/monetka/IMG_6051.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/projects_img/monetka/IMG_6051_min.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/projects_img/monetka/prew_monetka.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/projects_img/ordinka/20230427_080242.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/projects_img/ordinka/20230427_080242_min.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/projects_img/ordinka/DSC00218.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/projects_img/ordinka/DSC00218_min.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/projects_img/ordinka/DSC00219.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/projects_img/ordinka/DSC00219_min.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/projects_img/ordinka/DSC00249.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/projects_img/ordinka/DSC00249_min.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/projects_img/ordinka/DSC00272.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/projects_img/ordinka/DSC00272_min.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/projects_img/ordinka/DSC00273.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/projects_img/ordinka/DSC00273_min.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/projects_img/ordinka/DSC00274.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/projects_img/ordinka/DSC00274_min.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/projects_img/ordinka/DSC00295.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/projects_img/ordinka/DSC00295_min.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/projects_img/ordinka/prew_ordinka.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/projects_img/vdnh/prew_vdnh.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/projects_img/vdnh/vdnh1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/projects_img/vdnh/vdnh2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/projects_img/vdnh/vdnh3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/projects_img/vdnh/vdnh4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/projects_img/vdnh/vdnh5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/rosatom.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/soon.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/soon_vac.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/up-arrow.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/znak.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/Росатом.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/skripts.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/history.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/media1PAGE.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/projects.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/providers.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/vacancies.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,11 +212,25 @@
       <workItem from="1697621828310" duration="1209000" />
       <workItem from="1697697022863" duration="443000" />
       <workItem from="1697698294641" duration="2813000" />
-      <workItem from="1697704936272" duration="1743000" />
+      <workItem from="1697704936272" duration="2076000" />
     </task>
+    <task id="LOCAL-00001" summary="Started commit">
+      <option name="closed" value="true" />
+      <created>1697706934730</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1697706934730</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Started commit" />
+    <MESSAGE value="Unresolved" />
+    <option name="LAST_COMMIT_MESSAGE" value="Unresolved" />
   </component>
 </project>
