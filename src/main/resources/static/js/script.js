@@ -29,51 +29,6 @@ const btnUp = {
     }
   }
   btnUp.addEventListener();
-// Простые анимации фейда и появления сверху
-  const tl_fade = gsap.timeline({ 
-    paused: true, 
-    defaults: { duration: 1.3 }
-  })
-  .from("#fadeanim", { opacity: 0 })
-  .to("#fadeanim", { opacity: 1 }, "+=1")
- 
-  function doFade() {
-    tl_fade.restart();
-  }
-  
-  document.addEventListener("DOMContentLoaded", doFade);
-
-const tl_anim_up = gsap.timeline({ 
-  paused: true, 
-})
-gsap.fromTo("#anim_up", {x:0, y:-30}, {x:0, y:0, duration: 0.5, ease: "power2"});
- 
-  function doUp() {
-    tl_anim_up.restart();
-  }
-  
-  document.addEventListener("DOMContentLoaded", doUp);
-const tl_anim_logo = gsap.timeline({ 
-  paused: true
-})
-gsap.fromTo("#anim_logo", {x:0, y:0}, {x:0, y:0, rotation:360, duration: 20, ease:Linear.easeNone, repeat:-1});
- 
-  function doLogo() {
-    tl_anim_logo.restart();
-  }
-  
-  document.addEventListener("DOMContentLoaded", doLogo);
-  
-const tl_anim_soon = gsap.timeline({ 
-  paused: true
-})
-gsap.fromTo("#anim_soon", {rotation:-3}, { rotation:3, transformOrigin: 'center top', duration: 2,ease:Power1.easeInOut, yoyoEase:true, repeat:-1});
-  function doSoon() {
-      tl_anim_soon.play();
-  }
-
-  document.addEventListener("DOMContentLoaded", doSoon);
-
 //скрипт лоадера
 const loading_elem = document.getElementById("myDiv");
 

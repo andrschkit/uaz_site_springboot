@@ -415,7 +415,7 @@ background-color: #FFFAFA;
 /* Loader */
 .preloader {
   position:relative;
-  content: url("images/Logo.svg");
+  content: url("/images/Logo.svg");
   left: 50%;
   top: 50%;
   margin: 250px 0 250px -50px;
@@ -465,6 +465,27 @@ background-color: #FFFAFA;
 
 .loaded .preloader {
   display: none;
+}
+/*Анимации*/
+.anim_logo{
+    animation: spin 20s linear infinite;
+}
+.animate-bottom {
+    position: relative;
+    -webkit-animation-name: animatebottom;
+    -webkit-animation-duration: 0.2s;
+    animation-name: animatebottom;
+    animation-duration: 0.2s
+}
+
+@-webkit-keyframes animatebottom {
+    from { bottom:-10px; opacity:0 }
+    to { bottom:0; opacity:1 }
+}
+
+@keyframes animatebottom {
+    from{ bottom:-10px; opacity:0 }
+    to{ bottom:0; opacity:1 }
 }
 /* Стили Галереи */
 .thumb img {
