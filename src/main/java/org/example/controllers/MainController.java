@@ -8,28 +8,40 @@ import static org.example.StaticString.*;
 public class MainController {
     @GetMapping(URL_MAIN_PAGE)
     public String mainPage(Model model) {
-        return "index";
+        return "/index";
     }
 
     @GetMapping(URL_PROJECTS)
     public String projectsPage(Model model) {
-        return "projects";
+        return "/projects";
     }
     @GetMapping(URL_PROVIDERS)
     public String providersPage(Model model) {
-        return "providers";
+        return "/providers";
     }
     @GetMapping(URL_VACANCIES)
     public String vacanciesPage(Model model) {
-        return "vacancies";
+        return "/vacancies";
     }
     @GetMapping(URL_MEDIA)
     public String mediaPage(Model model) {
-        return "media";
+        return "/media";
     }
     @GetMapping(URL_HISTORY)
     public String historyPage(Model model) {
-        return "history";
+        return "/history";
+    }
+    @GetMapping(URL_PROJECT_ORDINKA)
+    public String projectOrdinkaPage(Model model) {return "/projects/ordinka";}
+    @GetMapping(URL_PROJECT_KITAY)
+    public String projectKitayPage(Model model) {return "/projects/kitay";}
+    @GetMapping(URL_PROJECT_VDNH)
+    public String projectVdnhPage(Model model) {
+        return "/projects/vdnh";
+    }
+    @GetMapping(URL_PROJECT_MONETKA)
+    public String projectMonetkaPage(Model model) {
+        return "/projects/monetka";
     }
 
 }

@@ -1,110 +1,19 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="">
-  <meta name="author" content="Andrew ShCherbakov">
-  <title>УАЗ Росатом</title>
-  <link rel="shortcut icon" href="../images/rosatom.ico" type="image/x-icon">
-
-  <link href="../css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="../fancybox-3.0/dist/jquery.fancybox.min.css" />
-
-
-  <!-- Custom styles for this template -->
-  <link href="../style.css" rel="stylesheet">
-
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Andrew Shcherbakov">
+    <title>Китайгородский Проезд</title>
+    <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="/StyleSheets/style.css" rel="stylesheet"/>
+    <link rel="shortcut icon" href="/images/Logo.svg" type="image/x-icon"/>
 </head>
 
 <body>
-  <header class="navbar navbar-expand-lg d-flex justify-content-center py-1 nav_border">
-    <div class="container-fluid d-flex flex-wrap">
-      <a href="../index.html" class="d-flex justify-content-start headlogo mb-lg-0 ms-sm-5">
-        <div><img src="../images/Logo.svg" height="60" width="60" class="img-fluid" id="anim_logo"></div>
-        <div><img src="../images/Name.svg" height="60" width="150" class="img-fluid"></div>
-      </a>
-      <div class="navbar navbar-expand-xl mx-auto d-flex justify-content-end me-1" id="anim_up">
-          <div class="collapse navbar-collapse" >
-            <div class="contact-decor">Тел: <a  href="tel:+74951234567" class="phone-decor">+7 (495) 123-45-67</a></div>
-            <div class="contact-decor mx-4">EMail: <a  href="mailto:uaz@book.ru" class="mail-decor">uaz@book.ru</a></div>
-          </div>
-        <div class="navbar mx-auto w-auto d-flex justify-content-center ms-1">
-            <div class="col-xs-8">
-              <a class="btn btn-my btn-modal me-3" data-bs-toggle="modal" href="#ModalToggle" role="button">Обратная связь</a>
-            </div>
-            <a class="btn_select" href="#">
-              <div>RU</div>
-              <div class="shadow">
-                <span>EN</span>
-              </div>
-            </a>
-        </div>
-      </div>
-    </div>
-  </header>
 
-
-  <nav class="navbar navbar-expand-lg py-1 mb-3 nav_border">
-    <div class="container-fluid d-flex flex-wrap">
-      <a class="navbar-brand btn me-house nav-butt change-pics" href="../index.html" aria-current="page">
-        <div class="change-pic">
-          <img src="../images/house_black.svg" height="30px" width="30px"/>
-        </div>
-        <div class="change-pic">  
-          <img src="../images/house_white.svg" height="30px" width="30px"/>
-        </div> 
-      </a>
-       <button class="navbar-toggler ms-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Переключатель навигации">
-         <span class="navbar-toggler-icon"></span>
-       </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item h2-text"><a href="../projects.html" class="nav-link nav-butt px-2">Проекты</a></li>
-            <li class="nav-item h2-text"><a href="../media/media1PAGE/media1PAGE.html" class="nav-link nav-butt px-2">Медиацентр</a></li>
-            <li class="nav-item h2-text"><a href="../vacancies.html" class="nav-link nav-butt px-2">Вакансии</a></li>
-            <li class="nav-item h2-text"><a href="../providers.html" class="nav-link nav-butt px-2">Поставщикам</a></li>
-            <li class="nav-item h2-text"><a href="../history.html" class="nav-link nav-butt px-2">История</a></li>
-          </ul>
-        </div>
-    </div>
-  </nav>
-
-<!-- Модальное окно -->
-<div class="modal fade" id="ModalToggle" aria-hidden="true" aria-labelledby="ModalToggleLabel" tabindex="-1">
-  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="ModalToggleLabel">Обратная связь</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <form action="http://localhost/site_uaz/database/handler.php" method="post">
-        <div class="modal-body">
-            <div class="mb-3">
-              <label for="recipient-name" class="col-form-label">ФИО:</label>
-              <input type="text" class="form-control" name="fio" placeholder="Иван Павлович">
-            </div>
-            <div class="mb-3">
-              <label for="phone-text" class="col-form-label">Телефон:</label>
-              <input type="text" class="form-control" name="phone" placeholder="8999-999-99-99">
-            </div>
-            <div class="mb-3">
-              <label for="email-text" class="col-form-label">EMail:</label>
-              <input type="text" class="form-control" name="email" placeholder="me@yandex.ru">
-            </div>
-            <div class="mb-3">
-              <label for="message-text" class="col-form-label">Сообщение:</label>
-              <textarea class="form-control" name="message" placeholder="Сообщение"></textarea>
-            </div>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
-          <button class="btn btn-primary" type="submit" name="submit" data-bs-target="#ModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Отправить</button>
-        </div>
-      </form>
-    </div>
-  </div>
-</div>
+<header th:insert="blocks/header.html"> </header>
 
 <main>
   <div class="preloader"></div>
@@ -162,58 +71,10 @@
 
 <div class="btn-up btn-up_hide"></div>
 
-<footer class="container-fluid py-5 bg-light border-top border-bottom w-auto">
-  <div class="row me-footer container-size">
-    <div class="col-6 col-md me-bot">
-      <h5>Объекты</h5>
-      <ul class="list-unstyled text-small">
-        <li><a class="link-secondary" href="../projects.html">Обслуживание зданий</a></li>
-      </ul>
-    </div>
-    <div class="col-6 col-md">
-      <h5>Медиацентр</h5>
-      <ul class="list-unstyled text-small">
-        <li><a class="link-secondary" href="../media/media1PAGE/media1PAGE.html">Новости АО "УАЗ"</a></li>
-      </ul>
-    </div>
-    <div class="col-6 col-md">
-      <h5>Вакансии</h5>
-      <ul class="list-unstyled text-small">
-        <li><a class="link-secondary" href="../vacancies.html">Для кандидатов</a></li>
-      </ul>
-    </div>
-    <div class="col-6 col-md">
-      <h5>Поставщикам</h5>
-      <ul class="list-unstyled text-small"> 
-        <li><a class="link-secondary" href="../providers.html">Единые закупки</a></li>
-      </ul>
-    </div>
-    <div class="col-6 col-md">
-      <h5>История</h5>
-      <ul class="list-unstyled text-small"> 
-        <li><a class="link-secondary" href="../history.html">УАЗ 75 лет</a></li>
-      </ul>
-    </div>
-  </div>
-</footer>
+<footer th:insert="/blocks/footer.html"> </footer>
 
-<footer class="container-fluid bg-light border-top w-auto">
-  <div class="row me-footer container-size">
-    <div class="col-6 col-md me-bot">
-      <ul class="list-unstyled text-small">
-        <li><img src="../images/znak.jpg" height="17" width="17" class="img-fluid">
-        2023 АО "УАЗ"</li>
-      </ul>
-    </div>
-</footer>
+<script src="/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="/js/script.js"></script>
 
-
-    <script src="../js/bootstrap.bundle.min.js"></script>
-    <script src="../fancybox-3.0/dist/jquery-3.6.4.min.js"></script>
-    <script src="../fancybox-3.0/dist/jquery.fancybox.min.js"></script>
-    <script src="../js/gsap/gsap.min.js"></script>
-    <script src="../js/gsap/ScrollTrigger.min.js"></script>
-    <script src="../js/skripts.js"></script>
-
-  </body>
+</body>
 </html>
