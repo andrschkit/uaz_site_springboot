@@ -1,26 +1,17 @@
-@font-face {
-  font-family: "BestChoiceDemo";
-  font-style: normal;
-  font-weight: 400;
-  /* Браузер сначала попробует найти шрифт локально */
-  src: local("BestChoiceDemo"),
-       /* Если не получилось, загрузит woff2 */
-       url("/fonts/BestChoiceDemo-Regular.otf") format("otf"),
-}
 h1 {
-font-family: Arial Black;
+    font-family: Arial Black, serif;
 }
 h2 {
-font-family: Arial Black;
+    font-family: Arial Black, serif;
 }
 h3 {
-font-family: Arial Black;
+    font-family: Arial Black, serif;
 }
 h4 {
-font-family: Arial Black;
+    font-family: Arial Black, serif;
 }
 p {
-font-family: Helvetica;
+    font-family: Helvetica, serif;
 text-indent: 20px; /* Отступ первой строки в пикселах */
 }
 body {
@@ -28,7 +19,7 @@ font-family: "BestChoiceDemo", sans-serif;
 background-color: #FFFAFA;
 
 }
-.img-sahdow{
+.img-shadow{
   box-shadow: -0.2em -0.2em 0.9em #5F6062;
 }
 .nav_border{
@@ -228,32 +219,8 @@ background-color: #FFFAFA;
   font-size: 35px;
   text-shadow: 5px 5px 5px  #5F6062;
 }
-/* Кнопки хедер */
-.btn-rounded {
-    border-radius: 3px;
-}
-.btn_house {
-  width: 30px;
-}
-
 
 /* Центрирование и маржины */
-
-.leftimg {
- float:left; /* Выравнивание по левому краю */
- margin: 7px 7px 7px 0; /* Отступы вокруг картинки */
-}
-.rightimg  {
- float: right; /* Выравнивание по правому краю  */
- margin: 7px 0 7px 7px; /* Отступы вокруг картинки */
-}
-.centerimg  {
- float: center; /* Выравнивание по центру  */
- margin: 7px 0 7px 7px; /* Отступы вокруг картинки */
-}
-.me-house {
-  margin-left: 2.5rem !important;
-}
 .ms-toggle {
   margin-right: 2.8rem !important;
 }
@@ -266,6 +233,10 @@ background-color: #FFFAFA;
 .mt-hist {
   margin-top: 2rem !important;
 }
+.me_house {
+    margin-left: 2.5rem !important;
+}
+
 /* Декорации и шрифты */
 .phone-decor{
   color: black;
@@ -300,48 +271,36 @@ background-color: #FFFAFA;
 .h2-text {
   font-size: 20px;
 }
-.nav-butt {
-  border-top-left-radius: 3px;
-  border-top-right-radius: 3px;
-  border-bottom-left-radius: 3px;
-  border-bottom-right-radius: 3px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-left:5px;
-  margin-right: 5px;
-}
 /* Кнопка наверх страницы */
 .btn-up {
   position: fixed;
   background-color: #025EA1;
   right: 20px;
   bottom: 5px;
-  border-top-left-radius: 3px;
-  border-top-right-radius: 3px;
-  border-bottom-left-radius: 3px;
-  border-bottom-right-radius: 3px;
+    border-radius: 3px;
   cursor: pointer;
   display: flex;
-  align-items: center;
-  justify-content: center;
+    align-items: center;
+    justify-content: center;
   width: 43px;
   height: 43px;
-}
-
-.btn-up::before {
-  content: "";
-  width: 40px;
-  height: 40px;
-  background: transparent no-repeat center center;
-  background-size: 85% 85%;
-  background-image: url(images/up-arrow.svg);
 }
 
 .btn-up_hide {
   display: none;
 }
+
+.nav-butt {
+    border-radius: 3px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left:5px;
+    margin-right: 5px;
+}
+/*Белый домик при наведении курсора*/
+
 .change-pics .change-pic:nth-of-type(2) {
   display: none;
 }
@@ -366,12 +325,13 @@ background-color: #FFFAFA;
     display: block;
   }
 }
-/*Белый домик при наведении курсора*/ 
 
 .change-pics:hover {
   cursor: pointer;
 }
-/*Стили для фоток право, центр, лево и фон*/ 
+
+/*Стили для фоток право, центр, лево и фон*/
+
 .signright {
   float: right; /* Выравнивание по правому краю */
   text-align: center;
@@ -440,23 +400,6 @@ background-color: #FFFAFA;
   display: none;
   text-align: center;
 }
-.animate-bottom {
-  position: relative;
-  -webkit-animation-name: animatebottom;
-  -webkit-animation-duration: 0.5s;
-  animation-name: animatebottom;
-  animation-duration: 0.3s
-}
-
-@-webkit-keyframes animatebottom {
-  from { bottom:-40px; opacity:0 } 
-  to { bottom:0px; opacity:1 }
-}
-
-@keyframes animatebottom { 
-  from{ bottom:-40px; opacity:0 } 
-  to{ bottom:0; opacity:1 }
-}
 
 .loaded_hiding .preloader {
   transition: 0.3s opacity;
@@ -479,13 +422,48 @@ background-color: #FFFAFA;
 }
 
 @-webkit-keyframes animatebottom {
-    from { bottom:-10px; opacity:0 }
+    from { bottom:-40px; opacity:0 }
     to { bottom:0; opacity:1 }
 }
 
 @keyframes animatebottom {
-    from{ bottom:-10px; opacity:0 }
+    from{ bottom:-40px; opacity:0 }
     to{ bottom:0; opacity:1 }
+}
+
+.animate-top {
+    position: relative;
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.3s;
+    animation-name: animatetop;
+    animation-duration: 0.3s
+}
+
+@-webkit-keyframes animatetop{
+    from { top:-40px; opacity:0 }
+    to { top:0; opacity:1 }
+}
+
+@keyframes animatetop {
+    from{ top:-40px; opacity:0 }
+    to{ top:0; opacity:1 }
+}
+
+.animated-box {
+    animation: example-animation 7s infinite, infinite alternate;
+}
+
+@keyframes example-animation {
+    0% { transform: rotateZ(-3deg); transform-origin: top center}
+    50% { transform: rotateZ(3deg); transform-origin: top center}
+    100% { transform: rotateZ(-3deg); transform-origin: top center}
+}
+.pic_scale_anim{
+    object-fit: cover;
+    transition: 0.3s;
+}
+.pic_scale_anim:hover{
+    transform: scale(1.01);
 }
 /* Стили Галереи */
 .thumb img {

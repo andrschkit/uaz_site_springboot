@@ -25,25 +25,25 @@
     </div>
     <div class="carousel-inner normal-text" >
       <a th:href="@{/projects/ordinka}" class="carousel-item active">
-        <img src="images/carousel_img/ordinka.jpg" class="d-block w-100" alt="...">
+        <img src="/images/carousel_img/ordinka.jpg" class="d-block w-100" alt="...">
         <div class="carousel-caption cartext-decor">
           <h>Большая Ордынка</h>
         </div>
       </a>
       <a th:href="@{/projects/kitay}" class="carousel-item">
-        <img src="images/carousel_img/kitay.jpg" class="d-block w-100" alt="...">
+        <img src="/images/carousel_img/kitay.jpg" class="d-block w-100" alt="...">
         <div class="carousel-caption cartext-decor">
           <h>Китайгородский проезд</h>
         </div>
       </a>
       <a th:href="@{/projects/monetka}" class="carousel-item">
-        <img src="images/carousel_img/monetka.jpg" class="d-block w-100" alt="...">
+        <img src="/images/carousel_img/monetka.jpg" class="d-block w-100" alt="...">
         <div class="carousel-caption cartext-decor">
           <h>Старомонетный переулок</h>
         </div>
       </a>
       <a th:href="@{/projects/vdnh}" class="carousel-item">
-        <img src="images/carousel_img/vdnh.jpg" class="d-block w-100" alt="...">
+        <img src="/images/carousel_img/vdnh.jpg" class="d-block w-100" alt="...">
         <div class="carousel-caption cartext-decor">
           <h>Павильон №19. «Атом»</h>
         </div>
@@ -52,7 +52,8 @@
   </div>
 </main>
 
-<div class="btn-up btn-up_hide"></div>
+<div class="btn-up btn-up_hide"> <img src="/images/up-arrow.svg" alt=""/></div>
+
 <footer th:insert="/blocks/footer.html"> </footer>
 
   <script src="/bootstrap/js/bootstrap.bundle.min.js"></script>

@@ -5,7 +5,7 @@
                 <div><img src="/images/Logo.svg" height="60" width="60" class="img-fluid anim_logo" alt=""></div>
                 <div><img src="/images/Name.svg" height="60" width="150" class="img-fluid" alt=""></div>
             </a>
-            <div class="navbar navbar-expand-xl mx-auto d-flex justify-content-end me-1 animate-bottom">
+            <div class="navbar navbar-expand-xl mx-auto d-flex justify-content-end me-1 animate-top">
                 <div class="collapse navbar-collapse" >
                     <div class="contact-decor">Тел: <a  href="tel:+74951234567" class="phone-decor">+7 (495) 123-45-67</a></div>
                     <div class="contact-decor mx-4">EMail: <a  href="mailto:uaz@book.ru" class="mail-decor">uaz@book.ru</a></div>
@@ -27,9 +27,14 @@
 
     <nav class="navbar navbar-expand-lg py-1  border-bottom nav_border">
         <div class="container-fluid d-flex flex-wrap">
-            <a class="navbar-brand btn me-house nav-butt static_hover" th:href="@{/}" aria-current="page">
+            <a class="navbar-brand btn me_house nav-butt change-pics" th:href="@{/}" aria-current="page">
                 <div>
-                    <img src="/images/house_white.svg" height="30px" width="30px"/>
+                    <div class="change-pic">
+                        <img id="nav_house" src="/images/house_black.svg" height="30px" width="30px" alt=""/>
+                    </div>
+                    <div class="change-pic">
+                        <img src="/images/house_white.svg" height="30px" width="30px" alt=""/>
+                    </div>
                 </div>
             </a>
 

@@ -1,3 +1,32 @@
+//Кнопки вкладок Header
+let nav_item=document.getElementsByClassName('nav-butt');
+let nav_house=document.getElementById("nav_house");
+
+nav_item=[].slice.call(nav_item);
+
+switch (window.location.pathname) {
+    case '/':
+        nav_item[0].classList.add('static_hover');
+        nav_house.src="/images/house_white.svg"
+        break;
+    case '/projects':
+        nav_item[1].classList.add('static_hover');
+        break;
+    case '/media':
+        nav_item[2].classList.add('static_hover');
+        break;
+    case '/vacancies':
+        nav_item[3].classList.add('static_hover');
+        break;
+    case '/providers':
+        nav_item[4].classList.add('static_hover');
+        break;
+    case '/history':
+        nav_item[5].classList.add('static_hover');
+        break;
+    default:
+
+}
 // кнопка наверх страницы
 const btnUp = {
     el: document.querySelector('.btn-up'),
