@@ -3,9 +3,20 @@ package org.example.controllers;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.example.domain.Message;
+import org.example.services.MessageRepo;
+
 import static org.example.StaticString.*;
 @Controller
 public class MainController {
+    private final MessageRepo messageRepo;
+
+    public MainController(MessageRepo messageRepo) {
+        this.messageRepo = messageRepo;
+    }
+
     @GetMapping(URL_MAIN_PAGE)
     public String mainPage(Model model) {
         return "/index";
@@ -42,6 +53,20 @@ public class MainController {
     @GetMapping(URL_PROJECT_MONETKA)
     public String projectMonetkaPage(Model model) {
         return "/projects/monetka";
+    }
+
+    @PostMapping("/add")
+    public String add( @RequestParam String name, @RequestParam String phone_number,
+                      @RequestParam String mail, @RequestParam String msg, Model model) {
+        Message message = new Message(name, phone_number, mail, msg);
+
+        messageRepo.save(message);
+
+        Iterable<Message> messages = messageRepo.findAll();
+
+        model.addAttribute("messages", messages);
+
+        return "index";
     }
 
 }
