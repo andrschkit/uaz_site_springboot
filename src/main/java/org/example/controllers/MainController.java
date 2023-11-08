@@ -1,20 +1,29 @@
 package org.example.controllers;
 
+import org.example.services.MessageService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.example.domain.Message;
-import org.example.services.MessageRepo;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.validation.Valid;
+
+import java.util.Optional;
 
 import static org.example.StaticString.*;
+import static org.example.controllers.ControllerUtils.getPreviousPageByRequest;
+
 @Controller
 public class MainController {
-    private final MessageRepo messageRepo;
+    private final MessageService messageService;
 
-    public MainController(MessageRepo messageRepo) {
-        this.messageRepo = messageRepo;
+    public MainController(MessageService messageService) {
+
+        this.messageService = messageService;
     }
 
     @GetMapping(URL_MAIN_PAGE)
@@ -55,18 +64,24 @@ public class MainController {
         return "/projects/monetka";
     }
 
+
+
     @PostMapping("/add")
-    public String add( @RequestParam String name, @RequestParam String phone_number,
-                      @RequestParam String mail, @RequestParam String msg, Model model) {
-        Message message = new Message(name, phone_number, mail, msg);
+    public String add(
+            HttpServletRequest request,
+            @Valid @ModelAttribute Message message,
+            BindingResult bindingResult,
+            Model model) {
 
-        messageRepo.save(message);
+        if (bindingResult.hasErrors()) {
+            return getPreviousPageByRequest(request).orElse("/"); //else go to home page
+        } else {
+            messageService.save(message);
+            return "redirect:/";
+        }
+        /*Iterable<Message> messages = messageService.findAll();
 
-        Iterable<Message> messages = messageRepo.findAll();
-
-        model.addAttribute("messages", messages);
-
-        return "index";
+        model.addAttribute("messages", messages);*/
     }
 
 }

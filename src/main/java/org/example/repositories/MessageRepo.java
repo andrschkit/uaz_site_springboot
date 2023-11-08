@@ -1,4 +1,4 @@
-package org.example.services;
+package org.example.repositories;
 
 import org.example.domain.Message;
 import org.springframework.data.repository.CrudRepository;

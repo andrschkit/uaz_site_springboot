@@ -1,20 +1,34 @@
 package org.example.domain;
 
 
+import com.sun.istack.NotNull;
+
+import javax.validation.constraints.*;
 import javax.persistence.*;
+
+import static org.example.StaticString.*;
 
 
 @Entity
-@Table(name = "message")
+@Table(name = "message",
+        schema="callback")
 public class Message {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", unique = true)
-    private Integer id;
+    private Long id;
+
+    @NotBlank(message = MESSAGE_ENTER_NAME)
     @Column(name = "name")
     private String name;
+
+    // 8999-999-99-99
+    @NotBlank(message = MESSAGE_ENTER_PHONE_NUMBER)
+    @Pattern(regexp = "8-\\d{3}-\\d{3}-\\d{2}-\\d{2}", message = MESSAGE_PATTERN_PHONE_NUMBER)
     @Column(name = "phone_number")
     private String phone_number;
+
+    @Email
     @Column(name = "mail")
     private String mail;
     @Column(name = "msg")
@@ -30,11 +44,11 @@ public class Message {
         this.msg=msg;
     }
 
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
