@@ -54,37 +54,54 @@
         </div>
     </nav>
     <!-- Модальное окно -->
-    <div class="modal fade" id="ModalToggle" aria-hidden="true" aria-labelledby="ModalToggleLabel" tabindex="-1">
+    <div class="modal" id="ModalToggle" aria-hidden="true" aria-labelledby="ModalToggleLabel" tabindex="-1">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="ModalToggleLabel">Обратная связь</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <form th:action="@{/add}"  method="post">
+                <form id="submitForm" th:action="@{/api/message}"  method="post">
                     <div class="modal-body">
                         <div class="mb-3">
                             <label class="col-form-label">ФИО:</label>
-                            <input type="text" class="form-control" name="name" placeholder="Иван Павлович">
+                            <input type="text" class="form-control" id="name" name="name" placeholder="Иван Павлович"/>
+                            <div  id="name_error" class="invalid-feedback add_font_size"> </div>
                         </div>
                         <div class="mb-3">
                             <label class="col-form-label">Телефон:</label>
-                            <input type="text" class="form-control" name="phone_number" placeholder="8999-999-99-99">
+                            <input type="text" class="form-control" id="phone_number" name="phone_number" placeholder="8999-999-99-99"/>
+                            <div  id="phone_number_error" class="invalid-feedback add_font_size"> </div>
                         </div>
                         <div class="mb-3">
                             <label class="col-form-label">EMail:</label>
-                            <input type="text" class="form-control" name="mail" placeholder="me@yandex.ru">
+                            <input type="text" class="form-control" id="mail" name="mail" placeholder="me@yandex.ru"/>
+                            <div  id="mail_error" class="invalid-feedback add_font_size"> </div>
                         </div>
                         <div class="mb-3">
                             <label class="col-form-label">Сообщение:</label>
-                            <textarea class="form-control" name="msg" placeholder="Сообщение"></textarea>
+                            <textarea class="form-control" id="msg" name="msg" placeholder="Сообщение"></textarea>
+                            <div  id="msg_error" class="invalid-feedback add_font_size"> </div>
                         </div>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
-                        <button class="btn btn-primary" type="submit" name="submit" data-bs-target="#ModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Отправить</button>
+                        <button class="btn btn-primary" type="submit" name="submit" data-bs-target="#ModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">Отправить</button>
                     </div>
                 </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="infoModal" tabindex="-1" role="dialog" aria-labelledby="infoModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="infoModalLabel"></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-footer">
+                </div>
             </div>
         </div>
     </div>

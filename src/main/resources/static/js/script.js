@@ -71,3 +71,106 @@ window.onload = function () {
     }
   }, 500);
 }
+
+
+//----------------AjaxPost-----------------------
+
+$('#submitForm').submit(function(e) {
+    // reference to form object
+    var form = this;
+    // for stopping the default action of element
+    e.preventDefault();
+    // mapthat will hold form data
+    // создадим пустой объект
+    var data = {};
+// переберём все элементы input, textarea и select формы с id="myForm "
+    $('#submitForm').find ('input, textarea, select').each(function() {
+        // добавим новое свойство к объекту $data
+        // имя свойства – значение атрибута name элемента
+        // значение свойства – значение свойство value элемента
+        data[this.name] = $(this).val();
+    });
+    $.ajax({
+        type: form.getAttribute('method'), // method attribute of form
+        url: form.getAttribute('action'),  // action attribute of form
+        // convert form data to json format
+        data : data,
+        success: function(response){
+
+            // we have the response
+            if(response.status === "SUCCESS"){
+                $('#infoModalLabel').text(response.result.toString());
+                $('#infoModal').modal('show');
+                resetForm($('#submitForm'));
+                console.log("SUCCESS");
+            }else{
+                console.log("ERROR");
+                resetErrorsInForm($('#submitForm'));
+                for(i =0 ; i < response.result.length ; i++){
+                    var inputId = response.result[i].field;
+                    $('#'+inputId).addClass('is-invalid')
+                    $('#'+inputId+"_error").text(response.result[i].defaultMessage.toString());
+                }
+                $('#ModalToggle').modal('show');
+
+            }
+        },
+        error: function(e){
+            alert('Error: ' + e);
+        }
+    });
+});
+
+function resetForm($form) {
+    $form.find('input:text, input:password, input:file, select, textarea').val('');
+    $form.find('input:radio, input:checkbox')
+        .removeAttr('checked').removeAttr('selected');
+    resetErrorsInForm($form);
+}
+
+function resetErrorsInForm($form) {
+    $form.find('input:text, input:password, input:file, select, textarea').removeClass("is-invalid");
+}
+
+
+
+/*function doAjaxPost() {
+    // get the form values
+    var name = $('#name').val();
+    var education = $('#education').val();
+
+    $.ajax({
+        type: "POST",
+        url: contexPath + "/AddUser.htm",
+        data: "name=" + name + "&education=" + education,
+        success: function(response){
+            // we have the response
+            if(response.status == "SUCCESS"){
+                userInfo = "<ol>";
+                for(i =0 ; i < response.result.length ; i++){
+                    userInfo += "<br><li><b>Name</b> : " + response.result[i].name +
+                        ";<b> Education</b> : " + response.result[i].education;
+                }
+                userInfo += "</ol>";
+                $('#info').html("User has been added to the list successfully. " + userInfo);
+                $('#name').val('');
+                $('#education').val('');
+                $('#error').hide('slow');
+                $('#info').show('slow');
+            }else{
+                errorInfo = "";
+                for(i =0 ; i < response.result.length ; i++){
+                    errorInfo += "<br>" + (i + 1) +". " + response.result[i].code;
+                }
+                $('#error').html("Please correct following errors: " + errorInfo);
+                $('#info').hide('slow');
+                $('#error').show('slow');
+            }
+        },
+        error: function(e){
+            alert('Error: ' + e);
+        }
+    });
+}*/
+
+

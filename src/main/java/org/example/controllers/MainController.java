@@ -1,12 +1,12 @@
 package org.example.controllers;
 
+import org.example.domain.JsonResponse;
 import org.example.services.MessageService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.validation.ValidationUtils;
+import org.springframework.web.bind.annotation.*;
 import org.example.domain.Message;
 
 import javax.servlet.http.HttpServletRequest;
@@ -62,26 +62,6 @@ public class MainController {
     @GetMapping(URL_PROJECT_MONETKA)
     public String projectMonetkaPage(Model model) {
         return "/projects/monetka";
-    }
-
-
-
-    @PostMapping("/add")
-    public String add(
-            HttpServletRequest request,
-            @Valid @ModelAttribute Message message,
-            BindingResult bindingResult,
-            Model model) {
-
-        if (bindingResult.hasErrors()) {
-            return getPreviousPageByRequest(request).orElse("/"); //else go to home page
-        } else {
-            messageService.save(message);
-            return "redirect:/";
-        }
-        /*Iterable<Message> messages = messageService.findAll();
-
-        model.addAttribute("messages", messages);*/
     }
 
 }
