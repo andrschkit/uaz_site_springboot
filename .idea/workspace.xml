@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="63d29c66-ea9a-40cb-a3d4-b579f5e1bd53" name="Changes" comment="[BF]: fix mobile header margin">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="63d29c66-ea9a-40cb-a3d4-b579f5e1bd53" name="Changes" comment="[BF]: fix margins">
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/StyleSheets/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/StyleSheets/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,7 +116,7 @@
       <workItem from="1699333904964" duration="4428000" />
       <workItem from="1699422371290" duration="8382000" />
       <workItem from="1699512446251" duration="18374000" />
-      <workItem from="1707892567930" duration="4334000" />
+      <workItem from="1707892567930" duration="4658000" />
     </task>
     <task id="LOCAL-00001" summary="Started commit">
       <option name="closed" value="true" />
@@ -173,7 +173,14 @@
       <option name="project" value="LOCAL" />
       <updated>1707895680216</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="[BF]: fix margins">
+      <created>1707907441333</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1707907441333</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -198,7 +205,8 @@
     <MESSAGE value="NF: animation complete" />
     <MESSAGE value="[NF]: validation(with nuance), migration" />
     <MESSAGE value="[BF]: fix mobile header margin" />
-    <option name="LAST_COMMIT_MESSAGE" value="[BF]: fix mobile header margin" />
+    <MESSAGE value="[BF]: fix margins" />
+    <option name="LAST_COMMIT_MESSAGE" value="[BF]: fix margins" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>
