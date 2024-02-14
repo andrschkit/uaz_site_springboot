@@ -25,6 +25,9 @@ background-color: #FFFAFA;
 .nav_border{
   border-bottom: 2px solid #dddddd;
 }
+.navbar-nav{
+    margin-top: 5px;
+}
 .static_hover{
   background-color: #025EA1;
   color: white;
