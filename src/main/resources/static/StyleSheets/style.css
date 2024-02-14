@@ -222,7 +222,7 @@ background-color: #FFFAFA;
 
 /* Центрирование и маржины */
 .ms-toggle {
-  margin-right: 2.8rem !important;
+  margin-right: 1rem !important;
 }
 .me-footer {
   margin-left: 2.5rem !important;
@@ -234,7 +234,7 @@ background-color: #FFFAFA;
   margin-top: 2rem !important;
 }
 .me_house {
-    margin-left: 2.5rem !important;
+    margin-left: 1rem !important;
 }
 
 /* Декорации и шрифты */

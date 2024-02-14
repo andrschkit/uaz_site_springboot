@@ -2,7 +2,7 @@ spring:
   datasource:
     url: "jdbc:postgresql://localhost:5432/Callback-UAZ"
     username: "postgres"
-    password: "7723"
+    password: "qwerty"
     driver-class-name: org.postgresql.Driver
   jpa:
     show-sql: true
@@ -17,4 +17,4 @@ spring:
     database: postgresql
     database-platform: "org.hibernate.dialect.PostgreSQL10Dialect"
 server:
-  port: 8080
+  port: 8070
