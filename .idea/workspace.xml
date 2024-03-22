@@ -5,7 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="63d29c66-ea9a-40cb-a3d4-b579f5e1bd53" name="Changes" comment="[BF]: fix margins">
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/StyleSheets/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/StyleSheets/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application-dev.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application-prod.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controllers/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controllers/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/blocks/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/blocks/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/history.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/history.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/media.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/media.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/projects.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/projects.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/projects/kitay.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/projects/kitay.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/projects/monetka.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/projects/monetka.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/projects/ordinka.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/projects/ordinka.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/projects/vdnh.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/projects/vdnh.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/providers.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/providers.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/vacancies.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/vacancies.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,7 +37,13 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -48,11 +69,12 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/User/Documents/GitHub/uaz_site_springboot",
+    "last_opened_file_path": "C:/JOB/UAZ_Supplications",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
     "spring.configuration.checksum": "43c385488b6baff9f1f826e581dbc89c",
     "vue.rearranger.settings.migration": "true"
   }
@@ -64,11 +86,11 @@
       <recent name="C:\Users\Andrew\Documents\Projects\uaz_site_springboot\src\main\resources" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\JOB\uaz_site_springboot\src\main\resources\templates" />
       <recent name="C:\JOB\uaz_site_springboot\src\main\resources\db\migration" />
       <recent name="C:\Users\Andrew\Documents\Projects\uaz_site_springboot\src\main\resources\static\fancybox" />
       <recent name="C:\Users\Andrew\Documents\Projects\uaz_site_springboot\src\main\resources\static" />
       <recent name="C:\Users\Andrew\Documents\Projects\uaz_site_springboot\src\main\resources\static\gsap" />
-      <recent name="C:\Users\Andrew\Documents\Projects\uaz_site_springboot\src\main\resources\js" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="org.example.dto" />
@@ -76,18 +98,18 @@
       <recent name="org.example" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.SiteUazApplication">
-    <configuration name="SiteUazApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="uaz_site_springboot" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="org.example.SiteUazApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager">
     <configuration name="SiteUazApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="ACTIVE_PROFILES" />
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
-      <module name="uaz_site_springboot" />
+      <module name="Site_UAZ" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="org.example.SiteUazApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -117,6 +139,9 @@
       <workItem from="1699422371290" duration="8382000" />
       <workItem from="1699512446251" duration="18374000" />
       <workItem from="1707892567930" duration="4658000" />
+      <workItem from="1711013370725" duration="8400000" />
+      <workItem from="1711025998600" duration="2205000" />
+      <workItem from="1711088160127" duration="2104000" />
     </task>
     <task id="LOCAL-00001" summary="Started commit">
       <option name="closed" value="true" />
@@ -191,7 +216,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
