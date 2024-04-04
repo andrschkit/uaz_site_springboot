@@ -4,21 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="63d29c66-ea9a-40cb-a3d4-b579f5e1bd53" name="Changes" comment="[BF]: fix margins">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application-dev.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application-prod.yml" afterDir="false" />
+    <list default="true" id="63d29c66-ea9a-40cb-a3d4-b579f5e1bd53" name="Changes" comment="[BF]:">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/controllers/MediaPostController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/domain/MediaPost.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/jquery-3.7.1.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/editor.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/StaticString.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/StaticString.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controllers/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controllers/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-dev.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/blocks/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/blocks/header.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/history.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/history.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/media.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/media.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/projects.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/projects.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/projects/kitay.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/projects/kitay.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/projects/monetka.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/projects/monetka.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/projects/ordinka.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/projects/ordinka.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/projects/vdnh.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/projects/vdnh.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/providers.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/providers.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/vacancies.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/vacancies.html" afterDir="false" />
     </list>
@@ -30,20 +30,14 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="JavaScript File" />
         <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="master" />
-      </map>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="RESET_MODE" value="HARD" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -57,28 +51,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/JOB/UAZ_Supplications",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "spring.configuration.checksum": "43c385488b6baff9f1f826e581dbc89c",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/User/Documents/GitHub/uaz_site_springboot&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;9ecfeb4f9516be01698fd41d1da6085c&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\JOB\uaz_site_springboot\src\main\resources" />
@@ -86,11 +80,11 @@
       <recent name="C:\Users\Andrew\Documents\Projects\uaz_site_springboot\src\main\resources" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\JOB\uaz_site_springboot\src\main\resources\templates" />
-      <recent name="C:\JOB\uaz_site_springboot\src\main\resources\db\migration" />
-      <recent name="C:\Users\Andrew\Documents\Projects\uaz_site_springboot\src\main\resources\static\fancybox" />
-      <recent name="C:\Users\Andrew\Documents\Projects\uaz_site_springboot\src\main\resources\static" />
-      <recent name="C:\Users\Andrew\Documents\Projects\uaz_site_springboot\src\main\resources\static\gsap" />
+      <recent name="C:\Users\User\Documents\GitHub\uaz_site_springboot\src\main\resources\static" />
+      <recent name="C:\Users\User\Documents\GitHub\uaz_site_springboot\src\main\resources\static\summernote-0.8.18\bs4" />
+      <recent name="C:\Users\User\Documents\GitHub\uaz_site_springboot\src\main\resources\static\js" />
+      <recent name="C:\Users\User\Documents\GitHub\uaz_site_springboot\src\main\resources\static\summernote-0.8.18" />
+      <recent name="C:\Users\User\Documents\GitHub\uaz_site_springboot\src\main\resources\templates" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="org.example.dto" />
@@ -98,18 +92,18 @@
       <recent name="org.example" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="configurationTypes">
-      <set>
-        <option value="SpringBootApplicationConfigurationType" />
-      </set>
-    </option>
-  </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Spring Boot.SiteUazApplication">
+    <configuration name="SiteUazApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="uaz_site_springboot" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="org.example.SiteUazApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="SiteUazApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="ACTIVE_PROFILES" />
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
-      <module name="Site_UAZ" />
+      <module name="uaz_site_springboot" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="org.example.SiteUazApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -139,9 +133,9 @@
       <workItem from="1699422371290" duration="8382000" />
       <workItem from="1699512446251" duration="18374000" />
       <workItem from="1707892567930" duration="4658000" />
-      <workItem from="1711013370725" duration="8400000" />
-      <workItem from="1711025998600" duration="2205000" />
-      <workItem from="1711088160127" duration="2104000" />
+      <workItem from="1711955540618" duration="28235000" />
+      <workItem from="1712128970725" duration="1333000" />
+      <workItem from="1712131163551" duration="20202000" />
     </task>
     <task id="LOCAL-00001" summary="Started commit">
       <option name="closed" value="true" />
@@ -216,19 +210,7 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="master" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
+            <State />
           </value>
         </entry>
       </map>

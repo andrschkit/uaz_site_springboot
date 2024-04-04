@@ -23,9 +23,14 @@
       </div>
 
       <div class="container-fluid">
-          <div class="row gy-5 mb-5 mt-5">
-              <div class="w-auto mx-auto" style="min-width: 300px">
-                <div><img src="/images/soon.svg" height="1400px" width="700px" class="img-fluid animated-box" alt=""></div>
+          <div class="container">
+              <div class="row">
+                  <div class="col-sm-12 mt-5">
+                      <h1 th:text="${post.title}">Title</h1>
+                      <div th:utext="${post.content}">Content</div>
+
+                      <a th:href="@{/editor}" class="btn btn-primary">Добавить статью</a>
+                  </div>
               </div>
           </div>
       </div>
@@ -36,7 +41,7 @@
 
 <footer th:insert="blocks/footer.html"> </footer>
 
-<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script src="/js/jquery-3.7.1.js"></script>
 <script src="/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="/js/script.js"></script>
 

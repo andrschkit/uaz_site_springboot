@@ -1,6 +1,7 @@
 package org.example.controllers;
 
 import org.example.domain.JsonResponse;
+import org.example.domain.MediaPost;
 import org.example.services.MessageService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -45,6 +46,7 @@ public class MainController {
     }
     @GetMapping(URL_MEDIA)
     public String mediaPage(Model model) {
+        model.addAttribute("post", new MediaPost());
         return "media";
     }
     @GetMapping(URL_HISTORY)
@@ -52,9 +54,13 @@ public class MainController {
         return "history";
     }
     @GetMapping(URL_PROJECT_ORDINKA)
-    public String projectOrdinkaPage(Model model) {return "projects/ordinka";}
+    public String projectOrdinkaPage(Model model) {
+        return "projects/ordinka";
+    }
     @GetMapping(URL_PROJECT_KITAY)
-    public String projectKitayPage(Model model) {return "projects/kitay";}
+    public String projectKitayPage(Model model) {
+        return "projects/kitay";
+    }
     @GetMapping(URL_PROJECT_VDNH)
     public String projectVdnhPage(Model model) {
         return "projects/vdnh";
