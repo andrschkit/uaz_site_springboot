@@ -489,3 +489,10 @@ background-color: #FFFAFA;
 .thumb {
   padding: 10px;
 }
+.save{
+    margin-top: 10px;
+}
+.note-modal-footer{
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}

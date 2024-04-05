@@ -1,13 +1,22 @@
 package org.example.domain;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
 
+import static org.example.StaticString.MESSAGE_ENTER_NAME;
 
+@Entity
+@Table(name = "note",
+        schema="notes")
 public class MediaPost {
-    private String title;
-    private String content;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id", unique = true)
     private Long id;
+    @Column(name = "title")
+    private String title;
+    @Column(name = "content")
+    private String content;
 
     public String getTitle() {
         return title;
@@ -28,8 +37,6 @@ public class MediaPost {
     public void setId(Long id) {
         this.id = id;
     }
-
-    @Id
     public Long getId() {
         return id;
     }

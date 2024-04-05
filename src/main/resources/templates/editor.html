@@ -28,7 +28,9 @@
             <div class="container">
 
                 <div class="row">
-                    <form method="post" th:object="${post}">
+                    <form th:action="@{/editor}" method="post" th:object="${post}">
+
+                        <input type="hidden" th:field="*{id}"/>
 
                         <div class="form-group">
                             <label for="title">Название:</label>
@@ -42,7 +44,7 @@
                                       th:field="*{content}" autocomplete="off"></textarea>
                         </div>
 
-                        <button class="btn btn-primary" type="submit">Сахранить статью</button>
+                        <button class="btn btn-primary save" type="submit">Сахранить статью</button>
                     </form>
                 </div>
 

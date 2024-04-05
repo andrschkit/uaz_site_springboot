@@ -1,30 +1,26 @@
 package org.example.controllers;
 
-import org.example.domain.JsonResponse;
 import org.example.domain.MediaPost;
+import org.example.services.MediaService;
 import org.example.services.MessageService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.validation.BindingResult;
-import org.springframework.validation.ValidationUtils;
 import org.springframework.web.bind.annotation.*;
-import org.example.domain.Message;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.validation.Valid;
-
-import java.util.Optional;
+import java.util.ArrayList;
+import java.util.List;
 
 import static org.example.StaticString.*;
-import static org.example.controllers.ControllerUtils.getPreviousPageByRequest;
 
 @Controller
 public class MainController {
     private final MessageService messageService;
+    private final MediaService mediaService;
 
-    public MainController(MessageService messageService) {
+    public MainController(MessageService messageService, MediaService mediaService) {
 
         this.messageService = messageService;
+        this.mediaService = mediaService;
     }
 
     @GetMapping(URL_MAIN_PAGE)
@@ -46,7 +42,10 @@ public class MainController {
     }
     @GetMapping(URL_MEDIA)
     public String mediaPage(Model model) {
-        model.addAttribute("post", new MediaPost());
+        List<MediaPost> postList = new ArrayList<>();
+        postList= mediaService.findAllPosts();
+        model.addAttribute("posts",
+                postList);
         return "media";
     }
     @GetMapping(URL_HISTORY)

@@ -26,9 +26,10 @@
           <div class="container">
               <div class="row">
                   <div class="col-sm-12 mt-5">
-                      <h1 th:text="${post.title}">Title</h1>
-                      <div th:utext="${post.content}">Content</div>
-
+                      <div th:each="el:${posts}">
+                          <h1 th:text="${el.getTitle}">Title</h1>
+                          <div th:utext="${el.getContent}">Content</div>
+                      </div>
                       <a th:href="@{/editor}" class="btn btn-primary">Добавить статью</a>
                   </div>
               </div>
