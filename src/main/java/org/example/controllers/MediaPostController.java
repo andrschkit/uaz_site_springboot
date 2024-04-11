@@ -4,13 +4,12 @@ import org.example.domain.MediaPost;
 import org.example.services.MediaService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 import javax.validation.Valid;
+import java.io.IOException;
+import java.util.Base64;
 
 import static org.example.StaticString.*;
 
@@ -29,10 +28,12 @@ public class MediaPostController {
     }
     @PostMapping
     public String save(
-            @Valid @ModelAttribute(name = "post") MediaPost post,
+            @RequestParam("title_image") MultipartFile title_image,
+            @RequestParam("title") String title,
+            @RequestParam("short_content") String short_content,
+            @RequestParam("content") String content,
             Model model){
-        model.addAttribute("post", post);
-        mediaService.save(post);
+        mediaService.save(title_image, title, short_content, content);
         return "redirect:"+URL_MEDIA;
     }
 }

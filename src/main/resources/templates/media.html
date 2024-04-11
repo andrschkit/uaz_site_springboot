@@ -25,10 +25,17 @@
       <div class="container-fluid">
           <div class="container">
               <div class="row">
+                  <div th:action="@{/editor}" method="get" >
+                      <div th:each="el:${posts}">
+                          <label  class="post_id hidden" th:text="${el.getId}"></label>
+                          <img alt="" th:src="${'data:image/jpeg;base64,'+el.getTitle_image}" style="width: 100px;height: 100px;"/>
+                          <div th:utext="${el.getShort_content}">Контент</div>
+                      </div>
+                  </div>
                   <div class="col-sm-12 mt-5">
                       <div th:each="el:${posts}">
-                          <h1 th:text="${el.getTitle}">Title</h1>
-                          <div th:utext="${el.getContent}">Content</div>
+                          <h1 th:text="${el.getTitle}">Название</h1>
+                          <div th:utext="${el.getContent}">Статья</div>
                       </div>
                       <a th:href="@{/editor}" class="btn btn-primary">Добавить статью</a>
                   </div>

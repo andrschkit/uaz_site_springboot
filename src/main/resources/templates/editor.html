@@ -28,14 +28,28 @@
             <div class="container">
 
                 <div class="row">
-                    <form th:action="@{/editor}" method="post" th:object="${post}">
+                    <form th:action="@{/editor}" method="post" th:object="${post}" enctype="multipart/form-data">
 
-                        <input type="hidden" th:field="*{id}"/>
+                        <input class="hidden" th:field="*{id}"/>
 
                         <div class="form-group">
                             <label for="title">Название:</label>
                             <input type="text" id="title" placeholder="Название" autocomplete="off" class="form-control"
                                    th:field="*{title}"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="short_content">Короткий контент:</label>
+                            <input type="text" id="short_content" placeholder="Название" autocomplete="off" class="form-control"
+                                   th:field="*{short_content}"/>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="input-file">
+                                <input type="file" name="image" accept="image/*"
+                                       th:field="*{title_image}">
+                                <span class="input-file-btn">Выберите файл</span>
+                                <span class="input-file-text">Максимум 10мб</span>
+                            </label>
                         </div>
 
                         <div class="form-group">

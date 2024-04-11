@@ -16,5 +16,9 @@ spring:
             non_contextual_creation: true
     database: postgresql
     database-platform: "org.hibernate.dialect.PostgreSQL10Dialect"
+  servlet:
+    multipart:
+      max-file-size: 20MB
+      max-request-size: 20MB
 server:
   port: 8083

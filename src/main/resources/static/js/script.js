@@ -133,6 +133,10 @@ function resetErrorsInForm($form) {
 }
 
 
+$('.input-file input[type=file]').on('change', function(){
+    let file = this.files[0];
+    $(this).closest('.input-file').find('.input-file-text').html(file.name);
+});
 
 /*function doAjaxPost() {
     // get the form values
@@ -141,8 +145,8 @@ function resetErrorsInForm($form) {
 
     $.ajax({
         type: "POST",
-        url: contexPath + "/AddUser.htm",
-        data: "name=" + name + "&education=" + education,
+        url:
+        data: "contexPath + "/AddUser.htm",name=" + name + "&education=" + education,
         success: function(response){
             // we have the response
             if(response.status == "SUCCESS"){
