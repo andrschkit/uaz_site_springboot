@@ -4,23 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="63d29c66-ea9a-40cb-a3d4-b579f5e1bd53" name="Changes" comment="[BF]: fix margins">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application-dev.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application-prod.yml" afterDir="false" />
+    <list default="true" id="63d29c66-ea9a-40cb-a3d4-b579f5e1bd53" name="Changes" comment="NF:Short content for title box WYSIWYG">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/script_post_add.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/script_post_edit.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/addPost.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/blocks/inputPost.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/editPost.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/singlePost.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controllers/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controllers/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/blocks/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/blocks/header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/history.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/history.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/StaticString.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/StaticString.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controllers/MediaPostController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controllers/MediaPostController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/domain/MediaPost.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/domain/MediaPost.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/repositories/MediaRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/repositories/MediaRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/services/MediaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/services/MediaService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db/migration/V2__Init_Notes.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db/migration/V2__Init_Notes.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/StyleSheets/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/StyleSheets/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/editor.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/media.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/media.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/projects.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/projects.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/projects/kitay.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/projects/kitay.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/projects/monetka.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/projects/monetka.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/projects/ordinka.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/projects/ordinka.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/projects/vdnh.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/projects/vdnh.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/providers.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/providers.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/vacancies.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/vacancies.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,9 +32,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
+        <option value="Class" />
         <option value="HTML File" />
         <option value="JavaScript File" />
-        <option value="Class" />
       </list>
     </option>
   </component>
@@ -43,7 +46,6 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="RESET_MODE" value="HARD" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -69,13 +71,13 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/JOB/UAZ_Supplications",
+    "last_opened_file_path": "C:/Users/User/Documents/GitHub/UAZ_Supplications",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "spring.configuration.checksum": "43c385488b6baff9f1f826e581dbc89c",
+    "spring.configuration.checksum": "9ecfeb4f9516be01698fd41d1da6085c",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -86,11 +88,11 @@
       <recent name="C:\Users\Andrew\Documents\Projects\uaz_site_springboot\src\main\resources" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\JOB\uaz_site_springboot\src\main\resources\templates" />
-      <recent name="C:\JOB\uaz_site_springboot\src\main\resources\db\migration" />
-      <recent name="C:\Users\Andrew\Documents\Projects\uaz_site_springboot\src\main\resources\static\fancybox" />
-      <recent name="C:\Users\Andrew\Documents\Projects\uaz_site_springboot\src\main\resources\static" />
-      <recent name="C:\Users\Andrew\Documents\Projects\uaz_site_springboot\src\main\resources\static\gsap" />
+      <recent name="C:\Users\User\Documents\GitHub\uaz_site_springboot\src\main\resources\static" />
+      <recent name="C:\Users\User\Documents\GitHub\uaz_site_springboot\src\main\resources\static\summernote-0.8.18\bs4" />
+      <recent name="C:\Users\User\Documents\GitHub\uaz_site_springboot\src\main\resources\static\js" />
+      <recent name="C:\Users\User\Documents\GitHub\uaz_site_springboot\src\main\resources\static\summernote-0.8.18" />
+      <recent name="C:\Users\User\Documents\GitHub\uaz_site_springboot\src\main\resources\templates" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="org.example.dto" />
@@ -98,18 +100,18 @@
       <recent name="org.example" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="configurationTypes">
-      <set>
-        <option value="SpringBootApplicationConfigurationType" />
-      </set>
-    </option>
-  </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Spring Boot.SiteUazApplication">
+    <configuration name="SiteUazApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="uaz_site_springboot" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="org.example.SiteUazApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="SiteUazApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="ACTIVE_PROFILES" />
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
-      <module name="Site_UAZ" />
+      <module name="uaz_site_springboot" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="org.example.SiteUazApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -139,9 +141,12 @@
       <workItem from="1699422371290" duration="8382000" />
       <workItem from="1699512446251" duration="18374000" />
       <workItem from="1707892567930" duration="4658000" />
-      <workItem from="1711013370725" duration="8400000" />
-      <workItem from="1711025998600" duration="2205000" />
-      <workItem from="1711088160127" duration="2104000" />
+      <workItem from="1711955540618" duration="28235000" />
+      <workItem from="1712128970725" duration="1333000" />
+      <workItem from="1712131163551" duration="75463000" />
+      <workItem from="1712812455126" duration="4939000" />
+      <workItem from="1712827400464" duration="26313000" />
+      <workItem from="1713157902028" duration="51084000" />
     </task>
     <task id="LOCAL-00001" summary="Started commit">
       <option name="closed" value="true" />
@@ -205,7 +210,28 @@
       <option name="project" value="LOCAL" />
       <updated>1707907441333</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="NF: Add WYSIWYG">
+      <created>1712217415247</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1712217415247</updated>
+    </task>
+    <task id="LOCAL-00010" summary="BF: Base working with WYSIWYG">
+      <created>1712303118214</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1712303118214</updated>
+    </task>
+    <task id="LOCAL-00011" summary="NF:Short content for title box WYSIWYG">
+      <created>1712836018468</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1712836018468</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -216,19 +242,7 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="master" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
+            <State />
           </value>
         </entry>
       </map>
@@ -243,9 +257,21 @@
     <MESSAGE value="[NF]: validation(with nuance), migration" />
     <MESSAGE value="[BF]: fix mobile header margin" />
     <MESSAGE value="[BF]: fix margins" />
-    <option name="LAST_COMMIT_MESSAGE" value="[BF]: fix margins" />
+    <MESSAGE value="NF: Add WYSIWYG" />
+    <MESSAGE value="BF: Base working with WYSIWYG" />
+    <MESSAGE value="NF:Short content for title box WYSIWYG" />
+    <option name="LAST_COMMIT_MESSAGE" value="NF:Short content for title box WYSIWYG" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/services/MediaService.java</url>
+          <line>36</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo parentTag="org.example.domain.JsonResponse" memberName="status" />

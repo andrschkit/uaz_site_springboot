@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Andrew Shcherbakov">
+    <title>Медиацентр</title>
+    <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="/summernote-0.8.20/summernote-lite.css" rel="stylesheet"/>
+    <link href="/StyleSheets/summ_bs5.css" rel="stylesheet"/>
+    <link href="/StyleSheets/style.css" rel="stylesheet"/>
+    <link rel="shortcut icon" href="/images/Logo.svg" type="image/x-icon"/>
+</head>
+
+<body>
+
+<header th:insert="blocks/header.html"> </header>
+<main>
+    <div class="preloader"></div>
+    <div style="display:none;" id="myDiv" class="animate-bottom">
+        <div class="pricing-header p-3 pb-md-4 mx-auto text-center border-bottom border-3 mb-5">
+            <h3 class="display-4 fw-normal">Редактор Статей</h3>
+        </div>
+
+        <div class="container-fluid">
+
+            <div class="container">
+
+                <div class="row">
+                    <form th:action="@{/editPost}" method="post" enctype="multipart/form-data" th:object="${singlePost}">
+                        <div th:insert="blocks/inputPost" style="width: 100%"></div>
+                    </form>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</main>
+
+<div class="btn-up btn-up_hide"> <img src="/images/up-arrow.svg" alt=""/></div>
+
+<footer th:insert="blocks/footer.html"> </footer>
+
+<script src="/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="/js/jquery-3.7.1.js"></script>
+<script src="/summernote-0.8.20/summernote-lite.min.js"></script>
+<script src="/summernote-0.8.20/lang/summernote-ru-RU.js"></script>
+<script src="/js/summ-bs5.js"></script>
+<script src="/js/script.js"></script>
+
+</body>
+</html>

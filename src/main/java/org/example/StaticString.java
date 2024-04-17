@@ -7,6 +7,9 @@ public final class StaticString {
     public static final String URL_VACANCIES = "/vacancies";
     public static final String URL_MEDIA = "/media";
     public static final String URL_HISTORY = "/history";
+    public static final String URL_ADD_POSTS = "/addPost";
+    public static final String URL_EDIT_POSTS = "/editPost";
+    public static final String URL_POST = "/singlePost";
     public static final String URL_PROJECT_ORDINKA = "/projects/ordinka";
     public static final String URL_PROJECT_KITAY = "/projects/kitay";
     public static final String URL_PROJECT_VDNH = "/projects/vdnh";

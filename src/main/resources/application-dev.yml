@@ -2,8 +2,11 @@ spring:
   datasource:
     url: "jdbc:postgresql://localhost:5432/Callback-UAZ-dev"
     username: "postgres"
-    password: "7723"
+    password: "qwerty"
     driver-class-name: org.postgresql.Driver
+    hikari:
+      auto-commit: false
+
   jpa:
     show-sql: true
     generate-ddl: false
@@ -16,5 +19,13 @@ spring:
             non_contextual_creation: true
     database: postgresql
     database-platform: "org.hibernate.dialect.PostgreSQL10Dialect"
+
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 100MB
+
 server:
   port: 8083
+  tomcat:
+    max-http-form-post-size: 100MB

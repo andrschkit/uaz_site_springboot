@@ -132,7 +132,13 @@ function resetErrorsInForm($form) {
     $form.find('input:text, input:password, input:file, select, textarea').removeClass("is-invalid");
 }
 
-
+let img=document.getElementById('title_image');
+if (img!=null){
+    img.onchange = function () {
+        let src = URL.createObjectURL(this.files[0])
+        document.getElementById('file_img').src = src
+    }
+}
 
 /*function doAjaxPost() {
     // get the form values
@@ -141,8 +147,8 @@ function resetErrorsInForm($form) {
 
     $.ajax({
         type: "POST",
-        url: contexPath + "/AddUser.htm",
-        data: "name=" + name + "&education=" + education,
+        url:
+        data: "contexPath + "/AddUser.htm",name=" + name + "&education=" + education,
         success: function(response){
             // we have the response
             if(response.status == "SUCCESS"){
