@@ -1,0 +1,44 @@
+<div th:fragment="inputPost">
+
+    <input class="hidden" th:field="*{id}"/>
+
+    <div class="form-group" style="display: grid; grid-template-columns: 1fr 4fr; align-items: center; justify-items: start">
+        <div class="form-group" style="justify-items: end; justify-content: end">
+            <div class="input-file-row">
+                <label class="input-file" style="display: grid;">
+                    <input type="file" id="title_image" name="file" accept="image/*"
+                           th:field="*{title_image}">
+                    <div class="input-file-list-item">
+                        <img alt="" class="input-file-list-img" id="file_img" th:src="${'data:image/jpeg;base64,'+singlePost.getTitle_image()}"/>
+                    </div>
+                    <span>Выберите файл</span>
+                    </input>
+                </label>
+                <div class="input-file-list"></div>
+            </div>
+        </div>
+        <div class="form-group" style="width: 100%;padding-bottom: 80px">
+            <div class="form-group mb-3">
+                <label for="title">Название:</label>
+                <input type="text" id="title" placeholder="Название" autocomplete="off" class="form-control"
+                       th:field="*{title}"/>
+            </div>
+
+            <div class="form-group">
+                <label for="short_content">Короткий контент:</label>
+                <input type="text" id="short_content" placeholder="Контент" autocomplete="off" class="form-control"
+                       th:field="*{short_content}"/>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="form-group">
+        <label for="content">Контент:</label>
+        <textarea type="text" rows="4" id="content" placeholder="Контент" class="form-control"
+                  th:field="*{content}" autocomplete="off"></textarea>
+    </div>
+
+    <button class="btn btn-primary save mb-3" type="submit">Сохранить статью</button>
+
+</div>

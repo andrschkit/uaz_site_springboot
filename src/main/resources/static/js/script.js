@@ -132,11 +132,13 @@ function resetErrorsInForm($form) {
     $form.find('input:text, input:password, input:file, select, textarea').removeClass("is-invalid");
 }
 
-
-$('.input-file input[type=file]').on('change', function(){
-    let file = this.files[0];
-    $(this).closest('.input-file').find('.input-file-text').html(file.name);
-});
+let img=document.getElementById('title_image');
+if (img!=null){
+    img.onchange = function () {
+        let src = URL.createObjectURL(this.files[0])
+        document.getElementById('file_img').src = src
+    }
+}
 
 /*function doAjaxPost() {
     // get the form values

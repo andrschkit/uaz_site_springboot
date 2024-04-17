@@ -21,27 +21,21 @@
       <div class="pricing-header p-3 pb-md-4 mx-auto text-center border-bottom border-3 mb-5">
         <h3 class="display-4 fw-normal">Медиацентр и Новости АО "УАЗ"</h3>
       </div>
-
-      <div class="container-fluid">
-          <div class="container">
-              <div class="row">
-                  <div th:action="@{/editor}" method="get" >
-                      <div th:each="el:${posts}">
-                          <label  class="post_id hidden" th:text="${el.getId}"></label>
-                          <img alt="" th:src="${'data:image/jpeg;base64,'+el.getTitle_image}" style="width: 100px;height: 100px;"/>
-                          <div th:utext="${el.getShort_content}">Контент</div>
+          <div class="container my-5 mb-cont ">
+              <a th:action="@{/addPost}" method="get" style="color:black; text-decoration: none;">
+                  <div class="row current_news p-5 mb-5 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg" th:each="el:${posts}">
+                      <label  class="post_id hidden" th:text="${el.getId}"></label>
+                      <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
+                          <h1 class="display-4 fw-bold h-2" th:utext="${el.getTitle}"></h1>
+                          <p class="lead" th:utext="${el.getShort_content}"></p>
+                      </div>
+                      <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden img-shadow">
+                          <img class="rounded-lg-3 d-block" th:src="${'data:image/jpeg;base64,'+el.getTitle_image}" alt="" width="500" style="max-height: 310px; object-fit: cover;">
                       </div>
                   </div>
-                  <div class="col-sm-12 mt-5">
-                      <div th:each="el:${posts}">
-                          <h1 th:text="${el.getTitle}">Название</h1>
-                          <div th:utext="${el.getContent}">Статья</div>
-                      </div>
-                      <a th:href="@{/editor}" class="btn btn-primary">Добавить статью</a>
-                  </div>
-              </div>
+              </a>
           </div>
-      </div>
+          <a th:href="@{/addPost}" class="btn btn-primary mb-3">Добавить статью</a>
   </div>  
 </main>
 
@@ -52,6 +46,7 @@
 <script src="/js/jquery-3.7.1.js"></script>
 <script src="/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="/js/script.js"></script>
+<script src="/js/script_post_add.js"></script>
 
 
   </body>

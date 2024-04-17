@@ -1,13 +1,13 @@
 package org.example.domain;
 
+import org.springframework.transaction.annotation.Transactional;
+
 import javax.persistence.*;
-import javax.validation.constraints.NotBlank;
 
-import java.util.Base64;
-
-import static org.example.StaticString.MESSAGE_ENTER_NAME;
+import java.sql.Timestamp;
 
 @Entity
+@Transactional
 @Table(name = "note",
         schema="notes")
 public class MediaPost {
@@ -15,6 +15,11 @@ public class MediaPost {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", unique = true)
     private Long id;
+    @Column(name = "create_date")
+    private Timestamp createDate;
+
+    @Column(name = "modify_date")
+    private Timestamp modifyDate;
     @Column(name = "title")
     private String title;
     @Column(name = "content")
@@ -31,6 +36,22 @@ public class MediaPost {
 
     public void setTitle(String title) {
         this.title = title;
+    }
+
+    public Timestamp getCreateDate() {
+        return createDate;
+    }
+
+    public void setCreateDate(Timestamp createDate) {
+        this.createDate = createDate;
+    }
+
+    public Timestamp getModifyDate() {
+        return modifyDate;
+    }
+
+    public void setModifyDate(Timestamp modifyDate) {
+        this.modifyDate = modifyDate;
     }
 
     public String getContent() {
