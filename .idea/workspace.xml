@@ -4,32 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="63d29c66-ea9a-40cb-a3d4-b579f5e1bd53" name="Changes" comment="NF: lite refactoring">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/StyleSheets/style_carousel.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/StyleSheets/style_mobile.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/jquery-3.4.1.slim.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/StyleSheets/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/StyleSheets/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/summernote-0.8.20/summernote-lite.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/summernote-0.8.20/summernote-lite.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/summernote-0.8.20/summernote-lite.css.map" beforeDir="false" />
+    <list default="true" id="63d29c66-ea9a-40cb-a3d4-b579f5e1bd53" name="Changes" comment="NF: summernote-lite.js">
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/summernote-0.8.20/summernote-lite.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/summernote-0.8.20/summernote-lite.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/summernote-0.8.20/summernote-lite.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/summernote-0.8.20/summernote-lite.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/summernote-0.8.20/summernote-lite.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/addPost.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/addPost.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/blocks/inputPost.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/blocks/inputPost.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/editPost.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/editPost.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/history.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/history.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/media.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/media.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/projects.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/projects.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/projects/kitay.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/projects/kitay.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/projects/monetka.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/projects/monetka.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/projects/ordinka.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/projects/ordinka.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/projects/vdnh.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/projects/vdnh.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/providers.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/providers.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/singlePost.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/singlePost.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/vacancies.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/vacancies.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -247,7 +223,14 @@
       <option name="project" value="LOCAL" />
       <updated>1713342484818</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="NF: lite refactoring">
+      <created>1713439131984</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1713439131984</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -278,7 +261,8 @@
     <MESSAGE value="NF:Short content for title box WYSIWYG" />
     <MESSAGE value="NF: WYSIWYG complete. Beta test" />
     <MESSAGE value="NF: lite refactoring" />
-    <option name="LAST_COMMIT_MESSAGE" value="NF: lite refactoring" />
+    <MESSAGE value="NF: summernote-lite.js" />
+    <option name="LAST_COMMIT_MESSAGE" value="NF: summernote-lite.js" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

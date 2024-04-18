@@ -1,39 +1,237 @@
 /*!
  * 
- * Super simple WYSIWYG editor v0.8.20
+ * Super simple wysiwyg editor v0.8.18
  * https://summernote.org
- *
- *
- * Copyright 2013- Alan Hong and contributors
- * Summernote may be freely distributed under the MIT license.
- *
- * Date: 2021-10-14T21:15Z
- *
+ * 
+ * 
+ * Copyright 2013- Alan Hong. and other contributors
+ * summernote may be freely distributed under the MIT license.
+ * 
+ * Date: 2020-05-20T18:09Z
+ * 
  */
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
-		module.exports = factory(require("jQuery"));
+		module.exports = factory(require("jquery"));
 	else if(typeof define === 'function' && define.amd)
-		define(["jQuery"], factory);
+		define(["jquery"], factory);
 	else {
-		let a = typeof exports === 'object' ? factory(require("jQuery")) : factory(root["jQuery"]);
-		for(let i in a) (typeof exports === 'object' ? exports : root)[i] = a[i];
+		var a = typeof exports === 'object' ? factory(require("jquery")) : factory(root["jQuery"]);
+		for(var i in a) (typeof exports === 'object' ? exports : root)[i] = a[i];
 	}
-})(self, function(__WEBPACK_EXTERNAL_MODULE__1145__) {
-return /******/ (() => { // webpackBootstrap
-/******/ 	"use strict";
-/******/ 	let __webpack_modules__ = ({
+})(window, function(__WEBPACK_EXTERNAL_MODULE__0__) {
+return /******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId]) {
+/******/ 			return installedModules[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, { enumerable: true, get: getter });
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// define __esModule on exports
+/******/ 	__webpack_require__.r = function(exports) {
+/******/ 		if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 			Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 		}
+/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 	};
+/******/
+/******/ 	// create a fake namespace object
+/******/ 	// mode & 1: value is a module id, require it
+/******/ 	// mode & 2: merge all properties of value into the ns
+/******/ 	// mode & 4: return value when already ns object
+/******/ 	// mode & 8|1: behave like require
+/******/ 	__webpack_require__.t = function(value, mode) {
+/******/ 		if(mode & 1) value = __webpack_require__(value);
+/******/ 		if(mode & 8) return value;
+/******/ 		if((mode & 4) && typeof value === 'object' && value && value.__esModule) return value;
+/******/ 		var ns = Object.create(null);
+/******/ 		__webpack_require__.r(ns);
+/******/ 		Object.defineProperty(ns, 'default', { enumerable: true, value: value });
+/******/ 		if(mode & 2 && typeof value != 'string') for(var key in value) __webpack_require__.d(ns, key, function(key) { return value[key]; }.bind(null, key));
+/******/ 		return ns;
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "";
+/******/
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = 51);
+/******/ })
+/************************************************************************/
+/******/ ({
 
-/***/ 9770:
-/***/ ((__unused_webpack_module, __unused_webpack___webpack_exports__, __webpack_require__) => {
+/***/ 0:
+/***/ (function(module, exports) {
 
-/* harmony import */ let jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1145);
-/* harmony import */ let jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
+module.exports = __WEBPACK_EXTERNAL_MODULE__0__;
 
-(jquery__WEBPACK_IMPORTED_MODULE_0___default().summernote) = (jquery__WEBPACK_IMPORTED_MODULE_0___default().summernote) || {
+/***/ }),
+
+/***/ 1:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(0);
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+
+
+var Renderer = /*#__PURE__*/function () {
+  function Renderer(markup, children, options, callback) {
+    _classCallCheck(this, Renderer);
+
+    this.markup = markup;
+    this.children = children;
+    this.options = options;
+    this.callback = callback;
+  }
+
+  _createClass(Renderer, [{
+    key: "render",
+    value: function render($parent) {
+      var $node = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this.markup);
+
+      if (this.options && this.options.contents) {
+        $node.html(this.options.contents);
+      }
+
+      if (this.options && this.options.className) {
+        $node.addClass(this.options.className);
+      }
+
+      if (this.options && this.options.data) {
+        jquery__WEBPACK_IMPORTED_MODULE_0___default.a.each(this.options.data, function (k, v) {
+          $node.attr('data-' + k, v);
+        });
+      }
+
+      if (this.options && this.options.click) {
+        $node.on('click', this.options.click);
+      }
+
+      if (this.children) {
+        var $container = $node.find('.note-children-container');
+        this.children.forEach(function (child) {
+          child.render($container.length ? $container : $node);
+        });
+      }
+
+      if (this.callback) {
+        this.callback($node, this.options);
+      }
+
+      if (this.options && this.options.callback) {
+        this.options.callback($node);
+      }
+
+      if ($parent) {
+        $parent.append($node);
+      }
+
+      return $node;
+    }
+  }]);
+
+  return Renderer;
+}();
+
+/* harmony default export */ __webpack_exports__["a"] = ({
+  create: function create(markup, callback) {
+    return function () {
+      var options = _typeof(arguments[1]) === 'object' ? arguments[1] : arguments[0];
+      var children = Array.isArray(arguments[0]) ? arguments[0] : [];
+
+      if (options && options.children) {
+        children = options.children;
+      }
+
+      return new Renderer(markup, children, options, callback);
+    };
+  }
+});
+
+/***/ }),
+
+/***/ 2:
+/***/ (function(module, exports) {
+
+/* WEBPACK VAR INJECTION */(function(__webpack_amd_options__) {/* globals __webpack_amd_options__ */
+module.exports = __webpack_amd_options__;
+
+/* WEBPACK VAR INJECTION */}.call(this, {}))
+
+/***/ }),
+
+/***/ 3:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+
+// EXTERNAL MODULE: external {"root":"jQuery","commonjs2":"jquery","commonjs":"jquery","amd":"jquery"}
+var external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_ = __webpack_require__(0);
+var external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default = /*#__PURE__*/__webpack_require__.n(external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_);
+
+// CONCATENATED MODULE: ./src/js/base/summernote-en-US.js
+
+external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default.a.summernote = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default.a.summernote || {
   lang: {}
 };
-jquery__WEBPACK_IMPORTED_MODULE_0___default().extend((jquery__WEBPACK_IMPORTED_MODULE_0___default().summernote.lang), {
+external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default.a.extend(external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default.a.summernote.lang, {
   'en-US': {
     font: {
       bold: 'Bold',
@@ -76,7 +274,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default().extend((jquery__WEBPACK_IMPORTED_M
       videoLink: 'Video Link',
       insert: 'Insert Video',
       url: 'Video URL',
-      providers: '(YouTube, Google Drive, Vimeo, Vine, Instagram, DailyMotion, Youku, Peertube)'
+      providers: '(YouTube, Vimeo, Vine, Instagram, DailyMotion or Youku)'
     },
     link: {
       link: 'Link',
@@ -194,96 +392,9 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default().extend((jquery__WEBPACK_IMPORTED_M
     }
   }
 });
+// CONCATENATED MODULE: ./src/js/base/core/env.js
 
-/***/ }),
-
-/***/ 1145:
-/***/ ((module) => {
-
-module.exports = __WEBPACK_EXTERNAL_MODULE__1145__;
-
-/***/ })
-
-/******/ 	});
-/************************************************************************/
-/******/ 	// The module cache
-/******/ 	let __webpack_module_cache__ = {};
-/******/ 	
-/******/ 	// The require function
-/******/ 	function __webpack_require__(moduleId) {
-/******/ 		// Check if module is in cache
-/******/ 		let cachedModule = __webpack_module_cache__[moduleId];
-/******/ 		if (cachedModule !== undefined) {
-/******/ 			return cachedModule.exports;
-/******/ 		}
-/******/ 		// Create a new module (and put it into the cache)
-/******/ 		let module = __webpack_module_cache__[moduleId] = {
-/******/ 			// no module.id needed
-/******/ 			// no module.loaded needed
-/******/ 			exports: {}
-/******/ 		};
-/******/ 	
-/******/ 		// Execute the module function
-/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
-/******/ 	
-/******/ 		// Return the exports of the module
-/******/ 		return module.exports;
-/******/ 	}
-/******/ 	
-/************************************************************************/
-/******/ 	/* webpack/runtime/compat get default export */
-/******/ 	(() => {
-/******/ 		// getDefaultExport function for compatibility with non-harmony modules
-/******/ 		__webpack_require__.n = (module) => {
-/******/ 			let getter = module && module.__esModule ?
-/******/ 				() => (module['default']) :
-/******/ 				() => (module);
-/******/ 			__webpack_require__.d(getter, { a: getter });
-/******/ 			return getter;
-/******/ 		};
-/******/ 	})();
-/******/ 	
-/******/ 	/* webpack/runtime/define property getters */
-/******/ 	(() => {
-/******/ 		// define getter functions for harmony exports
-/******/ 		__webpack_require__.d = (exports, definition) => {
-/******/ 			for(let key in definition) {
-/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
-/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
-/******/ 				}
-/******/ 			}
-/******/ 		};
-/******/ 	})();
-/******/ 	
-/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
-/******/ 	(() => {
-/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
-/******/ 	})();
-/******/ 	
-/******/ 	/* webpack/runtime/make namespace object */
-/******/ 	(() => {
-/******/ 		// define __esModule on exports
-/******/ 		__webpack_require__.r = (exports) => {
-/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
-/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
-/******/ 			}
-/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
-/******/ 		};
-/******/ 	})();
-/******/ 	
-/************************************************************************/
-let __webpack_exports__ = {};
-// This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
-(() => {
-// ESM COMPAT FLAG
-__webpack_require__.r(__webpack_exports__);
-
-// EXTERNAL MODULE: external "jQuery"
-let external_jQuery_ = __webpack_require__(1145);
-let external_jQuery_default = /*#__PURE__*/__webpack_require__.n(external_jQuery_);
-// EXTERNAL MODULE: ./src/lang/summernote-en-US.js
-let summernote_en_US = __webpack_require__(9770);
-;// CONCATENATED MODULE: ./src/js/core/env.js
+var isSupportAmd = typeof define === 'function' && __webpack_require__(2); // eslint-disable-line
 
 /**
  * returns whether font is installed or not.
@@ -292,31 +403,31 @@ let summernote_en_US = __webpack_require__(9770);
  * @return {Boolean}
  */
 
-let genericFontFamilies = ['sans-serif', 'serif', 'monospace', 'cursive', 'fantasy'];
+var genericFontFamilies = ['sans-serif', 'serif', 'monospace', 'cursive', 'fantasy'];
 
 function validFontName(fontName) {
-  return external_jQuery_default().inArray(fontName.toLowerCase(), genericFontFamilies) === -1 ? "'".concat(fontName, "'") : fontName;
+  return external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default.a.inArray(fontName.toLowerCase(), genericFontFamilies) === -1 ? "'".concat(fontName, "'") : fontName;
 }
 
-function isFontInstalled(fontName) {
-  let testFontName = fontName === 'Comic Sans MS' ? 'Courier New' : 'Comic Sans MS';
-  let testText = 'mmmmmmmmmmwwwww';
-  let testSize = '200px';
-  let canvas = document.createElement('canvas');
-  let context = canvas.getContext('2d');
+function env_isFontInstalled(fontName) {
+  var testFontName = fontName === 'Comic Sans MS' ? 'Courier New' : 'Comic Sans MS';
+  var testText = 'mmmmmmmmmmwwwww';
+  var testSize = '200px';
+  var canvas = document.createElement('canvas');
+  var context = canvas.getContext('2d');
   context.font = testSize + " '" + testFontName + "'";
-  let originalWidth = context.measureText(testText).width;
+  var originalWidth = context.measureText(testText).width;
   context.font = testSize + ' ' + validFontName(fontName) + ', "' + testFontName + '"';
-  let width = context.measureText(testText).width;
+  var width = context.measureText(testText).width;
   return originalWidth !== width;
 }
 
-let userAgent = navigator.userAgent;
-let isMSIE = /MSIE|Trident/i.test(userAgent);
-let browserVersion;
+var userAgent = navigator.userAgent;
+var isMSIE = /MSIE|Trident/i.test(userAgent);
+var browserVersion;
 
 if (isMSIE) {
-  let matches = /MSIE (\d+[.]\d+)/.exec(userAgent);
+  var matches = /MSIE (\d+[.]\d+)/.exec(userAgent);
 
   if (matches) {
     browserVersion = parseFloat(matches[1]);
@@ -329,11 +440,11 @@ if (isMSIE) {
   }
 }
 
-let isEdge = /Edge\/\d+/.test(userAgent);
-let isSupportTouch = 'ontouchstart' in window || navigator.MaxTouchPoints > 0 || navigator.msMaxTouchPoints > 0; // [workaround] IE doesn't have input events for contentEditable
+var isEdge = /Edge\/\d+/.test(userAgent);
+var isSupportTouch = 'ontouchstart' in window || navigator.MaxTouchPoints > 0 || navigator.msMaxTouchPoints > 0; // [workaround] IE doesn't have input events for contentEditable
 // - see: https://goo.gl/4bfIvA
 
-let inputEventName = isMSIE ? 'DOMCharacterDataModified DOMSubtreeModified DOMNodeInserted' : 'input';
+var inputEventName = isMSIE ? 'DOMCharacterDataModified DOMSubtreeModified DOMNodeInserted' : 'input';
 /**
  * @class core.env
  *
@@ -343,7 +454,7 @@ let inputEventName = isMSIE ? 'DOMCharacterDataModified DOMSubtreeModified DOMNo
  * @alternateClassName env
  */
 
-/* harmony default export */ const env = ({
+/* harmony default export */ var env = ({
   isMac: navigator.appVersion.indexOf('Mac') > -1,
   isMSIE: isMSIE,
   isEdge: isEdge,
@@ -353,14 +464,16 @@ let inputEventName = isMSIE ? 'DOMCharacterDataModified DOMSubtreeModified DOMNo
   isChrome: !isEdge && /chrome/i.test(userAgent),
   isSafari: !isEdge && /safari/i.test(userAgent) && !/chrome/i.test(userAgent),
   browserVersion: browserVersion,
+  jqueryVersion: parseFloat(external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default.a.fn.jquery),
+  isSupportAmd: isSupportAmd,
   isSupportTouch: isSupportTouch,
-  isFontInstalled: isFontInstalled,
+  isFontInstalled: env_isFontInstalled,
   isW3CRangeSupport: !!document.createRange,
   inputEventName: inputEventName,
   genericFontFamilies: genericFontFamilies,
   validFontName: validFontName
 });
-;// CONCATENATED MODULE: ./src/js/core/func.js
+// CONCATENATED MODULE: ./src/js/base/core/func.js
 
 /**
  * @class core.func
@@ -411,13 +524,13 @@ function func_self(a) {
   return a;
 }
 
-function invoke(obj, method) {
+function func_invoke(obj, method) {
   return function () {
     return obj[method].apply(obj, arguments);
   };
 }
 
-let idCounter = 0;
+var idCounter = 0;
 /**
  * reset globally-unique id
  *
@@ -434,7 +547,7 @@ function resetUniqueId() {
 
 
 function uniqueId(prefix) {
-  let id = ++idCounter + '';
+  var id = ++idCounter + '';
   return prefix ? prefix + id : id;
 }
 /**
@@ -453,7 +566,7 @@ function uniqueId(prefix) {
 
 
 function rect2bnd(rect) {
-  let $document = external_jQuery_default()(document);
+  var $document = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(document);
   return {
     top: rect.top + $document.scrollTop(),
     left: rect.left + $document.scrollLeft(),
@@ -469,9 +582,9 @@ function rect2bnd(rect) {
 
 
 function invertObject(obj) {
-  let inverted = {};
+  var inverted = {};
 
-  for (let key in obj) {
+  for (var key in obj) {
     if (Object.prototype.hasOwnProperty.call(obj, key)) {
       inverted[obj[key]] = key;
     }
@@ -505,12 +618,12 @@ function namespaceToCamel(namespace, prefix) {
 
 
 function debounce(func, wait, immediate) {
-  let timeout;
+  var timeout;
   return function () {
-    let context = this;
-    let args = arguments;
+    var context = this;
+    var args = arguments;
 
-    let later = function later() {
+    var later = function later() {
       timeout = null;
 
       if (!immediate) {
@@ -518,7 +631,7 @@ function debounce(func, wait, immediate) {
       }
     };
 
-    let callNow = immediate && !timeout;
+    var callNow = immediate && !timeout;
     clearTimeout(timeout);
     timeout = setTimeout(later, wait);
 
@@ -535,11 +648,11 @@ function debounce(func, wait, immediate) {
 
 
 function isValidUrl(url) {
-  let expression = /[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/gi;
+  var expression = /[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/gi;
   return expression.test(url);
 }
 
-/* harmony default export */ const func = ({
+/* harmony default export */ var func = ({
   eq: eq,
   eq2: eq2,
   peq2: peq2,
@@ -548,7 +661,7 @@ function isValidUrl(url) {
   self: func_self,
   not: not,
   and: and,
-  invoke: invoke,
+  invoke: func_invoke,
   resetUniqueId: resetUniqueId,
   uniqueId: uniqueId,
   rect2bnd: rect2bnd,
@@ -557,7 +670,7 @@ function isValidUrl(url) {
   debounce: debounce,
   isValidUrl: isValidUrl
 });
-;// CONCATENATED MODULE: ./src/js/core/lists.js
+// CONCATENATED MODULE: ./src/js/base/core/lists.js
 
 /**
  * returns the first item of an array.
@@ -565,7 +678,7 @@ function isValidUrl(url) {
  * @param {Array} array
  */
 
-function head(array) {
+function lists_head(array) {
   return array[0];
 }
 /**
@@ -575,7 +688,7 @@ function head(array) {
  */
 
 
-function last(array) {
+function lists_last(array) {
   return array[array.length - 1];
 }
 /**
@@ -604,8 +717,8 @@ function tail(array) {
 
 
 function find(array, pred) {
-  for (let idx = 0, len = array.length; idx < len; idx++) {
-    let item = array[idx];
+  for (var idx = 0, len = array.length; idx < len; idx++) {
+    var item = array[idx];
 
     if (pred(item)) {
       return item;
@@ -618,7 +731,7 @@ function find(array, pred) {
 
 
 function lists_all(array, pred) {
-  for (let idx = 0, len = array.length; idx < len; idx++) {
+  for (var idx = 0, len = array.length; idx < len; idx++) {
     if (!pred(array[idx])) {
       return false;
     }
@@ -664,9 +777,9 @@ function sum(array, fn) {
 
 
 function from(collection) {
-  let result = [];
-  let length = collection.length;
-  let idx = -1;
+  var result = [];
+  var length = collection.length;
+  var idx = -1;
 
   while (++idx < length) {
     result[idx] = collection[idx];
@@ -679,7 +792,7 @@ function from(collection) {
  */
 
 
-function isEmpty(array) {
+function lists_isEmpty(array) {
   return !array || !array.length;
 }
 /**
@@ -696,18 +809,18 @@ function clusterBy(array, fn) {
     return [];
   }
 
-  let aTail = tail(array);
+  var aTail = tail(array);
   return aTail.reduce(function (memo, v) {
-    let aLast = last(memo);
+    var aLast = lists_last(memo);
 
-    if (fn(last(aLast), v)) {
+    if (fn(lists_last(aLast), v)) {
       aLast[aLast.length] = v;
     } else {
       memo[memo.length] = [v];
     }
 
     return memo;
-  }, [[head(array)]]);
+  }, [[lists_head(array)]]);
 }
 /**
  * returns a copy of the array with all false values removed
@@ -718,9 +831,9 @@ function clusterBy(array, fn) {
 
 
 function compact(array) {
-  let aResult = [];
+  var aResult = [];
 
-  for (let idx = 0, len = array.length; idx < len; idx++) {
+  for (var idx = 0, len = array.length; idx < len; idx++) {
     if (array[idx]) {
       aResult.push(array[idx]);
     }
@@ -736,9 +849,9 @@ function compact(array) {
 
 
 function unique(array) {
-  let results = [];
+  var results = [];
 
-  for (let idx = 0, len = array.length; idx < len; idx++) {
+  for (var idx = 0, len = array.length; idx < len; idx++) {
     if (!contains(results, array[idx])) {
       results.push(array[idx]);
     }
@@ -752,9 +865,9 @@ function unique(array) {
  */
 
 
-function next(array, item) {
+function lists_next(array, item) {
   if (array && array.length && item) {
-    let idx = array.indexOf(item);
+    var idx = array.indexOf(item);
     return idx === -1 ? null : array[idx + 1];
   }
 
@@ -768,7 +881,7 @@ function next(array, item) {
 
 function prev(array, item) {
   if (array && array.length && item) {
-    let idx = array.indexOf(item);
+    var idx = array.indexOf(item);
     return idx === -1 ? null : array[idx - 1];
   }
 
@@ -784,30 +897,30 @@ function prev(array, item) {
  */
 
 
-/* harmony default export */ const lists = ({
-  head: head,
-  last: last,
+/* harmony default export */ var lists = ({
+  head: lists_head,
+  last: lists_last,
   initial: initial,
   tail: tail,
   prev: prev,
-  next: next,
+  next: lists_next,
   find: find,
   contains: contains,
   all: lists_all,
   sum: sum,
   from: from,
-  isEmpty: isEmpty,
+  isEmpty: lists_isEmpty,
   clusterBy: clusterBy,
   compact: compact,
   unique: unique
 });
-;// CONCATENATED MODULE: ./src/js/core/dom.js
+// CONCATENATED MODULE: ./src/js/base/core/dom.js
 
 
 
 
-let NBSP_CHAR = String.fromCharCode(160);
-let ZERO_WIDTH_NBSP_CHAR = "\uFEFF";
+var NBSP_CHAR = String.fromCharCode(160);
+var ZERO_WIDTH_NBSP_CHAR = "\uFEFF";
 /**
  * @method isEditable
  *
@@ -818,7 +931,7 @@ let ZERO_WIDTH_NBSP_CHAR = "\uFEFF";
  */
 
 function isEditable(node) {
-  return node && external_jQuery_default()(node).hasClass('note-editable');
+  return node && external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(node).hasClass('note-editable');
 }
 /**
  * @method isControlSizing
@@ -831,7 +944,7 @@ function isEditable(node) {
 
 
 function isControlSizing(node) {
-  return node && external_jQuery_default()(node).hasClass('note-control-sizing');
+  return node && external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(node).hasClass('note-control-sizing');
 }
 /**
  * @method makePredByNodeName
@@ -898,17 +1011,17 @@ function isHeading(node) {
   return node && /^H[1-7]/.test(node.nodeName.toUpperCase());
 }
 
-let isPre = makePredByNodeName('PRE');
-let isLi = makePredByNodeName('LI');
+var isPre = makePredByNodeName('PRE');
+var isLi = makePredByNodeName('LI');
 
 function isPurePara(node) {
   return isPara(node) && !isLi(node);
 }
 
-let isTable = makePredByNodeName('TABLE');
-let isData = makePredByNodeName('DATA');
+var isTable = makePredByNodeName('TABLE');
+var isData = makePredByNodeName('DATA');
 
-function isInline(node) {
+function dom_isInline(node) {
   return !isBodyContainer(node) && !isList(node) && !isHr(node) && !isPara(node) && !isTable(node) && !isBlockquote(node) && !isData(node);
 }
 
@@ -916,29 +1029,29 @@ function isList(node) {
   return node && /^UL|^OL/.test(node.nodeName.toUpperCase());
 }
 
-let isHr = makePredByNodeName('HR');
+var isHr = makePredByNodeName('HR');
 
-function isCell(node) {
+function dom_isCell(node) {
   return node && /^TD|^TH/.test(node.nodeName.toUpperCase());
 }
 
-let isBlockquote = makePredByNodeName('BLOCKQUOTE');
+var isBlockquote = makePredByNodeName('BLOCKQUOTE');
 
 function isBodyContainer(node) {
-  return isCell(node) || isBlockquote(node) || isEditable(node);
+  return dom_isCell(node) || isBlockquote(node) || isEditable(node);
 }
 
-let isAnchor = makePredByNodeName('A');
+var isAnchor = makePredByNodeName('A');
 
 function isParaInline(node) {
-  return isInline(node) && !!ancestor(node, isPara);
+  return dom_isInline(node) && !!dom_ancestor(node, isPara);
 }
 
 function isBodyInline(node) {
-  return isInline(node) && !ancestor(node, isPara);
+  return dom_isInline(node) && !dom_ancestor(node, isPara);
 }
 
-let isBody = makePredByNodeName('BODY');
+var isBody = makePredByNodeName('BODY');
 /**
  * returns whether nodeB is closest sibling of nodeA
  *
@@ -961,7 +1074,7 @@ function isClosestSibling(nodeA, nodeB) {
 
 function withClosestSiblings(node, pred) {
   pred = pred || func.ok;
-  let siblings = [];
+  var siblings = [];
 
   if (node.previousSibling && pred(node.previousSibling)) {
     siblings.push(node.previousSibling);
@@ -982,7 +1095,7 @@ function withClosestSiblings(node, pred) {
  */
 
 
-let blankHTML = env.isMSIE && env.browserVersion < 11 ? '&nbsp;' : '<br>';
+var blankHTML = env.isMSIE && env.browserVersion < 11 ? '&nbsp;' : '<br>';
 /**
  * @method nodeLength
  *
@@ -1026,7 +1139,7 @@ function deepestChildIsEmpty(node) {
 
 
 function dom_isEmpty(node) {
-  let len = nodeLength(node);
+  var len = nodeLength(node);
 
   if (len === 0) {
     return true;
@@ -1058,7 +1171,7 @@ function paddingBlankHTML(node) {
  */
 
 
-function ancestor(node, pred) {
+function dom_ancestor(node, pred) {
   while (node) {
     if (pred(node)) {
       return node;
@@ -1112,8 +1225,8 @@ function singleChildAncestor(node, pred) {
 
 function listAncestor(node, pred) {
   pred = pred || func.fail;
-  let ancestors = [];
-  ancestor(node, function (el) {
+  var ancestors = [];
+  dom_ancestor(node, function (el) {
     if (!isEditable(el)) {
       ancestors.push(el);
     }
@@ -1128,7 +1241,7 @@ function listAncestor(node, pred) {
 
 
 function lastAncestor(node, pred) {
-  let ancestors = listAncestor(node);
+  var ancestors = listAncestor(node);
   return lists.last(ancestors.filter(pred));
 }
 /**
@@ -1139,10 +1252,10 @@ function lastAncestor(node, pred) {
  */
 
 
-function commonAncestor(nodeA, nodeB) {
-  let ancestors = listAncestor(nodeA);
+function dom_commonAncestor(nodeA, nodeB) {
+  var ancestors = listAncestor(nodeA);
 
-  for (let n = nodeB; n; n = n.parentNode) {
+  for (var n = nodeB; n; n = n.parentNode) {
     if (ancestors.indexOf(n) > -1) return n;
   }
 
@@ -1158,7 +1271,7 @@ function commonAncestor(nodeA, nodeB) {
 
 function listPrev(node, pred) {
   pred = pred || func.fail;
-  let nodes = [];
+  var nodes = [];
 
   while (node) {
     if (pred(node)) {
@@ -1181,7 +1294,7 @@ function listPrev(node, pred) {
 
 function listNext(node, pred) {
   pred = pred || func.fail;
-  let nodes = [];
+  var nodes = [];
 
   while (node) {
     if (pred(node)) {
@@ -1203,7 +1316,7 @@ function listNext(node, pred) {
 
 
 function listDescendant(node, pred) {
-  let descendants = [];
+  var descendants = [];
   pred = pred || func.ok; // start DFS(depth first search) with node
 
   (function fnWalk(current) {
@@ -1211,7 +1324,7 @@ function listDescendant(node, pred) {
       descendants.push(current);
     }
 
-    for (let idx = 0, len = current.childNodes.length; idx < len; idx++) {
+    for (var idx = 0, len = current.childNodes.length; idx < len; idx++) {
       fnWalk(current.childNodes[idx]);
     }
   })(node);
@@ -1228,8 +1341,8 @@ function listDescendant(node, pred) {
 
 
 function wrap(node, wrapperName) {
-  let parent = node.parentNode;
-  let wrapper = external_jQuery_default()('<' + wrapperName + '>')[0];
+  var parent = node.parentNode;
+  var wrapper = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()('<' + wrapperName + '>')[0];
   parent.insertBefore(wrapper, node);
   wrapper.appendChild(node);
   return wrapper;
@@ -1243,8 +1356,8 @@ function wrap(node, wrapperName) {
 
 
 function insertAfter(node, preceding) {
-  let next = preceding.nextSibling;
-  let parent = preceding.parentNode;
+  var next = preceding.nextSibling;
+  var parent = preceding.parentNode;
 
   if (next) {
     parent.insertBefore(node, next);
@@ -1263,7 +1376,7 @@ function insertAfter(node, preceding) {
 
 
 function appendChildNodes(node, aChild) {
-  external_jQuery_default().each(aChild, function (idx, child) {
+  external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default.a.each(aChild, function (idx, child) {
     node.appendChild(child);
   });
   return node;
@@ -1310,9 +1423,9 @@ function isEdgePoint(point) {
  */
 
 
-function isLeftEdgeOf(node, ancestor) {
+function dom_isLeftEdgeOf(node, ancestor) {
   while (node && node !== ancestor) {
-    if (position(node) !== 0) {
+    if (dom_position(node) !== 0) {
       return false;
     }
 
@@ -1336,7 +1449,7 @@ function isRightEdgeOf(node, ancestor) {
   }
 
   while (node && node !== ancestor) {
-    if (position(node) !== nodeLength(node.parentNode) - 1) {
+    if (dom_position(node) !== nodeLength(node.parentNode) - 1) {
       return false;
     }
 
@@ -1354,7 +1467,7 @@ function isRightEdgeOf(node, ancestor) {
 
 
 function isLeftEdgePointOf(point, ancestor) {
-  return isLeftEdgePoint(point) && isLeftEdgeOf(point.node, ancestor);
+  return isLeftEdgePoint(point) && dom_isLeftEdgeOf(point.node, ancestor);
 }
 /**
  * returns whether point is right edge of ancestor or not.
@@ -1374,8 +1487,8 @@ function isRightEdgePointOf(point, ancestor) {
  */
 
 
-function position(node) {
-  let offset = 0;
+function dom_position(node) {
+  var offset = 0;
 
   while (node = node.previousSibling) {
     offset += 1;
@@ -1396,9 +1509,9 @@ function hasChildren(node) {
  */
 
 
-function prevPoint(point, isSkipInnerOffset) {
-  let node;
-  let offset;
+function dom_prevPoint(point, isSkipInnerOffset) {
+  var node;
+  var offset;
 
   if (point.offset === 0) {
     if (isEditable(point.node)) {
@@ -1406,7 +1519,7 @@ function prevPoint(point, isSkipInnerOffset) {
     }
 
     node = point.node.parentNode;
-    offset = position(point.node);
+    offset = dom_position(point.node);
   } else if (hasChildren(point.node)) {
     node = point.node.childNodes[point.offset - 1];
     offset = nodeLength(node);
@@ -1429,22 +1542,22 @@ function prevPoint(point, isSkipInnerOffset) {
  */
 
 
-function nextPoint(point, isSkipInnerOffset) {
-  let node, offset;
+function dom_nextPoint(point, isSkipInnerOffset) {
+  var node, offset;
 
   if (nodeLength(point.node) === point.offset) {
     if (isEditable(point.node)) {
       return null;
     }
 
-    let nextTextNode = getNextTextNode(point.node);
+    var nextTextNode = getNextTextNode(point.node);
 
     if (nextTextNode) {
       node = nextTextNode;
       offset = 0;
     } else {
       node = point.node.parentNode;
-      offset = position(point.node) + 1;
+      offset = dom_position(point.node) + 1;
     }
   } else if (hasChildren(point.node)) {
     node = point.node.childNodes[point.offset];
@@ -1469,14 +1582,9 @@ function nextPoint(point, isSkipInnerOffset) {
 
 
 function nextPointWithEmptyNode(point, isSkipInnerOffset) {
-  let node,
-      offset = 0; // if node is empty string node, return current node's sibling.
+  var node, offset; // if node is empty string node, return current node's sibling.
 
   if (dom_isEmpty(point.node)) {
-    if (point.node === null) {
-      return null;
-    }
-
     node = point.node.nextSibling;
     offset = 0;
     return {
@@ -1490,8 +1598,16 @@ function nextPointWithEmptyNode(point, isSkipInnerOffset) {
       return null;
     }
 
-    node = point.node.parentNode;
-    offset = position(point.node) + 1; // if next node is editable ,  return current node's sibling node.
+    var nextTextNode = getNextTextNode(point.node);
+
+    if (nextTextNode) {
+      node = nextTextNode;
+      offset = 0;
+    } else {
+      node = point.node.parentNode;
+      offset = dom_position(point.node) + 1;
+    } // if next node is editable, return current node's sibling node.
+
 
     if (isEditable(node)) {
       node = point.node.nextSibling;
@@ -1502,13 +1618,6 @@ function nextPointWithEmptyNode(point, isSkipInnerOffset) {
     offset = 0;
 
     if (dom_isEmpty(node)) {
-      if (!dom_isEmpty(point.node.nextSibling)) {
-        return {
-          node: point.node.nextSibling,
-          offset: offset
-        };
-      }
-
       return null;
     }
   } else {
@@ -1533,7 +1642,8 @@ function nextPointWithEmptyNode(point, isSkipInnerOffset) {
 function getNextTextNode(actual) {
   if (!actual.nextSibling) return undefined;
   if (actual.parent !== actual.nextSibling.parent) return undefined;
-  if (isText(actual.nextSibling)) return actual.nextSibling;else return getNextTextNode(actual.nextSibling);
+  if (isText(actual.nextSibling)) return actual.nextSibling;
+  return getNextTextNode(actual.nextSibling);
 }
 /**
  * returns whether pointA and pointB is same or not.
@@ -1560,10 +1670,10 @@ function isVisiblePoint(point) {
     return true;
   }
 
-  let leftNode = point.node.childNodes[point.offset - 1];
-  let rightNode = point.node.childNodes[point.offset];
+  var leftNode = point.node.childNodes[point.offset - 1];
+  var rightNode = point.node.childNodes[point.offset];
 
-  if ((!leftNode || isVoid(leftNode)) && (!rightNode || isVoid(rightNode)) || isTable(rightNode)) {
+  if ((!leftNode || isVoid(leftNode)) && (!rightNode || isVoid(rightNode))) {
     return true;
   }
 
@@ -1584,7 +1694,7 @@ function prevPointUntil(point, pred) {
       return point;
     }
 
-    point = prevPoint(point);
+    point = dom_prevPoint(point);
   }
 
   return null;
@@ -1604,7 +1714,7 @@ function nextPointUntil(point, pred) {
       return point;
     }
 
-    point = nextPoint(point);
+    point = dom_nextPoint(point);
   }
 
   return null;
@@ -1622,7 +1732,7 @@ function isCharPoint(point) {
     return false;
   }
 
-  let ch = point.node.nodeValue.charAt(point.offset - 1);
+  var ch = point.node.nodeValue.charAt(point.offset - 1);
   return ch && ch !== ' ' && ch !== NBSP_CHAR;
 }
 /**
@@ -1638,7 +1748,7 @@ function isSpacePoint(point) {
     return false;
   }
 
-  let ch = point.node.nodeValue.charAt(point.offset - 1);
+  var ch = point.node.nodeValue.charAt(point.offset - 1);
   return ch === ' ' || ch === NBSP_CHAR;
 }
 /**
@@ -1652,7 +1762,7 @@ function isSpacePoint(point) {
 
 
 function walkPoint(startPoint, endPoint, handler, isSkipInnerOffset) {
-  let point = startPoint;
+  var point = startPoint;
 
   while (point) {
     handler(point);
@@ -1661,7 +1771,7 @@ function walkPoint(startPoint, endPoint, handler, isSkipInnerOffset) {
       break;
     }
 
-    let isSkipOffset = isSkipInnerOffset && startPoint.node !== point.node && endPoint.node !== point.node;
+    var isSkipOffset = isSkipInnerOffset && startPoint.node !== point.node && endPoint.node !== point.node;
     point = nextPointWithEmptyNode(point, isSkipOffset);
   }
 }
@@ -1676,8 +1786,8 @@ function walkPoint(startPoint, endPoint, handler, isSkipInnerOffset) {
 
 
 function makeOffsetPath(ancestor, node) {
-  let ancestors = listAncestor(node, func.eq(ancestor));
-  return ancestors.map(position).reverse();
+  var ancestors = listAncestor(node, func.eq(ancestor));
+  return ancestors.map(dom_position).reverse();
 }
 /**
  * @method fromOffsetPath
@@ -1690,9 +1800,9 @@ function makeOffsetPath(ancestor, node) {
 
 
 function fromOffsetPath(ancestor, offsets) {
-  let current = ancestor;
+  var current = ancestor;
 
-  for (let i = 0, len = offsets.length; i < len; i++) {
+  for (var i = 0, len = offsets.length; i < len; i++) {
     if (current.childNodes.length <= offsets[i]) {
       current = current.childNodes[current.childNodes.length - 1];
     } else {
@@ -1717,9 +1827,9 @@ function fromOffsetPath(ancestor, offsets) {
 
 
 function splitNode(point, options) {
-  let isSkipPaddingBlankHTML = options && options.isSkipPaddingBlankHTML;
-  let isNotSplitEdgePoint = options && options.isNotSplitEdgePoint;
-  let isDiscardEmptySplits = options && options.isDiscardEmptySplits;
+  var isSkipPaddingBlankHTML = options && options.isSkipPaddingBlankHTML;
+  var isNotSplitEdgePoint = options && options.isNotSplitEdgePoint;
+  var isDiscardEmptySplits = options && options.isDiscardEmptySplits;
 
   if (isDiscardEmptySplits) {
     isSkipPaddingBlankHTML = true;
@@ -1738,8 +1848,8 @@ function splitNode(point, options) {
   if (isText(point.node)) {
     return point.node.splitText(point.offset);
   } else {
-    let childNode = point.node.childNodes[point.offset];
-    let clone = insertAfter(point.node.cloneNode(false), point.node);
+    var childNode = point.node.childNodes[point.offset];
+    var clone = insertAfter(point.node.cloneNode(false), point.node);
     appendChildNodes(clone, listNext(childNode));
 
     if (!isSkipPaddingBlankHTML) {
@@ -1777,7 +1887,7 @@ function splitNode(point, options) {
 
 function splitTree(root, point, options) {
   // ex) [#text, <span>, <p>]
-  let ancestors = listAncestor(point.node, func.eq(root));
+  var ancestors = listAncestor(point.node, func.eq(root));
 
   if (!ancestors.length) {
     return null;
@@ -1792,7 +1902,7 @@ function splitTree(root, point, options) {
 
     return splitNode({
       node: parent,
-      offset: node ? position(node) : nodeLength(parent)
+      offset: node ? dom_position(node) : nodeLength(parent)
     }, options);
   });
 }
@@ -1809,10 +1919,10 @@ function splitPoint(point, isInline) {
   // find splitRoot, container
   //  - inline: splitRoot is a child of paragraph
   //  - block: splitRoot is a child of bodyContainer
-  let pred = isInline ? isPara : isBodyContainer;
-  let ancestors = listAncestor(point.node, pred);
-  let topAncestor = lists.last(ancestors) || point.node;
-  let splitRoot, container;
+  var pred = isInline ? isPara : isBodyContainer;
+  var ancestors = listAncestor(point.node, pred);
+  var topAncestor = lists.last(ancestors) || point.node;
+  var splitRoot, container;
 
   if (pred(topAncestor)) {
     splitRoot = ancestors[ancestors.length - 2];
@@ -1823,7 +1933,7 @@ function splitPoint(point, isInline) {
   } // if splitRoot is exists, split with splitTree
 
 
-  let pivot = splitRoot && splitTree(splitRoot, point, {
+  var pivot = splitRoot && splitTree(splitRoot, point, {
     isSkipPaddingBlankHTML: isInline,
     isNotSplitEdgePoint: isInline
   }); // if container is point.node, find pivot with point.offset
@@ -1838,7 +1948,7 @@ function splitPoint(point, isInline) {
   };
 }
 
-function create(nodeName) {
+function dom_create(nodeName) {
   return document.createElement(nodeName);
 }
 
@@ -1864,16 +1974,16 @@ function remove(node, isRemoveChild) {
     return node.removeNode(isRemoveChild);
   }
 
-  let parent = node.parentNode;
+  var parent = node.parentNode;
 
   if (!isRemoveChild) {
-    let nodes = [];
+    var nodes = [];
 
-    for (let i = 0, len = node.childNodes.length; i < len; i++) {
+    for (var i = 0, len = node.childNodes.length; i < len; i++) {
       nodes.push(node.childNodes[i]);
     }
 
-    for (let _i = 0, _len = nodes.length; _i < _len; _i++) {
+    for (var _i = 0, _len = nodes.length; _i < _len; _i++) {
       parent.insertBefore(nodes[_i], node);
     }
   }
@@ -1894,7 +2004,7 @@ function removeWhile(node, pred) {
       break;
     }
 
-    let parent = node.parentNode;
+    var parent = node.parentNode;
     remove(node);
     node = parent;
   }
@@ -1910,12 +2020,12 @@ function removeWhile(node, pred) {
  */
 
 
-function replace(node, nodeName) {
+function dom_replace(node, nodeName) {
   if (node.nodeName.toUpperCase() === nodeName.toUpperCase()) {
     return node;
   }
 
-  let newNode = create(nodeName);
+  var newNode = dom_create(nodeName);
 
   if (node.style.cssText) {
     newNode.style.cssText = node.style.cssText;
@@ -1927,14 +2037,14 @@ function replace(node, nodeName) {
   return newNode;
 }
 
-let isTextarea = makePredByNodeName('TEXTAREA');
+var isTextarea = makePredByNodeName('TEXTAREA');
 /**
  * @param {jQuery} $node
  * @param {Boolean} [stripLinebreaks] - default: false
  */
 
-function value($node, stripLinebreaks) {
-  let val = isTextarea($node[0]) ? $node.val() : $node.html();
+function dom_value($node, stripLinebreaks) {
+  var val = isTextarea($node[0]) ? $node.val() : $node.html();
 
   if (stripLinebreaks) {
     return val.replace(/[\n\r]/g, '');
@@ -1952,15 +2062,15 @@ function value($node, stripLinebreaks) {
  */
 
 
-function html($node, isNewlineOnBlock) {
-  let markup = value($node);
+function dom_html($node, isNewlineOnBlock) {
+  var markup = dom_value($node);
 
   if (isNewlineOnBlock) {
-    let regexTag = /<(\/?)(\b(?!!)[^>\s]*)(.*?)(\s*\/?>)/g;
+    var regexTag = /<(\/?)(\b(?!!)[^>\s]*)(.*?)(\s*\/?>)/g;
     markup = markup.replace(regexTag, function (match, endSlash, name) {
       name = name.toUpperCase();
-      let isEndOfInlineContainer = /^DIV|^TD|^TH|^P|^LI|^H[1-7]/.test(name) && !!endSlash;
-      let isBlockNode = /^BLOCKQUOTE|^TABLE|^TBODY|^TR|^HR|^UL|^OL/.test(name);
+      var isEndOfInlineContainer = /^DIV|^TD|^TH|^P|^LI|^H[1-7]/.test(name) && !!endSlash;
+      var isBlockNode = /^BLOCKQUOTE|^TABLE|^TBODY|^TR|^HR|^UL|^OL/.test(name);
       return match + (isEndOfInlineContainer || isBlockNode ? '\n' : '');
     });
     markup = markup.trim();
@@ -1970,9 +2080,9 @@ function html($node, isNewlineOnBlock) {
 }
 
 function posFromPlaceholder(placeholder) {
-  let $placeholder = external_jQuery_default()(placeholder);
-  let pos = $placeholder.offset();
-  let height = $placeholder.outerHeight(true); // include margin
+  var $placeholder = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(placeholder);
+  var pos = $placeholder.offset();
+  var height = $placeholder.outerHeight(true); // include margin
 
   return {
     left: pos.left,
@@ -2005,7 +2115,7 @@ function isCustomStyleTag(node) {
   return node && !isText(node) && lists.contains(node.classList, 'note-styletag');
 }
 
-/* harmony default export */ const dom = ({
+/* harmony default export */ var dom = ({
   /** @property {String} NBSP_CHAR */
   NBSP_CHAR: NBSP_CHAR,
 
@@ -2026,8 +2136,8 @@ function isCustomStyleTag(node) {
   isPara: isPara,
   isPurePara: isPurePara,
   isHeading: isHeading,
-  isInline: isInline,
-  isBlock: func.not(isInline),
+  isInline: dom_isInline,
+  isBlock: func.not(dom_isInline),
   isBodyInline: isBodyInline,
   isBody: isBody,
   isParaInline: isParaInline,
@@ -2035,7 +2145,7 @@ function isCustomStyleTag(node) {
   isList: isList,
   isTable: isTable,
   isData: isData,
-  isCell: isCell,
+  isCell: dom_isCell,
   isBlockquote: isBlockquote,
   isBodyContainer: isBodyContainer,
   isAnchor: isAnchor,
@@ -2058,12 +2168,12 @@ function isCustomStyleTag(node) {
   isLeftEdgePoint: isLeftEdgePoint,
   isRightEdgePoint: isRightEdgePoint,
   isEdgePoint: isEdgePoint,
-  isLeftEdgeOf: isLeftEdgeOf,
+  isLeftEdgeOf: dom_isLeftEdgeOf,
   isRightEdgeOf: isRightEdgeOf,
   isLeftEdgePointOf: isLeftEdgePointOf,
   isRightEdgePointOf: isRightEdgePointOf,
-  prevPoint: prevPoint,
-  nextPoint: nextPoint,
+  prevPoint: dom_prevPoint,
+  nextPoint: dom_nextPoint,
   nextPointWithEmptyNode: nextPointWithEmptyNode,
   isSamePoint: isSamePoint,
   isVisiblePoint: isVisiblePoint,
@@ -2072,39 +2182,39 @@ function isCustomStyleTag(node) {
   isCharPoint: isCharPoint,
   isSpacePoint: isSpacePoint,
   walkPoint: walkPoint,
-  ancestor: ancestor,
+  ancestor: dom_ancestor,
   singleChildAncestor: singleChildAncestor,
   listAncestor: listAncestor,
   lastAncestor: lastAncestor,
   listNext: listNext,
   listPrev: listPrev,
   listDescendant: listDescendant,
-  commonAncestor: commonAncestor,
+  commonAncestor: dom_commonAncestor,
   wrap: wrap,
   insertAfter: insertAfter,
   appendChildNodes: appendChildNodes,
-  position: position,
+  position: dom_position,
   hasChildren: hasChildren,
   makeOffsetPath: makeOffsetPath,
   fromOffsetPath: fromOffsetPath,
   splitTree: splitTree,
   splitPoint: splitPoint,
-  create: create,
+  create: dom_create,
   createText: createText,
   remove: remove,
   removeWhile: removeWhile,
-  replace: replace,
-  html: html,
-  value: value,
+  replace: dom_replace,
+  html: dom_html,
+  value: dom_value,
   posFromPlaceholder: posFromPlaceholder,
   attachEvents: attachEvents,
   detachEvents: detachEvents,
   isCustomStyleTag: isCustomStyleTag
 });
-;// CONCATENATED MODULE: ./src/js/Context.js
+// CONCATENATED MODULE: ./src/js/base/Context.js
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-function _defineProperties(target, props) { for (let i = 0; i < props.length; i++) { let descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
@@ -2113,7 +2223,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 
 
-let Context = /*#__PURE__*/function () {
+var Context_Context = /*#__PURE__*/function () {
   /**
    * @param {jQuery} $note
    * @param {Object} options
@@ -2125,10 +2235,10 @@ let Context = /*#__PURE__*/function () {
     this.memos = {};
     this.modules = {};
     this.layoutInfo = {};
-    this.options = external_jQuery_default().extend(true, {}, options); // init ui with options
+    this.options = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default.a.extend(true, {}, options); // init ui with options
 
-    (external_jQuery_default()).summernote.ui = external_jQuery_default().summernote.ui_template(this.options);
-    this.ui = (external_jQuery_default()).summernote.ui;
+    external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default.a.summernote.ui = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default.a.summernote.ui_template(this.options);
+    this.ui = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default.a.summernote.ui;
     this.initialize();
   }
   /**
@@ -2165,7 +2275,7 @@ let Context = /*#__PURE__*/function () {
   }, {
     key: "reset",
     value: function reset() {
-      let disabled = this.isDisabled();
+      var disabled = this.isDisabled();
       this.code(dom.emptyPara);
 
       this._destroy();
@@ -2179,18 +2289,18 @@ let Context = /*#__PURE__*/function () {
   }, {
     key: "_initialize",
     value: function _initialize() {
-      let _this = this;
+      var _this = this;
 
       // set own id
-      this.options.id = func.uniqueId(external_jQuery_default().now()); // set default container for tooltips, popovers, and dialogs
+      this.options.id = func.uniqueId(external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default.a.now()); // set default container for tooltips, popovers, and dialogs
 
       this.options.container = this.options.container || this.layoutInfo.editor; // add optional buttons
 
-      let buttons = external_jQuery_default().extend({}, this.options.buttons);
+      var buttons = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default.a.extend({}, this.options.buttons);
       Object.keys(buttons).forEach(function (key) {
         _this.memo('button.' + key, buttons[key]);
       });
-      let modules = external_jQuery_default().extend({}, this.options.modules, (external_jQuery_default()).summernote.plugins || {}); // add and initialize modules
+      var modules = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default.a.extend({}, this.options.modules, external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default.a.summernote.plugins || {}); // add and initialize modules
 
       Object.keys(modules).forEach(function (key) {
         _this.module(key, modules[key], true);
@@ -2202,7 +2312,7 @@ let Context = /*#__PURE__*/function () {
   }, {
     key: "_destroy",
     value: function _destroy() {
-      let _this2 = this;
+      var _this2 = this;
 
       // destroy modules with reversed order
       Object.keys(this.modules).reverse().forEach(function (key) {
@@ -2217,7 +2327,7 @@ let Context = /*#__PURE__*/function () {
   }, {
     key: "code",
     value: function code(html) {
-      let isActivated = this.invoke('codeview.isActivated');
+      var isActivated = this.invoke('codeview.isActivated');
 
       if (html === undefined) {
         this.invoke('codeview.sync');
@@ -2262,9 +2372,9 @@ let Context = /*#__PURE__*/function () {
   }, {
     key: "triggerEvent",
     value: function triggerEvent() {
-      let namespace = lists.head(arguments);
-      let args = lists.tail(lists.from(arguments));
-      let callback = this.options.callbacks[func.namespaceToCamel(namespace, 'on')];
+      var namespace = lists.head(arguments);
+      var args = lists.tail(lists.from(arguments));
+      var callback = this.options.callbacks[func.namespaceToCamel(namespace, 'on')];
 
       if (callback) {
         callback.apply(this.$note[0], args);
@@ -2275,7 +2385,7 @@ let Context = /*#__PURE__*/function () {
   }, {
     key: "initializeModule",
     value: function initializeModule(key) {
-      let module = this.modules[key];
+      var module = this.modules[key];
       module.shouldInitialize = module.shouldInitialize || func.ok;
 
       if (!module.shouldInitialize()) {
@@ -2308,7 +2418,7 @@ let Context = /*#__PURE__*/function () {
   }, {
     key: "removeModule",
     value: function removeModule(key) {
-      let module = this.modules[key];
+      var module = this.modules[key];
 
       if (module.shouldInitialize()) {
         if (module.events) {
@@ -2347,7 +2457,7 @@ let Context = /*#__PURE__*/function () {
   }, {
     key: "createInvokeHandlerAndUpdateState",
     value: function createInvokeHandlerAndUpdateState(namespace, value) {
-      let _this3 = this;
+      var _this3 = this;
 
       return function (event) {
         _this3.createInvokeHandler(namespace, value)(event);
@@ -2358,11 +2468,11 @@ let Context = /*#__PURE__*/function () {
   }, {
     key: "createInvokeHandler",
     value: function createInvokeHandler(namespace, value) {
-      let _this4 = this;
+      var _this4 = this;
 
       return function (event) {
         event.preventDefault();
-        let $target = external_jQuery_default()(event.target);
+        var $target = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(event.target);
 
         _this4.invoke(namespace, value || $target.closest('[data-value]').data('value'), $target);
       };
@@ -2370,13 +2480,13 @@ let Context = /*#__PURE__*/function () {
   }, {
     key: "invoke",
     value: function invoke() {
-      let namespace = lists.head(arguments);
-      let args = lists.tail(lists.from(arguments));
-      let splits = namespace.split('.');
-      let hasSeparator = splits.length > 1;
-      let moduleName = hasSeparator && lists.head(splits);
-      let methodName = hasSeparator ? lists.last(splits) : lists.head(splits);
-      let module = this.modules[moduleName || 'editor'];
+      var namespace = lists.head(arguments);
+      var args = lists.tail(lists.from(arguments));
+      var splits = namespace.split('.');
+      var hasSeparator = splits.length > 1;
+      var moduleName = hasSeparator && lists.head(splits);
+      var methodName = hasSeparator ? lists.last(splits) : lists.head(splits);
+      var module = this.modules[moduleName || 'editor'];
 
       if (!moduleName && this[methodName]) {
         return this[methodName].apply(this, args);
@@ -2390,12 +2500,12 @@ let Context = /*#__PURE__*/function () {
 }();
 
 
-;// CONCATENATED MODULE: ./src/js/summernote.js
+// CONCATENATED MODULE: ./src/js/summernote.js
 
 
 
 
-external_jQuery_default().fn.extend({
+external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default.a.fn.extend({
   /**
    * Summernote API
    *
@@ -2403,27 +2513,27 @@ external_jQuery_default().fn.extend({
    * @return {this}
    */
   summernote: function summernote() {
-    let type = external_jQuery_default().type(lists.head(arguments));
-    let isExternalAPICalled = type === 'string';
-    let hasInitOptions = type === 'object';
-    let options = external_jQuery_default().extend({}, (external_jQuery_default()).summernote.options, hasInitOptions ? lists.head(arguments) : {}); // Update options
+    var type = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default.a.type(lists.head(arguments));
+    var isExternalAPICalled = type === 'string';
+    var hasInitOptions = type === 'object';
+    var options = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default.a.extend({}, external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default.a.summernote.options, hasInitOptions ? lists.head(arguments) : {}); // Update options
 
-    options.langInfo = external_jQuery_default().extend(true, {}, (external_jQuery_default()).summernote.lang["en-US"], (external_jQuery_default()).summernote.lang[options.lang]);
-    options.icons = external_jQuery_default().extend(true, {}, (external_jQuery_default()).summernote.options.icons, options.icons);
+    options.langInfo = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default.a.extend(true, {}, external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default.a.summernote.lang['en-US'], external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default.a.summernote.lang[options.lang]);
+    options.icons = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default.a.extend(true, {}, external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default.a.summernote.options.icons, options.icons);
     options.tooltip = options.tooltip === 'auto' ? !env.isSupportTouch : options.tooltip;
     this.each(function (idx, note) {
-      let $note = external_jQuery_default()(note);
+      var $note = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(note);
 
       if (!$note.data('summernote')) {
-        let context = new Context($note, options);
+        var context = new Context_Context($note, options);
         $note.data('summernote', context);
         $note.data('summernote').triggerEvent('init', context.layoutInfo);
       }
     });
-    let $note = this.first();
+    var $note = this.first();
 
     if ($note.length) {
-      let context = $note.data('summernote');
+      var context = $note.data('summernote');
 
       if (isExternalAPICalled) {
         return context.invoke.apply(context, lists.from(arguments));
@@ -2435,10 +2545,10 @@ external_jQuery_default().fn.extend({
     return this;
   }
 });
-;// CONCATENATED MODULE: ./src/js/core/range.js
+// CONCATENATED MODULE: ./src/js/base/core/range.js
 function range_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-function range_defineProperties(target, props) { for (let i = 0; i < props.length; i++) { let descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+function range_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
 function range_createClass(Constructor, protoProps, staticProps) { if (protoProps) range_defineProperties(Constructor.prototype, protoProps); if (staticProps) range_defineProperties(Constructor, staticProps); return Constructor; }
 
@@ -2458,11 +2568,11 @@ function range_createClass(Constructor, protoProps, staticProps) { if (protoProp
  */
 
 function textRangeToPoint(textRange, isStart) {
-  let container = textRange.parentElement();
-  let offset;
-  let tester = document.body.createTextRange();
-  let prevContainer;
-  let childNodes = lists.from(container.childNodes);
+  var container = textRange.parentElement();
+  var offset;
+  var tester = document.body.createTextRange();
+  var prevContainer;
+  var childNodes = lists.from(container.childNodes);
 
   for (offset = 0; offset < childNodes.length; offset++) {
     if (dom.isText(childNodes[offset])) {
@@ -2479,14 +2589,14 @@ function textRangeToPoint(textRange, isStart) {
   }
 
   if (offset !== 0 && dom.isText(childNodes[offset - 1])) {
-    let textRangeStart = document.body.createTextRange();
-    let curTextNode = null;
+    var textRangeStart = document.body.createTextRange();
+    var curTextNode = null;
     textRangeStart.moveToElementText(prevContainer || container);
     textRangeStart.collapse(!prevContainer);
     curTextNode = prevContainer ? prevContainer.nextSibling : container.firstChild;
-    let pointTester = textRange.duplicate();
+    var pointTester = textRange.duplicate();
     pointTester.setEndPoint('StartToStart', textRangeStart);
-    let textCount = pointTester.text.replace(/[\r\n]/g, '').length;
+    var textCount = pointTester.text.replace(/[\r\n]/g, '').length;
 
     while (textCount > curTextNode.nodeValue.length && curTextNode.nextSibling) {
       textCount -= curTextNode.nodeValue.length;
@@ -2494,7 +2604,7 @@ function textRangeToPoint(textRange, isStart) {
     } // [workaround] enforce IE to re-reference curTextNode, hack
 
 
-    let dummy = curTextNode.nodeValue; // eslint-disable-line
+    var dummy = curTextNode.nodeValue; // eslint-disable-line
 
     if (isStart && curTextNode.nextSibling && dom.isText(curTextNode.nextSibling) && textCount === curTextNode.nodeValue.length) {
       textCount -= curTextNode.nodeValue.length;
@@ -2518,12 +2628,12 @@ function textRangeToPoint(textRange, isStart) {
 
 
 function pointToTextRange(point) {
-  let textRangeInfo = function textRangeInfo(container, offset) {
-    let node, isCollapseToStart;
+  var textRangeInfo = function textRangeInfo(container, offset) {
+    var node, isCollapseToStart;
 
     if (dom.isText(container)) {
-      let prevTextNodes = dom.listPrev(container, func.not(dom.isText));
-      let prevContainer = lists.last(prevTextNodes).previousSibling;
+      var prevTextNodes = dom.listPrev(container, func.not(dom.isText));
+      var prevContainer = lists.last(prevTextNodes).previousSibling;
       node = prevContainer || container.parentNode;
       offset += lists.sum(lists.tail(prevTextNodes), dom.nodeLength);
       isCollapseToStart = !prevContainer;
@@ -2545,8 +2655,8 @@ function pointToTextRange(point) {
     };
   };
 
-  let textRange = document.body.createTextRange();
-  let info = textRangeInfo(point.node, point.offset);
+  var textRange = document.body.createTextRange();
+  var info = textRangeInfo(point.node, point.offset);
   textRange.moveToElementText(info.node);
   textRange.collapse(info.collapseToStart);
   textRange.moveStart('character', info.offset);
@@ -2563,7 +2673,7 @@ function pointToTextRange(point) {
    */
 
 
-let WrappedRange = /*#__PURE__*/function () {
+var range_WrappedRange = /*#__PURE__*/function () {
   function WrappedRange(sc, so, ec, eo) {
     range_classCallCheck(this, WrappedRange);
 
@@ -2588,12 +2698,12 @@ let WrappedRange = /*#__PURE__*/function () {
     key: "nativeRange",
     value: function nativeRange() {
       if (env.isW3CRangeSupport) {
-        let w3cRange = document.createRange();
+        var w3cRange = document.createRange();
         w3cRange.setStart(this.sc, this.so);
         w3cRange.setEnd(this.ec, this.eo);
         return w3cRange;
       } else {
-        let textRange = pointToTextRange({
+        var textRange = pointToTextRange({
           node: this.sc,
           offset: this.so
         });
@@ -2637,10 +2747,10 @@ let WrappedRange = /*#__PURE__*/function () {
   }, {
     key: "select",
     value: function select() {
-      let nativeRng = this.nativeRange();
+      var nativeRng = this.nativeRange();
 
       if (env.isW3CRangeSupport) {
-        let selection = document.getSelection();
+        var selection = document.getSelection();
 
         if (selection.rangeCount > 0) {
           selection.removeAllRanges();
@@ -2662,7 +2772,7 @@ let WrappedRange = /*#__PURE__*/function () {
   }, {
     key: "scrollIntoView",
     value: function scrollIntoView(container) {
-      let height = external_jQuery_default()(container).height();
+      var height = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(container).height();
 
       if (container.scrollTop + height < this.sc.offsetTop) {
         container.scrollTop += Math.abs(container.scrollTop + height - this.sc.offsetTop);
@@ -2683,7 +2793,7 @@ let WrappedRange = /*#__PURE__*/function () {
        *                                - false: prefer to choose left node
        * @return {BoundaryPoint}
        */
-      let getVisiblePoint = function getVisiblePoint(point, isLeftToRight) {
+      var getVisiblePoint = function getVisiblePoint(point, isLeftToRight) {
         if (!point) {
           return point;
         } // Just use the given point [XXX:Adhoc]
@@ -2702,20 +2812,20 @@ let WrappedRange = /*#__PURE__*/function () {
         } // point on block's edge
 
 
-        let block = dom.ancestor(point.node, dom.isBlock);
-        let hasRightNode = false;
+        var block = dom.ancestor(point.node, dom.isBlock);
+        var hasRightNode = false;
 
         if (!hasRightNode) {
-          let prevPoint = dom.prevPoint(point) || {
+          var prevPoint = dom.prevPoint(point) || {
             node: null
           };
           hasRightNode = (dom.isLeftEdgePointOf(point, block) || dom.isVoid(prevPoint.node)) && !isLeftToRight;
         }
 
-        let hasLeftNode = false;
+        var hasLeftNode = false;
 
         if (!hasLeftNode) {
-          let _nextPoint = dom.nextPoint(point) || {
+          var _nextPoint = dom.nextPoint(point) || {
             node: null
           };
 
@@ -2732,12 +2842,12 @@ let WrappedRange = /*#__PURE__*/function () {
           isLeftToRight = !isLeftToRight;
         }
 
-        let nextPoint = isLeftToRight ? dom.nextPointUntil(dom.nextPoint(point), dom.isVisiblePoint) : dom.prevPointUntil(dom.prevPoint(point), dom.isVisiblePoint);
+        var nextPoint = isLeftToRight ? dom.nextPointUntil(dom.nextPoint(point), dom.isVisiblePoint) : dom.prevPointUntil(dom.prevPoint(point), dom.isVisiblePoint);
         return nextPoint || point;
       };
 
-      let endPoint = getVisiblePoint(this.getEndPoint(), false);
-      let startPoint = this.isCollapsed() ? endPoint : getVisiblePoint(this.getStartPoint(), true);
+      var endPoint = getVisiblePoint(this.getEndPoint(), false);
+      var startPoint = this.isCollapsed() ? endPoint : getVisiblePoint(this.getStartPoint(), true);
       return new WrappedRange(startPoint.node, startPoint.offset, endPoint.node, endPoint.offset);
     }
     /**
@@ -2754,19 +2864,19 @@ let WrappedRange = /*#__PURE__*/function () {
     key: "nodes",
     value: function nodes(pred, options) {
       pred = pred || func.ok;
-      let includeAncestor = options && options.includeAncestor;
-      let fullyContains = options && options.fullyContains; // TODO compare points and sort
+      var includeAncestor = options && options.includeAncestor;
+      var fullyContains = options && options.fullyContains; // TODO compare points and sort
 
-      let startPoint = this.getStartPoint();
-      let endPoint = this.getEndPoint();
-      let nodes = [];
-      let leftEdgeNodes = [];
+      var startPoint = this.getStartPoint();
+      var endPoint = this.getEndPoint();
+      var nodes = [];
+      var leftEdgeNodes = [];
       dom.walkPoint(startPoint, endPoint, function (point) {
         if (dom.isEditable(point.node)) {
           return;
         }
 
-        let node;
+        var node;
 
         if (fullyContains) {
           if (dom.isLeftEdgePoint(point)) {
@@ -2808,14 +2918,14 @@ let WrappedRange = /*#__PURE__*/function () {
   }, {
     key: "expand",
     value: function expand(pred) {
-      let startAncestor = dom.ancestor(this.sc, pred);
-      let endAncestor = dom.ancestor(this.ec, pred);
+      var startAncestor = dom.ancestor(this.sc, pred);
+      var endAncestor = dom.ancestor(this.ec, pred);
 
       if (!startAncestor && !endAncestor) {
         return new WrappedRange(this.sc, this.so, this.ec, this.eo);
       }
 
-      let boundaryPoints = this.getPoints();
+      var boundaryPoints = this.getPoints();
 
       if (startAncestor) {
         boundaryPoints.sc = startAncestor;
@@ -2850,8 +2960,8 @@ let WrappedRange = /*#__PURE__*/function () {
   }, {
     key: "splitText",
     value: function splitText() {
-      let isSameContainer = this.sc === this.ec;
-      let boundaryPoints = this.getPoints();
+      var isSameContainer = this.sc === this.ec;
+      var boundaryPoints = this.getPoints();
 
       if (dom.isText(this.ec) && !dom.isEdgePoint(this.getEndPoint())) {
         this.ec.splitText(this.eo);
@@ -2881,18 +2991,18 @@ let WrappedRange = /*#__PURE__*/function () {
         return this;
       }
 
-      let rng = this.splitText();
-      let nodes = rng.nodes(null, {
+      var rng = this.splitText();
+      var nodes = rng.nodes(null, {
         fullyContains: true
       }); // find new cursor point
 
-      let point = dom.prevPointUntil(rng.getStartPoint(), function (point) {
+      var point = dom.prevPointUntil(rng.getStartPoint(), function (point) {
         return !lists.contains(nodes, point.node);
       });
-      let emptyParents = [];
-      external_jQuery_default().each(nodes, function (idx, node) {
+      var emptyParents = [];
+      external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default.a.each(nodes, function (idx, node) {
         // find empty parents
-        let parent = node.parentNode;
+        var parent = node.parentNode;
 
         if (point.node !== parent && dom.nodeLength(parent) === 1) {
           emptyParents.push(parent);
@@ -2901,7 +3011,7 @@ let WrappedRange = /*#__PURE__*/function () {
         dom.remove(node, false);
       }); // remove empty parents
 
-      external_jQuery_default().each(emptyParents, function (idx, node) {
+      external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default.a.each(emptyParents, function (idx, node) {
         dom.remove(node, false);
       });
       return new WrappedRange(point.node, point.offset, point.node, point.offset).normalize();
@@ -2914,7 +3024,7 @@ let WrappedRange = /*#__PURE__*/function () {
     key: "makeIsOn",
     value: function makeIsOn(pred) {
       return function () {
-        let ancestor = dom.ancestor(this.sc, pred);
+        var ancestor = dom.ancestor(this.sc, pred);
         return !!ancestor && ancestor === dom.ancestor(this.ec, pred);
       };
     }
@@ -2930,7 +3040,7 @@ let WrappedRange = /*#__PURE__*/function () {
         return false;
       }
 
-      let node = dom.ancestor(this.sc, pred);
+      var node = dom.ancestor(this.sc, pred);
       return node && dom.isLeftEdgeOf(this.sc, node);
     }
     /**
@@ -2962,17 +3072,17 @@ let WrappedRange = /*#__PURE__*/function () {
        */
 
 
-      let rng = this.normalize();
+      var rng = this.normalize();
 
       if (dom.isParaInline(this.sc) || dom.isPara(this.sc)) {
         return rng;
       } // find inline top ancestor
 
 
-      let topAncestor;
+      var topAncestor;
 
       if (dom.isInline(rng.sc)) {
-        let ancestors = dom.listAncestor(rng.sc, func.not(dom.isInline));
+        var ancestors = dom.listAncestor(rng.sc, func.not(dom.isInline));
         topAncestor = lists.last(ancestors);
 
         if (!dom.isInline(topAncestor)) {
@@ -2984,11 +3094,11 @@ let WrappedRange = /*#__PURE__*/function () {
 
       if (topAncestor) {
         // siblings not in paragraph
-        let inlineSiblings = dom.listPrev(topAncestor, dom.isParaInline).reverse();
+        var inlineSiblings = dom.listPrev(topAncestor, dom.isParaInline).reverse();
         inlineSiblings = inlineSiblings.concat(dom.listNext(topAncestor.nextSibling, dom.isParaInline)); // wrap with paragraph
 
         if (inlineSiblings.length) {
-          let para = dom.wrap(lists.head(inlineSiblings), 'p');
+          var para = dom.wrap(lists.head(inlineSiblings), 'p');
           dom.appendChildNodes(para, lists.tail(inlineSiblings));
         }
       }
@@ -3005,13 +3115,13 @@ let WrappedRange = /*#__PURE__*/function () {
   }, {
     key: "insertNode",
     value: function insertNode(node) {
-      let rng = this;
+      var rng = this;
 
       if (dom.isText(node) || dom.isInline(node)) {
         rng = this.wrapBodyInlineWithPara().deleteContents();
       }
 
-      let info = dom.splitPoint(rng.getStartPoint(), dom.isInline(node));
+      var info = dom.splitPoint(rng.getStartPoint(), dom.isInline(node));
 
       if (info.rightNode) {
         info.rightNode.parentNode.insertBefore(node, info.rightNode);
@@ -3032,12 +3142,12 @@ let WrappedRange = /*#__PURE__*/function () {
   }, {
     key: "pasteHTML",
     value: function pasteHTML(markup) {
-      markup = external_jQuery_default().trim(markup);
-      let contentsContainer = external_jQuery_default()('<div></div>').html(markup)[0];
-      let childNodes = lists.from(contentsContainer.childNodes); // const rng = this.wrapBodyInlineWithPara().deleteContents();
+      markup = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default.a.trim(markup);
+      var contentsContainer = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()('<div></div>').html(markup)[0];
+      var childNodes = lists.from(contentsContainer.childNodes); // const rng = this.wrapBodyInlineWithPara().deleteContents();
 
-      let rng = this;
-      let reversed = false;
+      var rng = this;
+      var reversed = false;
 
       if (rng.so >= 0) {
         childNodes = childNodes.reverse();
@@ -3063,7 +3173,7 @@ let WrappedRange = /*#__PURE__*/function () {
   }, {
     key: "toString",
     value: function toString() {
-      let nativeRng = this.nativeRange();
+      var nativeRng = this.nativeRange();
       return env.isW3CRangeSupport ? nativeRng.toString() : nativeRng.text;
     }
     /**
@@ -3076,13 +3186,13 @@ let WrappedRange = /*#__PURE__*/function () {
   }, {
     key: "getWordRange",
     value: function getWordRange(findAfter) {
-      let endPoint = this.getEndPoint();
+      var endPoint = this.getEndPoint();
 
       if (!dom.isCharPoint(endPoint)) {
         return this;
       }
 
-      let startPoint = dom.prevPointUntil(endPoint, function (point) {
+      var startPoint = dom.prevPointUntil(endPoint, function (point) {
         return !dom.isCharPoint(point);
       });
 
@@ -3104,9 +3214,9 @@ let WrappedRange = /*#__PURE__*/function () {
   }, {
     key: "getWordsRange",
     value: function getWordsRange(findAfter) {
-      let endPoint = this.getEndPoint();
+      var endPoint = this.getEndPoint();
 
-      let isNotTextPoint = function isNotTextPoint(point) {
+      var isNotTextPoint = function isNotTextPoint(point) {
         return !dom.isCharPoint(point) && !dom.isSpacePoint(point);
       };
 
@@ -3114,7 +3224,7 @@ let WrappedRange = /*#__PURE__*/function () {
         return this;
       }
 
-      let startPoint = dom.prevPointUntil(endPoint, isNotTextPoint);
+      var startPoint = dom.prevPointUntil(endPoint, isNotTextPoint);
 
       if (findAfter) {
         endPoint = dom.nextPointUntil(endPoint, isNotTextPoint);
@@ -3137,19 +3247,19 @@ let WrappedRange = /*#__PURE__*/function () {
   }, {
     key: "getWordsMatchRange",
     value: function getWordsMatchRange(regex) {
-      let endPoint = this.getEndPoint();
-      let startPoint = dom.prevPointUntil(endPoint, function (point) {
+      var endPoint = this.getEndPoint();
+      var startPoint = dom.prevPointUntil(endPoint, function (point) {
         if (!dom.isCharPoint(point) && !dom.isSpacePoint(point)) {
           return true;
         }
 
-        let rng = new WrappedRange(point.node, point.offset, endPoint.node, endPoint.offset);
-        let result = regex.exec(rng.toString());
+        var rng = new WrappedRange(point.node, point.offset, endPoint.node, endPoint.offset);
+        var result = regex.exec(rng.toString());
         return result && result.index === 0;
       });
-      let rng = new WrappedRange(startPoint.node, startPoint.offset, endPoint.node, endPoint.offset);
-      let text = rng.toString();
-      let result = regex.exec(text);
+      var rng = new WrappedRange(startPoint.node, startPoint.offset, endPoint.node, endPoint.offset);
+      var text = rng.toString();
+      var result = regex.exec(text);
 
       if (result && result[0].length === text.length) {
         return rng;
@@ -3205,7 +3315,7 @@ let WrappedRange = /*#__PURE__*/function () {
   }, {
     key: "getClientRects",
     value: function getClientRects() {
-      let nativeRng = this.nativeRange();
+      var nativeRng = this.nativeRange();
       return nativeRng.getClientRects();
     }
   }]);
@@ -3221,7 +3331,7 @@ let WrappedRange = /*#__PURE__*/function () {
  */
 
 
-/* harmony default export */ const range = ({
+/* harmony default export */ var range = ({
   /**
    * create Range Object From arguments or Browser Selection
    *
@@ -3233,17 +3343,17 @@ let WrappedRange = /*#__PURE__*/function () {
    */
   create: function create(sc, so, ec, eo) {
     if (arguments.length === 4) {
-      return new WrappedRange(sc, so, ec, eo);
+      return new range_WrappedRange(sc, so, ec, eo);
     } else if (arguments.length === 2) {
       // collapsed
       ec = sc;
       eo = so;
-      return new WrappedRange(sc, so, ec, eo);
+      return new range_WrappedRange(sc, so, ec, eo);
     } else {
-      let wrappedRange = this.createFromSelection();
+      var wrappedRange = this.createFromSelection();
 
       if (!wrappedRange && arguments.length === 1) {
-        let bodyElement = arguments[0];
+        var bodyElement = arguments[0];
 
         if (dom.isEditable(bodyElement)) {
           bodyElement = bodyElement.lastChild;
@@ -3256,15 +3366,15 @@ let WrappedRange = /*#__PURE__*/function () {
     }
   },
   createFromBodyElement: function createFromBodyElement(bodyElement) {
-    let isCollapseToStart = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
-    let wrappedRange = this.createFromNode(bodyElement);
+    var isCollapseToStart = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
+    var wrappedRange = this.createFromNode(bodyElement);
     return wrappedRange.collapse(isCollapseToStart);
   },
   createFromSelection: function createFromSelection() {
-    let sc, so, ec, eo;
+    var sc, so, ec, eo;
 
     if (env.isW3CRangeSupport) {
-      let selection = document.getSelection();
+      var selection = document.getSelection();
 
       if (!selection || selection.rangeCount === 0) {
         return null;
@@ -3274,20 +3384,20 @@ let WrappedRange = /*#__PURE__*/function () {
         return null;
       }
 
-      let nativeRng = selection.getRangeAt(0);
+      var nativeRng = selection.getRangeAt(0);
       sc = nativeRng.startContainer;
       so = nativeRng.startOffset;
       ec = nativeRng.endContainer;
       eo = nativeRng.endOffset;
     } else {
       // IE8: TextRange
-      let textRange = document.selection.createRange();
-      let textRangeEnd = textRange.duplicate();
+      var textRange = document.selection.createRange();
+      var textRangeEnd = textRange.duplicate();
       textRangeEnd.collapse(false);
-      let textRangeStart = textRange;
+      var textRangeStart = textRange;
       textRangeStart.collapse(true);
-      let startPoint = textRangeToPoint(textRangeStart, true);
-      let endPoint = textRangeToPoint(textRangeEnd, false); // same visible point case: range was collapsed.
+      var startPoint = textRangeToPoint(textRangeStart, true);
+      var endPoint = textRangeToPoint(textRangeEnd, false); // same visible point case: range was collapsed.
 
       if (dom.isText(startPoint.node) && dom.isLeftEdgePoint(startPoint) && dom.isTextNode(endPoint.node) && dom.isRightEdgePoint(endPoint) && endPoint.node.nextSibling === startPoint.node) {
         startPoint = endPoint;
@@ -3299,7 +3409,7 @@ let WrappedRange = /*#__PURE__*/function () {
       eo = endPoint.offset;
     }
 
-    return new WrappedRange(sc, so, ec, eo);
+    return new range_WrappedRange(sc, so, ec, eo);
   },
 
   /**
@@ -3311,10 +3421,10 @@ let WrappedRange = /*#__PURE__*/function () {
    * @return {WrappedRange}
    */
   createFromNode: function createFromNode(node) {
-    let sc = node;
-    let so = 0;
-    let ec = node;
-    let eo = dom.nodeLength(ec); // browsers can't target a picture or void node
+    var sc = node;
+    var so = 0;
+    var ec = node;
+    var eo = dom.nodeLength(ec); // browsers can't target a picture or void node
 
     if (dom.isVoid(sc)) {
       so = dom.listPrev(sc).length - 1;
@@ -3362,11 +3472,11 @@ let WrappedRange = /*#__PURE__*/function () {
    * @return {WrappedRange}
    */
   createFromBookmark: function createFromBookmark(editable, bookmark) {
-    let sc = dom.fromOffsetPath(editable, bookmark.s.path);
-    let so = bookmark.s.offset;
-    let ec = dom.fromOffsetPath(editable, bookmark.e.path);
-    let eo = bookmark.e.offset;
-    return new WrappedRange(sc, so, ec, eo);
+    var sc = dom.fromOffsetPath(editable, bookmark.s.path);
+    var so = bookmark.s.offset;
+    var ec = dom.fromOffsetPath(editable, bookmark.e.path);
+    var eo = bookmark.e.offset;
+    return new range_WrappedRange(sc, so, ec, eo);
   },
 
   /**
@@ -3379,17 +3489,17 @@ let WrappedRange = /*#__PURE__*/function () {
    * @return {WrappedRange}
    */
   createFromParaBookmark: function createFromParaBookmark(bookmark, paras) {
-    let so = bookmark.s.offset;
-    let eo = bookmark.e.offset;
-    let sc = dom.fromOffsetPath(lists.head(paras), bookmark.s.path);
-    let ec = dom.fromOffsetPath(lists.last(paras), bookmark.e.path);
-    return new WrappedRange(sc, so, ec, eo);
+    var so = bookmark.s.offset;
+    var eo = bookmark.e.offset;
+    var sc = dom.fromOffsetPath(lists.head(paras), bookmark.s.path);
+    var ec = dom.fromOffsetPath(lists.last(paras), bookmark.e.path);
+    return new range_WrappedRange(sc, so, ec, eo);
   }
 });
-;// CONCATENATED MODULE: ./src/js/core/key.js
+// CONCATENATED MODULE: ./src/js/base/core/key.js
 
 
-let KEY_MAP = {
+var KEY_MAP = {
   'BACKSPACE': 8,
   'TAB': 9,
   'ENTER': 13,
@@ -3443,7 +3553,7 @@ let KEY_MAP = {
  * @alternateClassName key
  */
 
-/* harmony default export */ const key = ({
+/* harmony default export */ var core_key = ({
   /**
    * @method isEdit
    *
@@ -3481,7 +3591,7 @@ let KEY_MAP = {
   nameFromCode: func.invertObject(KEY_MAP),
   code: KEY_MAP
 });
-;// CONCATENATED MODULE: ./src/js/core/async.js
+// CONCATENATED MODULE: ./src/js/base/core/async.js
 
 /**
  * @method readFileAsDataURL
@@ -3493,10 +3603,10 @@ let KEY_MAP = {
  */
 
 function readFileAsDataURL(file) {
-  return external_jQuery_default().Deferred(function (deferred) {
-    external_jQuery_default().extend(new FileReader(), {
+  return external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default.a.Deferred(function (deferred) {
+    external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default.a.extend(new FileReader(), {
       onload: function onload(e) {
-        let dataURL = e.target.result;
+        var dataURL = e.target.result;
         deferred.resolve(dataURL);
       },
       onerror: function onerror(err) {
@@ -3515,8 +3625,8 @@ function readFileAsDataURL(file) {
  */
 
 function createImage(url) {
-  return external_jQuery_default().Deferred(function (deferred) {
-    let $img = external_jQuery_default()('<img>');
+  return external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default.a.Deferred(function (deferred) {
+    var $img = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()('<img>');
     $img.one('load', function () {
       $img.off('error abort');
       deferred.resolve($img);
@@ -3528,16 +3638,16 @@ function createImage(url) {
     }).appendTo(document.body).attr('src', url);
   }).promise();
 }
-;// CONCATENATED MODULE: ./src/js/editing/History.js
+// CONCATENATED MODULE: ./src/js/base/editing/History.js
 function History_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-function History_defineProperties(target, props) { for (let i = 0; i < props.length; i++) { let descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+function History_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
 function History_createClass(Constructor, protoProps, staticProps) { if (protoProps) History_defineProperties(Constructor.prototype, protoProps); if (staticProps) History_defineProperties(Constructor, staticProps); return Constructor; }
 
 
 
-let History = /*#__PURE__*/function () {
+var History_History = /*#__PURE__*/function () {
   function History(context) {
     History_classCallCheck(this, History);
 
@@ -3551,8 +3661,8 @@ let History = /*#__PURE__*/function () {
   History_createClass(History, [{
     key: "makeSnapshot",
     value: function makeSnapshot() {
-      let rng = range.create(this.editable);
-      let emptyBookmark = {
+      var rng = range.create(this.editable);
+      var emptyBookmark = {
         s: {
           path: [],
           offset: 0
@@ -3685,10 +3795,10 @@ let History = /*#__PURE__*/function () {
 }();
 
 
-;// CONCATENATED MODULE: ./src/js/editing/Style.js
+// CONCATENATED MODULE: ./src/js/base/editing/Style.js
 function Style_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-function Style_defineProperties(target, props) { for (let i = 0; i < props.length; i++) { let descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+function Style_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
 function Style_createClass(Constructor, protoProps, staticProps) { if (protoProps) Style_defineProperties(Constructor.prototype, protoProps); if (staticProps) Style_defineProperties(Constructor, staticProps); return Constructor; }
 
@@ -3697,14 +3807,15 @@ function Style_createClass(Constructor, protoProps, staticProps) { if (protoProp
 
 
 
-let Style = /*#__PURE__*/function () {
+
+var Style_Style = /*#__PURE__*/function () {
   function Style() {
     Style_classCallCheck(this, Style);
   }
 
   Style_createClass(Style, [{
     key: "jQueryCSS",
-    value:
+
     /**
      * @method jQueryCSS
      *
@@ -3718,12 +3829,16 @@ let Style = /*#__PURE__*/function () {
      * @param  {Array} propertyNames - An array of one or more CSS properties.
      * @return {Object}
      */
-    function jQueryCSS($obj, propertyNames) {
-      let result = {};
-      external_jQuery_default().each(propertyNames, function (idx, propertyName) {
-        result[propertyName] = $obj.css(propertyName);
-      });
-      return result;
+    value: function jQueryCSS($obj, propertyNames) {
+      if (env.jqueryVersion < 1.9) {
+        var result = {};
+        external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default.a.each(propertyNames, function (idx, propertyName) {
+          result[propertyName] = $obj.css(propertyName);
+        });
+        return result;
+      }
+
+      return $obj.css(propertyNames);
     }
     /**
      * returns style object from node
@@ -3735,9 +3850,9 @@ let Style = /*#__PURE__*/function () {
   }, {
     key: "fromNode",
     value: function fromNode($node) {
-      let properties = ['font-family', 'font-size', 'text-align', 'list-style-type', 'line-height'];
-      let styleInfo = this.jQueryCSS($node, properties) || {};
-      let fontSize = $node[0].style.fontSize || styleInfo['font-size'];
+      var properties = ['font-family', 'font-size', 'text-align', 'list-style-type', 'line-height'];
+      var styleInfo = this.jQueryCSS($node, properties) || {};
+      var fontSize = $node[0].style.fontSize || styleInfo['font-size'];
       styleInfo['font-size'] = parseInt(fontSize, 10);
       styleInfo['font-size-unit'] = fontSize.match(/[a-z%]+$/);
       return styleInfo;
@@ -3752,10 +3867,10 @@ let Style = /*#__PURE__*/function () {
   }, {
     key: "stylePara",
     value: function stylePara(rng, styleInfo) {
-      external_jQuery_default().each(rng.nodes(dom.isPara, {
+      external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default.a.each(rng.nodes(dom.isPara, {
         includeAncestor: true
       }), function (idx, para) {
-        external_jQuery_default()(para).css(styleInfo);
+        external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(para).css(styleInfo);
       });
     }
     /**
@@ -3773,16 +3888,16 @@ let Style = /*#__PURE__*/function () {
     key: "styleNodes",
     value: function styleNodes(rng, options) {
       rng = rng.splitText();
-      let nodeName = options && options.nodeName || 'SPAN';
-      let expandClosestSibling = !!(options && options.expandClosestSibling);
-      let onlyPartialContains = !!(options && options.onlyPartialContains);
+      var nodeName = options && options.nodeName || 'SPAN';
+      var expandClosestSibling = !!(options && options.expandClosestSibling);
+      var onlyPartialContains = !!(options && options.onlyPartialContains);
 
       if (rng.isCollapsed()) {
         return [rng.insertNode(dom.create(nodeName))];
       }
 
-      let pred = dom.makePredByNodeName(nodeName);
-      let nodes = rng.nodes(dom.isText, {
+      var pred = dom.makePredByNodeName(nodeName);
+      var nodes = rng.nodes(dom.isText, {
         fullyContains: true
       }).map(function (text) {
         return dom.singleChildAncestor(text, pred) || dom.wrap(text, nodeName);
@@ -3790,7 +3905,7 @@ let Style = /*#__PURE__*/function () {
 
       if (expandClosestSibling) {
         if (onlyPartialContains) {
-          let nodesInRange = rng.nodes(); // compose with partial contains predication
+          var nodesInRange = rng.nodes(); // compose with partial contains predication
 
           pred = func.and(pred, function (node) {
             return lists.contains(nodesInRange, node);
@@ -3798,10 +3913,10 @@ let Style = /*#__PURE__*/function () {
         }
 
         return nodes.map(function (node) {
-          let siblings = dom.withClosestSiblings(node, pred);
-          let head = lists.head(siblings);
-          let tails = lists.tail(siblings);
-          external_jQuery_default().each(tails, function (idx, elem) {
+          var siblings = dom.withClosestSiblings(node, pred);
+          var head = lists.head(siblings);
+          var tails = lists.tail(siblings);
+          external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default.a.each(tails, function (idx, elem) {
             dom.appendChildNodes(head, elem.childNodes);
             dom.remove(elem);
           });
@@ -3821,12 +3936,12 @@ let Style = /*#__PURE__*/function () {
   }, {
     key: "current",
     value: function current(rng) {
-      let $cont = external_jQuery_default()(!dom.isElement(rng.sc) ? rng.sc.parentNode : rng.sc);
-      let styleInfo = this.fromNode($cont); // document.queryCommandState for toggle state
+      var $cont = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(!dom.isElement(rng.sc) ? rng.sc.parentNode : rng.sc);
+      var styleInfo = this.fromNode($cont); // document.queryCommandState for toggle state
       // [workaround] prevent Firefox nsresult: "0x80004005 (NS_ERROR_FAILURE)"
 
       try {
-        styleInfo = external_jQuery_default().extend(styleInfo, {
+        styleInfo = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default.a.extend(styleInfo, {
           'font-bold': document.queryCommandState('bold') ? 'bold' : 'normal',
           'font-italic': document.queryCommandState('italic') ? 'italic' : 'normal',
           'font-underline': document.queryCommandState('underline') ? 'underline' : 'normal',
@@ -3835,24 +3950,24 @@ let Style = /*#__PURE__*/function () {
           'font-strikethrough': document.queryCommandState('strikethrough') ? 'strikethrough' : 'normal',
           'font-family': document.queryCommandValue('fontname') || styleInfo['font-family']
         });
-      } catch (e) {// eslint-disable-next-line
-      } // list-style-type to list-style(unordered, ordered)
+      } catch (e) {} // eslint-disable-next-line
+      // list-style-type to list-style(unordered, ordered)
 
 
       if (!rng.isOnList()) {
         styleInfo['list-style'] = 'none';
       } else {
-        let orderedTypes = ['circle', 'disc', 'disc-leading-zero', 'square'];
-        let isUnordered = orderedTypes.indexOf(styleInfo['list-style-type']) > -1;
+        var orderedTypes = ['circle', 'disc', 'disc-leading-zero', 'square'];
+        var isUnordered = orderedTypes.indexOf(styleInfo['list-style-type']) > -1;
         styleInfo['list-style'] = isUnordered ? 'unordered' : 'ordered';
       }
 
-      let para = dom.ancestor(rng.sc, dom.isPara);
+      var para = dom.ancestor(rng.sc, dom.isPara);
 
       if (para && para.style['line-height']) {
         styleInfo['line-height'] = para.style.lineHeight;
       } else {
-        let lineHeight = parseInt(styleInfo['line-height'], 10) / parseInt(styleInfo['font-size'], 10);
+        var lineHeight = parseInt(styleInfo['line-height'], 10) / parseInt(styleInfo['font-size'], 10);
         styleInfo['line-height'] = lineHeight.toFixed(1);
       }
 
@@ -3867,10 +3982,10 @@ let Style = /*#__PURE__*/function () {
 }();
 
 
-;// CONCATENATED MODULE: ./src/js/editing/Bullet.js
+// CONCATENATED MODULE: ./src/js/base/editing/Bullet.js
 function Bullet_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-function Bullet_defineProperties(target, props) { for (let i = 0; i < props.length; i++) { let descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+function Bullet_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
 function Bullet_createClass(Constructor, protoProps, staticProps) { if (protoProps) Bullet_defineProperties(Constructor.prototype, protoProps); if (staticProps) Bullet_defineProperties(Constructor, staticProps); return Constructor; }
 
@@ -3880,18 +3995,18 @@ function Bullet_createClass(Constructor, protoProps, staticProps) { if (protoPro
 
 
 
-let Bullet = /*#__PURE__*/function () {
+var Bullet_Bullet = /*#__PURE__*/function () {
   function Bullet() {
     Bullet_classCallCheck(this, Bullet);
   }
 
   Bullet_createClass(Bullet, [{
     key: "insertOrderedList",
-    value:
+
     /**
      * toggle ordered list
      */
-    function insertOrderedList(editable) {
+    value: function insertOrderedList(editable) {
       this.toggleList('OL', editable);
     }
     /**
@@ -3910,18 +4025,18 @@ let Bullet = /*#__PURE__*/function () {
   }, {
     key: "indent",
     value: function indent(editable) {
-      let _this = this;
+      var _this = this;
 
-      let rng = range.create(editable).wrapBodyInlineWithPara();
-      let paras = rng.nodes(dom.isPara, {
+      var rng = range.create(editable).wrapBodyInlineWithPara();
+      var paras = rng.nodes(dom.isPara, {
         includeAncestor: true
       });
-      let clustereds = lists.clusterBy(paras, func.peq2('parentNode'));
-      external_jQuery_default().each(clustereds, function (idx, paras) {
-        let head = lists.head(paras);
+      var clustereds = lists.clusterBy(paras, func.peq2('parentNode'));
+      external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default.a.each(clustereds, function (idx, paras) {
+        var head = lists.head(paras);
 
         if (dom.isLi(head)) {
-          let previousList = _this.findList(head.previousSibling);
+          var previousList = _this.findList(head.previousSibling);
 
           if (previousList) {
             paras.map(function (para) {
@@ -3937,8 +4052,8 @@ let Bullet = /*#__PURE__*/function () {
             });
           }
         } else {
-          external_jQuery_default().each(paras, function (idx, para) {
-            external_jQuery_default()(para).css('marginLeft', function (idx, val) {
+          external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default.a.each(paras, function (idx, para) {
+            external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(para).css('marginLeft', function (idx, val) {
               return (parseInt(val, 10) || 0) + 25;
             });
           });
@@ -3953,21 +4068,21 @@ let Bullet = /*#__PURE__*/function () {
   }, {
     key: "outdent",
     value: function outdent(editable) {
-      let _this2 = this;
+      var _this2 = this;
 
-      let rng = range.create(editable).wrapBodyInlineWithPara();
-      let paras = rng.nodes(dom.isPara, {
+      var rng = range.create(editable).wrapBodyInlineWithPara();
+      var paras = rng.nodes(dom.isPara, {
         includeAncestor: true
       });
-      let clustereds = lists.clusterBy(paras, func.peq2('parentNode'));
-      external_jQuery_default().each(clustereds, function (idx, paras) {
-        let head = lists.head(paras);
+      var clustereds = lists.clusterBy(paras, func.peq2('parentNode'));
+      external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default.a.each(clustereds, function (idx, paras) {
+        var head = lists.head(paras);
 
         if (dom.isLi(head)) {
           _this2.releaseList([paras]);
         } else {
-          external_jQuery_default().each(paras, function (idx, para) {
-            external_jQuery_default()(para).css('marginLeft', function (idx, val) {
+          external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default.a.each(paras, function (idx, para) {
+            external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(para).css('marginLeft', function (idx, val) {
               val = parseInt(val, 10) || 0;
               return val > 25 ? val - 25 : '';
             });
@@ -3985,30 +4100,30 @@ let Bullet = /*#__PURE__*/function () {
   }, {
     key: "toggleList",
     value: function toggleList(listName, editable) {
-      let _this3 = this;
+      var _this3 = this;
 
-      let rng = range.create(editable).wrapBodyInlineWithPara();
-      let paras = rng.nodes(dom.isPara, {
+      var rng = range.create(editable).wrapBodyInlineWithPara();
+      var paras = rng.nodes(dom.isPara, {
         includeAncestor: true
       });
-      let bookmark = rng.paraBookmark(paras);
-      let clustereds = lists.clusterBy(paras, func.peq2('parentNode')); // paragraph to list
+      var bookmark = rng.paraBookmark(paras);
+      var clustereds = lists.clusterBy(paras, func.peq2('parentNode')); // paragraph to list
 
       if (lists.find(paras, dom.isPurePara)) {
-        let wrappedParas = [];
-        external_jQuery_default().each(clustereds, function (idx, paras) {
+        var wrappedParas = [];
+        external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default.a.each(clustereds, function (idx, paras) {
           wrappedParas = wrappedParas.concat(_this3.wrapList(paras, listName));
         });
         paras = wrappedParas; // list to paragraph or change list style
       } else {
-        let diffLists = rng.nodes(dom.isList, {
+        var diffLists = rng.nodes(dom.isList, {
           includeAncestor: true
         }).filter(function (listNode) {
-          return !external_jQuery_default().nodeName(listNode, listName);
+          return !external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default.a.nodeName(listNode, listName);
         });
 
         if (diffLists.length) {
-          external_jQuery_default().each(diffLists, function (idx, listNode) {
+          external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default.a.each(diffLists, function (idx, listNode) {
             dom.replace(listNode, listName);
           });
         } else {
@@ -4027,11 +4142,11 @@ let Bullet = /*#__PURE__*/function () {
   }, {
     key: "wrapList",
     value: function wrapList(paras, listName) {
-      let head = lists.head(paras);
-      let last = lists.last(paras);
-      let prevList = dom.isList(head.previousSibling) && head.previousSibling;
-      let nextList = dom.isList(last.nextSibling) && last.nextSibling;
-      let listNode = prevList || dom.insertAfter(dom.create(listName || 'UL'), last); // P to LI
+      var head = lists.head(paras);
+      var last = lists.last(paras);
+      var prevList = dom.isList(head.previousSibling) && head.previousSibling;
+      var nextList = dom.isList(last.nextSibling) && last.nextSibling;
+      var listNode = prevList || dom.insertAfter(dom.create(listName || 'UL'), last); // P to LI
 
       paras = paras.map(function (para) {
         return dom.isPurePara(para) ? dom.replace(para, 'LI') : para;
@@ -4057,18 +4172,18 @@ let Bullet = /*#__PURE__*/function () {
   }, {
     key: "releaseList",
     value: function releaseList(clustereds, isEscapseToBody) {
-      let _this4 = this;
+      var _this4 = this;
 
-      let releasedParas = [];
-      external_jQuery_default().each(clustereds, function (idx, paras) {
-        let head = lists.head(paras);
-        let last = lists.last(paras);
-        let headList = isEscapseToBody ? dom.lastAncestor(head, dom.isList) : head.parentNode;
-        let parentItem = headList.parentNode;
+      var releasedParas = [];
+      external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default.a.each(clustereds, function (idx, paras) {
+        var head = lists.head(paras);
+        var last = lists.last(paras);
+        var headList = isEscapseToBody ? dom.lastAncestor(head, dom.isList) : head.parentNode;
+        var parentItem = headList.parentNode;
 
         if (headList.parentNode.nodeName === 'LI') {
           paras.map(function (para) {
-            let newList = _this4.findNextSiblings(para);
+            var newList = _this4.findNextSiblings(para);
 
             if (parentItem.nextSibling) {
               parentItem.parentNode.insertBefore(para, parentItem.nextSibling);
@@ -4091,13 +4206,13 @@ let Bullet = /*#__PURE__*/function () {
             parentItem.parentNode.removeChild(parentItem);
           }
         } else {
-          let lastList = headList.childNodes.length > 1 ? dom.splitTree(headList, {
+          var lastList = headList.childNodes.length > 1 ? dom.splitTree(headList, {
             node: last.parentNode,
             offset: dom.position(last) + 1
           }, {
             isSkipPaddingBlankHTML: true
           }) : null;
-          let middleList = dom.splitTree(headList, {
+          var middleList = dom.splitTree(headList, {
             node: head.parentNode,
             offset: dom.position(head)
           }, {
@@ -4111,14 +4226,14 @@ let Bullet = /*#__PURE__*/function () {
             });
           }
 
-          external_jQuery_default().each(lists.from(paras).reverse(), function (idx, para) {
+          external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default.a.each(lists.from(paras).reverse(), function (idx, para) {
             dom.insertAfter(para, headList);
           }); // remove empty lists
 
-          let rootLists = lists.compact([headList, middleList, lastList]);
-          external_jQuery_default().each(rootLists, function (idx, rootList) {
-            let listNodes = [rootList].concat(dom.listDescendant(rootList, dom.isList));
-            external_jQuery_default().each(listNodes.reverse(), function (idx, listNode) {
+          var rootLists = lists.compact([headList, middleList, lastList]);
+          external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default.a.each(rootLists, function (idx, rootList) {
+            var listNodes = [rootList].concat(dom.listDescendant(rootList, dom.isList));
+            external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default.a.each(listNodes.reverse(), function (idx, listNode) {
               if (!dom.nodeLength(listNode)) {
                 dom.remove(listNode, true);
               }
@@ -4173,7 +4288,7 @@ let Bullet = /*#__PURE__*/function () {
   }, {
     key: "findNextSiblings",
     value: function findNextSiblings(node) {
-      let siblings = [];
+      var siblings = [];
 
       while (node.nextSibling) {
         siblings.push(node.nextSibling);
@@ -4188,10 +4303,10 @@ let Bullet = /*#__PURE__*/function () {
 }();
 
 
-;// CONCATENATED MODULE: ./src/js/editing/Typing.js
+// CONCATENATED MODULE: ./src/js/base/editing/Typing.js
 function Typing_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-function Typing_defineProperties(target, props) { for (let i = 0; i < props.length; i++) { let descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+function Typing_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
 function Typing_createClass(Constructor, protoProps, staticProps) { if (protoProps) Typing_defineProperties(Constructor.prototype, protoProps); if (staticProps) Typing_defineProperties(Constructor, staticProps); return Constructor; }
 
@@ -4206,12 +4321,12 @@ function Typing_createClass(Constructor, protoProps, staticProps) { if (protoPro
  *
  */
 
-let Typing = /*#__PURE__*/function () {
+var Typing_Typing = /*#__PURE__*/function () {
   function Typing(context) {
     Typing_classCallCheck(this, Typing);
 
     // a Bullet instance to toggle lists off
-    this.bullet = new Bullet();
+    this.bullet = new Bullet_Bullet();
     this.options = context.options;
   }
   /**
@@ -4225,7 +4340,7 @@ let Typing = /*#__PURE__*/function () {
   Typing_createClass(Typing, [{
     key: "insertTab",
     value: function insertTab(rng, tabsize) {
-      let tab = dom.createText(new Array(tabsize + 1).join(dom.NBSP_CHAR));
+      var tab = dom.createText(new Array(tabsize + 1).join(dom.NBSP_CHAR));
       rng = rng.deleteContents();
       rng.insertNode(tab, true);
       rng = range.create(tab, tabsize);
@@ -4252,8 +4367,8 @@ let Typing = /*#__PURE__*/function () {
 
       rng = rng.wrapBodyInlineWithPara(); // finding paragraph
 
-      let splitRoot = dom.ancestor(rng.sc, dom.isPara);
-      let nextPara; // on paragraph: split paragraph
+      var splitRoot = dom.ancestor(rng.sc, dom.isPara);
+      var nextPara; // on paragraph: split paragraph
 
       if (splitRoot) {
         // if it is an empty line with li
@@ -4262,7 +4377,7 @@ let Typing = /*#__PURE__*/function () {
           this.bullet.toggleList(splitRoot.parentNode.nodeName);
           return;
         } else {
-          let blockquote = null;
+          var blockquote = null;
 
           if (this.options.blockquoteBreakingLevel === 1) {
             blockquote = dom.ancestor(splitRoot, dom.isBlockquote);
@@ -4272,14 +4387,14 @@ let Typing = /*#__PURE__*/function () {
 
           if (blockquote) {
             // We're inside a blockquote and options ask us to break it
-            nextPara = external_jQuery_default()(dom.emptyPara)[0]; // If the split is right before a <br>, remove it so that there's no "empty line"
+            nextPara = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(dom.emptyPara)[0]; // If the split is right before a <br>, remove it so that there's no "empty line"
             // after the split in the new blockquote created
 
             if (dom.isRightEdgePoint(rng.getStartPoint()) && dom.isBR(rng.sc.nextSibling)) {
-              external_jQuery_default()(rng.sc.nextSibling).remove();
+              external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(rng.sc.nextSibling).remove();
             }
 
-            let split = dom.splitTree(blockquote, rng.getStartPoint(), {
+            var split = dom.splitTree(blockquote, rng.getStartPoint(), {
               isDiscardEmptySplits: true
             });
 
@@ -4291,9 +4406,9 @@ let Typing = /*#__PURE__*/function () {
           } else {
             nextPara = dom.splitTree(splitRoot, rng.getStartPoint()); // not a blockquote, just insert the paragraph
 
-            let emptyAnchors = dom.listDescendant(splitRoot, dom.isEmptyAnchor);
+            var emptyAnchors = dom.listDescendant(splitRoot, dom.isEmptyAnchor);
             emptyAnchors = emptyAnchors.concat(dom.listDescendant(nextPara, dom.isEmptyAnchor));
-            external_jQuery_default().each(emptyAnchors, function (idx, anchor) {
+            external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default.a.each(emptyAnchors, function (idx, anchor) {
               dom.remove(anchor);
             }); // replace empty heading, pre or custom-made styleTag with P tag
 
@@ -4304,8 +4419,8 @@ let Typing = /*#__PURE__*/function () {
         } // no paragraph: insert empty paragraph
 
       } else {
-        let next = rng.sc.childNodes[rng.so];
-        nextPara = external_jQuery_default()(dom.emptyPara)[0];
+        var next = rng.sc.childNodes[rng.so];
+        nextPara = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(dom.emptyPara)[0];
 
         if (next) {
           rng.sc.insertBefore(nextPara, next);
@@ -4322,10 +4437,10 @@ let Typing = /*#__PURE__*/function () {
 }();
 
 
-;// CONCATENATED MODULE: ./src/js/editing/Table.js
+// CONCATENATED MODULE: ./src/js/base/editing/Table.js
 function Table_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-function Table_defineProperties(target, props) { for (let i = 0; i < props.length; i++) { let descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+function Table_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
 function Table_createClass(Constructor, protoProps, staticProps) { if (protoProps) Table_defineProperties(Constructor.prototype, protoProps); if (staticProps) Table_defineProperties(Constructor, staticProps); return Constructor; }
 
@@ -4341,13 +4456,13 @@ function Table_createClass(Constructor, protoProps, staticProps) { if (protoProp
  * @param {object} domTable Dom element of table to make changes.
  */
 
-let TableResultAction = function TableResultAction(startPoint, where, action, domTable) {
-  let _startPoint = {
+var TableResultAction = function TableResultAction(startPoint, where, action, domTable) {
+  var _startPoint = {
     'colPos': 0,
     'rowPos': 0
   };
-  let _virtualTable = [];
-  let _actionCellList = []; /// ///////////////////////////////////////////
+  var _virtualTable = [];
+  var _actionCellList = []; /// ///////////////////////////////////////////
   // Private functions
   /// ///////////////////////////////////////////
 
@@ -4382,7 +4497,7 @@ let TableResultAction = function TableResultAction(startPoint, where, action, do
 
 
   function setVirtualTablePosition(rowIndex, cellIndex, baseRow, baseCell, isRowSpan, isColSpan, isVirtualCell) {
-    let objPosition = {
+    var objPosition = {
       'baseRow': baseRow,
       'baseCell': baseCell,
       'isRowSpan': isRowSpan,
@@ -4431,7 +4546,7 @@ let TableResultAction = function TableResultAction(startPoint, where, action, do
       return cellIndex;
     }
 
-    let newCellIndex = cellIndex;
+    var newCellIndex = cellIndex;
 
     while (_virtualTable[rowIndex][newCellIndex]) {
       newCellIndex++;
@@ -4450,28 +4565,28 @@ let TableResultAction = function TableResultAction(startPoint, where, action, do
 
 
   function addCellInfoToVirtual(row, cell) {
-    let cellIndex = recoverCellIndex(row.rowIndex, cell.cellIndex);
-    let cellHasColspan = cell.colSpan > 1;
-    let cellHasRowspan = cell.rowSpan > 1;
-    let isThisSelectedCell = row.rowIndex === _startPoint.rowPos && cell.cellIndex === _startPoint.colPos;
+    var cellIndex = recoverCellIndex(row.rowIndex, cell.cellIndex);
+    var cellHasColspan = cell.colSpan > 1;
+    var cellHasRowspan = cell.rowSpan > 1;
+    var isThisSelectedCell = row.rowIndex === _startPoint.rowPos && cell.cellIndex === _startPoint.colPos;
     setVirtualTablePosition(row.rowIndex, cellIndex, row, cell, cellHasRowspan, cellHasColspan, false); // Add span rows to virtual Table.
 
-    let rowspanNumber = cell.attributes.rowSpan ? parseInt(cell.attributes.rowSpan.value, 10) : 0;
+    var rowspanNumber = cell.attributes.rowSpan ? parseInt(cell.attributes.rowSpan.value, 10) : 0;
 
     if (rowspanNumber > 1) {
-      for (let rp = 1; rp < rowspanNumber; rp++) {
-        let rowspanIndex = row.rowIndex + rp;
+      for (var rp = 1; rp < rowspanNumber; rp++) {
+        var rowspanIndex = row.rowIndex + rp;
         adjustStartPoint(rowspanIndex, cellIndex, cell, isThisSelectedCell);
         setVirtualTablePosition(rowspanIndex, cellIndex, row, cell, true, cellHasColspan, true);
       }
     } // Add span cols to virtual table.
 
 
-    let colspanNumber = cell.attributes.colSpan ? parseInt(cell.attributes.colSpan.value, 10) : 0;
+    var colspanNumber = cell.attributes.colSpan ? parseInt(cell.attributes.colSpan.value, 10) : 0;
 
     if (colspanNumber > 1) {
-      for (let cp = 1; cp < colspanNumber; cp++) {
-        let cellspanIndex = recoverCellIndex(row.rowIndex, cellIndex + cp);
+      for (var cp = 1; cp < colspanNumber; cp++) {
+        var cellspanIndex = recoverCellIndex(row.rowIndex, cellIndex + cp);
         adjustStartPoint(row.rowIndex, cellspanIndex, cell, isThisSelectedCell);
         setVirtualTablePosition(row.rowIndex, cellspanIndex, row, cell, cellHasRowspan, true, true);
       }
@@ -4498,12 +4613,12 @@ let TableResultAction = function TableResultAction(startPoint, where, action, do
 
 
   function createVirtualTable() {
-    let rows = domTable.rows;
+    var rows = domTable.rows;
 
-    for (let rowIndex = 0; rowIndex < rows.length; rowIndex++) {
-      let cells = rows[rowIndex].cells;
+    for (var rowIndex = 0; rowIndex < rows.length; rowIndex++) {
+      var cells = rows[rowIndex].cells;
 
-      for (let cellIndex = 0; cellIndex < cells.length; cellIndex++) {
+      for (var cellIndex = 0; cellIndex < cells.length; cellIndex++) {
         addCellInfoToVirtual(rows[rowIndex], cells[cellIndex]);
       }
     }
@@ -4580,22 +4695,22 @@ let TableResultAction = function TableResultAction(startPoint, where, action, do
 
 
   this.getActionList = function () {
-    let fixedRow = where === TableResultAction.where.Row ? _startPoint.rowPos : -1;
-    let fixedCol = where === TableResultAction.where.Column ? _startPoint.colPos : -1;
-    let actualPosition = 0;
-    let canContinue = true;
+    var fixedRow = where === TableResultAction.where.Row ? _startPoint.rowPos : -1;
+    var fixedCol = where === TableResultAction.where.Column ? _startPoint.colPos : -1;
+    var actualPosition = 0;
+    var canContinue = true;
 
     while (canContinue) {
-      let rowPosition = fixedRow >= 0 ? fixedRow : actualPosition;
-      let colPosition = fixedCol >= 0 ? fixedCol : actualPosition;
-      let row = _virtualTable[rowPosition];
+      var rowPosition = fixedRow >= 0 ? fixedRow : actualPosition;
+      var colPosition = fixedCol >= 0 ? fixedCol : actualPosition;
+      var row = _virtualTable[rowPosition];
 
       if (!row) {
         canContinue = false;
         return _actionCellList;
       }
 
-      let cell = row[colPosition];
+      var cell = row[colPosition];
 
       if (!cell) {
         canContinue = false;
@@ -4603,7 +4718,7 @@ let TableResultAction = function TableResultAction(startPoint, where, action, do
       } // Define action to be applied in this cell
 
 
-      let resultAction = TableResultAction.resultAction.Ignore;
+      var resultAction = TableResultAction.resultAction.Ignore;
 
       switch (action) {
         case TableResultAction.requestAction.Add:
@@ -4664,25 +4779,25 @@ TableResultAction.resultAction = {
  *
  */
 
-let Table = /*#__PURE__*/function () {
+var Table_Table = /*#__PURE__*/function () {
   function Table() {
     Table_classCallCheck(this, Table);
   }
 
   Table_createClass(Table, [{
     key: "tab",
-    value:
+
     /**
      * handle tab key
      *
      * @param {WrappedRange} rng
      * @param {Boolean} isShift
      */
-    function tab(rng, isShift) {
-      let cell = dom.ancestor(rng.commonAncestor(), dom.isCell);
-      let table = dom.ancestor(cell, dom.isTable);
-      let cells = dom.listDescendant(table, dom.isCell);
-      let nextCell = lists[isShift ? 'prev' : 'next'](cells, cell);
+    value: function tab(rng, isShift) {
+      var cell = dom.ancestor(rng.commonAncestor(), dom.isCell);
+      var table = dom.ancestor(cell, dom.isTable);
+      var cells = dom.listDescendant(table, dom.isCell);
+      var nextCell = lists[isShift ? 'prev' : 'next'](cells, cell);
 
       if (nextCell) {
         range.create(nextCell, 0).select();
@@ -4699,16 +4814,16 @@ let Table = /*#__PURE__*/function () {
   }, {
     key: "addRow",
     value: function addRow(rng, position) {
-      let cell = dom.ancestor(rng.commonAncestor(), dom.isCell);
-      let currentTr = external_jQuery_default()(cell).closest('tr');
-      let trAttributes = this.recoverAttributes(currentTr);
-      let html = external_jQuery_default()('<tr' + trAttributes + '></tr>');
-      let vTable = new TableResultAction(cell, TableResultAction.where.Row, TableResultAction.requestAction.Add, external_jQuery_default()(currentTr).closest('table')[0]);
-      let actions = vTable.getActionList();
+      var cell = dom.ancestor(rng.commonAncestor(), dom.isCell);
+      var currentTr = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(cell).closest('tr');
+      var trAttributes = this.recoverAttributes(currentTr);
+      var html = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()('<tr' + trAttributes + '></tr>');
+      var vTable = new TableResultAction(cell, TableResultAction.where.Row, TableResultAction.requestAction.Add, external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(currentTr).closest('table')[0]);
+      var actions = vTable.getActionList();
 
-      for (let idCell = 0; idCell < actions.length; idCell++) {
-        let currentCell = actions[idCell];
-        let tdAttributes = this.recoverAttributes(currentCell.baseCell);
+      for (var idCell = 0; idCell < actions.length; idCell++) {
+        var currentCell = actions[idCell];
+        var tdAttributes = this.recoverAttributes(currentCell.baseCell);
 
         switch (currentCell.action) {
           case TableResultAction.resultAction.AddCell:
@@ -4718,17 +4833,17 @@ let Table = /*#__PURE__*/function () {
           case TableResultAction.resultAction.SumSpanCount:
             {
               if (position === 'top') {
-                let baseCellTr = currentCell.baseCell.parent;
-                let isTopFromRowSpan = (!baseCellTr ? 0 : currentCell.baseCell.closest('tr').rowIndex) <= currentTr[0].rowIndex;
+                var baseCellTr = currentCell.baseCell.parent;
+                var isTopFromRowSpan = (!baseCellTr ? 0 : currentCell.baseCell.closest('tr').rowIndex) <= currentTr[0].rowIndex;
 
                 if (isTopFromRowSpan) {
-                  let newTd = external_jQuery_default()('<div></div>').append(external_jQuery_default()('<td' + tdAttributes + '>' + dom.blank + '</td>').removeAttr('rowspan')).html();
+                  var newTd = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()('<div></div>').append(external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()('<td' + tdAttributes + '>' + dom.blank + '</td>').removeAttr('rowspan')).html();
                   html.append(newTd);
                   break;
                 }
               }
 
-              let rowspanNumber = parseInt(currentCell.baseCell.rowSpan, 10);
+              var rowspanNumber = parseInt(currentCell.baseCell.rowSpan, 10);
               rowspanNumber++;
               currentCell.baseCell.setAttribute('rowSpan', rowspanNumber);
             }
@@ -4739,11 +4854,11 @@ let Table = /*#__PURE__*/function () {
       if (position === 'top') {
         currentTr.before(html);
       } else {
-        let cellHasRowspan = cell.rowSpan > 1;
+        var cellHasRowspan = cell.rowSpan > 1;
 
         if (cellHasRowspan) {
-          let lastTrIndex = currentTr[0].rowIndex + (cell.rowSpan - 2);
-          external_jQuery_default()(external_jQuery_default()(currentTr).parent().find('tr')[lastTrIndex]).after(external_jQuery_default()(html));
+          var lastTrIndex = currentTr[0].rowIndex + (cell.rowSpan - 2);
+          external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(currentTr).parent().find('tr')[lastTrIndex]).after(external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(html));
           return;
         }
 
@@ -4761,34 +4876,34 @@ let Table = /*#__PURE__*/function () {
   }, {
     key: "addCol",
     value: function addCol(rng, position) {
-      let cell = dom.ancestor(rng.commonAncestor(), dom.isCell);
-      let row = external_jQuery_default()(cell).closest('tr');
-      let rowsGroup = external_jQuery_default()(row).siblings();
+      var cell = dom.ancestor(rng.commonAncestor(), dom.isCell);
+      var row = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(cell).closest('tr');
+      var rowsGroup = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(row).siblings();
       rowsGroup.push(row);
-      let vTable = new TableResultAction(cell, TableResultAction.where.Column, TableResultAction.requestAction.Add, external_jQuery_default()(row).closest('table')[0]);
-      let actions = vTable.getActionList();
+      var vTable = new TableResultAction(cell, TableResultAction.where.Column, TableResultAction.requestAction.Add, external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(row).closest('table')[0]);
+      var actions = vTable.getActionList();
 
-      for (let actionIndex = 0; actionIndex < actions.length; actionIndex++) {
-        let currentCell = actions[actionIndex];
-        let tdAttributes = this.recoverAttributes(currentCell.baseCell);
+      for (var actionIndex = 0; actionIndex < actions.length; actionIndex++) {
+        var currentCell = actions[actionIndex];
+        var tdAttributes = this.recoverAttributes(currentCell.baseCell);
 
         switch (currentCell.action) {
           case TableResultAction.resultAction.AddCell:
             if (position === 'right') {
-              external_jQuery_default()(currentCell.baseCell).after('<td' + tdAttributes + '>' + dom.blank + '</td>');
+              external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(currentCell.baseCell).after('<td' + tdAttributes + '>' + dom.blank + '</td>');
             } else {
-              external_jQuery_default()(currentCell.baseCell).before('<td' + tdAttributes + '>' + dom.blank + '</td>');
+              external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(currentCell.baseCell).before('<td' + tdAttributes + '>' + dom.blank + '</td>');
             }
 
             break;
 
           case TableResultAction.resultAction.SumSpanCount:
             if (position === 'right') {
-              let colspanNumber = parseInt(currentCell.baseCell.colSpan, 10);
+              var colspanNumber = parseInt(currentCell.baseCell.colSpan, 10);
               colspanNumber++;
               currentCell.baseCell.setAttribute('colSpan', colspanNumber);
             } else {
-              external_jQuery_default()(currentCell.baseCell).before('<td' + tdAttributes + '>' + dom.blank + '</td>');
+              external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(currentCell.baseCell).before('<td' + tdAttributes + '>' + dom.blank + '</td>');
             }
 
             break;
@@ -4805,15 +4920,15 @@ let Table = /*#__PURE__*/function () {
   }, {
     key: "recoverAttributes",
     value: function recoverAttributes(el) {
-      let resultStr = '';
+      var resultStr = '';
 
       if (!el) {
         return resultStr;
       }
 
-      let attrList = el.attributes || [];
+      var attrList = el.attributes || [];
 
-      for (let i = 0; i < attrList.length; i++) {
+      for (var i = 0; i < attrList.length; i++) {
         if (attrList[i].name.toLowerCase() === 'id') {
           continue;
         }
@@ -4835,22 +4950,22 @@ let Table = /*#__PURE__*/function () {
   }, {
     key: "deleteRow",
     value: function deleteRow(rng) {
-      let cell = dom.ancestor(rng.commonAncestor(), dom.isCell);
-      let row = external_jQuery_default()(cell).closest('tr');
-      let cellPos = row.children('td, th').index(external_jQuery_default()(cell));
-      let rowPos = row[0].rowIndex;
-      let vTable = new TableResultAction(cell, TableResultAction.where.Row, TableResultAction.requestAction.Delete, external_jQuery_default()(row).closest('table')[0]);
-      let actions = vTable.getActionList();
+      var cell = dom.ancestor(rng.commonAncestor(), dom.isCell);
+      var row = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(cell).closest('tr');
+      var cellPos = row.children('td, th').index(external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(cell));
+      var rowPos = row[0].rowIndex;
+      var vTable = new TableResultAction(cell, TableResultAction.where.Row, TableResultAction.requestAction.Delete, external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(row).closest('table')[0]);
+      var actions = vTable.getActionList();
 
-      for (let actionIndex = 0; actionIndex < actions.length; actionIndex++) {
+      for (var actionIndex = 0; actionIndex < actions.length; actionIndex++) {
         if (!actions[actionIndex]) {
           continue;
         }
 
-        let baseCell = actions[actionIndex].baseCell;
-        let virtualPosition = actions[actionIndex].virtualTable;
-        let hasRowspan = baseCell.rowSpan && baseCell.rowSpan > 1;
-        let rowspanNumber = hasRowspan ? parseInt(baseCell.rowSpan, 10) : 0;
+        var baseCell = actions[actionIndex].baseCell;
+        var virtualPosition = actions[actionIndex].virtualTable;
+        var hasRowspan = baseCell.rowSpan && baseCell.rowSpan > 1;
+        var rowspanNumber = hasRowspan ? parseInt(baseCell.rowSpan, 10) : 0;
 
         switch (actions[actionIndex].action) {
           case TableResultAction.resultAction.Ignore:
@@ -4858,13 +4973,13 @@ let Table = /*#__PURE__*/function () {
 
           case TableResultAction.resultAction.AddCell:
             {
-              let nextRow = row.next('tr')[0];
+              var nextRow = row.next('tr')[0];
 
               if (!nextRow) {
                 continue;
               }
 
-              let cloneRow = row[0].cells[cellPos];
+              var cloneRow = row[0].cells[cellPos];
 
               if (hasRowspan) {
                 if (rowspanNumber > 2) {
@@ -4919,13 +5034,13 @@ let Table = /*#__PURE__*/function () {
   }, {
     key: "deleteCol",
     value: function deleteCol(rng) {
-      let cell = dom.ancestor(rng.commonAncestor(), dom.isCell);
-      let row = external_jQuery_default()(cell).closest('tr');
-      let cellPos = row.children('td, th').index(external_jQuery_default()(cell));
-      let vTable = new TableResultAction(cell, TableResultAction.where.Column, TableResultAction.requestAction.Delete, external_jQuery_default()(row).closest('table')[0]);
-      let actions = vTable.getActionList();
+      var cell = dom.ancestor(rng.commonAncestor(), dom.isCell);
+      var row = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(cell).closest('tr');
+      var cellPos = row.children('td, th').index(external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(cell));
+      var vTable = new TableResultAction(cell, TableResultAction.where.Column, TableResultAction.requestAction.Delete, external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(row).closest('table')[0]);
+      var actions = vTable.getActionList();
 
-      for (let actionIndex = 0; actionIndex < actions.length; actionIndex++) {
+      for (var actionIndex = 0; actionIndex < actions.length; actionIndex++) {
         if (!actions[actionIndex]) {
           continue;
         }
@@ -4936,11 +5051,11 @@ let Table = /*#__PURE__*/function () {
 
           case TableResultAction.resultAction.SubtractSpanCount:
             {
-              let baseCell = actions[actionIndex].baseCell;
-              let hasColspan = baseCell.colSpan && baseCell.colSpan > 1;
+              var baseCell = actions[actionIndex].baseCell;
+              var hasColspan = baseCell.colSpan && baseCell.colSpan > 1;
 
               if (hasColspan) {
-                let colspanNumber = baseCell.colSpan ? parseInt(baseCell.colSpan, 10) : 0;
+                var colspanNumber = baseCell.colSpan ? parseInt(baseCell.colSpan, 10) : 0;
 
                 if (colspanNumber > 2) {
                   colspanNumber--;
@@ -4977,23 +5092,23 @@ let Table = /*#__PURE__*/function () {
   }, {
     key: "createTable",
     value: function createTable(colCount, rowCount, options) {
-      let tds = [];
-      let tdHTML;
+      var tds = [];
+      var tdHTML;
 
-      for (let idxCol = 0; idxCol < colCount; idxCol++) {
+      for (var idxCol = 0; idxCol < colCount; idxCol++) {
         tds.push('<td>' + dom.blank + '</td>');
       }
 
       tdHTML = tds.join('');
-      let trs = [];
-      let trHTML;
+      var trs = [];
+      var trHTML;
 
-      for (let idxRow = 0; idxRow < rowCount; idxRow++) {
+      for (var idxRow = 0; idxRow < rowCount; idxRow++) {
         trs.push('<tr>' + tdHTML + '</tr>');
       }
 
       trHTML = trs.join('');
-      let $table = external_jQuery_default()('<table>' + trHTML + '</table>');
+      var $table = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()('<table>' + trHTML + '</table>');
 
       if (options && options.tableClassName) {
         $table.addClass(options.tableClassName);
@@ -5011,8 +5126,8 @@ let Table = /*#__PURE__*/function () {
   }, {
     key: "deleteTable",
     value: function deleteTable(rng) {
-      let cell = dom.ancestor(rng.commonAncestor(), dom.isCell);
-      external_jQuery_default()(cell).closest('table').remove();
+      var cell = dom.ancestor(rng.commonAncestor(), dom.isCell);
+      external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(cell).closest('table').remove();
     }
   }]);
 
@@ -5020,10 +5135,10 @@ let Table = /*#__PURE__*/function () {
 }();
 
 
-;// CONCATENATED MODULE: ./src/js/module/Editor.js
+// CONCATENATED MODULE: ./src/js/base/module/Editor.js
 function Editor_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-function Editor_defineProperties(target, props) { for (let i = 0; i < props.length; i++) { let descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+function Editor_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
 function Editor_createClass(Constructor, protoProps, staticProps) { if (protoProps) Editor_defineProperties(Constructor.prototype, protoProps); if (staticProps) Editor_defineProperties(Constructor, staticProps); return Constructor; }
 
@@ -5040,14 +5155,14 @@ function Editor_createClass(Constructor, protoProps, staticProps) { if (protoPro
 
 
 
-let KEY_BOGUS = 'bogus';
+var KEY_BOGUS = 'bogus';
 /**
  * @class Editor
  */
 
-let Editor = /*#__PURE__*/function () {
+var Editor_Editor = /*#__PURE__*/function () {
   function Editor(context) {
-    let _this = this;
+    var _this = this;
 
     Editor_classCallCheck(this, Editor);
 
@@ -5060,11 +5175,11 @@ let Editor = /*#__PURE__*/function () {
     this.editable = this.$editable[0];
     this.lastRange = null;
     this.snapshot = null;
-    this.style = new Style();
-    this.table = new Table();
-    this.typing = new Typing(context);
-    this.bullet = new Bullet();
-    this.history = new History(context);
+    this.style = new Style_Style();
+    this.table = new Table_Table();
+    this.typing = new Typing_Typing(context);
+    this.bullet = new Bullet_Bullet();
+    this.history = new History_History(context);
     this.context.memo('help.escape', this.lang.help.escape);
     this.context.memo('help.undo', this.lang.help.undo);
     this.context.memo('help.redo', this.lang.help.redo);
@@ -5079,9 +5194,9 @@ let Editor = /*#__PURE__*/function () {
     this.context.memo('help.insertHorizontalRule', this.lang.help.insertHorizontalRule);
     this.context.memo('help.fontName', this.lang.help.fontName); // native commands(with execCommand), generate function for execCommand
 
-    let commands = ['bold', 'italic', 'underline', 'strikethrough', 'superscript', 'subscript', 'justifyLeft', 'justifyCenter', 'justifyRight', 'justifyFull', 'formatBlock', 'removeFormat', 'backColor'];
+    var commands = ['bold', 'italic', 'underline', 'strikethrough', 'superscript', 'subscript', 'justifyLeft', 'justifyCenter', 'justifyRight', 'justifyFull', 'formatBlock', 'removeFormat', 'backColor'];
 
-    for (let idx = 0, len = commands.length; idx < len; idx++) {
+    for (var idx = 0, len = commands.length; idx < len; idx++) {
       this[commands[idx]] = function (sCmd) {
         return function (value) {
           _this.beforeCommand();
@@ -5099,17 +5214,17 @@ let Editor = /*#__PURE__*/function () {
       return _this.fontStyling('font-family', env.validFontName(value));
     });
     this.fontSize = this.wrapCommand(function (value) {
-      let unit = _this.currentStyle()['font-size-unit'];
+      var unit = _this.currentStyle()['font-size-unit'];
 
       return _this.fontStyling('font-size', value + unit);
     });
     this.fontSizeUnit = this.wrapCommand(function (value) {
-      let size = _this.currentStyle()['font-size'];
+      var size = _this.currentStyle()['font-size'];
 
       return _this.fontStyling('font-size', size + value);
     });
 
-    for (let _idx = 1; _idx <= 6; _idx++) {
+    for (var _idx = 1; _idx <= 6; _idx++) {
       this['formatH' + _idx] = function (idx) {
         return function () {
           _this.formatBlock('H' + idx);
@@ -5141,11 +5256,11 @@ let Editor = /*#__PURE__*/function () {
      */
 
     this.insertNode = this.wrapCommand(function (node) {
-      if (_this.isLimited(external_jQuery_default()(node).text().length)) {
+      if (_this.isLimited(external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(node).text().length)) {
         return;
       }
 
-      let rng = _this.getLastRange();
+      var rng = _this.getLastRange();
 
       rng.insertNode(node);
 
@@ -5161,9 +5276,9 @@ let Editor = /*#__PURE__*/function () {
         return;
       }
 
-      let rng = _this.getLastRange();
+      var rng = _this.getLastRange();
 
-      let textNode = rng.insertNode(dom.createText(text));
+      var textNode = rng.insertNode(dom.createText(text));
 
       _this.setLastRange(range.create(textNode, dom.nodeLength(textNode)).select());
     });
@@ -5179,7 +5294,7 @@ let Editor = /*#__PURE__*/function () {
 
       markup = _this.context.invoke('codeview.purify', markup);
 
-      let contents = _this.getLastRange().pasteHTML(markup);
+      var contents = _this.getLastRange().pasteHTML(markup);
 
       _this.setLastRange(range.createFromNodeAfter(lists.last(contents)).select());
     });
@@ -5190,7 +5305,7 @@ let Editor = /*#__PURE__*/function () {
      */
 
     this.formatBlock = this.wrapCommand(function (tagName, $target) {
-      let onApplyCustomStyle = _this.options.callbacks.onApplyCustomStyle;
+      var onApplyCustomStyle = _this.options.callbacks.onApplyCustomStyle;
 
       if (onApplyCustomStyle) {
         onApplyCustomStyle.call(_this, $target, _this.context, _this.onFormatBlock);
@@ -5203,7 +5318,7 @@ let Editor = /*#__PURE__*/function () {
      */
 
     this.insertHorizontalRule = this.wrapCommand(function () {
-      let hrNode = _this.getLastRange().insertNode(dom.create('HR'));
+      var hrNode = _this.getLastRange().insertNode(dom.create('HR'));
 
       if (hrNode.nextSibling) {
         _this.setLastRange(range.create(hrNode.nextSibling, 0).normalize().select());
@@ -5226,20 +5341,20 @@ let Editor = /*#__PURE__*/function () {
      */
 
     this.createLink = this.wrapCommand(function (linkInfo) {
-      let linkUrl = linkInfo.url;
-      let linkText = linkInfo.text;
-      let isNewWindow = linkInfo.isNewWindow;
-      let checkProtocol = linkInfo.checkProtocol;
+      var linkUrl = linkInfo.url;
+      var linkText = linkInfo.text;
+      var isNewWindow = linkInfo.isNewWindow;
+      var checkProtocol = linkInfo.checkProtocol;
 
-      let rng = linkInfo.range || _this.getLastRange();
+      var rng = linkInfo.range || _this.getLastRange();
 
-      let additionalTextLength = linkText.length - rng.toString().length;
+      var additionalTextLength = linkText.length - rng.toString().length;
 
       if (additionalTextLength > 0 && _this.isLimited(additionalTextLength)) {
         return;
       }
 
-      let isTextChanged = rng.toString() !== linkText; // handle spaced urls from input
+      var isTextChanged = rng.toString() !== linkText; // handle spaced urls from input
 
       if (typeof linkUrl === 'string') {
         linkUrl = linkUrl.trim();
@@ -5252,11 +5367,11 @@ let Editor = /*#__PURE__*/function () {
         linkUrl = /^([A-Za-z][A-Za-z0-9+-.]*\:|#|\/)/.test(linkUrl) ? linkUrl : _this.options.defaultProtocol + linkUrl;
       }
 
-      let anchors = [];
+      var anchors = [];
 
       if (isTextChanged) {
         rng = rng.deleteContents();
-        let anchor = rng.insertNode(external_jQuery_default()('<A>' + linkText + '</A>')[0]);
+        var anchor = rng.insertNode(external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()('<A>' + linkText + '</A>')[0]);
         anchors.push(anchor);
       } else {
         anchors = _this.style.styleNodes(rng, {
@@ -5266,13 +5381,13 @@ let Editor = /*#__PURE__*/function () {
         });
       }
 
-      external_jQuery_default().each(anchors, function (idx, anchor) {
-        external_jQuery_default()(anchor).attr('href', linkUrl);
+      external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default.a.each(anchors, function (idx, anchor) {
+        external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(anchor).attr('href', linkUrl);
 
         if (isNewWindow) {
-          external_jQuery_default()(anchor).attr('target', '_blank');
+          external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(anchor).attr('target', '_blank');
         } else {
-          external_jQuery_default()(anchor).removeAttr('target');
+          external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(anchor).removeAttr('target');
         }
       });
 
@@ -5287,8 +5402,8 @@ let Editor = /*#__PURE__*/function () {
      */
 
     this.color = this.wrapCommand(function (colorInfo) {
-      let foreColor = colorInfo.foreColor;
-      let backColor = colorInfo.backColor;
+      var foreColor = colorInfo.foreColor;
+      var backColor = colorInfo.backColor;
 
       if (foreColor) {
         document.execCommand('foreColor', false, foreColor);
@@ -5314,9 +5429,9 @@ let Editor = /*#__PURE__*/function () {
      */
 
     this.insertTable = this.wrapCommand(function (dim) {
-      let dimension = dim.split('x');
+      var dimension = dim.split('x');
 
-      let rng = _this.getLastRange().deleteContents();
+      var rng = _this.getLastRange().deleteContents();
 
       rng.insertNode(_this.table.createTable(dimension[0], dimension[1], _this.options));
     });
@@ -5325,12 +5440,12 @@ let Editor = /*#__PURE__*/function () {
      */
 
     this.removeMedia = this.wrapCommand(function () {
-      let $target = external_jQuery_default()(_this.restoreTarget()).parent();
+      var $target = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(_this.restoreTarget()).parent();
 
       if ($target.closest('figure').length) {
         $target.closest('figure').remove();
       } else {
-        $target = external_jQuery_default()(_this.restoreTarget()).detach();
+        $target = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(_this.restoreTarget()).detach();
       }
 
       _this.context.triggerEvent('media.delete', $target, _this.$editable);
@@ -5342,7 +5457,7 @@ let Editor = /*#__PURE__*/function () {
      */
 
     this.floatMe = this.wrapCommand(function (value) {
-      let $target = external_jQuery_default()(_this.restoreTarget());
+      var $target = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(_this.restoreTarget());
       $target.toggleClass('note-float-left', value === 'left');
       $target.toggleClass('note-float-right', value === 'right');
       $target.css('float', value === 'none' ? '' : value);
@@ -5353,7 +5468,7 @@ let Editor = /*#__PURE__*/function () {
      */
 
     this.resize = this.wrapCommand(function (value) {
-      let $target = external_jQuery_default()(_this.restoreTarget());
+      var $target = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(_this.restoreTarget());
       value = parseFloat(value);
 
       if (value === 0) {
@@ -5370,11 +5485,11 @@ let Editor = /*#__PURE__*/function () {
   Editor_createClass(Editor, [{
     key: "initialize",
     value: function initialize() {
-      let _this2 = this;
+      var _this2 = this;
 
       // bind custom events
       this.$editable.on('keydown', function (event) {
-        if (event.keyCode === key.code.ENTER) {
+        if (event.keyCode === core_key.code.ENTER) {
           _this2.context.triggerEvent('enter', event);
         }
 
@@ -5393,7 +5508,7 @@ let Editor = /*#__PURE__*/function () {
         }
 
         if (_this2.isLimited(1, event)) {
-          let lastRange = _this2.getLastRange();
+          var lastRange = _this2.getLastRange();
 
           if (lastRange.eo - lastRange.so === 0) {
             return false;
@@ -5493,8 +5608,8 @@ let Editor = /*#__PURE__*/function () {
   }, {
     key: "handleKeyMap",
     value: function handleKeyMap(event) {
-      let keyMap = this.options.keyMap[env.isMac ? 'mac' : 'pc'];
-      let keys = [];
+      var keyMap = this.options.keyMap[env.isMac ? 'mac' : 'pc'];
+      var keys = [];
 
       if (event.metaKey) {
         keys.push('CMD');
@@ -5508,13 +5623,13 @@ let Editor = /*#__PURE__*/function () {
         keys.push('SHIFT');
       }
 
-      let keyName = key.nameFromCode[event.keyCode];
+      var keyName = core_key.nameFromCode[event.keyCode];
 
       if (keyName) {
         keys.push(keyName);
       }
 
-      let eventName = keyMap[keys.join('+')];
+      var eventName = keyMap[keys.join('+')];
 
       if (keyName === 'TAB' && !this.options.tabDisable) {
         this.afterCommand();
@@ -5524,7 +5639,7 @@ let Editor = /*#__PURE__*/function () {
 
           return true;
         }
-      } else if (key.isEdit(event.keyCode)) {
+      } else if (core_key.isEdit(event.keyCode)) {
         this.afterCommand();
       }
 
@@ -5544,7 +5659,7 @@ let Editor = /*#__PURE__*/function () {
       pad = pad || 0;
 
       if (typeof event !== 'undefined') {
-        if (key.isMove(event.keyCode) || key.isNavigation(event.keyCode) || event.ctrlKey || event.metaKey || lists.contains([key.code.BACKSPACE, key.code.DELETE], event.keyCode)) {
+        if (core_key.isMove(event.keyCode) || core_key.isNavigation(event.keyCode) || event.ctrlKey || event.metaKey || lists.contains([core_key.code.BACKSPACE, core_key.code.DELETE], event.keyCode)) {
           return false;
         }
       }
@@ -5579,10 +5694,10 @@ let Editor = /*#__PURE__*/function () {
   }, {
     key: "createRangeFromList",
     value: function createRangeFromList(lst) {
-      let startRange = range.createFromNodeBefore(lists.head(lst));
-      let startPoint = startRange.getStartPoint();
-      let endRange = range.createFromNodeAfter(lists.last(lst));
-      let endPoint = endRange.getEndPoint();
+      var startRange = range.createFromNodeBefore(lists.head(lst));
+      var startPoint = startRange.getStartPoint();
+      var endRange = range.createFromNodeAfter(lists.last(lst));
+      var endPoint = endRange.getEndPoint();
       return range.create(startPoint.node, startPoint.offset, endPoint.node, endPoint.offset);
     }
     /**
@@ -5602,7 +5717,7 @@ let Editor = /*#__PURE__*/function () {
       } else {
         this.lastRange = range.create(this.editable);
 
-        if (external_jQuery_default()(this.lastRange.sc).closest('.note-editable').length === 0) {
+        if (external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(this.lastRange.sc).closest('.note-editable').length === 0) {
           this.lastRange = range.createFromBodyElement(this.editable);
         }
       }
@@ -5679,7 +5794,7 @@ let Editor = /*#__PURE__*/function () {
   }, {
     key: "currentStyle",
     value: function currentStyle() {
-      let rng = range.create();
+      var rng = range.create();
 
       if (rng) {
         rng = rng.normalize();
@@ -5767,7 +5882,7 @@ let Editor = /*#__PURE__*/function () {
   }, {
     key: "tab",
     value: function tab() {
-      let rng = this.getLastRange();
+      var rng = this.getLastRange();
 
       if (rng.isCollapsed() && rng.isOnCell()) {
         this.table.tab(rng);
@@ -5790,7 +5905,7 @@ let Editor = /*#__PURE__*/function () {
   }, {
     key: "untab",
     value: function untab() {
-      let rng = this.getLastRange();
+      var rng = this.getLastRange();
 
       if (rng.isCollapsed() && rng.isOnCell()) {
         this.table.tab(rng, true);
@@ -5824,7 +5939,7 @@ let Editor = /*#__PURE__*/function () {
   }, {
     key: "insertImage",
     value: function insertImage(src, param) {
-      let _this3 = this;
+      var _this3 = this;
 
       return createImage(src, param).then(function ($image) {
         _this3.beforeCommand();
@@ -5858,10 +5973,10 @@ let Editor = /*#__PURE__*/function () {
   }, {
     key: "insertImagesAsDataURL",
     value: function insertImagesAsDataURL(files) {
-      let _this4 = this;
+      var _this4 = this;
 
-      external_jQuery_default().each(files, function (idx, file) {
-        let filename = file.name;
+      external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default.a.each(files, function (idx, file) {
+        var filename = file.name;
 
         if (_this4.options.maximumImageFileSize && _this4.options.maximumImageFileSize < file.size) {
           _this4.context.triggerEvent('image.upload.error', _this4.lang.image.maximumFileSizeError);
@@ -5882,7 +5997,7 @@ let Editor = /*#__PURE__*/function () {
   }, {
     key: "insertImagesOrCallback",
     value: function insertImagesOrCallback(files) {
-      let callbacks = this.options.callbacks; // If onImageUpload set,
+      var callbacks = this.options.callbacks; // If onImageUpload set,
 
       if (callbacks.onImageUpload) {
         this.context.triggerEvent('image.upload', files); // else insert Image as dataURL
@@ -5898,7 +6013,7 @@ let Editor = /*#__PURE__*/function () {
   }, {
     key: "getSelectedText",
     value: function getSelectedText() {
-      let rng = this.getLastRange(); // if range on anchor, expand range with anchor
+      var rng = this.getLastRange(); // if range on anchor, expand range with anchor
 
       if (rng.isOnAnchor()) {
         rng = range.createFromNode(dom.ancestor(rng.sc, dom.isAnchor));
@@ -5919,13 +6034,11 @@ let Editor = /*#__PURE__*/function () {
         }
 
         if ($target && $target.length) {
-          let currentRange = this.createRange();
-          let $parent = external_jQuery_default()([currentRange.sc, currentRange.ec]).closest(tagName); // remove class added for current block
-
-          $parent.removeClass();
-          let className = $target[0].className || '';
+          var className = $target[0].className || '';
 
           if (className) {
+            var currentRange = this.createRange();
+            var $parent = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()([currentRange.sc, currentRange.ec]).closest(tagName);
             $parent.addClass(className);
           }
         }
@@ -5939,16 +6052,16 @@ let Editor = /*#__PURE__*/function () {
   }, {
     key: "fontStyling",
     value: function fontStyling(target, value) {
-      let rng = this.getLastRange();
+      var rng = this.getLastRange();
 
       if (rng !== '') {
-        let spans = this.style.styleNodes(rng);
+        var spans = this.style.styleNodes(rng);
         this.$editor.find('.note-status-output').html('');
-        external_jQuery_default()(spans).css(target, value); // [workaround] added styled bogus span for style
+        external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(spans).css(target, value); // [workaround] added styled bogus span for style
         //  - also bogus character needed for cursor position
 
         if (rng.isCollapsed()) {
-          let firstSpan = lists.head(spans);
+          var firstSpan = lists.head(spans);
 
           if (firstSpan && !dom.nodeLength(firstSpan)) {
             firstSpan.innerHTML = dom.ZERO_WIDTH_NBSP_CHAR;
@@ -5960,10 +6073,10 @@ let Editor = /*#__PURE__*/function () {
           this.setLastRange(this.createRangeFromList(spans).select());
         }
       } else {
-        let noteStatusOutput = external_jQuery_default().now();
+        var noteStatusOutput = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default.a.now();
         this.$editor.find('.note-status-output').html('<div id="note-status-output-' + noteStatusOutput + '" class="alert alert-info">' + this.lang.output.noSelection + '</div>');
         setTimeout(function () {
-          external_jQuery_default()('#note-status-output-' + noteStatusOutput).remove();
+          external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()('#note-status-output-' + noteStatusOutput).remove();
         }, 5000);
       }
     }
@@ -5976,10 +6089,10 @@ let Editor = /*#__PURE__*/function () {
   }, {
     key: "unlink",
     value: function unlink() {
-      let rng = this.getLastRange();
+      var rng = this.getLastRange();
 
       if (rng.isOnAnchor()) {
-        let anchor = dom.ancestor(rng.sc, dom.isAnchor);
+        var anchor = dom.ancestor(rng.sc, dom.isAnchor);
         rng = range.createFromNode(anchor);
         rng.select();
         this.setLastRange();
@@ -6001,10 +6114,10 @@ let Editor = /*#__PURE__*/function () {
   }, {
     key: "getLinkInfo",
     value: function getLinkInfo() {
-      let rng = this.getLastRange().expand(dom.isAnchor); // Get the first anchor on range(for edit).
+      var rng = this.getLastRange().expand(dom.isAnchor); // Get the first anchor on range(for edit).
 
-      let $anchor = external_jQuery_default()(lists.head(rng.nodes(dom.isAnchor)));
-      let linkInfo = {
+      var $anchor = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(lists.head(rng.nodes(dom.isAnchor)));
+      var linkInfo = {
         range: rng,
         text: rng.toString(),
         url: $anchor.length ? $anchor.attr('href') : ''
@@ -6020,7 +6133,7 @@ let Editor = /*#__PURE__*/function () {
   }, {
     key: "addRow",
     value: function addRow(position) {
-      let rng = this.getLastRange(this.$editable);
+      var rng = this.getLastRange(this.$editable);
 
       if (rng.isCollapsed() && rng.isOnCell()) {
         this.beforeCommand();
@@ -6031,7 +6144,7 @@ let Editor = /*#__PURE__*/function () {
   }, {
     key: "addCol",
     value: function addCol(position) {
-      let rng = this.getLastRange(this.$editable);
+      var rng = this.getLastRange(this.$editable);
 
       if (rng.isCollapsed() && rng.isOnCell()) {
         this.beforeCommand();
@@ -6042,7 +6155,7 @@ let Editor = /*#__PURE__*/function () {
   }, {
     key: "deleteRow",
     value: function deleteRow() {
-      let rng = this.getLastRange(this.$editable);
+      var rng = this.getLastRange(this.$editable);
 
       if (rng.isCollapsed() && rng.isOnCell()) {
         this.beforeCommand();
@@ -6053,7 +6166,7 @@ let Editor = /*#__PURE__*/function () {
   }, {
     key: "deleteCol",
     value: function deleteCol() {
-      let rng = this.getLastRange(this.$editable);
+      var rng = this.getLastRange(this.$editable);
 
       if (rng.isCollapsed() && rng.isOnCell()) {
         this.beforeCommand();
@@ -6064,7 +6177,7 @@ let Editor = /*#__PURE__*/function () {
   }, {
     key: "deleteTable",
     value: function deleteTable() {
-      let rng = this.getLastRange(this.$editable);
+      var rng = this.getLastRange(this.$editable);
 
       if (rng.isCollapsed() && rng.isOnCell()) {
         this.beforeCommand();
@@ -6081,11 +6194,11 @@ let Editor = /*#__PURE__*/function () {
   }, {
     key: "resizeTo",
     value: function resizeTo(pos, $target, bKeepRatio) {
-      let imageSize;
+      var imageSize;
 
       if (bKeepRatio) {
-        let newRatio = pos.y / pos.x;
-        let ratio = $target.data('ratio');
+        var newRatio = pos.y / pos.x;
+        var ratio = $target.data('ratio');
         imageSize = {
           width: ratio > newRatio ? pos.x : pos.y / ratio,
           height: ratio > newRatio ? pos.x * ratio : pos.y
@@ -6155,16 +6268,16 @@ let Editor = /*#__PURE__*/function () {
 }();
 
 
-;// CONCATENATED MODULE: ./src/js/module/Clipboard.js
+// CONCATENATED MODULE: ./src/js/base/module/Clipboard.js
 function Clipboard_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-function Clipboard_defineProperties(target, props) { for (let i = 0; i < props.length; i++) { let descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+function Clipboard_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
 function Clipboard_createClass(Constructor, protoProps, staticProps) { if (protoProps) Clipboard_defineProperties(Constructor.prototype, protoProps); if (staticProps) Clipboard_defineProperties(Constructor, staticProps); return Constructor; }
 
 
 
-let Clipboard = /*#__PURE__*/function () {
+var Clipboard_Clipboard = /*#__PURE__*/function () {
   function Clipboard(context) {
     Clipboard_classCallCheck(this, Clipboard);
 
@@ -6186,12 +6299,12 @@ let Clipboard = /*#__PURE__*/function () {
   }, {
     key: "pasteByEvent",
     value: function pasteByEvent(event) {
-      let _this = this;
+      var _this = this;
 
-      let clipboardData = event.originalEvent.clipboardData;
+      var clipboardData = event.originalEvent.clipboardData;
 
       if (clipboardData && clipboardData.items && clipboardData.items.length) {
-        let item = clipboardData.items.length > 1 ? clipboardData.items[1] : lists.head(clipboardData.items);
+        var item = clipboardData.items.length > 1 ? clipboardData.items[1] : lists.head(clipboardData.items);
 
         if (item.kind === 'file' && item.type.indexOf('image/') !== -1) {
           // paste img file
@@ -6205,7 +6318,7 @@ let Clipboard = /*#__PURE__*/function () {
         }
       } else if (window.clipboardData) {
         // for IE
-        let text = window.clipboardData.getData('text');
+        var text = window.clipboardData.getData('text');
 
         if (this.context.invoke('editor.isLimited', text.length)) {
           event.preventDefault();
@@ -6223,27 +6336,27 @@ let Clipboard = /*#__PURE__*/function () {
 }();
 
 
-;// CONCATENATED MODULE: ./src/js/module/Dropzone.js
+// CONCATENATED MODULE: ./src/js/base/module/Dropzone.js
 function Dropzone_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-function Dropzone_defineProperties(target, props) { for (let i = 0; i < props.length; i++) { let descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+function Dropzone_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
 function Dropzone_createClass(Constructor, protoProps, staticProps) { if (protoProps) Dropzone_defineProperties(Constructor.prototype, protoProps); if (staticProps) Dropzone_defineProperties(Constructor, staticProps); return Constructor; }
 
 
 
-let Dropzone = /*#__PURE__*/function () {
+var Dropzone_Dropzone = /*#__PURE__*/function () {
   function Dropzone(context) {
     Dropzone_classCallCheck(this, Dropzone);
 
     this.context = context;
-    this.$eventListener = external_jQuery_default()(document);
+    this.$eventListener = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(document);
     this.$editor = context.layoutInfo.editor;
     this.$editable = context.layoutInfo.editable;
     this.options = context.options;
     this.lang = this.options.langInfo;
     this.documentEventHandlers = {};
-    this.$dropzone = external_jQuery_default()(['<div class="note-dropzone">', '<div class="note-dropzone-message"></div>', '</div>'].join('')).prependTo(this.$editor);
+    this.$dropzone = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(['<div class="note-dropzone">', '<div class="note-dropzone-message"></div>', '</div>'].join('')).prependTo(this.$editor);
   }
   /**
    * attach Drag and Drop Events
@@ -6273,15 +6386,15 @@ let Dropzone = /*#__PURE__*/function () {
   }, {
     key: "attachDragAndDropEvent",
     value: function attachDragAndDropEvent() {
-      let _this = this;
+      var _this = this;
 
-      let collection = external_jQuery_default()();
-      let $dropzoneMessage = this.$dropzone.find('.note-dropzone-message');
+      var collection = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()();
+      var $dropzoneMessage = this.$dropzone.find('.note-dropzone-message');
 
       this.documentEventHandlers.onDragenter = function (e) {
-        let isCodeview = _this.context.invoke('codeview.isActivated');
+        var isCodeview = _this.context.invoke('codeview.isActivated');
 
-        let hasEditorSize = _this.$editor.width() > 0 && _this.$editor.height() > 0;
+        var hasEditorSize = _this.$editor.width() > 0 && _this.$editor.height() > 0;
 
         if (!isCodeview && !collection.length && hasEditorSize) {
           _this.$editor.addClass('dragover');
@@ -6300,14 +6413,14 @@ let Dropzone = /*#__PURE__*/function () {
         collection = collection.not(e.target); // If nodeName is BODY, then just make it over (fix for IE)
 
         if (!collection.length || e.target.nodeName === 'BODY') {
-          collection = external_jQuery_default()();
+          collection = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()();
 
           _this.$editor.removeClass('dragover');
         }
       };
 
       this.documentEventHandlers.onDrop = function () {
-        collection = external_jQuery_default()();
+        collection = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()();
 
         _this.$editor.removeClass('dragover');
       }; // show dropzone on dragenter when dragging a object to document
@@ -6327,7 +6440,7 @@ let Dropzone = /*#__PURE__*/function () {
       }); // attach dropImage
 
       this.$dropzone.on('drop', function (event) {
-        let dataTransfer = event.originalEvent.dataTransfer; // stop the browser from opening the dropped content
+        var dataTransfer = event.originalEvent.dataTransfer; // stop the browser from opening the dropped content
 
         event.preventDefault();
 
@@ -6336,18 +6449,18 @@ let Dropzone = /*#__PURE__*/function () {
 
           _this.context.invoke('editor.insertImagesOrCallback', dataTransfer.files);
         } else {
-          external_jQuery_default().each(dataTransfer.types, function (idx, type) {
+          external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default.a.each(dataTransfer.types, function (idx, type) {
             // skip moz-specific types
             if (type.toLowerCase().indexOf('_moz_') > -1) {
               return;
             }
 
-            let content = dataTransfer.getData(type);
+            var content = dataTransfer.getData(type);
 
             if (type.toLowerCase().indexOf('text') > -1) {
               _this.context.invoke('editor.pasteHTML', content);
             } else {
-              external_jQuery_default()(content).each(function (idx, item) {
+              external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(content).each(function (idx, item) {
                 _this.context.invoke('editor.insertNode', item);
               });
             }
@@ -6358,7 +6471,7 @@ let Dropzone = /*#__PURE__*/function () {
   }, {
     key: "destroy",
     value: function destroy() {
-      let _this2 = this;
+      var _this2 = this;
 
       Object.keys(this.documentEventHandlers).forEach(function (key) {
         _this2.$eventListener.off(key.substr(2).toLowerCase(), _this2.documentEventHandlers[key]);
@@ -6371,16 +6484,16 @@ let Dropzone = /*#__PURE__*/function () {
 }();
 
 
-;// CONCATENATED MODULE: ./src/js/module/Codeview.js
-function _createForOfIteratorHelper(o, allowArrayLike) { let it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (!it) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; let i = 0; let F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } let normalCompletion = true, didErr = false, err; return { s: function s() { it = it.call(o); }, n: function n() { let step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
+// CONCATENATED MODULE: ./src/js/base/module/Codeview.js
+function _createForOfIteratorHelper(o) { if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) { if (Array.isArray(o) || (o = _unsupportedIterableToArray(o))) { var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var it, normalCompletion = true, didErr = false, err; return { s: function s() { it = o[Symbol.iterator](); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
 
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); let n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(n); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
 
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (let i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
 
 function Codeview_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-function Codeview_defineProperties(target, props) { for (let i = 0; i < props.length; i++) { let descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+function Codeview_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
 function Codeview_createClass(Constructor, protoProps, staticProps) { if (protoProps) Codeview_defineProperties(Constructor.prototype, protoProps); if (staticProps) Codeview_defineProperties(Constructor, staticProps); return Constructor; }
 
@@ -6390,7 +6503,7 @@ function Codeview_createClass(Constructor, protoProps, staticProps) { if (protoP
  * @class Codeview
  */
 
-let CodeView = /*#__PURE__*/function () {
+var Codeview_CodeView = /*#__PURE__*/function () {
   function CodeView(context) {
     Codeview_classCallCheck(this, CodeView);
 
@@ -6409,8 +6522,8 @@ let CodeView = /*#__PURE__*/function () {
   Codeview_createClass(CodeView, [{
     key: "sync",
     value: function sync(html) {
-      let isCodeview = this.isActivated();
-      let CodeMirror = this.CodeMirrorConstructor;
+      var isCodeview = this.isActivated();
+      var CodeMirror = this.CodeMirrorConstructor;
 
       if (isCodeview) {
         if (html) {
@@ -6429,10 +6542,10 @@ let CodeView = /*#__PURE__*/function () {
   }, {
     key: "initialize",
     value: function initialize() {
-      let _this = this;
+      var _this = this;
 
       this.$codable.on('keyup', function (event) {
-        if (event.keyCode === key.code.ESCAPE) {
+        if (event.keyCode === core_key.code.ESCAPE) {
           _this.deactivate();
         }
       });
@@ -6475,19 +6588,19 @@ let CodeView = /*#__PURE__*/function () {
         value = value.replace(this.options.codeviewFilterRegex, ''); // allow specific iframe tag
 
         if (this.options.codeviewIframeFilter) {
-          let whitelist = this.options.codeviewIframeWhitelistSrc.concat(this.options.codeviewIframeWhitelistSrcBase);
+          var whitelist = this.options.codeviewIframeWhitelistSrc.concat(this.options.codeviewIframeWhitelistSrcBase);
           value = value.replace(/(<iframe.*?>.*?(?:<\/iframe>)?)/gi, function (tag) {
             // remove if src attribute is duplicated
             if (/<.+src(?==?('|"|\s)?)[\s\S]+src(?=('|"|\s)?)[^>]*?>/i.test(tag)) {
               return '';
             }
 
-            let _iterator = _createForOfIteratorHelper(whitelist),
+            var _iterator = _createForOfIteratorHelper(whitelist),
                 _step;
 
             try {
               for (_iterator.s(); !(_step = _iterator.n()).done;) {
-                let src = _step.value;
+                var src = _step.value;
 
                 // pass if src is trusted
                 if (new RegExp('src="(https?:)?\/\/' + src.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&') + '\/(.+)"').test(tag)) {
@@ -6514,9 +6627,9 @@ let CodeView = /*#__PURE__*/function () {
   }, {
     key: "activate",
     value: function activate() {
-      let _this2 = this;
+      var _this2 = this;
 
-      let CodeMirror = this.CodeMirrorConstructor;
+      var CodeMirror = this.CodeMirrorConstructor;
       this.$codable.val(dom.html(this.$editable, this.options.prettifyHtml));
       this.$codable.height(this.$editable.height());
       this.context.invoke('toolbar.updateCodeview', true);
@@ -6525,10 +6638,10 @@ let CodeView = /*#__PURE__*/function () {
       this.$codable.focus(); // activate CodeMirror as codable
 
       if (CodeMirror) {
-        let cmEditor = CodeMirror.fromTextArea(this.$codable[0], this.options.codemirror); // CodeMirror TernServer
+        var cmEditor = CodeMirror.fromTextArea(this.$codable[0], this.options.codemirror); // CodeMirror TernServer
 
         if (this.options.codemirror.tern) {
-          let server = new CodeMirror.TernServer(this.options.codemirror.tern);
+          var server = new CodeMirror.TernServer(this.options.codemirror.tern);
           cmEditor.ternServer = server;
           cmEditor.on('cursorActivity', function (cm) {
             server.updateArgHints(cm);
@@ -6560,16 +6673,16 @@ let CodeView = /*#__PURE__*/function () {
   }, {
     key: "deactivate",
     value: function deactivate() {
-      let CodeMirror = this.CodeMirrorConstructor; // deactivate CodeMirror as codable
+      var CodeMirror = this.CodeMirrorConstructor; // deactivate CodeMirror as codable
 
       if (CodeMirror) {
-        let cmEditor = this.$codable.data('cmEditor');
+        var cmEditor = this.$codable.data('cmEditor');
         this.$codable.val(cmEditor.getValue());
         cmEditor.toTextArea();
       }
 
-      let value = this.purify(dom.value(this.$codable, this.options.prettifyHtml) || dom.emptyPara);
-      let isChange = this.$editable.html() !== value;
+      var value = this.purify(dom.value(this.$codable, this.options.prettifyHtml) || dom.emptyPara);
+      var isChange = this.$editable.html() !== value;
       this.$editable.html(value);
       this.$editable.height(this.options.height ? this.$codable.height() : 'auto');
       this.$editor.removeClass('codeview');
@@ -6595,31 +6708,30 @@ let CodeView = /*#__PURE__*/function () {
 }();
 
 
-;// CONCATENATED MODULE: ./src/js/module/Statusbar.js
+// CONCATENATED MODULE: ./src/js/base/module/Statusbar.js
 function Statusbar_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-function Statusbar_defineProperties(target, props) { for (let i = 0; i < props.length; i++) { let descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+function Statusbar_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
 function Statusbar_createClass(Constructor, protoProps, staticProps) { if (protoProps) Statusbar_defineProperties(Constructor.prototype, protoProps); if (staticProps) Statusbar_defineProperties(Constructor, staticProps); return Constructor; }
 
 
-let EDITABLE_PADDING = 24;
+var EDITABLE_PADDING = 24;
 
-let Statusbar = /*#__PURE__*/function () {
+var Statusbar_Statusbar = /*#__PURE__*/function () {
   function Statusbar(context) {
     Statusbar_classCallCheck(this, Statusbar);
 
-    this.$document = external_jQuery_default()(document);
+    this.$document = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(document);
     this.$statusbar = context.layoutInfo.statusbar;
     this.$editable = context.layoutInfo.editable;
-    this.$codable = context.layoutInfo.codable;
     this.options = context.options;
   }
 
   Statusbar_createClass(Statusbar, [{
     key: "initialize",
     value: function initialize() {
-      let _this = this;
+      var _this = this;
 
       if (this.options.airMode || this.options.disableResizeEditor) {
         this.destroy();
@@ -6630,21 +6742,14 @@ let Statusbar = /*#__PURE__*/function () {
         event.preventDefault();
         event.stopPropagation();
 
-        let editableTop = _this.$editable.offset().top - _this.$document.scrollTop();
+        var editableTop = _this.$editable.offset().top - _this.$document.scrollTop();
 
-        let editableCodeTop = _this.$codable.offset().top - _this.$document.scrollTop();
-
-        let onMouseMove = function onMouseMove(event) {
-          let height = event.clientY - (editableTop + EDITABLE_PADDING);
-          let heightCode = event.clientY - (editableCodeTop + EDITABLE_PADDING);
+        var onMouseMove = function onMouseMove(event) {
+          var height = event.clientY - (editableTop + EDITABLE_PADDING);
           height = _this.options.minheight > 0 ? Math.max(height, _this.options.minheight) : height;
           height = _this.options.maxHeight > 0 ? Math.min(height, _this.options.maxHeight) : height;
-          heightCode = _this.options.minheight > 0 ? Math.max(heightCode, _this.options.minheight) : heightCode;
-          heightCode = _this.options.maxHeight > 0 ? Math.min(heightCode, _this.options.maxHeight) : heightCode;
 
           _this.$editable.height(height);
-
-          _this.$codable.height(heightCode);
         };
 
         _this.$document.on('mousemove', onMouseMove).one('mouseup', function () {
@@ -6664,18 +6769,18 @@ let Statusbar = /*#__PURE__*/function () {
 }();
 
 
-;// CONCATENATED MODULE: ./src/js/module/Fullscreen.js
+// CONCATENATED MODULE: ./src/js/base/module/Fullscreen.js
 function Fullscreen_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-function Fullscreen_defineProperties(target, props) { for (let i = 0; i < props.length; i++) { let descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+function Fullscreen_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
 function Fullscreen_createClass(Constructor, protoProps, staticProps) { if (protoProps) Fullscreen_defineProperties(Constructor.prototype, protoProps); if (staticProps) Fullscreen_defineProperties(Constructor, staticProps); return Constructor; }
 
 
 
-let Fullscreen = /*#__PURE__*/function () {
+var Fullscreen_Fullscreen = /*#__PURE__*/function () {
   function Fullscreen(context) {
-    let _this = this;
+    var _this = this;
 
     Fullscreen_classCallCheck(this, Fullscreen);
 
@@ -6684,9 +6789,8 @@ let Fullscreen = /*#__PURE__*/function () {
     this.$toolbar = context.layoutInfo.toolbar;
     this.$editable = context.layoutInfo.editable;
     this.$codable = context.layoutInfo.codable;
-    this.$window = external_jQuery_default()(window);
-    this.$scrollbar = external_jQuery_default()('html, body');
-    this.scrollbarClassName = 'note-fullscreen-body';
+    this.$window = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(window);
+    this.$scrollbar = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()('html, body');
 
     this.onResize = function () {
       _this.resizeTo({
@@ -6713,33 +6817,28 @@ let Fullscreen = /*#__PURE__*/function () {
     key: "toggle",
     value: function toggle() {
       this.$editor.toggleClass('fullscreen');
-      let isFullscreen = this.isFullscreen();
-      this.$scrollbar.toggleClass(this.scrollbarClassName, isFullscreen);
 
-      if (isFullscreen) {
+      if (this.isFullscreen()) {
         this.$editable.data('orgHeight', this.$editable.css('height'));
         this.$editable.data('orgMaxHeight', this.$editable.css('maxHeight'));
         this.$editable.css('maxHeight', '');
         this.$window.on('resize', this.onResize).trigger('resize');
+        this.$scrollbar.css('overflow', 'hidden');
       } else {
         this.$window.off('resize', this.onResize);
         this.resizeTo({
           h: this.$editable.data('orgHeight')
         });
         this.$editable.css('maxHeight', this.$editable.css('orgMaxHeight'));
+        this.$scrollbar.css('overflow', 'visible');
       }
 
-      this.context.invoke('toolbar.updateFullscreen', isFullscreen);
+      this.context.invoke('toolbar.updateFullscreen', this.isFullscreen());
     }
   }, {
     key: "isFullscreen",
     value: function isFullscreen() {
       return this.$editor.hasClass('fullscreen');
-    }
-  }, {
-    key: "destroy",
-    value: function destroy() {
-      this.$scrollbar.removeClass(this.scrollbarClassName);
     }
   }]);
 
@@ -6747,24 +6846,24 @@ let Fullscreen = /*#__PURE__*/function () {
 }();
 
 
-;// CONCATENATED MODULE: ./src/js/module/Handle.js
+// CONCATENATED MODULE: ./src/js/base/module/Handle.js
 function Handle_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-function Handle_defineProperties(target, props) { for (let i = 0; i < props.length; i++) { let descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+function Handle_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
 function Handle_createClass(Constructor, protoProps, staticProps) { if (protoProps) Handle_defineProperties(Constructor.prototype, protoProps); if (staticProps) Handle_defineProperties(Constructor, staticProps); return Constructor; }
 
 
 
 
-let Handle = /*#__PURE__*/function () {
+var Handle_Handle = /*#__PURE__*/function () {
   function Handle(context) {
-    let _this = this;
+    var _this = this;
 
     Handle_classCallCheck(this, Handle);
 
     this.context = context;
-    this.$document = external_jQuery_default()(document);
+    this.$document = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(document);
     this.$editingArea = context.layoutInfo.editingArea;
     this.options = context.options;
     this.lang = this.options.langInfo;
@@ -6789,21 +6888,21 @@ let Handle = /*#__PURE__*/function () {
   Handle_createClass(Handle, [{
     key: "initialize",
     value: function initialize() {
-      let _this2 = this;
+      var _this2 = this;
 
-      this.$handle = external_jQuery_default()(['<div class="note-handle">', '<div class="note-control-selection">', '<div class="note-control-selection-bg"></div>', '<div class="note-control-holder note-control-nw"></div>', '<div class="note-control-holder note-control-ne"></div>', '<div class="note-control-holder note-control-sw"></div>', '<div class="', this.options.disableResizeImage ? 'note-control-holder' : 'note-control-sizing', ' note-control-se"></div>', this.options.disableResizeImage ? '' : '<div class="note-control-selection-info"></div>', '</div>', '</div>'].join('')).prependTo(this.$editingArea);
+      this.$handle = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(['<div class="note-handle">', '<div class="note-control-selection">', '<div class="note-control-selection-bg"></div>', '<div class="note-control-holder note-control-nw"></div>', '<div class="note-control-holder note-control-ne"></div>', '<div class="note-control-holder note-control-sw"></div>', '<div class="', this.options.disableResizeImage ? 'note-control-holder' : 'note-control-sizing', ' note-control-se"></div>', this.options.disableResizeImage ? '' : '<div class="note-control-selection-info"></div>', '</div>', '</div>'].join('')).prependTo(this.$editingArea);
       this.$handle.on('mousedown', function (event) {
         if (dom.isControlSizing(event.target)) {
           event.preventDefault();
           event.stopPropagation();
 
-          let $target = _this2.$handle.find('.note-control-selection').data('target');
+          var $target = _this2.$handle.find('.note-control-selection').data('target');
 
-          let posStart = $target.offset();
+          var posStart = $target.offset();
 
-          let scrollTop = _this2.$document.scrollTop();
+          var scrollTop = _this2.$document.scrollTop();
 
-          let onMouseMove = function onMouseMove(event) {
+          var onMouseMove = function onMouseMove(event) {
             _this2.context.invoke('editor.resizeTo', {
               x: event.clientX - posStart.left,
               y: event.clientY - (posStart.top - scrollTop)
@@ -6845,19 +6944,19 @@ let Handle = /*#__PURE__*/function () {
         return false;
       }
 
-      let isImage = dom.isImg(target);
-      let $selection = this.$handle.find('.note-control-selection');
+      var isImage = dom.isImg(target);
+      var $selection = this.$handle.find('.note-control-selection');
       this.context.invoke('imagePopover.update', target, event);
 
       if (isImage) {
-        let $image = external_jQuery_default()(target);
-        let position = $image.position();
-        let pos = {
+        var $image = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(target);
+        var position = $image.position();
+        var pos = {
           left: position.left + parseInt($image.css('marginLeft'), 10),
           top: position.top + parseInt($image.css('marginTop'), 10)
         }; // exclude margin
 
-        let imageSize = {
+        var imageSize = {
           w: $image.outerWidth(false),
           h: $image.outerHeight(false)
         };
@@ -6869,9 +6968,9 @@ let Handle = /*#__PURE__*/function () {
           height: imageSize.h
         }).data('target', $image); // save current image element.
 
-        let origImageObj = new Image();
+        var origImageObj = new Image();
         origImageObj.src = $image.attr('src');
-        let sizingText = imageSize.w + 'x' + imageSize.h + ' (' + this.lang.image.original + ': ' + origImageObj.width + 'x' + origImageObj.height + ')';
+        var sizingText = imageSize.w + 'x' + imageSize.h + ' (' + this.lang.image.original + ': ' + origImageObj.width + 'x' + origImageObj.height + ')';
         $selection.find('.note-control-selection-info').text(sizingText);
         this.context.invoke('editor.saveTarget', target);
       } else {
@@ -6898,22 +6997,22 @@ let Handle = /*#__PURE__*/function () {
 }();
 
 
-;// CONCATENATED MODULE: ./src/js/module/AutoLink.js
+// CONCATENATED MODULE: ./src/js/base/module/AutoLink.js
 function AutoLink_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-function AutoLink_defineProperties(target, props) { for (let i = 0; i < props.length; i++) { let descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+function AutoLink_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
 function AutoLink_createClass(Constructor, protoProps, staticProps) { if (protoProps) AutoLink_defineProperties(Constructor.prototype, protoProps); if (staticProps) AutoLink_defineProperties(Constructor, staticProps); return Constructor; }
 
 
 
 
-let defaultScheme = 'http://';
-let linkPattern = /^([A-Za-z][A-Za-z0-9+-.]*\:[\/]{2}|tel:|mailto:[A-Z0-9._%+-]+@|xmpp:[A-Z0-9._%+-]+@)?(www\.)?(.+)$/i;
+var defaultScheme = 'http://';
+var linkPattern = /^([A-Za-z][A-Za-z0-9+-.]*\:[\/]{2}|tel:|mailto:[A-Z0-9._%+-]+@)?(www\.)?(.+)$/i;
 
-let AutoLink = /*#__PURE__*/function () {
+var AutoLink_AutoLink = /*#__PURE__*/function () {
   function AutoLink(context) {
-    let _this = this;
+    var _this = this;
 
     AutoLink_classCallCheck(this, AutoLink);
 
@@ -6948,16 +7047,16 @@ let AutoLink = /*#__PURE__*/function () {
         return;
       }
 
-      let keyword = this.lastWordRange.toString();
-      let match = keyword.match(linkPattern);
+      var keyword = this.lastWordRange.toString();
+      var match = keyword.match(linkPattern);
 
       if (match && (match[1] || match[2])) {
-        let link = match[1] ? keyword : defaultScheme + keyword;
-        let urlText = this.options.showDomainOnlyForAutolink ? keyword.replace(/^(?:https?:\/\/)?(?:tel?:?)?(?:mailto?:?)?(?:xmpp?:?)?(?:www\.)?/i, '').split('/')[0] : keyword;
-        let node = external_jQuery_default()('<a></a>').html(urlText).attr('href', link)[0];
+        var link = match[1] ? keyword : defaultScheme + keyword;
+        var urlText = this.options.showDomainOnlyForAutolink ? keyword.replace(/^(?:https?:\/\/)?(?:tel?:?)?(?:mailto?:?)?(?:www\.)?/i, '').split('/')[0] : keyword;
+        var node = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()('<a />').html(urlText).attr('href', link)[0];
 
         if (this.context.options.linkTargetBlank) {
-          external_jQuery_default()(node).attr('target', '_blank');
+          external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(node).attr('target', '_blank');
         }
 
         this.lastWordRange.insertNode(node);
@@ -6968,15 +7067,15 @@ let AutoLink = /*#__PURE__*/function () {
   }, {
     key: "handleKeydown",
     value: function handleKeydown(e) {
-      if (lists.contains([key.code.ENTER, key.code.SPACE], e.keyCode)) {
-        let wordRange = this.context.invoke('editor.createRange').getWordRange();
+      if (lists.contains([core_key.code.ENTER, core_key.code.SPACE], e.keyCode)) {
+        var wordRange = this.context.invoke('editor.createRange').getWordRange();
         this.lastWordRange = wordRange;
       }
     }
   }, {
     key: "handleKeyup",
     value: function handleKeyup(e) {
-      if (lists.contains([key.code.ENTER, key.code.SPACE], e.keyCode)) {
+      if (lists.contains([core_key.code.ENTER, core_key.code.SPACE], e.keyCode)) {
         this.replace();
       }
     }
@@ -6986,10 +7085,10 @@ let AutoLink = /*#__PURE__*/function () {
 }();
 
 
-;// CONCATENATED MODULE: ./src/js/module/AutoSync.js
+// CONCATENATED MODULE: ./src/js/base/module/AutoSync.js
 function AutoSync_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-function AutoSync_defineProperties(target, props) { for (let i = 0; i < props.length; i++) { let descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+function AutoSync_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
 function AutoSync_createClass(Constructor, protoProps, staticProps) { if (protoProps) AutoSync_defineProperties(Constructor.prototype, protoProps); if (staticProps) AutoSync_defineProperties(Constructor, staticProps); return Constructor; }
 
@@ -6998,9 +7097,9 @@ function AutoSync_createClass(Constructor, protoProps, staticProps) { if (protoP
  * textarea auto sync.
  */
 
-let AutoSync = /*#__PURE__*/function () {
+var AutoSync_AutoSync = /*#__PURE__*/function () {
   function AutoSync(context) {
-    let _this = this;
+    var _this = this;
 
     AutoSync_classCallCheck(this, AutoSync);
 
@@ -7023,10 +7122,10 @@ let AutoSync = /*#__PURE__*/function () {
 }();
 
 
-;// CONCATENATED MODULE: ./src/js/module/AutoReplace.js
+// CONCATENATED MODULE: ./src/js/base/module/AutoReplace.js
 function AutoReplace_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-function AutoReplace_defineProperties(target, props) { for (let i = 0; i < props.length; i++) { let descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+function AutoReplace_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
 function AutoReplace_createClass(Constructor, protoProps, staticProps) { if (protoProps) AutoReplace_defineProperties(Constructor.prototype, protoProps); if (staticProps) AutoReplace_defineProperties(Constructor, staticProps); return Constructor; }
 
@@ -7034,15 +7133,15 @@ function AutoReplace_createClass(Constructor, protoProps, staticProps) { if (pro
 
 
 
-let AutoReplace = /*#__PURE__*/function () {
+var AutoReplace_AutoReplace = /*#__PURE__*/function () {
   function AutoReplace(context) {
-    let _this = this;
+    var _this = this;
 
     AutoReplace_classCallCheck(this, AutoReplace);
 
     this.context = context;
     this.options = context.options.replace || {};
-    this.keys = [key.code.ENTER, key.code.SPACE, key.code.PERIOD, key.code.COMMA, key.code.SEMICOLON, key.code.SLASH];
+    this.keys = [core_key.code.ENTER, core_key.code.SPACE, core_key.code.PERIOD, core_key.code.COMMA, core_key.code.SEMICOLON, core_key.code.SLASH];
     this.previousKeydownCode = null;
     this.events = {
       'summernote.keyup': function summernoteKeyup(we, e) {
@@ -7078,11 +7177,11 @@ let AutoReplace = /*#__PURE__*/function () {
         return;
       }
 
-      let self = this;
-      let keyword = this.lastWord.toString();
+      var self = this;
+      var keyword = this.lastWord.toString();
       this.options.match(keyword, function (match) {
         if (match) {
-          let node = '';
+          var node = '';
 
           if (typeof match === 'string') {
             node = dom.createText(match);
@@ -7110,7 +7209,7 @@ let AutoReplace = /*#__PURE__*/function () {
       }
 
       if (lists.contains(this.keys, e.keyCode)) {
-        let wordRange = this.context.invoke('editor.createRange').getWordRange();
+        var wordRange = this.context.invoke('editor.createRange').getWordRange();
         this.lastWord = wordRange;
       }
 
@@ -7129,18 +7228,18 @@ let AutoReplace = /*#__PURE__*/function () {
 }();
 
 
-;// CONCATENATED MODULE: ./src/js/module/Placeholder.js
+// CONCATENATED MODULE: ./src/js/base/module/Placeholder.js
 function Placeholder_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-function Placeholder_defineProperties(target, props) { for (let i = 0; i < props.length; i++) { let descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+function Placeholder_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
 function Placeholder_createClass(Constructor, protoProps, staticProps) { if (protoProps) Placeholder_defineProperties(Constructor.prototype, protoProps); if (staticProps) Placeholder_defineProperties(Constructor, staticProps); return Constructor; }
 
 
 
-let Placeholder = /*#__PURE__*/function () {
+var Placeholder_Placeholder = /*#__PURE__*/function () {
   function Placeholder(context) {
-    let _this = this;
+    var _this = this;
 
     Placeholder_classCallCheck(this, Placeholder);
 
@@ -7171,9 +7270,9 @@ let Placeholder = /*#__PURE__*/function () {
   }, {
     key: "initialize",
     value: function initialize() {
-      let _this2 = this;
+      var _this2 = this;
 
-      this.$placeholder = external_jQuery_default()('<div class="note-placeholder"></div>');
+      this.$placeholder = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()('<div class="note-placeholder">');
       this.$placeholder.on('click', function () {
         _this2.context.invoke('focus');
       }).html(this.options.placeholder).prependTo(this.$editingArea);
@@ -7187,7 +7286,7 @@ let Placeholder = /*#__PURE__*/function () {
   }, {
     key: "update",
     value: function update() {
-      let isShow = !this.context.invoke('codeview.isActivated') && this.context.invoke('editor.isEmpty');
+      var isShow = !this.context.invoke('codeview.isActivated') && this.context.invoke('editor.isEmpty');
       this.$placeholder.toggle(isShow);
     }
   }]);
@@ -7196,10 +7295,10 @@ let Placeholder = /*#__PURE__*/function () {
 }();
 
 
-;// CONCATENATED MODULE: ./src/js/module/Buttons.js
+// CONCATENATED MODULE: ./src/js/base/module/Buttons.js
 function Buttons_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-function Buttons_defineProperties(target, props) { for (let i = 0; i < props.length; i++) { let descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+function Buttons_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
 function Buttons_createClass(Constructor, protoProps, staticProps) { if (protoProps) Buttons_defineProperties(Constructor.prototype, protoProps); if (staticProps) Buttons_defineProperties(Constructor, staticProps); return Constructor; }
 
@@ -7208,11 +7307,11 @@ function Buttons_createClass(Constructor, protoProps, staticProps) { if (protoPr
 
 
 
-let Buttons = /*#__PURE__*/function () {
+var Buttons_Buttons = /*#__PURE__*/function () {
   function Buttons(context) {
     Buttons_classCallCheck(this, Buttons);
 
-    this.ui = (external_jQuery_default()).summernote.ui;
+    this.ui = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default.a.summernote.ui;
     this.context = context;
     this.$toolbar = context.layoutInfo.toolbar;
     this.options = context.options;
@@ -7223,7 +7322,7 @@ let Buttons = /*#__PURE__*/function () {
   Buttons_createClass(Buttons, [{
     key: "representShortcut",
     value: function representShortcut(editorMethod) {
-      let shortcut = this.invertedKeyMap[editorMethod];
+      var shortcut = this.invertedKeyMap[editorMethod];
 
       if (!this.options.shortcuts || !shortcut) {
         return '';
@@ -7278,7 +7377,7 @@ let Buttons = /*#__PURE__*/function () {
   }, {
     key: "colorPalette",
     value: function colorPalette(className, tooltip, backColor, foreColor) {
-      let _this = this;
+      var _this = this;
 
       return this.ui.buttonGroup({
         className: 'note-color ' + className,
@@ -7287,7 +7386,7 @@ let Buttons = /*#__PURE__*/function () {
           contents: this.ui.icon(this.options.icons.font + ' note-recent-color'),
           tooltip: tooltip,
           click: function click(e) {
-            let $button = external_jQuery_default()(e.currentTarget);
+            var $button = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(e.currentTarget);
 
             if (backColor && foreColor) {
               _this.context.invoke('editor.color', {
@@ -7305,7 +7404,7 @@ let Buttons = /*#__PURE__*/function () {
             }
           },
           callback: function callback($button) {
-            let $recentColor = $button.find('.note-recent-color');
+            var $recentColor = $button.find('.note-recent-color');
 
             if (backColor) {
               $recentColor.css('background-color', _this.options.colorButton.backColor);
@@ -7327,11 +7426,11 @@ let Buttons = /*#__PURE__*/function () {
             toggle: 'dropdown'
           }
         }), this.ui.dropdown({
-          items: (backColor ? ['<div class="note-palette">', '<div class="note-palette-title">' + this.lang.color.background + '</div>', '<div>', '<button type="button" class="note-color-reset btn btn-light btn-default" data-event="backColor" data-value="transparent">', this.lang.color.transparent, '</button>', '</div>', '<div class="note-holder" data-event="backColor"><!-- back colors --></div>', '<div>', '<button type="button" class="note-color-select btn btn-light btn-default" data-event="openPalette" data-value="backColorPicker-' + this.options.id + '">', this.lang.color.cpSelect, '</button>', '<input type="color" id="backColorPicker-' + this.options.id + '" class="note-btn note-color-select-btn" value="' + this.options.colorButton.backColor + '" data-event="backColorPalette-' + this.options.id + '">', '</div>', '<div class="note-holder-custom" id="backColorPalette-' + this.options.id + '" data-event="backColor"></div>', '</div>'].join('') : '') + (foreColor ? ['<div class="note-palette">', '<div class="note-palette-title">' + this.lang.color.foreground + '</div>', '<div>', '<button type="button" class="note-color-reset btn btn-light btn-default" data-event="removeFormat" data-value="foreColor">', this.lang.color.resetToDefault, '</button>', '</div>', '<div class="note-holder" data-event="foreColor"><!-- fore colors --></div>', '<div>', '<button type="button" class="note-color-select btn btn-light btn-default" data-event="openPalette" data-value="foreColorPicker-' + this.options.id + '">', this.lang.color.cpSelect, '</button>', '<input type="color" id="foreColorPicker-' + this.options.id + '" class="note-btn note-color-select-btn" value="' + this.options.colorButton.foreColor + '" data-event="foreColorPalette-' + this.options.id + '">', '</div>', // Fix missing Div, Commented to find easily if it's wrong
-          '<div class="note-holder-custom" id="foreColorPalette-' + this.options.id + '" data-event="foreColor"></div>', '</div>'].join('') : ''),
+          items: (backColor ? ['<div class="note-palette">', '<div class="note-palette-title">' + this.lang.color.background + '</div>', '<div>', '<button type="button" class="note-color-reset btn btn-light btn-default" data-event="backColor" data-value="transparent">', this.lang.color.transparent, '</button>', '</div>', '<div class="note-holder" data-event="backColor"><!-- back colors --></div>', '<div>', '<button type="button" class="note-color-select btn btn-light btn-default" data-event="openPalette" data-value="backColorPicker">', this.lang.color.cpSelect, '</button>', '<input type="color" id="backColorPicker" class="note-btn note-color-select-btn" value="' + this.options.colorButton.backColor + '" data-event="backColorPalette">', '</div>', '<div class="note-holder-custom" id="backColorPalette" data-event="backColor"></div>', '</div>'].join('') : '') + (foreColor ? ['<div class="note-palette">', '<div class="note-palette-title">' + this.lang.color.foreground + '</div>', '<div>', '<button type="button" class="note-color-reset btn btn-light btn-default" data-event="removeFormat" data-value="foreColor">', this.lang.color.resetToDefault, '</button>', '</div>', '<div class="note-holder" data-event="foreColor"><!-- fore colors --></div>', '<div>', '<button type="button" class="note-color-select btn btn-light btn-default" data-event="openPalette" data-value="foreColorPicker">', this.lang.color.cpSelect, '</button>', '<input type="color" id="foreColorPicker" class="note-btn note-color-select-btn" value="' + this.options.colorButton.foreColor + '" data-event="foreColorPalette">', '</div>', // Fix missing Div, Commented to find easily if it's wrong
+          '<div class="note-holder-custom" id="foreColorPalette" data-event="foreColor"></div>', '</div>'].join('') : ''),
           callback: function callback($dropdown) {
             $dropdown.find('.note-holder').each(function (idx, item) {
-              let $holder = external_jQuery_default()(item);
+              var $holder = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(item);
               $holder.append(_this.ui.palette({
                 colors: _this.options.colors,
                 colorsName: _this.options.colorsName,
@@ -7342,9 +7441,9 @@ let Buttons = /*#__PURE__*/function () {
             });
             /* TODO: do we have to record recent custom colors within cookies? */
 
-            let customColors = [['#FFFFFF', '#FFFFFF', '#FFFFFF', '#FFFFFF', '#FFFFFF', '#FFFFFF', '#FFFFFF', '#FFFFFF']];
+            var customColors = [['#FFFFFF', '#FFFFFF', '#FFFFFF', '#FFFFFF', '#FFFFFF', '#FFFFFF', '#FFFFFF', '#FFFFFF']];
             $dropdown.find('.note-holder-custom').each(function (idx, item) {
-              let $holder = external_jQuery_default()(item);
+              var $holder = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(item);
               $holder.append(_this.ui.palette({
                 colors: customColors,
                 colorsName: customColors,
@@ -7354,9 +7453,9 @@ let Buttons = /*#__PURE__*/function () {
               }).render());
             });
             $dropdown.find('input[type=color]').each(function (idx, item) {
-              external_jQuery_default()(item).change(function () {
-                let $chip = $dropdown.find('#' + external_jQuery_default()(this).data('event')).find('.note-color-btn').first();
-                let color = this.value.toUpperCase();
+              external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(item).change(function () {
+                var $chip = $dropdown.find('#' + external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(this).data('event')).find('.note-color-btn').first();
+                var color = this.value.toUpperCase();
                 $chip.css('background-color', color).attr('aria-label', color).attr('data-value', color).attr('data-original-title', color);
                 $chip.click();
               });
@@ -7364,26 +7463,26 @@ let Buttons = /*#__PURE__*/function () {
           },
           click: function click(event) {
             event.stopPropagation();
-            let $parent = external_jQuery_default()('.' + className).find('.note-dropdown-menu');
-            let $button = external_jQuery_default()(event.target);
-            let eventName = $button.data('event');
-            let value = $button.attr('data-value');
+            var $parent = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()('.' + className).find('.note-dropdown-menu');
+            var $button = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(event.target);
+            var eventName = $button.data('event');
+            var value = $button.attr('data-value');
 
             if (eventName === 'openPalette') {
-              let $picker = $parent.find('#' + value);
-              let $palette = external_jQuery_default()($parent.find('#' + $picker.data('event')).find('.note-color-row')[0]); // Shift palette chips
+              var $picker = $parent.find('#' + value);
+              var $palette = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()($parent.find('#' + $picker.data('event')).find('.note-color-row')[0]); // Shift palette chips
 
-              let $chip = $palette.find('.note-color-btn').last().detach(); // Set chip attributes
+              var $chip = $palette.find('.note-color-btn').last().detach(); // Set chip attributes
 
-              let color = $picker.val();
+              var color = $picker.val();
               $chip.css('background-color', color).attr('aria-label', color).attr('data-value', color).attr('data-original-title', color);
               $palette.prepend($chip);
               $picker.click();
             } else {
               if (lists.contains(['backColor', 'foreColor'], eventName)) {
-                let key = eventName === 'backColor' ? 'background-color' : 'color';
-                let $color = $button.closest('.note-color').find('.note-recent-color');
-                let $currentButton = $button.closest('.note-color').find('.note-current-color-button');
+                var key = eventName === 'backColor' ? 'background-color' : 'color';
+                var $color = $button.closest('.note-color').find('.note-recent-color');
+                var $currentButton = $button.closest('.note-color').find('.note-current-color-button');
                 $color.css(key, value);
                 $currentButton.attr('data-' + eventName, value);
               }
@@ -7397,7 +7496,7 @@ let Buttons = /*#__PURE__*/function () {
   }, {
     key: "addToolbarButtons",
     value: function addToolbarButtons() {
-      let _this2 = this;
+      var _this2 = this;
 
       this.context.memo('button.style', function () {
         return _this2.ui.buttonGroup([_this2.button({
@@ -7420,18 +7519,18 @@ let Buttons = /*#__PURE__*/function () {
               };
             }
 
-            let tag = item.tag;
-            let title = item.title;
-            let style = item.style ? ' style="' + item.style + '" ' : '';
-            let className = item.className ? ' class="' + item.className + '"' : '';
+            var tag = item.tag;
+            var title = item.title;
+            var style = item.style ? ' style="' + item.style + '" ' : '';
+            var className = item.className ? ' class="' + item.className + '"' : '';
             return '<' + tag + style + className + '>' + title + '</' + tag + '>';
           },
           click: _this2.context.createInvokeHandler('editor.formatBlock')
         })]).render();
       });
 
-      let _loop = function _loop(styleIdx, styleLen) {
-        let item = _this2.options.styleTags[styleIdx];
+      var _loop = function _loop(styleIdx, styleLen) {
+        var item = _this2.options.styleTags[styleIdx];
 
         _this2.context.memo('button.style.' + item, function () {
           return _this2.button({
@@ -7443,7 +7542,7 @@ let Buttons = /*#__PURE__*/function () {
         });
       };
 
-      for (let styleIdx = 0, styleLen = this.options.styleTags.length; styleIdx < styleLen; styleIdx++) {
+      for (var styleIdx = 0, styleLen = this.options.styleTags.length; styleIdx < styleLen; styleIdx++) {
         _loop(styleIdx, styleLen);
       }
 
@@ -7503,11 +7602,11 @@ let Buttons = /*#__PURE__*/function () {
         }).render();
       });
       this.context.memo('button.fontname', function () {
-        let styleInfo = _this2.context.invoke('editor.currentStyle');
+        var styleInfo = _this2.context.invoke('editor.currentStyle');
 
         if (_this2.options.addDefaultFonts) {
           // Add 'default' fonts into the fontnames array if not exist
-          external_jQuery_default().each(styleInfo['font-family'].split(','), function (idx, fontname) {
+          external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default.a.each(styleInfo['font-family'].split(','), function (idx, fontname) {
             fontname = fontname.trim().replace(/['"]+/g, '');
 
             if (_this2.isFontDeservedToAdd(fontname)) {
@@ -7591,32 +7690,32 @@ let Buttons = /*#__PURE__*/function () {
           click: _this2.context.createInvokeHandler('editor.insertOrderedList')
         }).render();
       });
-      let justifyLeft = this.button({
+      var justifyLeft = this.button({
         contents: this.ui.icon(this.options.icons.alignLeft),
         tooltip: this.lang.paragraph.left + this.representShortcut('justifyLeft'),
         click: this.context.createInvokeHandler('editor.justifyLeft')
       });
-      let justifyCenter = this.button({
+      var justifyCenter = this.button({
         contents: this.ui.icon(this.options.icons.alignCenter),
         tooltip: this.lang.paragraph.center + this.representShortcut('justifyCenter'),
         click: this.context.createInvokeHandler('editor.justifyCenter')
       });
-      let justifyRight = this.button({
+      var justifyRight = this.button({
         contents: this.ui.icon(this.options.icons.alignRight),
         tooltip: this.lang.paragraph.right + this.representShortcut('justifyRight'),
         click: this.context.createInvokeHandler('editor.justifyRight')
       });
-      let justifyFull = this.button({
+      var justifyFull = this.button({
         contents: this.ui.icon(this.options.icons.alignJustify),
         tooltip: this.lang.paragraph.justify + this.representShortcut('justifyFull'),
         click: this.context.createInvokeHandler('editor.justifyFull')
       });
-      let outdent = this.button({
+      var outdent = this.button({
         contents: this.ui.icon(this.options.icons.outdent),
         tooltip: this.lang.paragraph.outdent + this.representShortcut('outdent'),
         click: this.context.createInvokeHandler('editor.outdent')
       });
-      let indent = this.button({
+      var indent = this.button({
         contents: this.ui.icon(this.options.icons.indent),
         tooltip: this.lang.paragraph.indent + this.representShortcut('indent'),
         click: this.context.createInvokeHandler('editor.indent')
@@ -7673,11 +7772,11 @@ let Buttons = /*#__PURE__*/function () {
           items: ['<div class="note-dimension-picker">', '<div class="note-dimension-picker-mousecatcher" data-event="insertTable" data-value="1x1"></div>', '<div class="note-dimension-picker-highlighted"></div>', '<div class="note-dimension-picker-unhighlighted"></div>', '</div>', '<div class="note-dimension-display">1 x 1</div>'].join('')
         })], {
           callback: function callback($node) {
-            let $catcher = $node.find('.note-dimension-picker-mousecatcher');
+            var $catcher = $node.find('.note-dimension-picker-mousecatcher');
             $catcher.css({
               width: _this2.options.insertTableMaxSize.col + 'em',
               height: _this2.options.insertTableMaxSize.row + 'em'
-            }).mouseup(_this2.context.createInvokeHandler('editor.insertTable')).on('mousemove', _this2.tableMoveHandler.bind(_this2));
+            }).mousedown(_this2.context.createInvokeHandler('editor.insertTable')).on('mousemove', _this2.tableMoveHandler.bind(_this2));
           }
         }).render();
       });
@@ -7758,7 +7857,7 @@ let Buttons = /*#__PURE__*/function () {
   }, {
     key: "addImagePopoverButtons",
     value: function addImagePopoverButtons() {
-      let _this3 = this;
+      var _this3 = this;
 
       // Image Size Buttons
       this.context.memo('button.resizeFull', function () {
@@ -7823,7 +7922,7 @@ let Buttons = /*#__PURE__*/function () {
   }, {
     key: "addLinkPopoverButtons",
     value: function addLinkPopoverButtons() {
-      let _this4 = this;
+      var _this4 = this;
 
       this.context.memo('button.linkDialogShow', function () {
         return _this4.button({
@@ -7850,7 +7949,7 @@ let Buttons = /*#__PURE__*/function () {
   }, {
     key: "addTablePopoverButtons",
     value: function addTablePopoverButtons() {
-      let _this5 = this;
+      var _this5 = this;
 
       this.context.memo('button.addRowUp', function () {
         return _this5.button({
@@ -7912,16 +8011,16 @@ let Buttons = /*#__PURE__*/function () {
   }, {
     key: "build",
     value: function build($container, groups) {
-      for (let groupIdx = 0, groupLen = groups.length; groupIdx < groupLen; groupIdx++) {
-        let group = groups[groupIdx];
-        let groupName = Array.isArray(group) ? group[0] : group;
-        let buttons = Array.isArray(group) ? group.length === 1 ? [group[0]] : group[1] : [group];
-        let $group = this.ui.buttonGroup({
+      for (var groupIdx = 0, groupLen = groups.length; groupIdx < groupLen; groupIdx++) {
+        var group = groups[groupIdx];
+        var groupName = Array.isArray(group) ? group[0] : group;
+        var buttons = Array.isArray(group) ? group.length === 1 ? [group[0]] : group[1] : [group];
+        var $group = this.ui.buttonGroup({
           className: 'note-' + groupName
         }).render();
 
-        for (let idx = 0, len = buttons.length; idx < len; idx++) {
-          let btn = this.context.memo('button.' + buttons[idx]);
+        for (var idx = 0, len = buttons.length; idx < len; idx++) {
+          var btn = this.context.memo('button.' + buttons[idx]);
 
           if (btn) {
             $group.append(typeof btn === 'function' ? btn(this.context) : btn);
@@ -7938,8 +8037,10 @@ let Buttons = /*#__PURE__*/function () {
   }, {
     key: "updateCurrentStyle",
     value: function updateCurrentStyle($container) {
-      let $cont = $container || this.$toolbar;
-      let styleInfo = this.context.invoke('editor.currentStyle');
+      var _this6 = this;
+
+      var $cont = $container || this.$toolbar;
+      var styleInfo = this.context.invoke('editor.currentStyle');
       this.updateBtnStates($cont, {
         '.note-btn-bold': function noteBtnBold() {
           return styleInfo['font-bold'] === 'bold';
@@ -7962,71 +8063,69 @@ let Buttons = /*#__PURE__*/function () {
       });
 
       if (styleInfo['font-family']) {
-        let fontNames = styleInfo['font-family'].split(',').map(function (name) {
+        var fontNames = styleInfo['font-family'].split(',').map(function (name) {
           return name.replace(/[\'\"]/g, '').replace(/\s+$/, '').replace(/^\s+/, '');
         });
-        let fontName = lists.find(fontNames, this.isFontInstalled.bind(this));
+        var fontName = lists.find(fontNames, this.isFontInstalled.bind(this));
         $cont.find('.dropdown-fontname a').each(function (idx, item) {
-          let $item = external_jQuery_default()(item); // always compare string to avoid creating another func.
+          var $item = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(item); // always compare string to avoid creating another func.
 
-          let isChecked = $item.data('value') + '' === fontName + '';
+          var isChecked = $item.data('value') + '' === fontName + '';
           $item.toggleClass('checked', isChecked);
         });
         $cont.find('.note-current-fontname').text(fontName).css('font-family', fontName);
       }
 
       if (styleInfo['font-size']) {
-        let fontSize = styleInfo['font-size'];
+        var fontSize = styleInfo['font-size'];
         $cont.find('.dropdown-fontsize a').each(function (idx, item) {
-          let $item = external_jQuery_default()(item); // always compare with string to avoid creating another func.
+          var $item = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(item); // always compare with string to avoid creating another func.
 
-          let isChecked = $item.data('value') + '' === fontSize + '';
+          var isChecked = $item.data('value') + '' === fontSize + '';
           $item.toggleClass('checked', isChecked);
         });
         $cont.find('.note-current-fontsize').text(fontSize);
-        let fontSizeUnit = styleInfo['font-size-unit'];
+        var fontSizeUnit = styleInfo['font-size-unit'];
         $cont.find('.dropdown-fontsizeunit a').each(function (idx, item) {
-          let $item = external_jQuery_default()(item);
-          let isChecked = $item.data('value') + '' === fontSizeUnit + '';
+          var $item = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(item);
+          var isChecked = $item.data('value') + '' === fontSizeUnit + '';
           $item.toggleClass('checked', isChecked);
         });
         $cont.find('.note-current-fontsizeunit').text(fontSizeUnit);
       }
 
       if (styleInfo['line-height']) {
-        let lineHeight = styleInfo['line-height'];
-        $cont.find('.dropdown-line-height a').each(function (idx, item) {
-          let $item = external_jQuery_default()(item); // always compare with string to avoid creating another func.
-
-          let isChecked = external_jQuery_default()(item).data('value') + '' === lineHeight + '';
-          $item.toggleClass('checked', isChecked);
+        var lineHeight = styleInfo['line-height'];
+        $cont.find('.dropdown-line-height li a').each(function (idx, item) {
+          // always compare with string to avoid creating another func.
+          var isChecked = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(item).data('value') + '' === lineHeight + '';
+          _this6.className = isChecked ? 'checked' : '';
         });
-        $cont.find('.note-current-line-height').text(lineHeight);
       }
     }
   }, {
     key: "updateBtnStates",
     value: function updateBtnStates($container, infos) {
-      let _this6 = this;
+      var _this7 = this;
 
-      external_jQuery_default().each(infos, function (selector, pred) {
-        _this6.ui.toggleBtnActive($container.find(selector), pred());
+      external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default.a.each(infos, function (selector, pred) {
+        _this7.ui.toggleBtnActive($container.find(selector), pred());
       });
     }
   }, {
     key: "tableMoveHandler",
     value: function tableMoveHandler(event) {
-      let PX_PER_EM = 18;
-      let $picker = external_jQuery_default()(event.target.parentNode); // target is mousecatcher
+      var PX_PER_EM = 18;
+      var $picker = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(event.target.parentNode); // target is mousecatcher
 
-      let $dimensionDisplay = $picker.next();
-      let $catcher = $picker.find('.note-dimension-picker-mousecatcher');
-      let $highlighted = $picker.find('.note-dimension-picker-highlighted');
-      let $unhighlighted = $picker.find('.note-dimension-picker-unhighlighted');
-      let posOffset; // HTML5 with jQuery - e.offsetX is undefined in Firefox
+      var $dimensionDisplay = $picker.next();
+      var $catcher = $picker.find('.note-dimension-picker-mousecatcher');
+      var $highlighted = $picker.find('.note-dimension-picker-highlighted');
+      var $unhighlighted = $picker.find('.note-dimension-picker-unhighlighted');
+      var posOffset; // HTML5 with jQuery - e.offsetX is undefined in Firefox
 
       if (event.offsetX === undefined) {
-        let posCatcher = external_jQuery_default()(event.target).offset();
+        var posCatcher = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(event.target).offset();
         posOffset = {
           x: event.pageX - posCatcher.left,
           y: event.pageY - posCatcher.top
@@ -8038,7 +8137,7 @@ let Buttons = /*#__PURE__*/function () {
         };
       }
 
-      let dim = {
+      var dim = {
         c: Math.ceil(posOffset.x / PX_PER_EM) || 1,
         r: Math.ceil(posOffset.y / PX_PER_EM) || 1
       };
@@ -8068,23 +8167,23 @@ let Buttons = /*#__PURE__*/function () {
 }();
 
 
-;// CONCATENATED MODULE: ./src/js/module/Toolbar.js
+// CONCATENATED MODULE: ./src/js/base/module/Toolbar.js
 function Toolbar_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-function Toolbar_defineProperties(target, props) { for (let i = 0; i < props.length; i++) { let descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+function Toolbar_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
 function Toolbar_createClass(Constructor, protoProps, staticProps) { if (protoProps) Toolbar_defineProperties(Constructor.prototype, protoProps); if (staticProps) Toolbar_defineProperties(Constructor, staticProps); return Constructor; }
 
 
 
-let Toolbar = /*#__PURE__*/function () {
+var Toolbar_Toolbar = /*#__PURE__*/function () {
   function Toolbar(context) {
     Toolbar_classCallCheck(this, Toolbar);
 
     this.context = context;
-    this.$window = external_jQuery_default()(window);
-    this.$document = external_jQuery_default()(document);
-    this.ui = (external_jQuery_default()).summernote.ui;
+    this.$window = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(window);
+    this.$document = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(document);
+    this.ui = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default.a.summernote.ui;
     this.$note = context.layoutInfo.note;
     this.$editor = context.layoutInfo.editor;
     this.$toolbar = context.layoutInfo.toolbar;
@@ -8103,7 +8202,7 @@ let Toolbar = /*#__PURE__*/function () {
   }, {
     key: "initialize",
     value: function initialize() {
-      let _this = this;
+      var _this = this;
 
       this.options.toolbar = this.options.toolbar || [];
 
@@ -8143,22 +8242,22 @@ let Toolbar = /*#__PURE__*/function () {
         return false;
       }
 
-      let editorHeight = this.$editor.outerHeight();
-      let editorWidth = this.$editor.width();
-      let toolbarHeight = this.$toolbar.height();
-      let statusbarHeight = this.$statusbar.height(); // check if the web app is currently using another static bar
+      var editorHeight = this.$editor.outerHeight();
+      var editorWidth = this.$editor.width();
+      var toolbarHeight = this.$toolbar.height();
+      var statusbarHeight = this.$statusbar.height(); // check if the web app is currently using another static bar
 
-      let otherBarHeight = 0;
+      var otherBarHeight = 0;
 
       if (this.options.otherStaticBar) {
-        otherBarHeight = external_jQuery_default()(this.options.otherStaticBar).outerHeight();
+        otherBarHeight = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(this.options.otherStaticBar).outerHeight();
       }
 
-      let currentOffset = this.$document.scrollTop();
-      let editorOffsetTop = this.$editor.offset().top;
-      let editorOffsetBottom = editorOffsetTop + editorHeight;
-      let activateOffset = editorOffsetTop - otherBarHeight;
-      let deactivateOffsetBottom = editorOffsetBottom - otherBarHeight - toolbarHeight - statusbarHeight;
+      var currentOffset = this.$document.scrollTop();
+      var editorOffsetTop = this.$editor.offset().top;
+      var editorOffsetBottom = editorOffsetTop + editorHeight;
+      var activateOffset = editorOffsetTop - otherBarHeight;
+      var deactivateOffsetBottom = editorOffsetBottom - otherBarHeight - toolbarHeight - statusbarHeight;
 
       if (!this.isFollowing && currentOffset > activateOffset && currentOffset < deactivateOffsetBottom - toolbarHeight) {
         this.isFollowing = true;
@@ -8219,7 +8318,7 @@ let Toolbar = /*#__PURE__*/function () {
   }, {
     key: "activate",
     value: function activate(isIncludeCodeview) {
-      let $btn = this.$toolbar.find('button');
+      var $btn = this.$toolbar.find('button');
 
       if (!isIncludeCodeview) {
         $btn = $btn.not('.note-codeview-keep');
@@ -8230,7 +8329,7 @@ let Toolbar = /*#__PURE__*/function () {
   }, {
     key: "deactivate",
     value: function deactivate(isIncludeCodeview) {
-      let $btn = this.$toolbar.find('button');
+      var $btn = this.$toolbar.find('button');
 
       if (!isIncludeCodeview) {
         $btn = $btn.not('.note-codeview-keep');
@@ -8244,10 +8343,10 @@ let Toolbar = /*#__PURE__*/function () {
 }();
 
 
-;// CONCATENATED MODULE: ./src/js/module/LinkDialog.js
+// CONCATENATED MODULE: ./src/js/base/module/LinkDialog.js
 function LinkDialog_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-function LinkDialog_defineProperties(target, props) { for (let i = 0; i < props.length; i++) { let descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+function LinkDialog_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
 function LinkDialog_createClass(Constructor, protoProps, staticProps) { if (protoProps) LinkDialog_defineProperties(Constructor.prototype, protoProps); if (staticProps) LinkDialog_defineProperties(Constructor, staticProps); return Constructor; }
 
@@ -8256,13 +8355,13 @@ function LinkDialog_createClass(Constructor, protoProps, staticProps) { if (prot
 
 
 
-let LinkDialog = /*#__PURE__*/function () {
+var LinkDialog_LinkDialog = /*#__PURE__*/function () {
   function LinkDialog(context) {
     LinkDialog_classCallCheck(this, LinkDialog);
 
     this.context = context;
-    this.ui = (external_jQuery_default()).summernote.ui;
-    this.$body = external_jQuery_default()(document.body);
+    this.ui = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default.a.summernote.ui;
+    this.$body = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(document.body);
     this.$editor = context.layoutInfo.editor;
     this.options = context.options;
     this.lang = this.options.langInfo;
@@ -8272,18 +8371,18 @@ let LinkDialog = /*#__PURE__*/function () {
   LinkDialog_createClass(LinkDialog, [{
     key: "initialize",
     value: function initialize() {
-      let $container = this.options.dialogsInBody ? this.$body : this.options.container;
-      let body = ['<div class="form-group note-form-group">', "<label for=\"note-dialog-link-txt-".concat(this.options.id, "\" class=\"note-form-label\">").concat(this.lang.link.textToDisplay, "</label>"), "<input id=\"note-dialog-link-txt-".concat(this.options.id, "\" class=\"note-link-text form-control note-form-control note-input\" type=\"text\"/>"), '</div>', '<div class="form-group note-form-group">', "<label for=\"note-dialog-link-url-".concat(this.options.id, "\" class=\"note-form-label\">").concat(this.lang.link.url, "</label>"), "<input id=\"note-dialog-link-url-".concat(this.options.id, "\" class=\"note-link-url form-control note-form-control note-input\" type=\"text\" value=\"http://\"/>"), '</div>', !this.options.disableLinkTarget ? external_jQuery_default()('<div></div>').append(this.ui.checkbox({
+      var $container = this.options.dialogsInBody ? this.$body : this.options.container;
+      var body = ['<div class="form-group note-form-group">', "<label for=\"note-dialog-link-txt-".concat(this.options.id, "\" class=\"note-form-label\">").concat(this.lang.link.textToDisplay, "</label>"), "<input id=\"note-dialog-link-txt-".concat(this.options.id, "\" class=\"note-link-text form-control note-form-control note-input\" type=\"text\"/>"), '</div>', '<div class="form-group note-form-group">', "<label for=\"note-dialog-link-url-".concat(this.options.id, "\" class=\"note-form-label\">").concat(this.lang.link.url, "</label>"), "<input id=\"note-dialog-link-url-".concat(this.options.id, "\" class=\"note-link-url form-control note-form-control note-input\" type=\"text\" value=\"http://\"/>"), '</div>', !this.options.disableLinkTarget ? external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()('<div/>').append(this.ui.checkbox({
         className: 'sn-checkbox-open-in-new-window',
         text: this.lang.link.openInNewWindow,
         checked: true
-      }).render()).html() : '', external_jQuery_default()('<div></div>').append(this.ui.checkbox({
+      }).render()).html() : '', external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()('<div/>').append(this.ui.checkbox({
         className: 'sn-checkbox-use-protocol',
         text: this.lang.link.useProtocol,
         checked: true
       }).render()).html()].join('');
-      let buttonClass = 'btn btn-primary note-btn note-btn-primary note-link-btn';
-      let footer = "<input type=\"button\" href=\"#\" class=\"".concat(buttonClass, "\" value=\"").concat(this.lang.link.insert, "\" disabled>");
+      var buttonClass = 'btn btn-primary note-btn note-btn-primary note-link-btn';
+      var footer = "<input type=\"button\" href=\"#\" class=\"".concat(buttonClass, "\" value=\"").concat(this.lang.link.insert, "\" disabled>");
       this.$dialog = this.ui.dialog({
         className: 'link-dialog',
         title: this.lang.link.insert,
@@ -8302,7 +8401,7 @@ let LinkDialog = /*#__PURE__*/function () {
     key: "bindEnterKey",
     value: function bindEnterKey($input, $btn) {
       $input.on('keypress', function (event) {
-        if (event.keyCode === key.code.ENTER) {
+        if (event.keyCode === core_key.code.ENTER) {
           event.preventDefault();
           $btn.trigger('click');
         }
@@ -8327,18 +8426,18 @@ let LinkDialog = /*#__PURE__*/function () {
   }, {
     key: "showLinkDialog",
     value: function showLinkDialog(linkInfo) {
-      let _this = this;
+      var _this = this;
 
-      return external_jQuery_default().Deferred(function (deferred) {
-        let $linkText = _this.$dialog.find('.note-link-text');
+      return external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default.a.Deferred(function (deferred) {
+        var $linkText = _this.$dialog.find('.note-link-text');
 
-        let $linkUrl = _this.$dialog.find('.note-link-url');
+        var $linkUrl = _this.$dialog.find('.note-link-url');
 
-        let $linkBtn = _this.$dialog.find('.note-link-btn');
+        var $linkBtn = _this.$dialog.find('.note-link-btn');
 
-        let $openInNewWindow = _this.$dialog.find('.sn-checkbox-open-in-new-window input[type=checkbox]');
+        var $openInNewWindow = _this.$dialog.find('.sn-checkbox-open-in-new-window input[type=checkbox]');
 
-        let $useProtocol = _this.$dialog.find('.sn-checkbox-use-protocol input[type=checkbox]');
+        var $useProtocol = _this.$dialog.find('.sn-checkbox-use-protocol input[type=checkbox]');
 
         _this.ui.onDialogShown(_this.$dialog, function () {
           _this.context.triggerEvent('dialog.shown'); // If no url was given and given text is valid URL then copy that into URL Field
@@ -8375,9 +8474,9 @@ let LinkDialog = /*#__PURE__*/function () {
 
           _this.bindEnterKey($linkText, $linkBtn);
 
-          let isNewWindowChecked = linkInfo.isNewWindow !== undefined ? linkInfo.isNewWindow : _this.context.options.linkTargetBlank;
+          var isNewWindowChecked = linkInfo.isNewWindow !== undefined ? linkInfo.isNewWindow : _this.context.options.linkTargetBlank;
           $openInNewWindow.prop('checked', isNewWindowChecked);
-          let useProtocolChecked = linkInfo.url ? false : _this.context.options.useProtocol;
+          var useProtocolChecked = linkInfo.url ? false : _this.context.options.useProtocol;
           $useProtocol.prop('checked', useProtocolChecked);
           $linkBtn.one('click', function (event) {
             event.preventDefault();
@@ -8414,9 +8513,9 @@ let LinkDialog = /*#__PURE__*/function () {
   }, {
     key: "show",
     value: function show() {
-      let _this2 = this;
+      var _this2 = this;
 
-      let linkInfo = this.context.invoke('editor.getLinkInfo');
+      var linkInfo = this.context.invoke('editor.getLinkInfo');
       this.context.invoke('editor.saveRange');
       this.showLinkDialog(linkInfo).then(function (linkInfo) {
         _this2.context.invoke('editor.restoreRange');
@@ -8432,10 +8531,10 @@ let LinkDialog = /*#__PURE__*/function () {
 }();
 
 
-;// CONCATENATED MODULE: ./src/js/module/LinkPopover.js
+// CONCATENATED MODULE: ./src/js/base/module/LinkPopover.js
 function LinkPopover_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-function LinkPopover_defineProperties(target, props) { for (let i = 0; i < props.length; i++) { let descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+function LinkPopover_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
 function LinkPopover_createClass(Constructor, protoProps, staticProps) { if (protoProps) LinkPopover_defineProperties(Constructor.prototype, protoProps); if (staticProps) LinkPopover_defineProperties(Constructor, staticProps); return Constructor; }
 
@@ -8443,30 +8542,21 @@ function LinkPopover_createClass(Constructor, protoProps, staticProps) { if (pro
 
 
 
-let LinkPopover = /*#__PURE__*/function () {
+var LinkPopover_LinkPopover = /*#__PURE__*/function () {
   function LinkPopover(context) {
-    let _this = this;
+    var _this = this;
 
     LinkPopover_classCallCheck(this, LinkPopover);
 
     this.context = context;
-    this.ui = (external_jQuery_default()).summernote.ui;
+    this.ui = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default.a.summernote.ui;
     this.options = context.options;
     this.events = {
       'summernote.keyup summernote.mouseup summernote.change summernote.scroll': function summernoteKeyupSummernoteMouseupSummernoteChangeSummernoteScroll() {
         _this.update();
       },
-      'summernote.disable summernote.dialog.shown': function summernoteDisableSummernoteDialogShown() {
+      'summernote.disable summernote.dialog.shown summernote.blur': function summernoteDisableSummernoteDialogShownSummernoteBlur() {
         _this.hide();
-      },
-      'summernote.blur': function summernoteBlur(we, e) {
-        if (e.originalEvent && e.originalEvent.relatedTarget) {
-          if (!_this.$popover[0].contains(e.originalEvent.relatedTarget)) {
-            _this.hide();
-          }
-        } else {
-          _this.hide();
-        }
       }
     };
   }
@@ -8482,11 +8572,11 @@ let LinkPopover = /*#__PURE__*/function () {
       this.$popover = this.ui.popover({
         className: 'note-link-popover',
         callback: function callback($node) {
-          let $content = $node.find('.popover-content,.note-popover-content');
+          var $content = $node.find('.popover-content,.note-popover-content');
           $content.prepend('<span><a target="_blank"></a>&nbsp;</span>');
         }
       }).render().appendTo(this.options.container);
-      let $content = this.$popover.find('.popover-content,.note-popover-content');
+      var $content = this.$popover.find('.popover-content,.note-popover-content');
       this.context.invoke('buttons.build', $content, this.options.popover.link);
       this.$popover.on('mousedown', function (e) {
         e.preventDefault();
@@ -8506,14 +8596,14 @@ let LinkPopover = /*#__PURE__*/function () {
         return;
       }
 
-      let rng = this.context.invoke('editor.getLastRange');
+      var rng = this.context.invoke('editor.getLastRange');
 
       if (rng.isCollapsed() && rng.isOnAnchor()) {
-        let anchor = dom.ancestor(rng.sc, dom.isAnchor);
-        let href = external_jQuery_default()(anchor).attr('href');
+        var anchor = dom.ancestor(rng.sc, dom.isAnchor);
+        var href = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(anchor).attr('href');
         this.$popover.find('a').attr('href', href).text(href);
-        let pos = dom.posFromPlaceholder(anchor);
-        let containerOffset = external_jQuery_default()(this.options.container).offset();
+        var pos = dom.posFromPlaceholder(anchor);
+        var containerOffset = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(this.options.container).offset();
         pos.top -= containerOffset.top;
         pos.left -= containerOffset.left;
         this.$popover.css({
@@ -8536,10 +8626,10 @@ let LinkPopover = /*#__PURE__*/function () {
 }();
 
 
-;// CONCATENATED MODULE: ./src/js/module/ImageDialog.js
+// CONCATENATED MODULE: ./src/js/base/module/ImageDialog.js
 function ImageDialog_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-function ImageDialog_defineProperties(target, props) { for (let i = 0; i < props.length; i++) { let descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+function ImageDialog_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
 function ImageDialog_createClass(Constructor, protoProps, staticProps) { if (protoProps) ImageDialog_defineProperties(Constructor.prototype, protoProps); if (staticProps) ImageDialog_defineProperties(Constructor, staticProps); return Constructor; }
 
@@ -8547,13 +8637,13 @@ function ImageDialog_createClass(Constructor, protoProps, staticProps) { if (pro
 
 
 
-let ImageDialog = /*#__PURE__*/function () {
+var ImageDialog_ImageDialog = /*#__PURE__*/function () {
   function ImageDialog(context) {
     ImageDialog_classCallCheck(this, ImageDialog);
 
     this.context = context;
-    this.ui = (external_jQuery_default()).summernote.ui;
-    this.$body = external_jQuery_default()(document.body);
+    this.ui = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default.a.summernote.ui;
+    this.$body = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(document.body);
     this.$editor = context.layoutInfo.editor;
     this.options = context.options;
     this.lang = this.options.langInfo;
@@ -8562,18 +8652,18 @@ let ImageDialog = /*#__PURE__*/function () {
   ImageDialog_createClass(ImageDialog, [{
     key: "initialize",
     value: function initialize() {
-      let imageLimitation = '';
+      var imageLimitation = '';
 
       if (this.options.maximumImageFileSize) {
-        let unit = Math.floor(Math.log(this.options.maximumImageFileSize) / Math.log(1024));
-        let readableSize = (this.options.maximumImageFileSize / Math.pow(1024, unit)).toFixed(2) * 1 + ' ' + ' KMGTP'[unit] + 'B';
+        var unit = Math.floor(Math.log(this.options.maximumImageFileSize) / Math.log(1024));
+        var readableSize = (this.options.maximumImageFileSize / Math.pow(1024, unit)).toFixed(2) * 1 + ' ' + ' KMGTP'[unit] + 'B';
         imageLimitation = "<small>".concat(this.lang.image.maximumFileSize + ' : ' + readableSize, "</small>");
       }
 
-      let $container = this.options.dialogsInBody ? this.$body : this.options.container;
-      let body = ['<div class="form-group note-form-group note-group-select-from-files">', '<label for="note-dialog-image-file-' + this.options.id + '" class="note-form-label">' + this.lang.image.selectFromFiles + '</label>', '<input id="note-dialog-image-file-' + this.options.id + '" class="note-image-input form-control-file note-form-control note-input" ', ' type="file" name="files" accept="' + this.options.acceptImageFileTypes + '" multiple="multiple"/>', imageLimitation, '</div>', '<div class="form-group note-group-image-url">', '<label for="note-dialog-image-url-' + this.options.id + '" class="note-form-label">' + this.lang.image.url + '</label>', '<input id="note-dialog-image-url-' + this.options.id + '" class="note-image-url form-control note-form-control note-input" type="text"/>', '</div>'].join('');
-      let buttonClass = 'btn btn-primary note-btn note-btn-primary note-image-btn';
-      let footer = "<input type=\"button\" href=\"#\" class=\"".concat(buttonClass, "\" value=\"").concat(this.lang.image.insert, "\" disabled>");
+      var $container = this.options.dialogsInBody ? this.$body : this.options.container;
+      var body = ['<div class="form-group note-form-group note-group-select-from-files">', '<label for="note-dialog-image-file-' + this.options.id + '" class="note-form-label">' + this.lang.image.selectFromFiles + '</label>', '<input id="note-dialog-image-file-' + this.options.id + '" class="note-image-input form-control-file note-form-control note-input" ', ' type="file" name="files" accept="image/*" multiple="multiple"/>', imageLimitation, '</div>', '<div class="form-group note-group-image-url">', '<label for="note-dialog-image-url-' + this.options.id + '" class="note-form-label">' + this.lang.image.url + '</label>', '<input id="note-dialog-image-url-' + this.options.id + '" class="note-image-url form-control note-form-control note-input" type="text"/>', '</div>'].join('');
+      var buttonClass = 'btn btn-primary note-btn note-btn-primary note-image-btn';
+      var footer = "<input type=\"button\" href=\"#\" class=\"".concat(buttonClass, "\" value=\"").concat(this.lang.image.insert, "\" disabled>");
       this.$dialog = this.ui.dialog({
         title: this.lang.image.insert,
         fade: this.options.dialogsFade,
@@ -8591,7 +8681,7 @@ let ImageDialog = /*#__PURE__*/function () {
     key: "bindEnterKey",
     value: function bindEnterKey($input, $btn) {
       $input.on('keypress', function (event) {
-        if (event.keyCode === key.code.ENTER) {
+        if (event.keyCode === core_key.code.ENTER) {
           event.preventDefault();
           $btn.trigger('click');
         }
@@ -8600,7 +8690,7 @@ let ImageDialog = /*#__PURE__*/function () {
   }, {
     key: "show",
     value: function show() {
-      let _this = this;
+      var _this = this;
 
       this.context.invoke('editor.saveRange');
       this.showImageDialog().then(function (data) {
@@ -8635,14 +8725,14 @@ let ImageDialog = /*#__PURE__*/function () {
   }, {
     key: "showImageDialog",
     value: function showImageDialog() {
-      let _this2 = this;
+      var _this2 = this;
 
-      return external_jQuery_default().Deferred(function (deferred) {
-        let $imageInput = _this2.$dialog.find('.note-image-input');
+      return external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default.a.Deferred(function (deferred) {
+        var $imageInput = _this2.$dialog.find('.note-image-input');
 
-        let $imageUrl = _this2.$dialog.find('.note-image-url');
+        var $imageUrl = _this2.$dialog.find('.note-image-url');
 
-        let $imageBtn = _this2.$dialog.find('.note-image-btn');
+        var $imageBtn = _this2.$dialog.find('.note-image-btn');
 
         _this2.ui.onDialogShown(_this2.$dialog, function () {
           _this2.context.triggerEvent('dialog.shown'); // Cloning imageInput to clear element.
@@ -8686,10 +8776,10 @@ let ImageDialog = /*#__PURE__*/function () {
 }();
 
 
-;// CONCATENATED MODULE: ./src/js/module/ImagePopover.js
+// CONCATENATED MODULE: ./src/js/base/module/ImagePopover.js
 function ImagePopover_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-function ImagePopover_defineProperties(target, props) { for (let i = 0; i < props.length; i++) { let descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+function ImagePopover_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
 function ImagePopover_createClass(Constructor, protoProps, staticProps) { if (protoProps) ImagePopover_defineProperties(Constructor.prototype, protoProps); if (staticProps) ImagePopover_defineProperties(Constructor, staticProps); return Constructor; }
 
@@ -8702,28 +8792,19 @@ function ImagePopover_createClass(Constructor, protoProps, staticProps) { if (pr
  *  Handle.js will receive the events and invoke 'imagePopover.update'.
  */
 
-let ImagePopover = /*#__PURE__*/function () {
+var ImagePopover_ImagePopover = /*#__PURE__*/function () {
   function ImagePopover(context) {
-    let _this = this;
+    var _this = this;
 
     ImagePopover_classCallCheck(this, ImagePopover);
 
     this.context = context;
-    this.ui = (external_jQuery_default()).summernote.ui;
+    this.ui = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default.a.summernote.ui;
     this.editable = context.layoutInfo.editable[0];
     this.options = context.options;
     this.events = {
-      'summernote.disable summernote.dialog.shown': function summernoteDisableSummernoteDialogShown() {
+      'summernote.disable summernote.blur': function summernoteDisableSummernoteBlur() {
         _this.hide();
-      },
-      'summernote.blur': function summernoteBlur(we, e) {
-        if (e.originalEvent && e.originalEvent.relatedTarget) {
-          if (!_this.$popover[0].contains(e.originalEvent.relatedTarget)) {
-            _this.hide();
-          }
-        } else {
-          _this.hide();
-        }
       }
     };
   }
@@ -8739,7 +8820,7 @@ let ImagePopover = /*#__PURE__*/function () {
       this.$popover = this.ui.popover({
         className: 'note-image-popover'
       }).render().appendTo(this.options.container);
-      let $content = this.$popover.find('.popover-content,.note-popover-content');
+      var $content = this.$popover.find('.popover-content,.note-popover-content');
       this.context.invoke('buttons.build', $content, this.options.popover.image);
       this.$popover.on('mousedown', function (e) {
         e.preventDefault();
@@ -8754,9 +8835,9 @@ let ImagePopover = /*#__PURE__*/function () {
     key: "update",
     value: function update(target, event) {
       if (dom.isImg(target)) {
-        let position = external_jQuery_default()(target).offset();
-        let containerOffset = external_jQuery_default()(this.options.container).offset();
-        let pos = {};
+        var position = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(target).offset();
+        var containerOffset = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(this.options.container).offset();
+        var pos = {};
 
         if (this.options.popatmouse) {
           pos.left = event.pageX - 20;
@@ -8787,10 +8868,10 @@ let ImagePopover = /*#__PURE__*/function () {
 }();
 
 
-;// CONCATENATED MODULE: ./src/js/module/TablePopover.js
+// CONCATENATED MODULE: ./src/js/base/module/TablePopover.js
 function TablePopover_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-function TablePopover_defineProperties(target, props) { for (let i = 0; i < props.length; i++) { let descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+function TablePopover_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
 function TablePopover_createClass(Constructor, protoProps, staticProps) { if (protoProps) TablePopover_defineProperties(Constructor.prototype, protoProps); if (staticProps) TablePopover_defineProperties(Constructor, staticProps); return Constructor; }
 
@@ -8799,14 +8880,14 @@ function TablePopover_createClass(Constructor, protoProps, staticProps) { if (pr
 
 
 
-let TablePopover = /*#__PURE__*/function () {
+var TablePopover_TablePopover = /*#__PURE__*/function () {
   function TablePopover(context) {
-    let _this = this;
+    var _this = this;
 
     TablePopover_classCallCheck(this, TablePopover);
 
     this.context = context;
-    this.ui = (external_jQuery_default()).summernote.ui;
+    this.ui = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default.a.summernote.ui;
     this.options = context.options;
     this.events = {
       'summernote.mousedown': function summernoteMousedown(we, e) {
@@ -8815,17 +8896,8 @@ let TablePopover = /*#__PURE__*/function () {
       'summernote.keyup summernote.scroll summernote.change': function summernoteKeyupSummernoteScrollSummernoteChange() {
         _this.update();
       },
-      'summernote.disable summernote.dialog.shown': function summernoteDisableSummernoteDialogShown() {
+      'summernote.disable summernote.blur': function summernoteDisableSummernoteBlur() {
         _this.hide();
-      },
-      'summernote.blur': function summernoteBlur(we, e) {
-        if (e.originalEvent && e.originalEvent.relatedTarget) {
-          if (!_this.$popover[0].contains(e.originalEvent.relatedTarget)) {
-            _this.hide();
-          }
-        } else {
-          _this.hide();
-        }
       }
     };
   }
@@ -8841,7 +8913,7 @@ let TablePopover = /*#__PURE__*/function () {
       this.$popover = this.ui.popover({
         className: 'note-table-popover'
       }).render().appendTo(this.options.container);
-      let $content = this.$popover.find('.popover-content,.note-popover-content');
+      var $content = this.$popover.find('.popover-content,.note-popover-content');
       this.context.invoke('buttons.build', $content, this.options.popover.table); // [workaround] Disable Firefox's default table editor
 
       if (env.isFF) {
@@ -8864,11 +8936,11 @@ let TablePopover = /*#__PURE__*/function () {
         return false;
       }
 
-      let isCell = dom.isCell(target) || dom.isCell(target === null || target === void 0 ? void 0 : target.parentElement);
+      var isCell = dom.isCell(target);
 
       if (isCell) {
-        let pos = dom.posFromPlaceholder(target);
-        let containerOffset = external_jQuery_default()(this.options.container).offset();
+        var pos = dom.posFromPlaceholder(target);
+        var containerOffset = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(this.options.container).offset();
         pos.top -= containerOffset.top;
         pos.left -= containerOffset.left;
         this.$popover.css({
@@ -8893,10 +8965,10 @@ let TablePopover = /*#__PURE__*/function () {
 }();
 
 
-;// CONCATENATED MODULE: ./src/js/module/VideoDialog.js
+// CONCATENATED MODULE: ./src/js/base/module/VideoDialog.js
 function VideoDialog_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-function VideoDialog_defineProperties(target, props) { for (let i = 0; i < props.length; i++) { let descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+function VideoDialog_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
 function VideoDialog_createClass(Constructor, protoProps, staticProps) { if (protoProps) VideoDialog_defineProperties(Constructor.prototype, protoProps); if (staticProps) VideoDialog_defineProperties(Constructor, staticProps); return Constructor; }
 
@@ -8904,13 +8976,13 @@ function VideoDialog_createClass(Constructor, protoProps, staticProps) { if (pro
 
 
 
-let VideoDialog = /*#__PURE__*/function () {
+var VideoDialog_VideoDialog = /*#__PURE__*/function () {
   function VideoDialog(context) {
     VideoDialog_classCallCheck(this, VideoDialog);
 
     this.context = context;
-    this.ui = (external_jQuery_default()).summernote.ui;
-    this.$body = external_jQuery_default()(document.body);
+    this.ui = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default.a.summernote.ui;
+    this.$body = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(document.body);
     this.$editor = context.layoutInfo.editor;
     this.options = context.options;
     this.lang = this.options.langInfo;
@@ -8919,10 +8991,10 @@ let VideoDialog = /*#__PURE__*/function () {
   VideoDialog_createClass(VideoDialog, [{
     key: "initialize",
     value: function initialize() {
-      let $container = this.options.dialogsInBody ? this.$body : this.options.container;
-      let body = ['<div class="form-group note-form-group row-fluid">', "<label for=\"note-dialog-video-url-".concat(this.options.id, "\" class=\"note-form-label\">").concat(this.lang.video.url, " <small class=\"text-muted\">").concat(this.lang.video.providers, "</small></label>"), "<input id=\"note-dialog-video-url-".concat(this.options.id, "\" class=\"note-video-url form-control note-form-control note-input\" type=\"text\"/>"), '</div>'].join('');
-      let buttonClass = 'btn btn-primary note-btn note-btn-primary note-video-btn';
-      let footer = "<input type=\"button\" href=\"#\" class=\"".concat(buttonClass, "\" value=\"").concat(this.lang.video.insert, "\" disabled>");
+      var $container = this.options.dialogsInBody ? this.$body : this.options.container;
+      var body = ['<div class="form-group note-form-group row-fluid">', "<label for=\"note-dialog-video-url-".concat(this.options.id, "\" class=\"note-form-label\">").concat(this.lang.video.url, " <small class=\"text-muted\">").concat(this.lang.video.providers, "</small></label>"), "<input id=\"note-dialog-video-url-".concat(this.options.id, "\" class=\"note-video-url form-control note-form-control note-input\" type=\"text\"/>"), '</div>'].join('');
+      var buttonClass = 'btn btn-primary note-btn note-btn-primary note-video-btn';
+      var footer = "<input type=\"button\" href=\"#\" class=\"".concat(buttonClass, "\" value=\"").concat(this.lang.video.insert, "\" disabled>");
       this.$dialog = this.ui.dialog({
         title: this.lang.video.insert,
         fade: this.options.dialogsFade,
@@ -8940,7 +9012,7 @@ let VideoDialog = /*#__PURE__*/function () {
     key: "bindEnterKey",
     value: function bindEnterKey($input, $btn) {
       $input.on('keypress', function (event) {
-        if (event.keyCode === key.code.ENTER) {
+        if (event.keyCode === core_key.code.ENTER) {
           event.preventDefault();
           $btn.trigger('click');
         }
@@ -8949,84 +9021,66 @@ let VideoDialog = /*#__PURE__*/function () {
   }, {
     key: "createVideoNode",
     value: function createVideoNode(url) {
-      // video url patterns(youtube, instagram, vimeo, dailymotion, youku, peertube, mp4, ogg, webm)
-      let ytRegExp = /\/\/(?:(?:www|m)\.)?(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=))([\w|-]{11})(?:(?:[\?&]t=)(\S+))?$/;
-      let ytRegExpForStart = /^(?:(\d+)h)?(?:(\d+)m)?(?:(\d+)s)?$/;
-      let ytMatch = url.match(ytRegExp);
-      let gdRegExp = /(?:\.|\/\/)drive\.google\.com\/file\/d\/(.[a-zA-Z0-9_-]*)\/view/;
-      let gdMatch = url.match(gdRegExp);
-      let igRegExp = /(?:www\.|\/\/)instagram\.com\/p\/(.[a-zA-Z0-9_-]*)/;
-      let igMatch = url.match(igRegExp);
-      let vRegExp = /\/\/vine\.co\/v\/([a-zA-Z0-9]+)/;
-      let vMatch = url.match(vRegExp);
-      let vimRegExp = /\/\/(player\.)?vimeo\.com\/([a-z]*\/)*(\d+)[?]?.*/;
-      let vimMatch = url.match(vimRegExp);
-      let dmRegExp = /.+dailymotion.com\/(video|hub)\/([^_]+)[^#]*(#video=([^_&]+))?/;
-      let dmMatch = url.match(dmRegExp);
-      let youkuRegExp = /\/\/v\.youku\.com\/v_show\/id_(\w+)=*\.html/;
-      let youkuMatch = url.match(youkuRegExp);
-      let peerTubeRegExp = /\/\/(.*)\/videos\/watch\/([^?]*)(?:\?(?:start=(\w*))?(?:&stop=(\w*))?(?:&loop=([10]))?(?:&autoplay=([10]))?(?:&muted=([10]))?)?/;
-      let peerTubeMatch = url.match(peerTubeRegExp);
-      let qqRegExp = /\/\/v\.qq\.com.*?vid=(.+)/;
-      let qqMatch = url.match(qqRegExp);
-      let qqRegExp2 = /\/\/v\.qq\.com\/x?\/?(page|cover).*?\/([^\/]+)\.html\??.*/;
-      let qqMatch2 = url.match(qqRegExp2);
-      let mp4RegExp = /^.+.(mp4|m4v)$/;
-      let mp4Match = url.match(mp4RegExp);
-      let oggRegExp = /^.+.(ogg|ogv)$/;
-      let oggMatch = url.match(oggRegExp);
-      let webmRegExp = /^.+.(webm)$/;
-      let webmMatch = url.match(webmRegExp);
-      let fbRegExp = /(?:www\.|\/\/)facebook\.com\/([^\/]+)\/videos\/([0-9]+)/;
-      let fbMatch = url.match(fbRegExp);
-      let $video;
+      // video url patterns(youtube, instagram, vimeo, dailymotion, youku, mp4, ogg, webm)
+      var ytRegExp = /\/\/(?:(?:www|m)\.)?(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=))([\w|-]{11})(?:(?:[\?&]t=)(\S+))?$/;
+      var ytRegExpForStart = /^(?:(\d+)h)?(?:(\d+)m)?(?:(\d+)s)?$/;
+      var ytMatch = url.match(ytRegExp);
+      var igRegExp = /(?:www\.|\/\/)instagram\.com\/p\/(.[a-zA-Z0-9_-]*)/;
+      var igMatch = url.match(igRegExp);
+      var vRegExp = /\/\/vine\.co\/v\/([a-zA-Z0-9]+)/;
+      var vMatch = url.match(vRegExp);
+      var vimRegExp = /\/\/(player\.)?vimeo\.com\/([a-z]*\/)*(\d+)[?]?.*/;
+      var vimMatch = url.match(vimRegExp);
+      var dmRegExp = /.+dailymotion.com\/(video|hub)\/([^_]+)[^#]*(#video=([^_&]+))?/;
+      var dmMatch = url.match(dmRegExp);
+      var youkuRegExp = /\/\/v\.youku\.com\/v_show\/id_(\w+)=*\.html/;
+      var youkuMatch = url.match(youkuRegExp);
+      var qqRegExp = /\/\/v\.qq\.com.*?vid=(.+)/;
+      var qqMatch = url.match(qqRegExp);
+      var qqRegExp2 = /\/\/v\.qq\.com\/x?\/?(page|cover).*?\/([^\/]+)\.html\??.*/;
+      var qqMatch2 = url.match(qqRegExp2);
+      var mp4RegExp = /^.+.(mp4|m4v)$/;
+      var mp4Match = url.match(mp4RegExp);
+      var oggRegExp = /^.+.(ogg|ogv)$/;
+      var oggMatch = url.match(oggRegExp);
+      var webmRegExp = /^.+.(webm)$/;
+      var webmMatch = url.match(webmRegExp);
+      var fbRegExp = /(?:www\.|\/\/)facebook\.com\/([^\/]+)\/videos\/([0-9]+)/;
+      var fbMatch = url.match(fbRegExp);
+      var $video;
 
       if (ytMatch && ytMatch[1].length === 11) {
-        let youtubeId = ytMatch[1];
-        let start = 0;
+        var youtubeId = ytMatch[1];
+        var start = 0;
 
         if (typeof ytMatch[2] !== 'undefined') {
-          let ytMatchForStart = ytMatch[2].match(ytRegExpForStart);
+          var ytMatchForStart = ytMatch[2].match(ytRegExpForStart);
 
           if (ytMatchForStart) {
-            for (let n = [3600, 60, 1], i = 0, r = n.length; i < r; i++) {
+            for (var n = [3600, 60, 1], i = 0, r = n.length; i < r; i++) {
               start += typeof ytMatchForStart[i + 1] !== 'undefined' ? n[i] * parseInt(ytMatchForStart[i + 1], 10) : 0;
             }
           }
         }
 
-        $video = external_jQuery_default()('<iframe>').attr('frameborder', 0).attr('src', '//www.youtube.com/embed/' + youtubeId + (start > 0 ? '?start=' + start : '')).attr('width', '640').attr('height', '360');
-      } else if (gdMatch && gdMatch[0].length) {
-        $video = external_jQuery_default()('<iframe>').attr('frameborder', 0).attr('src', 'https://drive.google.com/file/d/' + gdMatch[1] + '/preview').attr('width', '640').attr('height', '480');
+        $video = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()('<iframe>').attr('frameborder', 0).attr('src', '//www.youtube.com/embed/' + youtubeId + (start > 0 ? '?start=' + start : '')).attr('width', '640').attr('height', '360');
       } else if (igMatch && igMatch[0].length) {
-        $video = external_jQuery_default()('<iframe>').attr('frameborder', 0).attr('src', 'https://instagram.com/p/' + igMatch[1] + '/embed/').attr('width', '612').attr('height', '710').attr('scrolling', 'no').attr('allowtransparency', 'true');
+        $video = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()('<iframe>').attr('frameborder', 0).attr('src', 'https://instagram.com/p/' + igMatch[1] + '/embed/').attr('width', '612').attr('height', '710').attr('scrolling', 'no').attr('allowtransparency', 'true');
       } else if (vMatch && vMatch[0].length) {
-        $video = external_jQuery_default()('<iframe>').attr('frameborder', 0).attr('src', vMatch[0] + '/embed/simple').attr('width', '600').attr('height', '600').attr('class', 'vine-embed');
+        $video = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()('<iframe>').attr('frameborder', 0).attr('src', vMatch[0] + '/embed/simple').attr('width', '600').attr('height', '600').attr('class', 'vine-embed');
       } else if (vimMatch && vimMatch[3].length) {
-        $video = external_jQuery_default()('<iframe webkitallowfullscreen mozallowfullscreen allowfullscreen>').attr('frameborder', 0).attr('src', '//player.vimeo.com/video/' + vimMatch[3]).attr('width', '640').attr('height', '360');
+        $video = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()('<iframe webkitallowfullscreen mozallowfullscreen allowfullscreen>').attr('frameborder', 0).attr('src', '//player.vimeo.com/video/' + vimMatch[3]).attr('width', '640').attr('height', '360');
       } else if (dmMatch && dmMatch[2].length) {
-        $video = external_jQuery_default()('<iframe>').attr('frameborder', 0).attr('src', '//www.dailymotion.com/embed/video/' + dmMatch[2]).attr('width', '640').attr('height', '360');
+        $video = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()('<iframe>').attr('frameborder', 0).attr('src', '//www.dailymotion.com/embed/video/' + dmMatch[2]).attr('width', '640').attr('height', '360');
       } else if (youkuMatch && youkuMatch[1].length) {
-        $video = external_jQuery_default()('<iframe webkitallowfullscreen mozallowfullscreen allowfullscreen>').attr('frameborder', 0).attr('height', '498').attr('width', '510').attr('src', '//player.youku.com/embed/' + youkuMatch[1]);
-      } else if (peerTubeMatch && peerTubeMatch[0].length) {
-        let begin = 0;
-        if (peerTubeMatch[2] !== 'undefined') begin = peerTubeMatch[2];
-        let end = 0;
-        if (peerTubeMatch[3] !== 'undefined') end = peerTubeMatch[3];
-        let loop = 0;
-        if (peerTubeMatch[4] !== 'undefined') loop = peerTubeMatch[4];
-        let autoplay = 0;
-        if (peerTubeMatch[5] !== 'undefined') autoplay = peerTubeMatch[5];
-        let muted = 0;
-        if (peerTubeMatch[6] !== 'undefined') muted = peerTubeMatch[6];
-        $video = external_jQuery_default()('<iframe allowfullscreen sandbox="allow-same-origin allow-scripts allow-popups">').attr('frameborder', 0).attr('src', '//' + peerTubeMatch[1] + '/videos/embed/' + peerTubeMatch[2] + "?loop=" + loop + "&autoplay=" + autoplay + "&muted=" + muted + (begin > 0 ? '&start=' + begin : '') + (end > 0 ? '&end=' + start : '')).attr('width', '560').attr('height', '315');
+        $video = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()('<iframe webkitallowfullscreen mozallowfullscreen allowfullscreen>').attr('frameborder', 0).attr('height', '498').attr('width', '510').attr('src', '//player.youku.com/embed/' + youkuMatch[1]);
       } else if (qqMatch && qqMatch[1].length || qqMatch2 && qqMatch2[2].length) {
-        let vid = qqMatch && qqMatch[1].length ? qqMatch[1] : qqMatch2[2];
-        $video = external_jQuery_default()('<iframe webkitallowfullscreen mozallowfullscreen allowfullscreen>').attr('frameborder', 0).attr('height', '310').attr('width', '500').attr('src', 'https://v.qq.com/txp/iframe/player.html?vid=' + vid + '&amp;auto=0');
+        var vid = qqMatch && qqMatch[1].length ? qqMatch[1] : qqMatch2[2];
+        $video = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()('<iframe webkitallowfullscreen mozallowfullscreen allowfullscreen>').attr('frameborder', 0).attr('height', '310').attr('width', '500').attr('src', 'https://v.qq.com/txp/iframe/player.html?vid=' + vid + '&amp;auto=0');
       } else if (mp4Match || oggMatch || webmMatch) {
-        $video = external_jQuery_default()('<video controls>').attr('src', url).attr('width', '640').attr('height', '360');
+        $video = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()('<video controls>').attr('src', url).attr('width', '640').attr('height', '360');
       } else if (fbMatch && fbMatch[0].length) {
-        $video = external_jQuery_default()('<iframe>').attr('frameborder', 0).attr('src', 'https://www.facebook.com/plugins/video.php?href=' + encodeURIComponent(fbMatch[0]) + '&show_text=0&width=560').attr('width', '560').attr('height', '301').attr('scrolling', 'no').attr('allowtransparency', 'true');
+        $video = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()('<iframe>').attr('frameborder', 0).attr('src', 'https://www.facebook.com/plugins/video.php?href=' + encodeURIComponent(fbMatch[0]) + '&show_text=0&width=560').attr('width', '560').attr('height', '301').attr('scrolling', 'no').attr('allowtransparency', 'true');
       } else {
         // this is not a known video link. Now what, Cat? Now what?
         return false;
@@ -9038,9 +9092,9 @@ let VideoDialog = /*#__PURE__*/function () {
   }, {
     key: "show",
     value: function show() {
-      let _this = this;
+      var _this = this;
 
-      let text = this.context.invoke('editor.getSelectedText');
+      var text = this.context.invoke('editor.getSelectedText');
       this.context.invoke('editor.saveRange');
       this.showVideoDialog(text).then(function (url) {
         // [workaround] hide dialog before restore range for IE range focus
@@ -9049,7 +9103,7 @@ let VideoDialog = /*#__PURE__*/function () {
         _this.context.invoke('editor.restoreRange'); // build node
 
 
-        let $node = _this.createVideoNode(url);
+        var $node = _this.createVideoNode(url);
 
         if ($node) {
           // insert video node
@@ -9068,13 +9122,15 @@ let VideoDialog = /*#__PURE__*/function () {
 
   }, {
     key: "showVideoDialog",
-    value: function showVideoDialog() {
-      let _this2 = this;
+    value: function showVideoDialog()
+    /* text */
+    {
+      var _this2 = this;
 
-      return external_jQuery_default().Deferred(function (deferred) {
-        let $videoUrl = _this2.$dialog.find('.note-video-url');
+      return external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default.a.Deferred(function (deferred) {
+        var $videoUrl = _this2.$dialog.find('.note-video-url');
 
-        let $videoBtn = _this2.$dialog.find('.note-video-btn');
+        var $videoBtn = _this2.$dialog.find('.note-video-btn');
 
         _this2.ui.onDialogShown(_this2.$dialog, function () {
           _this2.context.triggerEvent('dialog.shown');
@@ -9113,23 +9169,23 @@ let VideoDialog = /*#__PURE__*/function () {
 }();
 
 
-;// CONCATENATED MODULE: ./src/js/module/HelpDialog.js
+// CONCATENATED MODULE: ./src/js/base/module/HelpDialog.js
 function HelpDialog_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-function HelpDialog_defineProperties(target, props) { for (let i = 0; i < props.length; i++) { let descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+function HelpDialog_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
 function HelpDialog_createClass(Constructor, protoProps, staticProps) { if (protoProps) HelpDialog_defineProperties(Constructor.prototype, protoProps); if (staticProps) HelpDialog_defineProperties(Constructor, staticProps); return Constructor; }
 
 
 
 
-let HelpDialog = /*#__PURE__*/function () {
+var HelpDialog_HelpDialog = /*#__PURE__*/function () {
   function HelpDialog(context) {
     HelpDialog_classCallCheck(this, HelpDialog);
 
     this.context = context;
-    this.ui = (external_jQuery_default()).summernote.ui;
-    this.$body = external_jQuery_default()(document.body);
+    this.ui = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default.a.summernote.ui;
+    this.$body = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(document.body);
     this.$editor = context.layoutInfo.editor;
     this.options = context.options;
     this.lang = this.options.langInfo;
@@ -9138,8 +9194,8 @@ let HelpDialog = /*#__PURE__*/function () {
   HelpDialog_createClass(HelpDialog, [{
     key: "initialize",
     value: function initialize() {
-      let $container = this.options.dialogsInBody ? this.$body : this.options.container;
-      //let body = ['<p class="text-center">', '<a href="http://summernote.org/" target="_blank" rel="noopener noreferrer">Summernote 0.8.20</a> · ', '<a href="https://github.com/summernote/summernote" target="_blank" rel="noopener noreferrer">Project</a> · ', '<a href="https://github.com/summernote/summernote/issues" target="_blank" rel="noopener noreferrer">Issues</a>', '</p>'].join('');
+      var $container = this.options.dialogsInBody ? this.$body : this.options.container;
+      var body = ['<p class="text-center">', '<a href="http://summernote.org/" target="_blank">Summernote 0.8.18</a> · ', '<a href="https://github.com/summernote/summernote" target="_blank">Project</a> · ', '<a href="https://github.com/summernote/summernote/issues" target="_blank">Issues</a>', '</p>'].join('');
       this.$dialog = this.ui.dialog({
         title: this.lang.options.help,
         fade: this.options.dialogsFade,
@@ -9162,16 +9218,16 @@ let HelpDialog = /*#__PURE__*/function () {
   }, {
     key: "createShortcutList",
     value: function createShortcutList() {
-      let _this = this;
+      var _this = this;
 
-      let keyMap = this.options.keyMap[env.isMac ? 'mac' : 'pc'];
+      var keyMap = this.options.keyMap[env.isMac ? 'mac' : 'pc'];
       return Object.keys(keyMap).map(function (key) {
-        let command = keyMap[key];
-        let $row = external_jQuery_default()('<div><div class="help-list-item"></div></div>');
-        $row.append(external_jQuery_default()('<label><kbd>' + key + '</kdb></label>').css({
+        var command = keyMap[key];
+        var $row = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()('<div><div class="help-list-item"></div></div>');
+        $row.append(external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()('<label><kbd>' + key + '</kdb></label>').css({
           'width': 180,
           'margin-right': 10
-        })).append(external_jQuery_default()('<span></span>').html(_this.context.memo('help.' + command) || command));
+        })).append(external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()('<span/>').html(_this.context.memo('help.' + command) || command));
         return $row.html();
       }).join('');
     }
@@ -9184,9 +9240,9 @@ let HelpDialog = /*#__PURE__*/function () {
   }, {
     key: "showHelpDialog",
     value: function showHelpDialog() {
-      let _this2 = this;
+      var _this2 = this;
 
-      return external_jQuery_default().Deferred(function (deferred) {
+      return external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default.a.Deferred(function (deferred) {
         _this2.ui.onDialogShown(_this2.$dialog, function () {
           _this2.context.triggerEvent('dialog.shown');
 
@@ -9199,7 +9255,7 @@ let HelpDialog = /*#__PURE__*/function () {
   }, {
     key: "show",
     value: function show() {
-      let _this3 = this;
+      var _this3 = this;
 
       this.context.invoke('editor.saveRange');
       this.showHelpDialog().then(function () {
@@ -9212,26 +9268,26 @@ let HelpDialog = /*#__PURE__*/function () {
 }();
 
 
-;// CONCATENATED MODULE: ./src/js/module/AirPopover.js
+// CONCATENATED MODULE: ./src/js/base/module/AirPopover.js
 function AirPopover_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-function AirPopover_defineProperties(target, props) { for (let i = 0; i < props.length; i++) { let descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+function AirPopover_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
 function AirPopover_createClass(Constructor, protoProps, staticProps) { if (protoProps) AirPopover_defineProperties(Constructor.prototype, protoProps); if (staticProps) AirPopover_defineProperties(Constructor, staticProps); return Constructor; }
 
 
 
-let AIRMODE_POPOVER_X_OFFSET = -5;
-let AIRMODE_POPOVER_Y_OFFSET = 5;
+var AIRMODE_POPOVER_X_OFFSET = -5;
+var AIRMODE_POPOVER_Y_OFFSET = 5;
 
-let AirPopover = /*#__PURE__*/function () {
+var AirPopover_AirPopover = /*#__PURE__*/function () {
   function AirPopover(context) {
-    let _this = this;
+    var _this = this;
 
     AirPopover_classCallCheck(this, AirPopover);
 
     this.context = context;
-    this.ui = (external_jQuery_default()).summernote.ui;
+    this.ui = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default.a.summernote.ui;
     this.options = context.options;
     this.hidable = true;
     this.onContextmenu = false;
@@ -9280,12 +9336,12 @@ let AirPopover = /*#__PURE__*/function () {
   }, {
     key: "initialize",
     value: function initialize() {
-      let _this2 = this;
+      var _this2 = this;
 
       this.$popover = this.ui.popover({
         className: 'note-air-popover'
       }).render().appendTo(this.options.container);
-      let $content = this.$popover.find('.popover-content');
+      var $content = this.$popover.find('.popover-content');
       this.context.invoke('buttons.build', $content, this.options.popover.air); // disable hiding this popover preemptively by 'summernote.blur' event.
 
       this.$popover.on('mousedown', function () {
@@ -9304,14 +9360,14 @@ let AirPopover = /*#__PURE__*/function () {
   }, {
     key: "update",
     value: function update(forcelyOpen) {
-      let styleInfo = this.context.invoke('editor.currentStyle');
+      var styleInfo = this.context.invoke('editor.currentStyle');
 
       if (styleInfo.range && (!styleInfo.range.isCollapsed() || forcelyOpen)) {
-        let rect = {
+        var rect = {
           left: this.pageX,
           top: this.pageY
         };
-        let containerOffset = external_jQuery_default()(this.options.container).offset();
+        var containerOffset = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(this.options.container).offset();
         rect.top -= containerOffset.top;
         rect.left -= containerOffset.left;
         this.$popover.css({
@@ -9346,10 +9402,10 @@ let AirPopover = /*#__PURE__*/function () {
 }();
 
 
-;// CONCATENATED MODULE: ./src/js/module/HintPopover.js
+// CONCATENATED MODULE: ./src/js/base/module/HintPopover.js
 function HintPopover_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-function HintPopover_defineProperties(target, props) { for (let i = 0; i < props.length; i++) { let descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+function HintPopover_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
 function HintPopover_createClass(Constructor, protoProps, staticProps) { if (protoProps) HintPopover_defineProperties(Constructor.prototype, protoProps); if (staticProps) HintPopover_defineProperties(Constructor, staticProps); return Constructor; }
 
@@ -9359,16 +9415,16 @@ function HintPopover_createClass(Constructor, protoProps, staticProps) { if (pro
 
 
 
-let POPOVER_DIST = 5;
+var POPOVER_DIST = 5;
 
-let HintPopover = /*#__PURE__*/function () {
+var HintPopover_HintPopover = /*#__PURE__*/function () {
   function HintPopover(context) {
-    let _this = this;
+    var _this = this;
 
     HintPopover_classCallCheck(this, HintPopover);
 
     this.context = context;
-    this.ui = (external_jQuery_default()).summernote.ui;
+    this.ui = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default.a.summernote.ui;
     this.$editable = context.layoutInfo.editable;
     this.options = context.options;
     this.hint = this.options.hint || [];
@@ -9397,7 +9453,7 @@ let HintPopover = /*#__PURE__*/function () {
   }, {
     key: "initialize",
     value: function initialize() {
-      let _this2 = this;
+      var _this2 = this;
 
       this.lastWordRange = null;
       this.matchingWord = null;
@@ -9411,7 +9467,7 @@ let HintPopover = /*#__PURE__*/function () {
       this.$content.on('click', '.note-hint-item', function (e) {
         _this2.$content.find('.active').removeClass('active');
 
-        external_jQuery_default()(e.currentTarget).addClass('active');
+        external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(e.currentTarget).addClass('active');
 
         _this2.replace();
       });
@@ -9434,13 +9490,13 @@ let HintPopover = /*#__PURE__*/function () {
   }, {
     key: "moveDown",
     value: function moveDown() {
-      let $current = this.$content.find('.note-hint-item.active');
-      let $next = $current.next();
+      var $current = this.$content.find('.note-hint-item.active');
+      var $next = $current.next();
 
       if ($next.length) {
         this.selectItem($next);
       } else {
-        let $nextGroup = $current.parent().next();
+        var $nextGroup = $current.parent().next();
 
         if (!$nextGroup.length) {
           $nextGroup = this.$content.find('.note-hint-group').first();
@@ -9452,13 +9508,13 @@ let HintPopover = /*#__PURE__*/function () {
   }, {
     key: "moveUp",
     value: function moveUp() {
-      let $current = this.$content.find('.note-hint-item.active');
-      let $prev = $current.prev();
+      var $current = this.$content.find('.note-hint-item.active');
+      var $prev = $current.prev();
 
       if ($prev.length) {
         this.selectItem($prev);
       } else {
-        let $prevGroup = $current.parent().prev();
+        var $prevGroup = $current.parent().prev();
 
         if (!$prevGroup.length) {
           $prevGroup = this.$content.find('.note-hint-group').last();
@@ -9470,15 +9526,15 @@ let HintPopover = /*#__PURE__*/function () {
   }, {
     key: "replace",
     value: function replace() {
-      let $item = this.$content.find('.note-hint-item.active');
+      var $item = this.$content.find('.note-hint-item.active');
 
       if ($item.length) {
-        let node = this.nodeFromItem($item); // If matchingWord length = 0 -> capture OK / open hint / but as mention capture "" (\w*)
+        var node = this.nodeFromItem($item); // If matchingWord length = 0 -> capture OK / open hint / but as mention capture "" (\w*)
 
         if (this.matchingWord !== null && this.matchingWord.length === 0) {
           this.lastWordRange.so = this.lastWordRange.eo; // Else si > 0 and normal case -> adjust range "before" for correct position of insertion
         } else if (this.matchingWord !== null && this.matchingWord.length > 0 && !this.lastWordRange.isCollapsed()) {
-          let rangeCompute = this.lastWordRange.eo - this.lastWordRange.so - this.matchingWord.length;
+          var rangeCompute = this.lastWordRange.eo - this.lastWordRange.so - this.matchingWord.length;
 
           if (rangeCompute > 0) {
             this.lastWordRange.so += rangeCompute;
@@ -9488,8 +9544,8 @@ let HintPopover = /*#__PURE__*/function () {
         this.lastWordRange.insertNode(node);
 
         if (this.options.hintSelect === 'next') {
-          let blank = document.createTextNode('');
-          external_jQuery_default()(node).after(blank);
+          var blank = document.createTextNode('');
+          external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(node).after(blank);
           range.createFromNodeBefore(blank).select();
         } else {
           range.createFromNodeAfter(node).select();
@@ -9498,15 +9554,14 @@ let HintPopover = /*#__PURE__*/function () {
         this.lastWordRange = null;
         this.hide();
         this.context.invoke('editor.focus');
-        this.context.triggerEvent('change', this.$editable.html(), this.$editable);
       }
     }
   }, {
     key: "nodeFromItem",
     value: function nodeFromItem($item) {
-      let hint = this.hints[$item.data('index')];
-      let item = $item.data('item');
-      let node = hint.content ? hint.content(item) : item;
+      var hint = this.hints[$item.data('index')];
+      var item = $item.data('item');
+      var node = hint.content ? hint.content(item) : item;
 
       if (typeof node === 'string') {
         node = dom.createText(node);
@@ -9517,11 +9572,11 @@ let HintPopover = /*#__PURE__*/function () {
   }, {
     key: "createItemTemplates",
     value: function createItemTemplates(hintIdx, items) {
-      let hint = this.hints[hintIdx];
+      var hint = this.hints[hintIdx];
       return items.map(function (item
       /*, idx */
       ) {
-        let $item = external_jQuery_default()('<div class="note-hint-item"></div>');
+        var $item = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()('<div class="note-hint-item"/>');
         $item.append(hint.template ? hint.template(item) : item + '');
         $item.data({
           'index': hintIdx,
@@ -9537,13 +9592,13 @@ let HintPopover = /*#__PURE__*/function () {
         return;
       }
 
-      if (e.keyCode === key.code.ENTER) {
+      if (e.keyCode === core_key.code.ENTER) {
         e.preventDefault();
         this.replace();
-      } else if (e.keyCode === key.code.UP) {
+      } else if (e.keyCode === core_key.code.UP) {
         e.preventDefault();
         this.moveUp();
-      } else if (e.keyCode === key.code.DOWN) {
+      } else if (e.keyCode === core_key.code.DOWN) {
         e.preventDefault();
         this.moveDown();
       }
@@ -9551,10 +9606,10 @@ let HintPopover = /*#__PURE__*/function () {
   }, {
     key: "searchKeyword",
     value: function searchKeyword(index, keyword, callback) {
-      let hint = this.hints[index];
+      var hint = this.hints[index];
 
       if (hint && hint.match.test(keyword) && hint.search) {
-        let matches = hint.match.exec(keyword);
+        var matches = hint.match.exec(keyword);
         this.matchingWord = matches[0];
         hint.search(matches[1], callback);
       } else {
@@ -9564,9 +9619,9 @@ let HintPopover = /*#__PURE__*/function () {
   }, {
     key: "createGroup",
     value: function createGroup(idx, keyword) {
-      let _this3 = this;
+      var _this3 = this;
 
-      let $group = external_jQuery_default()('<div class="note-hint-group note-hint-group-' + idx + '"></div>');
+      var $group = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()('<div class="note-hint-group note-hint-group-' + idx + '"></div>');
       this.searchKeyword(idx, keyword, function (items) {
         items = items || [];
 
@@ -9581,12 +9636,12 @@ let HintPopover = /*#__PURE__*/function () {
   }, {
     key: "handleKeyup",
     value: function handleKeyup(e) {
-      let _this4 = this;
+      var _this4 = this;
 
-      if (!lists.contains([key.code.ENTER, key.code.UP, key.code.DOWN], e.keyCode)) {
-        let _range = this.context.invoke('editor.getLastRange');
+      if (!lists.contains([core_key.code.ENTER, core_key.code.UP, core_key.code.DOWN], e.keyCode)) {
+        var _range = this.context.invoke('editor.getLastRange');
 
-        let wordRange, keyword;
+        var wordRange, keyword;
 
         if (this.options.hintMode === 'words') {
           wordRange = _range.getWordsRange(_range);
@@ -9611,8 +9666,8 @@ let HintPopover = /*#__PURE__*/function () {
 
         if (this.hints.length && keyword) {
           this.$content.empty();
-          let bnd = func.rect2bnd(lists.last(wordRange.getClientRects()));
-          let containerOffset = external_jQuery_default()(this.options.container).offset();
+          var bnd = func.rect2bnd(lists.last(wordRange.getClientRects()));
+          var containerOffset = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(this.options.container).offset();
 
           if (bnd) {
             bnd.top -= containerOffset.top;
@@ -9660,7 +9715,7 @@ let HintPopover = /*#__PURE__*/function () {
 }();
 
 
-;// CONCATENATED MODULE: ./src/js/settings.js
+// CONCATENATED MODULE: ./src/js/base/settings.js
 
 
 
@@ -9689,40 +9744,40 @@ let HintPopover = /*#__PURE__*/function () {
 
 
 
-(external_jQuery_default()).summernote = external_jQuery_default().extend((external_jQuery_default()).summernote, {
-  version: '0.8.20',
+external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default.a.summernote = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default.a.extend(external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default.a.summernote, {
+  version: '0.8.18',
   plugins: {},
   dom: dom,
   range: range,
   lists: lists,
   options: {
-    langInfo: (external_jQuery_default()).summernote.lang["en-US"],
+    langInfo: external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default.a.summernote.lang['en-US'],
     editing: true,
     modules: {
-      'editor': Editor,
-      'clipboard': Clipboard,
-      'dropzone': Dropzone,
-      'codeview': CodeView,
-      'statusbar': Statusbar,
-      'fullscreen': Fullscreen,
-      'handle': Handle,
+      'editor': Editor_Editor,
+      'clipboard': Clipboard_Clipboard,
+      'dropzone': Dropzone_Dropzone,
+      'codeview': Codeview_CodeView,
+      'statusbar': Statusbar_Statusbar,
+      'fullscreen': Fullscreen_Fullscreen,
+      'handle': Handle_Handle,
       // FIXME: HintPopover must be front of autolink
       //  - Script error about range when Enter key is pressed on hint popover
-      'hintPopover': HintPopover,
-      'autoLink': AutoLink,
-      'autoSync': AutoSync,
-      'autoReplace': AutoReplace,
-      'placeholder': Placeholder,
-      'buttons': Buttons,
-      'toolbar': Toolbar,
-      'linkDialog': LinkDialog,
-      'linkPopover': LinkPopover,
-      'imageDialog': ImageDialog,
-      'imagePopover': ImagePopover,
-      'tablePopover': TablePopover,
-      'videoDialog': VideoDialog,
-      'helpDialog': HelpDialog,
-      'airPopover': AirPopover
+      'hintPopover': HintPopover_HintPopover,
+      'autoLink': AutoLink_AutoLink,
+      'autoSync': AutoSync_AutoSync,
+      'autoReplace': AutoReplace_AutoReplace,
+      'placeholder': Placeholder_Placeholder,
+      'buttons': Buttons_Buttons,
+      'toolbar': Toolbar_Toolbar,
+      'linkDialog': LinkDialog_LinkDialog,
+      'linkPopover': LinkPopover_LinkPopover,
+      'imageDialog': ImageDialog_ImageDialog,
+      'imagePopover': ImagePopover_ImagePopover,
+      'tablePopover': TablePopover_TablePopover,
+      'videoDialog': VideoDialog_VideoDialog,
+      'helpDialog': HelpDialog_HelpDialog,
+      'airPopover': AirPopover_AirPopover
     },
     buttons: {},
     lang: 'en-US',
@@ -9796,7 +9851,6 @@ let HintPopover = /*#__PURE__*/function () {
     dialogsInBody: false,
     dialogsFade: false,
     maximumImageFileSize: null,
-    acceptImageFileTypes: "image/*",
     callbacks: {
       onBeforeCommand: null,
       onBlur: null,
@@ -9822,11 +9876,11 @@ let HintPopover = /*#__PURE__*/function () {
       htmlMode: true,
       lineNumbers: true
     },
-    codeviewFilter: true,
+    codeviewFilter: false,
     codeviewFilterRegex: /<\/*(?:applet|b(?:ase|gsound|link)|embed|frame(?:set)?|ilayer|l(?:ayer|ink)|meta|object|s(?:cript|tyle)|t(?:itle|extarea)|xml)[^>]*?>/gi,
     codeviewIframeFilter: true,
     codeviewIframeWhitelistSrc: [],
-    codeviewIframeWhitelistSrcBase: ['www.youtube.com', 'www.youtube-nocookie.com', 'www.facebook.com', 'vine.co', 'instagram.com', 'player.vimeo.com', 'www.dailymotion.com', 'player.youku.com', 'jumpingbean.tv', 'v.qq.com'],
+    codeviewIframeWhitelistSrcBase: ['www.youtube.com', 'www.youtube-nocookie.com', 'www.facebook.com', 'vine.co', 'instagram.com', 'player.vimeo.com', 'www.dailymotion.com', 'player.youku.com', 'v.qq.com'],
     keyMap: {
       pc: {
         'ESC': 'escape',
@@ -9940,117 +9994,50 @@ let HintPopover = /*#__PURE__*/function () {
     }
   }
 });
-;// CONCATENATED MODULE: ./src/js/renderer.js
-function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
-function renderer_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+/***/ }),
 
-function renderer_defineProperties(target, props) { for (let i = 0; i < props.length; i++) { let descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+/***/ 51:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-function renderer_createClass(Constructor, protoProps, staticProps) { if (protoProps) renderer_defineProperties(Constructor.prototype, protoProps); if (staticProps) renderer_defineProperties(Constructor, staticProps); return Constructor; }
+"use strict";
+// ESM COMPAT FLAG
+__webpack_require__.r(__webpack_exports__);
 
+// EXTERNAL MODULE: external {"root":"jQuery","commonjs2":"jquery","commonjs":"jquery","amd":"jquery"}
+var external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_ = __webpack_require__(0);
+var external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default = /*#__PURE__*/__webpack_require__.n(external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_);
 
+// EXTERNAL MODULE: ./src/js/base/renderer.js
+var renderer = __webpack_require__(1);
 
-let Renderer = /*#__PURE__*/function () {
-  function Renderer(markup, children, options, callback) {
-    renderer_classCallCheck(this, Renderer);
+// CONCATENATED MODULE: ./src/js/lite/ui/TooltipUI.js
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-    this.markup = markup;
-    this.children = children;
-    this.options = options;
-    this.callback = callback;
-  }
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
-  renderer_createClass(Renderer, [{
-    key: "render",
-    value: function render($parent) {
-      let $node = external_jQuery_default()(this.markup);
-
-      if (this.options && this.options.contents) {
-        $node.html(this.options.contents);
-      }
-
-      if (this.options && this.options.className) {
-        $node.addClass(this.options.className);
-      }
-
-      if (this.options && this.options.data) {
-        external_jQuery_default().each(this.options.data, function (k, v) {
-          $node.attr('data-' + k, v);
-        });
-      }
-
-      if (this.options && this.options.click) {
-        $node.on('click', this.options.click);
-      }
-
-      if (this.children) {
-        let $container = $node.find('.note-children-container');
-        this.children.forEach(function (child) {
-          child.render($container.length ? $container : $node);
-        });
-      }
-
-      if (this.callback) {
-        this.callback($node, this.options);
-      }
-
-      if (this.options && this.options.callback) {
-        this.options.callback($node);
-      }
-
-      if ($parent) {
-        $parent.append($node);
-      }
-
-      return $node;
-    }
-  }]);
-
-  return Renderer;
-}();
-
-/* harmony default export */ const renderer = ({
-  create: function create(markup, callback) {
-    return function () {
-      let options = _typeof(arguments[1]) === 'object' ? arguments[1] : arguments[0];
-      let children = Array.isArray(arguments[0]) ? arguments[0] : [];
-
-      if (options && options.children) {
-        children = options.children;
-      }
-
-      return new Renderer(markup, children, options, callback);
-    };
-  }
-});
-;// CONCATENATED MODULE: ./src/styles/lite/js/TooltipUI.js
-function TooltipUI_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function TooltipUI_defineProperties(target, props) { for (let i = 0; i < props.length; i++) { let descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function TooltipUI_createClass(Constructor, protoProps, staticProps) { if (protoProps) TooltipUI_defineProperties(Constructor.prototype, protoProps); if (staticProps) TooltipUI_defineProperties(Constructor, staticProps); return Constructor; }
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
 
 
-let TooltipUI = /*#__PURE__*/function () {
+var TooltipUI_TooltipUI = /*#__PURE__*/function () {
   function TooltipUI($node, options) {
-    TooltipUI_classCallCheck(this, TooltipUI);
+    _classCallCheck(this, TooltipUI);
 
     this.$node = $node;
-    this.options = external_jQuery_default().extend({}, {
+    this.options = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default.a.extend({}, {
       title: '',
       target: options.container,
       trigger: 'hover focus',
       placement: 'bottom'
     }, options); // create tooltip node
 
-    this.$tooltip = external_jQuery_default()(['<div class="note-tooltip">', '<div class="note-tooltip-arrow"></div>', '<div class="note-tooltip-content"></div>', '</div>'].join('')); // define event
+    this.$tooltip = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(['<div class="note-tooltip">', '<div class="note-tooltip-arrow"></div>', '<div class="note-tooltip-content"></div>', '</div>'].join('')); // define event
 
     if (this.options.trigger !== 'manual') {
-      let showCallback = this.show.bind(this);
-      let hideCallback = this.hide.bind(this);
-      let toggleCallback = this.toggle.bind(this);
+      var showCallback = this.show.bind(this);
+      var hideCallback = this.hide.bind(this);
+      var toggleCallback = this.toggle.bind(this);
       this.options.trigger.split(' ').forEach(function (eventName) {
         if (eventName === 'hover') {
           $node.off('mouseenter mouseleave');
@@ -10064,24 +10051,24 @@ let TooltipUI = /*#__PURE__*/function () {
     }
   }
 
-  TooltipUI_createClass(TooltipUI, [{
+  _createClass(TooltipUI, [{
     key: "show",
     value: function show() {
-      let $node = this.$node;
-      let offset = $node.offset();
-      let targetOffset = external_jQuery_default()(this.options.target).offset();
+      var $node = this.$node;
+      var offset = $node.offset();
+      var targetOffset = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(this.options.target).offset();
       offset.top -= targetOffset.top;
       offset.left -= targetOffset.left;
-      let $tooltip = this.$tooltip;
-      let title = this.options.title || $node.attr('title') || $node.data('title');
-      let placement = this.options.placement || $node.data('placement');
+      var $tooltip = this.$tooltip;
+      var title = this.options.title || $node.attr('title') || $node.data('title');
+      var placement = this.options.placement || $node.data('placement');
       $tooltip.addClass(placement);
       $tooltip.find('.note-tooltip-content').text(title);
       $tooltip.appendTo(this.options.target);
-      let nodeWidth = $node.outerWidth();
-      let nodeHeight = $node.outerHeight();
-      let tooltipWidth = $tooltip.outerWidth();
-      let tooltipHeight = $tooltip.outerHeight();
+      var nodeWidth = $node.outerWidth();
+      var nodeHeight = $node.outerHeight();
+      var tooltipWidth = $tooltip.outerWidth();
+      var tooltipHeight = $tooltip.outerHeight();
 
       if (placement === 'bottom') {
         $tooltip.css({
@@ -10110,7 +10097,7 @@ let TooltipUI = /*#__PURE__*/function () {
   }, {
     key: "hide",
     value: function hide() {
-      let _this = this;
+      var _this = this;
 
       this.$tooltip.removeClass('in');
       setTimeout(function () {
@@ -10131,22 +10118,22 @@ let TooltipUI = /*#__PURE__*/function () {
   return TooltipUI;
 }();
 
-/* harmony default export */ const js_TooltipUI = (TooltipUI);
-;// CONCATENATED MODULE: ./src/styles/lite/js/DropdownUI.js
+/* harmony default export */ var ui_TooltipUI = (TooltipUI_TooltipUI);
+// CONCATENATED MODULE: ./src/js/lite/ui/DropdownUI.js
 function DropdownUI_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-function DropdownUI_defineProperties(target, props) { for (let i = 0; i < props.length; i++) { let descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+function DropdownUI_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
 function DropdownUI_createClass(Constructor, protoProps, staticProps) { if (protoProps) DropdownUI_defineProperties(Constructor.prototype, protoProps); if (staticProps) DropdownUI_defineProperties(Constructor, staticProps); return Constructor; }
 
 
 
-let DropdownUI = /*#__PURE__*/function () {
+var DropdownUI_DropdownUI = /*#__PURE__*/function () {
   function DropdownUI($node, options) {
     DropdownUI_classCallCheck(this, DropdownUI);
 
     this.$button = $node;
-    this.options = external_jQuery_default().extend({}, {
+    this.options = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default.a.extend({}, {
       target: options.container
     }, options);
     this.setEvent();
@@ -10155,7 +10142,7 @@ let DropdownUI = /*#__PURE__*/function () {
   DropdownUI_createClass(DropdownUI, [{
     key: "setEvent",
     value: function setEvent() {
-      let _this = this;
+      var _this = this;
 
       this.$button.on('click', function (e) {
         _this.toggle();
@@ -10166,7 +10153,7 @@ let DropdownUI = /*#__PURE__*/function () {
   }, {
     key: "clear",
     value: function clear() {
-      let $parent = external_jQuery_default()('.note-btn-group.open');
+      var $parent = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()('.note-btn-group.open');
       $parent.find('.note-btn.active').removeClass('active');
       $parent.removeClass('open');
     }
@@ -10175,11 +10162,11 @@ let DropdownUI = /*#__PURE__*/function () {
     value: function show() {
       this.$button.addClass('active');
       this.$button.parent().addClass('open');
-      let $dropdown = this.$button.next();
-      let offset = $dropdown.offset();
-      let width = $dropdown.outerWidth();
-      let windowWidth = external_jQuery_default()(window).width();
-      let targetMarginRight = parseFloat(external_jQuery_default()(this.options.target).css('margin-right'));
+      var $dropdown = this.$button.next();
+      var offset = $dropdown.offset();
+      var width = $dropdown.outerWidth();
+      var windowWidth = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(window).width();
+      var targetMarginRight = parseFloat(external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(this.options.target).css('margin-right'));
 
       if (offset.left + width > windowWidth - targetMarginRight) {
         $dropdown.css('margin-left', windowWidth - targetMarginRight - (offset.left + width));
@@ -10196,7 +10183,7 @@ let DropdownUI = /*#__PURE__*/function () {
   }, {
     key: "toggle",
     value: function toggle() {
-      let isOpened = this.$button.parent().hasClass('open');
+      var isOpened = this.$button.parent().hasClass('open');
       this.clear();
 
       if (isOpened) {
@@ -10210,40 +10197,40 @@ let DropdownUI = /*#__PURE__*/function () {
   return DropdownUI;
 }();
 
-external_jQuery_default()(document).on('click', function (e) {
-  if (!external_jQuery_default()(e.target).closest('.note-btn-group').length) {
-    external_jQuery_default()('.note-btn-group.open').removeClass('open');
-    external_jQuery_default()('.note-btn-group .note-btn.active').removeClass('active');
+external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(document).on('click', function (e) {
+  if (!external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(e.target).closest('.note-btn-group').length) {
+    external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()('.note-btn-group.open').removeClass('open');
+    external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()('.note-btn-group .note-btn.active').removeClass('active');
   }
 });
-external_jQuery_default()(document).on('click.note-dropdown-menu', function (e) {
-  external_jQuery_default()(e.target).closest('.note-dropdown-menu').parent().removeClass('open');
-  external_jQuery_default()(e.target).closest('.note-dropdown-menu').parent().find('.note-btn.active').removeClass('active');
+external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(document).on('click.note-dropdown-menu', function (e) {
+  external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(e.target).closest('.note-dropdown-menu').parent().removeClass('open');
+  external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(e.target).closest('.note-dropdown-menu').parent().find('.note-btn.active').removeClass('active');
 });
-/* harmony default export */ const js_DropdownUI = (DropdownUI);
-;// CONCATENATED MODULE: ./src/styles/lite/js/ModalUI.js
+/* harmony default export */ var ui_DropdownUI = (DropdownUI_DropdownUI);
+// CONCATENATED MODULE: ./src/js/lite/ui/ModalUI.js
 function ModalUI_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-function ModalUI_defineProperties(target, props) { for (let i = 0; i < props.length; i++) { let descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+function ModalUI_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
 function ModalUI_createClass(Constructor, protoProps, staticProps) { if (protoProps) ModalUI_defineProperties(Constructor.prototype, protoProps); if (staticProps) ModalUI_defineProperties(Constructor, staticProps); return Constructor; }
 
 
 
-let ModalUI = /*#__PURE__*/function () {
+var ModalUI_ModalUI = /*#__PURE__*/function () {
   function ModalUI($node
   /*, options */
   ) {
     ModalUI_classCallCheck(this, ModalUI);
 
     this.$modal = $node;
-    this.$backdrop = external_jQuery_default()('<div class="note-modal-backdrop"></div>');
+    this.$backdrop = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()('<div class="note-modal-backdrop"/>');
   }
 
   ModalUI_createClass(ModalUI, [{
     key: "show",
     value: function show() {
-      let _this = this;
+      var _this = this;
 
       this.$backdrop.appendTo(document.body).show();
       this.$modal.addClass('open').show();
@@ -10270,35 +10257,33 @@ let ModalUI = /*#__PURE__*/function () {
   return ModalUI;
 }();
 
-/* harmony default export */ const js_ModalUI = (ModalUI);
-;// CONCATENATED MODULE: ./src/styles/lite/summernote-lite.js
+/* harmony default export */ var ui_ModalUI = (ModalUI_ModalUI);
+// CONCATENATED MODULE: ./src/js/lite/ui.js
 
 
 
 
 
-
-
-let editor = renderer.create('<div class="note-editor note-frame"></div>');
-let toolbar = renderer.create('<div class="note-toolbar" role="toolbar"></div>');
-let editingArea = renderer.create('<div class="note-editing-area"></div>');
-let codable = renderer.create('<textarea class="note-codable" aria-multiline="true"></textarea>');
-let editable = renderer.create('<div class="note-editable" contentEditable="true" role="textbox" aria-multiline="true"></div>');
-let statusbar = renderer.create(['<output class="note-status-output" role="status" aria-live="polite"></output>', '<div class="note-statusbar" role="status">', '<div class="note-resizebar" aria-label="resize">', '<div class="note-icon-bar"></div>', '<div class="note-icon-bar"></div>', '<div class="note-icon-bar"></div>', '</div>', '</div>'].join(''));
-let airEditor = renderer.create('<div class="note-editor note-airframe"></div>');
-let airEditable = renderer.create(['<div class="note-editable" contentEditable="true" role="textbox" aria-multiline="true"></div>', '<output class="note-status-output" role="status" aria-live="polite"></output>'].join(''));
-let buttonGroup = renderer.create('<div class="note-btn-group"></div>');
-let summernote_lite_button = renderer.create('<button type="button" class="note-btn" tabindex="-1"></button>', function ($node, options) {
+var editor = renderer["a" /* default */].create('<div class="note-editor note-frame"/>');
+var toolbar = renderer["a" /* default */].create('<div class="note-toolbar" role="toolbar"/>');
+var editingArea = renderer["a" /* default */].create('<div class="note-editing-area"/>');
+var codable = renderer["a" /* default */].create('<textarea class="note-codable" aria-multiline="true"/>');
+var editable = renderer["a" /* default */].create('<div class="note-editable" contentEditable="true" role="textbox" aria-multiline="true"/>');
+var statusbar = renderer["a" /* default */].create(['<output class="note-status-output" role="status" aria-live="polite"></output>', '<div class="note-statusbar" role="status">', '<div class="note-resizebar" aria-label="resize">', '<div class="note-icon-bar"></div>', '<div class="note-icon-bar"></div>', '<div class="note-icon-bar"></div>', '</div>', '</div>'].join(''));
+var airEditor = renderer["a" /* default */].create('<div class="note-editor note-airframe"/>');
+var airEditable = renderer["a" /* default */].create(['<div class="note-editable" contentEditable="true" role="textbox" aria-multiline="true"></div>', '<output class="note-status-output" role="status" aria-live="polite"></output>'].join(''));
+var buttonGroup = renderer["a" /* default */].create('<div class="note-btn-group">');
+var ui_button = renderer["a" /* default */].create('<button type="button" class="note-btn" tabindex="-1">', function ($node, options) {
   // set button type
   if (options && options.tooltip) {
     $node.attr({
       'aria-label': options.tooltip
     });
-    $node.data('_lite_tooltip', new js_TooltipUI($node, {
+    $node.data('_lite_tooltip', new ui_TooltipUI($node, {
       title: options.tooltip,
       container: options.container
     })).on('click', function (e) {
-      external_jQuery_default()(e.currentTarget).data('_lite_tooltip').hide();
+      external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(e.currentTarget).data('_lite_tooltip').hide();
     });
   }
 
@@ -10307,7 +10292,7 @@ let summernote_lite_button = renderer.create('<button type="button" class="note-
   }
 
   if (options && options.data && options.data.toggle === 'dropdown') {
-    $node.data('_lite_dropdown', new js_DropdownUI($node, {
+    $node.data('_lite_dropdown', new ui_DropdownUI($node, {
       container: options.container
     }));
   }
@@ -10316,11 +10301,11 @@ let summernote_lite_button = renderer.create('<button type="button" class="note-
     $node.addClass('note-codeview-keep');
   }
 });
-let dropdown = renderer.create('<div class="note-dropdown-menu" role="list"></div>', function ($node, options) {
-  let markup = Array.isArray(options.items) ? options.items.map(function (item) {
-    let value = typeof item === 'string' ? item : item.value || '';
-    let content = options.template ? options.template(item) : item;
-    let $temp = external_jQuery_default()('<a class="note-dropdown-item" href="#" data-value="' + value + '" role="listitem" aria-label="' + value + '"></a>');
+var dropdown = renderer["a" /* default */].create('<div class="note-dropdown-menu" role="list">', function ($node, options) {
+  var markup = Array.isArray(options.items) ? options.items.map(function (item) {
+    var value = typeof item === 'string' ? item : item.value || '';
+    var content = options.template ? options.template(item) : item;
+    var $temp = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()('<a class="note-dropdown-item" href="#" data-value="' + value + '" role="listitem" aria-label="' + value + '"></a>');
     $temp.html(content).data('item', item);
     return $temp;
   }) : options.items;
@@ -10328,9 +10313,9 @@ let dropdown = renderer.create('<div class="note-dropdown-menu" role="list"></di
     'aria-label': options.title
   });
   $node.on('click', '> .note-dropdown-item', function (e) {
-    let $a = external_jQuery_default()(this);
-    let item = $a.data('item');
-    let value = $a.data('value');
+    var $a = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(this);
+    var item = $a.data('item');
+    var value = $a.data('value');
 
     if (item.click) {
       item.click($a);
@@ -10343,11 +10328,11 @@ let dropdown = renderer.create('<div class="note-dropdown-menu" role="list"></di
     $node.addClass('note-codeview-keep');
   }
 });
-let dropdownCheck = renderer.create('<div class="note-dropdown-menu note-check" role="list"></div>', function ($node, options) {
-  let markup = Array.isArray(options.items) ? options.items.map(function (item) {
-    let value = typeof item === 'string' ? item : item.value || '';
-    let content = options.template ? options.template(item) : item;
-    let $temp = external_jQuery_default()('<a class="note-dropdown-item" href="#" data-value="' + value + '" role="listitem" aria-label="' + item + '"></a>');
+var dropdownCheck = renderer["a" /* default */].create('<div class="note-dropdown-menu note-check" role="list">', function ($node, options) {
+  var markup = Array.isArray(options.items) ? options.items.map(function (item) {
+    var value = typeof item === 'string' ? item : item.value || '';
+    var content = options.template ? options.template(item) : item;
+    var $temp = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()('<a class="note-dropdown-item" href="#" data-value="' + value + '" role="listitem" aria-label="' + item + '"></a>');
     $temp.html([icon(options.checkClassName), ' ', content]).data('item', item);
     return $temp;
   }) : options.items;
@@ -10355,9 +10340,9 @@ let dropdownCheck = renderer.create('<div class="note-dropdown-menu note-check" 
     'aria-label': options.title
   });
   $node.on('click', '> .note-dropdown-item', function (e) {
-    let $a = external_jQuery_default()(this);
-    let item = $a.data('item');
-    let value = $a.data('value');
+    var $a = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(this);
+    var item = $a.data('item');
+    var value = $a.data('value');
 
     if (item.click) {
       item.click($a);
@@ -10371,12 +10356,12 @@ let dropdownCheck = renderer.create('<div class="note-dropdown-menu note-check" 
   }
 });
 
-let dropdownButtonContents = function dropdownButtonContents(contents, options) {
+var dropdownButtonContents = function dropdownButtonContents(contents, options) {
   return contents + ' ' + icon(options.icons.caret, 'span');
 };
 
-let dropdownButton = function dropdownButton(opt, callback) {
-  return buttonGroup([summernote_lite_button({
+var dropdownButton = function dropdownButton(opt, callback) {
+  return buttonGroup([ui_button({
     className: 'dropdown-toggle',
     contents: opt.title + ' ' + icon('note-icon-caret'),
     tooltip: opt.tooltip,
@@ -10393,8 +10378,8 @@ let dropdownButton = function dropdownButton(opt, callback) {
   }).render();
 };
 
-let dropdownCheckButton = function dropdownCheckButton(opt, callback) {
-  return buttonGroup([summernote_lite_button({
+var dropdownCheckButton = function dropdownCheckButton(opt, callback) {
+  return buttonGroup([ui_button({
     className: 'dropdown-toggle',
     contents: opt.title + ' ' + icon('note-icon-caret'),
     tooltip: opt.tooltip,
@@ -10412,8 +10397,8 @@ let dropdownCheckButton = function dropdownCheckButton(opt, callback) {
   }).render();
 };
 
-let paragraphDropdownButton = function paragraphDropdownButton(opt) {
-  return buttonGroup([summernote_lite_button({
+var paragraphDropdownButton = function paragraphDropdownButton(opt) {
+  return buttonGroup([ui_button({
     className: 'dropdown-toggle',
     contents: opt.title + ' ' + icon('note-icon-caret'),
     tooltip: opt.tooltip,
@@ -10429,18 +10414,18 @@ let paragraphDropdownButton = function paragraphDropdownButton(opt) {
   })])]).render();
 };
 
-let tableMoveHandler = function tableMoveHandler(event, col, row) {
-  let PX_PER_EM = 18;
-  let $picker = external_jQuery_default()(event.target.parentNode); // target is mousecatcher
+var ui_tableMoveHandler = function tableMoveHandler(event, col, row) {
+  var PX_PER_EM = 18;
+  var $picker = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(event.target.parentNode); // target is mousecatcher
 
-  let $dimensionDisplay = $picker.next();
-  let $catcher = $picker.find('.note-dimension-picker-mousecatcher');
-  let $highlighted = $picker.find('.note-dimension-picker-highlighted');
-  let $unhighlighted = $picker.find('.note-dimension-picker-unhighlighted');
-  let posOffset; // HTML5 with jQuery - e.offsetX is undefined in Firefox
+  var $dimensionDisplay = $picker.next();
+  var $catcher = $picker.find('.note-dimension-picker-mousecatcher');
+  var $highlighted = $picker.find('.note-dimension-picker-highlighted');
+  var $unhighlighted = $picker.find('.note-dimension-picker-unhighlighted');
+  var posOffset; // HTML5 with jQuery - e.offsetX is undefined in Firefox
 
   if (event.offsetX === undefined) {
-    let posCatcher = external_jQuery_default()(event.target).offset();
+    var posCatcher = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(event.target).offset();
     posOffset = {
       x: event.pageX - posCatcher.left,
       y: event.pageY - posCatcher.top
@@ -10452,7 +10437,7 @@ let tableMoveHandler = function tableMoveHandler(event, col, row) {
     };
   }
 
-  let dim = {
+  var dim = {
     c: Math.ceil(posOffset.x / PX_PER_EM) || 1,
     r: Math.ceil(posOffset.y / PX_PER_EM) || 1
   };
@@ -10477,8 +10462,8 @@ let tableMoveHandler = function tableMoveHandler(event, col, row) {
   $dimensionDisplay.html(dim.c + ' x ' + dim.r);
 };
 
-let tableDropdownButton = function tableDropdownButton(opt) {
-  return buttonGroup([summernote_lite_button({
+var tableDropdownButton = function tableDropdownButton(opt) {
+  return buttonGroup([ui_button({
     className: 'dropdown-toggle',
     contents: opt.title + ' ' + icon('note-icon-caret'),
     tooltip: opt.tooltip,
@@ -10490,29 +10475,29 @@ let tableDropdownButton = function tableDropdownButton(opt) {
     items: ['<div class="note-dimension-picker">', '<div class="note-dimension-picker-mousecatcher" data-event="insertTable" data-value="1x1"></div>', '<div class="note-dimension-picker-highlighted"></div>', '<div class="note-dimension-picker-unhighlighted"></div>', '</div>', '<div class="note-dimension-display">1 x 1</div>'].join('')
   })], {
     callback: function callback($node) {
-      let $catcher = $node.find('.note-dimension-picker-mousecatcher');
+      var $catcher = $node.find('.note-dimension-picker-mousecatcher');
       $catcher.css({
         width: opt.col + 'em',
         height: opt.row + 'em'
-      }).mouseup(opt.itemClick).mousemove(function (e) {
-        tableMoveHandler(e, opt.col, opt.row);
+      }).mousedown(opt.itemClick).mousemove(function (e) {
+        ui_tableMoveHandler(e, opt.col, opt.row);
       });
     }
   }).render();
 };
 
-let palette = renderer.create('<div class="note-color-palette"></div>', function ($node, options) {
-  let contents = [];
+var palette = renderer["a" /* default */].create('<div class="note-color-palette"/>', function ($node, options) {
+  var contents = [];
 
-  for (let row = 0, rowSize = options.colors.length; row < rowSize; row++) {
-    let eventName = options.eventName;
-    let colors = options.colors[row];
-    let colorsName = options.colorsName[row];
-    let buttons = [];
+  for (var row = 0, rowSize = options.colors.length; row < rowSize; row++) {
+    var eventName = options.eventName;
+    var colors = options.colors[row];
+    var colorsName = options.colorsName[row];
+    var buttons = [];
 
-    for (let col = 0, colSize = colors.length; col < colSize; col++) {
-      let color = colors[col];
-      let colorName = colorsName[col];
+    for (var col = 0, colSize = colors.length; col < colSize; col++) {
+      var color = colors[col];
+      var colorName = colorsName[col];
       buttons.push(['<button type="button" class="note-btn note-color-btn"', 'style="background-color:', color, '" ', 'data-event="', eventName, '" ', 'data-value="', color, '" ', 'data-title="', colorName, '" ', 'aria-label="', colorName, '" ', 'data-toggle="button" tabindex="-1"></button>'].join(''));
     }
 
@@ -10521,29 +10506,29 @@ let palette = renderer.create('<div class="note-color-palette"></div>', function
 
   $node.html(contents.join(''));
   $node.find('.note-color-btn').each(function () {
-    external_jQuery_default()(this).data('_lite_tooltip', new js_TooltipUI(external_jQuery_default()(this), {
+    external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(this).data('_lite_tooltip', new ui_TooltipUI(external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(this), {
       container: options.container
     }));
   });
 });
 
-let colorDropdownButton = function colorDropdownButton(opt, type) {
+var ui_colorDropdownButton = function colorDropdownButton(opt, type) {
   return buttonGroup({
     className: 'note-color',
-    children: [summernote_lite_button({
+    children: [ui_button({
       className: 'note-current-color-button',
       contents: opt.title,
       tooltip: opt.lang.color.recent,
       click: opt.currentClick,
       callback: function callback($button) {
-        let $recentColor = $button.find('.note-recent-color');
+        var $recentColor = $button.find('.note-recent-color');
 
         if (type !== 'foreColor') {
           $recentColor.css('background-color', '#FFFF00');
           $button.attr('data-backColor', '#FFFF00');
         }
       }
-    }), summernote_lite_button({
+    }), ui_button({
       className: 'dropdown-toggle',
       contents: icon('note-icon-caret'),
       tooltip: opt.lang.color.more,
@@ -10554,7 +10539,7 @@ let colorDropdownButton = function colorDropdownButton(opt, type) {
       items: ['<div>', '<div class="note-btn-group btn-background-color">', '<div class="note-palette-title">' + opt.lang.color.background + '</div>', '<div>', '<button type="button" class="note-color-reset note-btn note-btn-block" data-event="backColor" data-value="transparent">', opt.lang.color.transparent, '</button>', '</div>', '<div class="note-holder" data-event="backColor"></div>', '<div class="btn-sm">', '<input type="color" id="html5bcp" class="note-btn btn-default" value="#21104A" style="width:100%;" data-value="cp">', '<button type="button" class="note-color-reset btn" data-event="backColor" data-value="cpbackColor">', opt.lang.color.cpSelect, '</button>', '</div>', '</div>', '<div class="note-btn-group btn-foreground-color">', '<div class="note-palette-title">' + opt.lang.color.foreground + '</div>', '<div>', '<button type="button" class="note-color-reset note-btn note-btn-block" data-event="removeFormat" data-value="foreColor">', opt.lang.color.resetToDefault, '</button>', '</div>', '<div class="note-holder" data-event="foreColor"></div>', '<div class="btn-sm">', '<input type="color" id="html5fcp" class="note-btn btn-default" value="#21104A" style="width:100%;" data-value="cp">', '<button type="button" class="note-color-reset btn" data-event="foreColor" data-value="cpforeColor">', opt.lang.color.cpSelect, '</button>', '</div>', '</div>', '</div>'].join(''),
       callback: function callback($dropdown) {
         $dropdown.find('.note-holder').each(function () {
-          let $holder = external_jQuery_default()(this);
+          var $holder = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(this);
           $holder.append(palette({
             colors: opt.colors,
             eventName: $holder.data('event')
@@ -10574,11 +10559,11 @@ let colorDropdownButton = function colorDropdownButton(opt, type) {
         }
       },
       click: function click(event) {
-        let $button = external_jQuery_default()(event.target);
-        let eventName = $button.data('event');
-        let value = $button.data('value');
-        let foreinput = document.getElementById('html5fcp').value;
-        let backinput = document.getElementById('html5bcp').value;
+        var $button = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(event.target);
+        var eventName = $button.data('event');
+        var value = $button.data('value');
+        var foreinput = document.getElementById('html5fcp').value;
+        var backinput = document.getElementById('html5bcp').value;
 
         if (value === 'cp') {
           event.stopPropagation();
@@ -10589,9 +10574,9 @@ let colorDropdownButton = function colorDropdownButton(opt, type) {
         }
 
         if (eventName && value) {
-          let key = eventName === 'backColor' ? 'background-color' : 'color';
-          let $color = $button.closest('.note-color').find('.note-recent-color');
-          let $currentButton = $button.closest('.note-color').find('.note-current-color-button');
+          var key = eventName === 'backColor' ? 'background-color' : 'color';
+          var $color = $button.closest('.note-color').find('.note-recent-color');
+          var $currentButton = $button.closest('.note-color').find('.note-current-color-button');
           $color.css(key, value);
           $currentButton.attr('data-' + eventName, value);
 
@@ -10608,7 +10593,7 @@ let colorDropdownButton = function colorDropdownButton(opt, type) {
   }).render();
 };
 
-let dialog = renderer.create('<div class="note-modal" aria-hidden="false" tabindex="-1" role="dialog"></div>', function ($node, options) {
+var dialog = renderer["a" /* default */].create('<div class="note-modal" aria-hidden="false" tabindex="-1" role="dialog"/>', function ($node, options) {
   if (options.fade) {
     $node.addClass('fade');
   }
@@ -10617,12 +10602,12 @@ let dialog = renderer.create('<div class="note-modal" aria-hidden="false" tabind
     'aria-label': options.title
   });
   $node.html(['<div class="note-modal-content">', options.title ? '<div class="note-modal-header"><button type="button" class="close" aria-label="Close" aria-hidden="true"><i class="note-icon-close"></i></button><h4 class="note-modal-title">' + options.title + '</h4></div>' : '', '<div class="note-modal-body">' + options.body + '</div>', options.footer ? '<div class="note-modal-footer">' + options.footer + '</div>' : '', '</div>'].join(''));
-  $node.data('modal', new js_ModalUI($node, options));
+  $node.data('modal', new ui_ModalUI($node, options));
 });
 
-let videoDialog = function videoDialog(opt) {
-  let body = '<div class="note-form-group">' + '<label for="note-dialog-video-url-' + opt.id + '" class="note-form-label">' + opt.lang.video.url + ' <small class="text-muted">' + opt.lang.video.providers + '</small></label>' + '<input id="note-dialog-video-url-' + opt.id + '" class="note-video-url note-input" type="text"/>' + '</div>';
-  let footer = ['<button type="button" href="#" class="note-btn note-btn-primary note-video-btn disabled" disabled>', opt.lang.video.insert, '</button>'].join('');
+var videoDialog = function videoDialog(opt) {
+  var body = '<div class="note-form-group">' + '<label for="note-dialog-video-url-' + opt.id + '" class="note-form-label">' + opt.lang.video.url + ' <small class="text-muted">' + opt.lang.video.providers + '</small></label>' + '<input id="note-dialog-video-url-' + opt.id + '" class="note-video-url note-input" type="text"/>' + '</div>';
+  var footer = ['<button type="button" href="#" class="note-btn note-btn-primary note-video-btn disabled" disabled>', opt.lang.video.insert, '</button>'].join('');
   return dialog({
     title: opt.lang.video.insert,
     fade: opt.fade,
@@ -10631,9 +10616,9 @@ let videoDialog = function videoDialog(opt) {
   }).render();
 };
 
-let imageDialog = function imageDialog(opt) {
-  let body = '<div class="note-form-group note-group-select-from-files">' + '<label for="note-dialog-image-file-' + opt.id + '" class="note-form-label">' + opt.lang.image.selectFromFiles + '</label>' + '<input id="note-dialog-image-file-' + opt.id + '" class="note-note-image-input note-input" type="file" name="files" accept="image/*" multiple="multiple"/>' + opt.imageLimitation + '</div>' + '<div class="note-form-group">' + '<label for="note-dialog-image-url-' + opt.id + '" class="note-form-label">' + opt.lang.image.url + '</label>' + '<input id="note-dialog-image-url-' + opt.id + '" class="note-image-url note-input" type="text"/>' + '</div>';
-  let footer = ['<button href="#" type="button" class="note-btn note-btn-primary note-btn-large note-image-btn disabled" disabled>', opt.lang.image.insert, '</button>'].join('');
+var imageDialog = function imageDialog(opt) {
+  var body = '<div class="note-form-group note-group-select-from-files">' + '<label for="note-dialog-image-file-' + opt.id + '" class="note-form-label">' + opt.lang.image.selectFromFiles + '</label>' + '<input id="note-dialog-image-file-' + opt.id + '" class="note-note-image-input note-input" type="file" name="files" accept="image/*" multiple="multiple"/>' + opt.imageLimitation + '</div>' + '<div class="note-form-group">' + '<label for="note-dialog-image-url-' + opt.id + '" class="note-form-label">' + opt.lang.image.url + '</label>' + '<input id="note-dialog-image-url-' + opt.id + '" class="note-image-url note-input" type="text"/>' + '</div>';
+  var footer = ['<button href="#" type="button" class="note-btn note-btn-primary note-btn-large note-image-btn disabled" disabled>', opt.lang.image.insert, '</button>'].join('');
   return dialog({
     title: opt.lang.image.insert,
     fade: opt.fade,
@@ -10642,9 +10627,9 @@ let imageDialog = function imageDialog(opt) {
   }).render();
 };
 
-let linkDialog = function linkDialog(opt) {
-  let body = '<div class="note-form-group">' + '<label for="note-dialog-link-txt-' + opt.id + '" class="note-form-label">' + opt.lang.link.textToDisplay + '</label>' + '<input id="note-dialog-link-txt-' + opt.id + '" class="note-link-text note-input" type="text"/>' + '</div>' + '<div class="note-form-group">' + '<label for="note-dialog-link-url-' + opt.id + '" class="note-form-label">' + opt.lang.link.url + '</label>' + '<input id="note-dialog-link-url-' + opt.id + '" class="note-link-url note-input" type="text" value="http://"/>' + '</div>' + (!opt.disableLinkTarget ? '<div class="checkbox"><label for="note-dialog-link-nw-' + opt.id + '"><input id="note-dialog-link-nw-' + opt.id + '" type="checkbox" checked> ' + opt.lang.link.openInNewWindow + '</label></div>' : '') + '<div class="checkbox"><label for="note-dialog-link-up-' + opt.id + '"><input id="note-dialog-link-up-' + opt.id + '" type="checkbox" checked> ' + opt.lang.link.useProtocol + '</label></div>';
-  let footer = ['<button href="#" type="button" class="note-btn note-btn-primary note-link-btn disabled" disabled>', opt.lang.link.insert, '</button>'].join('');
+var linkDialog = function linkDialog(opt) {
+  var body = '<div class="note-form-group">' + '<label for="note-dialog-link-txt-' + opt.id + '" class="note-form-label">' + opt.lang.link.textToDisplay + '</label>' + '<input id="note-dialog-link-txt-' + opt.id + '" class="note-link-text note-input" type="text"/>' + '</div>' + '<div class="note-form-group">' + '<label for="note-dialog-link-url-' + opt.id + '" class="note-form-label">' + opt.lang.link.url + '</label>' + '<input id="note-dialog-link-url-' + opt.id + '" class="note-link-url note-input" type="text" value="http://"/>' + '</div>' + (!opt.disableLinkTarget ? '<div class="checkbox"><label for="note-dialog-link-nw-' + opt.id + '"><input id="note-dialog-link-nw-' + opt.id + '" type="checkbox" checked> ' + opt.lang.link.openInNewWindow + '</label></div>' : '') + '<div class="checkbox"><label for="note-dialog-link-up-' + opt.id + '"><input id="note-dialog-link-up-' + opt.id + '" type="checkbox" checked> ' + opt.lang.link.useProtocol + '</label></div>';
+  var footer = ['<button href="#" type="button" class="note-btn note-btn-primary note-link-btn disabled" disabled>', opt.lang.link.insert, '</button>'].join('');
   return dialog({
     className: 'link-dialog',
     title: opt.lang.link.insert,
@@ -10654,28 +10639,24 @@ let linkDialog = function linkDialog(opt) {
   }).render();
 };
 
-let popover = renderer.create(['<div class="note-popover bottom">', '<div class="note-popover-arrow"></div>', '<div class="popover-content note-children-container"></div>', '</div>'].join(''), function ($node, options) {
-  let direction = typeof options.direction !== 'undefined' ? options.direction : 'bottom';
+var popover = renderer["a" /* default */].create(['<div class="note-popover bottom">', '<div class="note-popover-arrow"></div>', '<div class="popover-content note-children-container"></div>', '</div>'].join(''), function ($node, options) {
+  var direction = typeof options.direction !== 'undefined' ? options.direction : 'bottom';
   $node.addClass(direction).hide();
 
   if (options.hideArrow) {
     $node.find('.note-popover-arrow').hide();
   }
 });
-let summernote_lite_checkbox = renderer.create('<div class="checkbox"></div>', function ($node, options) {
+var ui_checkbox = renderer["a" /* default */].create('<div class="checkbox"></div>', function ($node, options) {
   $node.html(['<label' + (options.id ? ' for="note-' + options.id + '"' : '') + '>', '<input role="checkbox" type="checkbox"' + (options.id ? ' id="note-' + options.id + '"' : ''), options.checked ? ' checked' : '', ' aria-checked="' + (options.checked ? 'true' : 'false') + '"/>', options.text ? options.text : '', '</label>'].join(''));
 });
 
-let icon = function icon(iconClassName, tagName) {
-  if (iconClassName.match(/^</)) {
-    return iconClassName;
-  }
-
+var icon = function icon(iconClassName, tagName) {
   tagName = tagName || 'i';
-  return '<' + tagName + ' class="' + iconClassName + '"></' + tagName + '>';
+  return '<' + tagName + ' class="' + iconClassName + '"/>';
 };
 
-let ui = function ui(editorOptions) {
+var ui = function ui(editorOptions) {
   return {
     editor: editor,
     toolbar: toolbar,
@@ -10686,7 +10667,7 @@ let ui = function ui(editorOptions) {
     airEditor: airEditor,
     airEditable: airEditable,
     buttonGroup: buttonGroup,
-    button: summernote_lite_button,
+    button: ui_button,
     dropdown: dropdown,
     dropdownCheck: dropdownCheck,
     dropdownButton: dropdownButton,
@@ -10694,14 +10675,14 @@ let ui = function ui(editorOptions) {
     dropdownCheckButton: dropdownCheckButton,
     paragraphDropdownButton: paragraphDropdownButton,
     tableDropdownButton: tableDropdownButton,
-    colorDropdownButton: colorDropdownButton,
+    colorDropdownButton: ui_colorDropdownButton,
     palette: palette,
     dialog: dialog,
     videoDialog: videoDialog,
     imageDialog: imageDialog,
     linkDialog: linkDialog,
     popover: popover,
-    checkbox: summernote_lite_checkbox,
+    checkbox: ui_checkbox,
     icon: icon,
     options: editorOptions,
     toggleBtn: function toggleBtn($btn, isEnable) {
@@ -10748,7 +10729,7 @@ let ui = function ui(editorOptions) {
       return $dialog.find('.note-modal-body');
     },
     createLayout: function createLayout($note) {
-      let $editor = (editorOptions.airMode ? airEditor([editingArea([codable(), airEditable()])]) : editorOptions.toolbarPosition === 'bottom' ? editor([editingArea([codable(), editable()]), toolbar(), statusbar()]) : editor([toolbar(), editingArea([codable(), editable()]), statusbar()])).render();
+      var $editor = (editorOptions.airMode ? airEditor([editingArea([codable(), airEditable()])]) : editorOptions.toolbarPosition === 'bottom' ? editor([editingArea([codable(), editable()]), toolbar(), statusbar()]) : editor([toolbar(), editingArea([codable(), editable()]), statusbar()])).render();
       $editor.insertAfter($note);
       return {
         note: $note,
@@ -10770,14 +10751,32 @@ let ui = function ui(editorOptions) {
   };
 };
 
-(external_jQuery_default()).summernote = external_jQuery_default().extend((external_jQuery_default()).summernote, {
-  ui_template: ui,
+/* harmony default export */ var lite_ui = (ui);
+// EXTERNAL MODULE: ./src/js/base/settings.js + 37 modules
+var settings = __webpack_require__(3);
+
+// EXTERNAL MODULE: ./src/styles/summernote-lite.scss
+var summernote_lite = __webpack_require__(6);
+
+// CONCATENATED MODULE: ./src/js/lite/settings.js
+
+
+
+
+external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default.a.summernote = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default.a.extend(external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default.a.summernote, {
+  ui_template: lite_ui,
   "interface": 'lite'
 });
-})();
 
-/******/ 	return __webpack_exports__;
-/******/ })()
-;
+/***/ }),
+
+/***/ 6:
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
+
+/***/ })
+
+/******/ });
 });
 //# sourceMappingURL=summernote-lite.js.map
