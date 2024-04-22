@@ -1,14 +1,14 @@
 /*!
- * 
+ *
  * Super simple wysiwyg editor v0.8.18
  * https://summernote.org
- * 
- * 
+ *
+ *
  * Copyright 2013- Alan Hong. and other contributors
  * summernote may be freely distributed under the MIT license.
- * 
+ *
  * Date: 2020-05-20T18:09Z
- * 
+ *
  */
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
@@ -16,13 +16,13 @@
 	else if(typeof define === 'function' && define.amd)
 		define(["jquery"], factory);
 	else {
-		var a = typeof exports === 'object' ? factory(require("jquery")) : factory(root["jQuery"]);
-		for(var i in a) (typeof exports === 'object' ? exports : root)[i] = a[i];
+		let a = typeof exports === 'object' ? factory(require("jquery")) : factory(root["jQuery"]);
+		for(let i in a) (typeof exports === 'object' ? exports : root)[i] = a[i];
 	}
 })(window, function(__WEBPACK_EXTERNAL_MODULE__0__) {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
-/******/ 	var installedModules = {};
+/******/ 	let installedModules = {};
 /******/
 /******/ 	// The require function
 /******/ 	function __webpack_require__(moduleId) {
@@ -32,7 +32,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 			return installedModules[moduleId].exports;
 /******/ 		}
 /******/ 		// Create a new module (and put it into the cache)
-/******/ 		var module = installedModules[moduleId] = {
+/******/ 		let module = installedModules[moduleId] = {
 /******/ 			i: moduleId,
 /******/ 			l: false,
 /******/ 			exports: {}
@@ -79,16 +79,16 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 		if(mode & 1) value = __webpack_require__(value);
 /******/ 		if(mode & 8) return value;
 /******/ 		if((mode & 4) && typeof value === 'object' && value && value.__esModule) return value;
-/******/ 		var ns = Object.create(null);
+/******/ 		let ns = Object.create(null);
 /******/ 		__webpack_require__.r(ns);
 /******/ 		Object.defineProperty(ns, 'default', { enumerable: true, value: value });
-/******/ 		if(mode & 2 && typeof value != 'string') for(var key in value) __webpack_require__.d(ns, key, function(key) { return value[key]; }.bind(null, key));
+/******/ 		if(mode & 2 && typeof value != 'string') for(let key in value) __webpack_require__.d(ns, key, function(key) { return value[key]; }.bind(null, key));
 /******/ 		return ns;
 /******/ 	};
 /******/
 /******/ 	// getDefaultExport function for compatibility with non-harmony modules
 /******/ 	__webpack_require__.n = function(module) {
-/******/ 		var getter = module && module.__esModule ?
+/******/ 		let getter = module && module.__esModule ?
 /******/ 			function getDefault() { return module['default']; } :
 /******/ 			function getModuleExports() { return module; };
 /******/ 		__webpack_require__.d(getter, 'a', getter);
@@ -119,19 +119,19 @@ module.exports = __WEBPACK_EXTERNAL_MODULE__0__;
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(0);
-/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ let jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(0);
+/* harmony import */ let jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+function _defineProperties(target, props) { for (let i = 0; i < props.length; i++) { let descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
 
 
-var Renderer = /*#__PURE__*/function () {
+let Renderer = /*#__PURE__*/function () {
   function Renderer(markup, children, options, callback) {
     _classCallCheck(this, Renderer);
 
@@ -144,7 +144,7 @@ var Renderer = /*#__PURE__*/function () {
   _createClass(Renderer, [{
     key: "render",
     value: function render($parent) {
-      var $node = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this.markup);
+      let $node = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this.markup);
 
       if (this.options && this.options.contents) {
         $node.html(this.options.contents);
@@ -165,7 +165,7 @@ var Renderer = /*#__PURE__*/function () {
       }
 
       if (this.children) {
-        var $container = $node.find('.note-children-container');
+        let $container = $node.find('.note-children-container');
         this.children.forEach(function (child) {
           child.render($container.length ? $container : $node);
         });
@@ -193,8 +193,8 @@ var Renderer = /*#__PURE__*/function () {
 /* harmony default export */ __webpack_exports__["a"] = ({
   create: function create(markup, callback) {
     return function () {
-      var options = _typeof(arguments[1]) === 'object' ? arguments[1] : arguments[0];
-      var children = Array.isArray(arguments[0]) ? arguments[0] : [];
+      let options = _typeof(arguments[1]) === 'object' ? arguments[1] : arguments[0];
+      let children = Array.isArray(arguments[0]) ? arguments[0] : [];
 
       if (options && options.children) {
         children = options.children;
@@ -210,10 +210,10 @@ var Renderer = /*#__PURE__*/function () {
 /***/ 2:
 /***/ (function(module, exports) {
 
-/* WEBPACK VAR INJECTION */(function(__webpack_amd_options__) {/* globals __webpack_amd_options__ */
+/* WEBPACK let INJECTION */(function(__webpack_amd_options__) {/* globals __webpack_amd_options__ */
 module.exports = __webpack_amd_options__;
 
-/* WEBPACK VAR INJECTION */}.call(this, {}))
+/* WEBPACK let INJECTION */}.call(this, {}))
 
 /***/ }),
 
@@ -223,8 +223,8 @@ module.exports = __webpack_amd_options__;
 "use strict";
 
 // EXTERNAL MODULE: external {"root":"jQuery","commonjs2":"jquery","commonjs":"jquery","amd":"jquery"}
-var external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_ = __webpack_require__(0);
-var external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default = /*#__PURE__*/__webpack_require__.n(external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_);
+let external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_ = __webpack_require__(0);
+let external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default = /*#__PURE__*/__webpack_require__.n(external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_);
 
 // CONCATENATED MODULE: ./src/js/base/summernote-en-US.js
 
@@ -394,7 +394,7 @@ external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default.a.exten
 });
 // CONCATENATED MODULE: ./src/js/base/core/env.js
 
-var isSupportAmd = typeof define === 'function' && __webpack_require__(2); // eslint-disable-line
+let isSupportAmd = typeof define === 'function' && __webpack_require__(2); // eslint-disable-line
 
 /**
  * returns whether font is installed or not.
@@ -403,31 +403,31 @@ var isSupportAmd = typeof define === 'function' && __webpack_require__(2); // es
  * @return {Boolean}
  */
 
-var genericFontFamilies = ['sans-serif', 'serif', 'monospace', 'cursive', 'fantasy'];
+let genericFontFamilies = ['sans-serif', 'serif', 'monospace', 'cursive', 'fantasy'];
 
 function validFontName(fontName) {
   return external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default.a.inArray(fontName.toLowerCase(), genericFontFamilies) === -1 ? "'".concat(fontName, "'") : fontName;
 }
 
 function env_isFontInstalled(fontName) {
-  var testFontName = fontName === 'Comic Sans MS' ? 'Courier New' : 'Comic Sans MS';
-  var testText = 'mmmmmmmmmmwwwww';
-  var testSize = '200px';
-  var canvas = document.createElement('canvas');
-  var context = canvas.getContext('2d');
+  let testFontName = fontName === 'Comic Sans MS' ? 'Courier New' : 'Comic Sans MS';
+  let testText = 'mmmmmmmmmmwwwww';
+  let testSize = '200px';
+  let canvas = document.createElement('canvas');
+  let context = canvas.getContext('2d');
   context.font = testSize + " '" + testFontName + "'";
-  var originalWidth = context.measureText(testText).width;
+  let originalWidth = context.measureText(testText).width;
   context.font = testSize + ' ' + validFontName(fontName) + ', "' + testFontName + '"';
-  var width = context.measureText(testText).width;
+  let width = context.measureText(testText).width;
   return originalWidth !== width;
 }
 
-var userAgent = navigator.userAgent;
-var isMSIE = /MSIE|Trident/i.test(userAgent);
-var browserVersion;
+let userAgent = navigator.userAgent;
+let isMSIE = /MSIE|Trident/i.test(userAgent);
+let browserVersion;
 
 if (isMSIE) {
-  var matches = /MSIE (\d+[.]\d+)/.exec(userAgent);
+  let matches = /MSIE (\d+[.]\d+)/.exec(userAgent);
 
   if (matches) {
     browserVersion = parseFloat(matches[1]);
@@ -440,11 +440,11 @@ if (isMSIE) {
   }
 }
 
-var isEdge = /Edge\/\d+/.test(userAgent);
-var isSupportTouch = 'ontouchstart' in window || navigator.MaxTouchPoints > 0 || navigator.msMaxTouchPoints > 0; // [workaround] IE doesn't have input events for contentEditable
+let isEdge = /Edge\/\d+/.test(userAgent);
+let isSupportTouch = 'ontouchstart' in window || navigator.MaxTouchPoints > 0 || navigator.msMaxTouchPoints > 0; // [workaround] IE doesn't have input events for contentEditable
 // - see: https://goo.gl/4bfIvA
 
-var inputEventName = isMSIE ? 'DOMCharacterDataModified DOMSubtreeModified DOMNodeInserted' : 'input';
+let inputEventName = isMSIE ? 'DOMCharacterDataModified DOMSubtreeModified DOMNodeInserted' : 'input';
 /**
  * @class core.env
  *
@@ -454,7 +454,7 @@ var inputEventName = isMSIE ? 'DOMCharacterDataModified DOMSubtreeModified DOMNo
  * @alternateClassName env
  */
 
-/* harmony default export */ var env = ({
+/* harmony default export */ let env = ({
   isMac: navigator.appVersion.indexOf('Mac') > -1,
   isMSIE: isMSIE,
   isEdge: isEdge,
@@ -530,7 +530,7 @@ function func_invoke(obj, method) {
   };
 }
 
-var idCounter = 0;
+let idCounter = 0;
 /**
  * reset globally-unique id
  *
@@ -547,7 +547,7 @@ function resetUniqueId() {
 
 
 function uniqueId(prefix) {
-  var id = ++idCounter + '';
+  let id = ++idCounter + '';
   return prefix ? prefix + id : id;
 }
 /**
@@ -566,7 +566,7 @@ function uniqueId(prefix) {
 
 
 function rect2bnd(rect) {
-  var $document = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(document);
+  let $document = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(document);
   return {
     top: rect.top + $document.scrollTop(),
     left: rect.left + $document.scrollLeft(),
@@ -582,9 +582,9 @@ function rect2bnd(rect) {
 
 
 function invertObject(obj) {
-  var inverted = {};
+  let inverted = {};
 
-  for (var key in obj) {
+  for (let key in obj) {
     if (Object.prototype.hasOwnProperty.call(obj, key)) {
       inverted[obj[key]] = key;
     }
@@ -618,12 +618,12 @@ function namespaceToCamel(namespace, prefix) {
 
 
 function debounce(func, wait, immediate) {
-  var timeout;
+  let timeout;
   return function () {
-    var context = this;
-    var args = arguments;
+    let context = this;
+    let args = arguments;
 
-    var later = function later() {
+    let later = function later() {
       timeout = null;
 
       if (!immediate) {
@@ -631,7 +631,7 @@ function debounce(func, wait, immediate) {
       }
     };
 
-    var callNow = immediate && !timeout;
+    let callNow = immediate && !timeout;
     clearTimeout(timeout);
     timeout = setTimeout(later, wait);
 
@@ -648,11 +648,11 @@ function debounce(func, wait, immediate) {
 
 
 function isValidUrl(url) {
-  var expression = /[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/gi;
+  let expression = /[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/gi;
   return expression.test(url);
 }
 
-/* harmony default export */ var func = ({
+/* harmony default export */ let func = ({
   eq: eq,
   eq2: eq2,
   peq2: peq2,
@@ -717,8 +717,8 @@ function tail(array) {
 
 
 function find(array, pred) {
-  for (var idx = 0, len = array.length; idx < len; idx++) {
-    var item = array[idx];
+  for (let idx = 0, len = array.length; idx < len; idx++) {
+    let item = array[idx];
 
     if (pred(item)) {
       return item;
@@ -731,7 +731,7 @@ function find(array, pred) {
 
 
 function lists_all(array, pred) {
-  for (var idx = 0, len = array.length; idx < len; idx++) {
+  for (let idx = 0, len = array.length; idx < len; idx++) {
     if (!pred(array[idx])) {
       return false;
     }
@@ -777,9 +777,9 @@ function sum(array, fn) {
 
 
 function from(collection) {
-  var result = [];
-  var length = collection.length;
-  var idx = -1;
+  let result = [];
+  let length = collection.length;
+  let idx = -1;
 
   while (++idx < length) {
     result[idx] = collection[idx];
@@ -809,9 +809,9 @@ function clusterBy(array, fn) {
     return [];
   }
 
-  var aTail = tail(array);
+  let aTail = tail(array);
   return aTail.reduce(function (memo, v) {
-    var aLast = lists_last(memo);
+    let aLast = lists_last(memo);
 
     if (fn(lists_last(aLast), v)) {
       aLast[aLast.length] = v;
@@ -831,9 +831,9 @@ function clusterBy(array, fn) {
 
 
 function compact(array) {
-  var aResult = [];
+  let aResult = [];
 
-  for (var idx = 0, len = array.length; idx < len; idx++) {
+  for (let idx = 0, len = array.length; idx < len; idx++) {
     if (array[idx]) {
       aResult.push(array[idx]);
     }
@@ -849,9 +849,9 @@ function compact(array) {
 
 
 function unique(array) {
-  var results = [];
+  let results = [];
 
-  for (var idx = 0, len = array.length; idx < len; idx++) {
+  for (let idx = 0, len = array.length; idx < len; idx++) {
     if (!contains(results, array[idx])) {
       results.push(array[idx]);
     }
@@ -867,7 +867,7 @@ function unique(array) {
 
 function lists_next(array, item) {
   if (array && array.length && item) {
-    var idx = array.indexOf(item);
+    let idx = array.indexOf(item);
     return idx === -1 ? null : array[idx + 1];
   }
 
@@ -881,7 +881,7 @@ function lists_next(array, item) {
 
 function prev(array, item) {
   if (array && array.length && item) {
-    var idx = array.indexOf(item);
+    let idx = array.indexOf(item);
     return idx === -1 ? null : array[idx - 1];
   }
 
@@ -897,7 +897,7 @@ function prev(array, item) {
  */
 
 
-/* harmony default export */ var lists = ({
+/* harmony default export */ let lists = ({
   head: lists_head,
   last: lists_last,
   initial: initial,
@@ -919,8 +919,8 @@ function prev(array, item) {
 
 
 
-var NBSP_CHAR = String.fromCharCode(160);
-var ZERO_WIDTH_NBSP_CHAR = "\uFEFF";
+let NBSP_CHAR = String.fromCharCode(160);
+let ZERO_WIDTH_NBSP_CHAR = "\uFEFF";
 /**
  * @method isEditable
  *
@@ -1011,15 +1011,15 @@ function isHeading(node) {
   return node && /^H[1-7]/.test(node.nodeName.toUpperCase());
 }
 
-var isPre = makePredByNodeName('PRE');
-var isLi = makePredByNodeName('LI');
+let isPre = makePredByNodeName('PRE');
+let isLi = makePredByNodeName('LI');
 
 function isPurePara(node) {
   return isPara(node) && !isLi(node);
 }
 
-var isTable = makePredByNodeName('TABLE');
-var isData = makePredByNodeName('DATA');
+let isTable = makePredByNodeName('TABLE');
+let isData = makePredByNodeName('DATA');
 
 function dom_isInline(node) {
   return !isBodyContainer(node) && !isList(node) && !isHr(node) && !isPara(node) && !isTable(node) && !isBlockquote(node) && !isData(node);
@@ -1029,19 +1029,19 @@ function isList(node) {
   return node && /^UL|^OL/.test(node.nodeName.toUpperCase());
 }
 
-var isHr = makePredByNodeName('HR');
+let isHr = makePredByNodeName('HR');
 
 function dom_isCell(node) {
   return node && /^TD|^TH/.test(node.nodeName.toUpperCase());
 }
 
-var isBlockquote = makePredByNodeName('BLOCKQUOTE');
+let isBlockquote = makePredByNodeName('BLOCKQUOTE');
 
 function isBodyContainer(node) {
   return dom_isCell(node) || isBlockquote(node) || isEditable(node);
 }
 
-var isAnchor = makePredByNodeName('A');
+let isAnchor = makePredByNodeName('A');
 
 function isParaInline(node) {
   return dom_isInline(node) && !!dom_ancestor(node, isPara);
@@ -1051,7 +1051,7 @@ function isBodyInline(node) {
   return dom_isInline(node) && !dom_ancestor(node, isPara);
 }
 
-var isBody = makePredByNodeName('BODY');
+let isBody = makePredByNodeName('BODY');
 /**
  * returns whether nodeB is closest sibling of nodeA
  *
@@ -1074,7 +1074,7 @@ function isClosestSibling(nodeA, nodeB) {
 
 function withClosestSiblings(node, pred) {
   pred = pred || func.ok;
-  var siblings = [];
+  let siblings = [];
 
   if (node.previousSibling && pred(node.previousSibling)) {
     siblings.push(node.previousSibling);
@@ -1095,7 +1095,7 @@ function withClosestSiblings(node, pred) {
  */
 
 
-var blankHTML = env.isMSIE && env.browserVersion < 11 ? '&nbsp;' : '<br>';
+let blankHTML = env.isMSIE && env.browserVersion < 11 ? '&nbsp;' : '<br>';
 /**
  * @method nodeLength
  *
@@ -1139,7 +1139,7 @@ function deepestChildIsEmpty(node) {
 
 
 function dom_isEmpty(node) {
-  var len = nodeLength(node);
+  let len = nodeLength(node);
 
   if (len === 0) {
     return true;
@@ -1225,7 +1225,7 @@ function singleChildAncestor(node, pred) {
 
 function listAncestor(node, pred) {
   pred = pred || func.fail;
-  var ancestors = [];
+  let ancestors = [];
   dom_ancestor(node, function (el) {
     if (!isEditable(el)) {
       ancestors.push(el);
@@ -1241,7 +1241,7 @@ function listAncestor(node, pred) {
 
 
 function lastAncestor(node, pred) {
-  var ancestors = listAncestor(node);
+  let ancestors = listAncestor(node);
   return lists.last(ancestors.filter(pred));
 }
 /**
@@ -1253,9 +1253,9 @@ function lastAncestor(node, pred) {
 
 
 function dom_commonAncestor(nodeA, nodeB) {
-  var ancestors = listAncestor(nodeA);
+  let ancestors = listAncestor(nodeA);
 
-  for (var n = nodeB; n; n = n.parentNode) {
+  for (let n = nodeB; n; n = n.parentNode) {
     if (ancestors.indexOf(n) > -1) return n;
   }
 
@@ -1271,7 +1271,7 @@ function dom_commonAncestor(nodeA, nodeB) {
 
 function listPrev(node, pred) {
   pred = pred || func.fail;
-  var nodes = [];
+  let nodes = [];
 
   while (node) {
     if (pred(node)) {
@@ -1294,7 +1294,7 @@ function listPrev(node, pred) {
 
 function listNext(node, pred) {
   pred = pred || func.fail;
-  var nodes = [];
+  let nodes = [];
 
   while (node) {
     if (pred(node)) {
@@ -1316,7 +1316,7 @@ function listNext(node, pred) {
 
 
 function listDescendant(node, pred) {
-  var descendants = [];
+  let descendants = [];
   pred = pred || func.ok; // start DFS(depth first search) with node
 
   (function fnWalk(current) {
@@ -1324,7 +1324,7 @@ function listDescendant(node, pred) {
       descendants.push(current);
     }
 
-    for (var idx = 0, len = current.childNodes.length; idx < len; idx++) {
+    for (let idx = 0, len = current.childNodes.length; idx < len; idx++) {
       fnWalk(current.childNodes[idx]);
     }
   })(node);
@@ -1341,8 +1341,8 @@ function listDescendant(node, pred) {
 
 
 function wrap(node, wrapperName) {
-  var parent = node.parentNode;
-  var wrapper = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()('<' + wrapperName + '>')[0];
+  let parent = node.parentNode;
+  let wrapper = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()('<' + wrapperName + '>')[0];
   parent.insertBefore(wrapper, node);
   wrapper.appendChild(node);
   return wrapper;
@@ -1356,8 +1356,8 @@ function wrap(node, wrapperName) {
 
 
 function insertAfter(node, preceding) {
-  var next = preceding.nextSibling;
-  var parent = preceding.parentNode;
+  let next = preceding.nextSibling;
+  let parent = preceding.parentNode;
 
   if (next) {
     parent.insertBefore(node, next);
@@ -1488,7 +1488,7 @@ function isRightEdgePointOf(point, ancestor) {
 
 
 function dom_position(node) {
-  var offset = 0;
+  let offset = 0;
 
   while (node = node.previousSibling) {
     offset += 1;
@@ -1510,8 +1510,8 @@ function hasChildren(node) {
 
 
 function dom_prevPoint(point, isSkipInnerOffset) {
-  var node;
-  var offset;
+  let node;
+  let offset;
 
   if (point.offset === 0) {
     if (isEditable(point.node)) {
@@ -1543,14 +1543,14 @@ function dom_prevPoint(point, isSkipInnerOffset) {
 
 
 function dom_nextPoint(point, isSkipInnerOffset) {
-  var node, offset;
+  let node, offset;
 
   if (nodeLength(point.node) === point.offset) {
     if (isEditable(point.node)) {
       return null;
     }
 
-    var nextTextNode = getNextTextNode(point.node);
+    let nextTextNode = getNextTextNode(point.node);
 
     if (nextTextNode) {
       node = nextTextNode;
@@ -1582,7 +1582,7 @@ function dom_nextPoint(point, isSkipInnerOffset) {
 
 
 function nextPointWithEmptyNode(point, isSkipInnerOffset) {
-  var node, offset; // if node is empty string node, return current node's sibling.
+  let node, offset; // if node is empty string node, return current node's sibling.
 
   if (dom_isEmpty(point.node)) {
     node = point.node.nextSibling;
@@ -1598,7 +1598,7 @@ function nextPointWithEmptyNode(point, isSkipInnerOffset) {
       return null;
     }
 
-    var nextTextNode = getNextTextNode(point.node);
+    let nextTextNode = getNextTextNode(point.node);
 
     if (nextTextNode) {
       node = nextTextNode;
@@ -1670,8 +1670,8 @@ function isVisiblePoint(point) {
     return true;
   }
 
-  var leftNode = point.node.childNodes[point.offset - 1];
-  var rightNode = point.node.childNodes[point.offset];
+  let leftNode = point.node.childNodes[point.offset - 1];
+  let rightNode = point.node.childNodes[point.offset];
 
   if ((!leftNode || isVoid(leftNode)) && (!rightNode || isVoid(rightNode))) {
     return true;
@@ -1732,7 +1732,7 @@ function isCharPoint(point) {
     return false;
   }
 
-  var ch = point.node.nodeValue.charAt(point.offset - 1);
+  let ch = point.node.nodeValue.charAt(point.offset - 1);
   return ch && ch !== ' ' && ch !== NBSP_CHAR;
 }
 /**
@@ -1748,7 +1748,7 @@ function isSpacePoint(point) {
     return false;
   }
 
-  var ch = point.node.nodeValue.charAt(point.offset - 1);
+  let ch = point.node.nodeValue.charAt(point.offset - 1);
   return ch === ' ' || ch === NBSP_CHAR;
 }
 /**
@@ -1762,7 +1762,7 @@ function isSpacePoint(point) {
 
 
 function walkPoint(startPoint, endPoint, handler, isSkipInnerOffset) {
-  var point = startPoint;
+  let point = startPoint;
 
   while (point) {
     handler(point);
@@ -1771,7 +1771,7 @@ function walkPoint(startPoint, endPoint, handler, isSkipInnerOffset) {
       break;
     }
 
-    var isSkipOffset = isSkipInnerOffset && startPoint.node !== point.node && endPoint.node !== point.node;
+    let isSkipOffset = isSkipInnerOffset && startPoint.node !== point.node && endPoint.node !== point.node;
     point = nextPointWithEmptyNode(point, isSkipOffset);
   }
 }
@@ -1786,7 +1786,7 @@ function walkPoint(startPoint, endPoint, handler, isSkipInnerOffset) {
 
 
 function makeOffsetPath(ancestor, node) {
-  var ancestors = listAncestor(node, func.eq(ancestor));
+  let ancestors = listAncestor(node, func.eq(ancestor));
   return ancestors.map(dom_position).reverse();
 }
 /**
@@ -1800,9 +1800,9 @@ function makeOffsetPath(ancestor, node) {
 
 
 function fromOffsetPath(ancestor, offsets) {
-  var current = ancestor;
+  let current = ancestor;
 
-  for (var i = 0, len = offsets.length; i < len; i++) {
+  for (let i = 0, len = offsets.length; i < len; i++) {
     if (current.childNodes.length <= offsets[i]) {
       current = current.childNodes[current.childNodes.length - 1];
     } else {
@@ -1827,9 +1827,9 @@ function fromOffsetPath(ancestor, offsets) {
 
 
 function splitNode(point, options) {
-  var isSkipPaddingBlankHTML = options && options.isSkipPaddingBlankHTML;
-  var isNotSplitEdgePoint = options && options.isNotSplitEdgePoint;
-  var isDiscardEmptySplits = options && options.isDiscardEmptySplits;
+  let isSkipPaddingBlankHTML = options && options.isSkipPaddingBlankHTML;
+  let isNotSplitEdgePoint = options && options.isNotSplitEdgePoint;
+  let isDiscardEmptySplits = options && options.isDiscardEmptySplits;
 
   if (isDiscardEmptySplits) {
     isSkipPaddingBlankHTML = true;
@@ -1848,8 +1848,8 @@ function splitNode(point, options) {
   if (isText(point.node)) {
     return point.node.splitText(point.offset);
   } else {
-    var childNode = point.node.childNodes[point.offset];
-    var clone = insertAfter(point.node.cloneNode(false), point.node);
+    let childNode = point.node.childNodes[point.offset];
+    let clone = insertAfter(point.node.cloneNode(false), point.node);
     appendChildNodes(clone, listNext(childNode));
 
     if (!isSkipPaddingBlankHTML) {
@@ -1887,7 +1887,7 @@ function splitNode(point, options) {
 
 function splitTree(root, point, options) {
   // ex) [#text, <span>, <p>]
-  var ancestors = listAncestor(point.node, func.eq(root));
+  let ancestors = listAncestor(point.node, func.eq(root));
 
   if (!ancestors.length) {
     return null;
@@ -1919,10 +1919,10 @@ function splitPoint(point, isInline) {
   // find splitRoot, container
   //  - inline: splitRoot is a child of paragraph
   //  - block: splitRoot is a child of bodyContainer
-  var pred = isInline ? isPara : isBodyContainer;
-  var ancestors = listAncestor(point.node, pred);
-  var topAncestor = lists.last(ancestors) || point.node;
-  var splitRoot, container;
+  let pred = isInline ? isPara : isBodyContainer;
+  let ancestors = listAncestor(point.node, pred);
+  let topAncestor = lists.last(ancestors) || point.node;
+  let splitRoot, container;
 
   if (pred(topAncestor)) {
     splitRoot = ancestors[ancestors.length - 2];
@@ -1933,7 +1933,7 @@ function splitPoint(point, isInline) {
   } // if splitRoot is exists, split with splitTree
 
 
-  var pivot = splitRoot && splitTree(splitRoot, point, {
+  let pivot = splitRoot && splitTree(splitRoot, point, {
     isSkipPaddingBlankHTML: isInline,
     isNotSplitEdgePoint: isInline
   }); // if container is point.node, find pivot with point.offset
@@ -1974,16 +1974,16 @@ function remove(node, isRemoveChild) {
     return node.removeNode(isRemoveChild);
   }
 
-  var parent = node.parentNode;
+  let parent = node.parentNode;
 
   if (!isRemoveChild) {
-    var nodes = [];
+    let nodes = [];
 
-    for (var i = 0, len = node.childNodes.length; i < len; i++) {
+    for (let i = 0, len = node.childNodes.length; i < len; i++) {
       nodes.push(node.childNodes[i]);
     }
 
-    for (var _i = 0, _len = nodes.length; _i < _len; _i++) {
+    for (let _i = 0, _len = nodes.length; _i < _len; _i++) {
       parent.insertBefore(nodes[_i], node);
     }
   }
@@ -2004,7 +2004,7 @@ function removeWhile(node, pred) {
       break;
     }
 
-    var parent = node.parentNode;
+    let parent = node.parentNode;
     remove(node);
     node = parent;
   }
@@ -2025,7 +2025,7 @@ function dom_replace(node, nodeName) {
     return node;
   }
 
-  var newNode = dom_create(nodeName);
+  let newNode = dom_create(nodeName);
 
   if (node.style.cssText) {
     newNode.style.cssText = node.style.cssText;
@@ -2037,14 +2037,14 @@ function dom_replace(node, nodeName) {
   return newNode;
 }
 
-var isTextarea = makePredByNodeName('TEXTAREA');
+let isTextarea = makePredByNodeName('TEXTAREA');
 /**
  * @param {jQuery} $node
  * @param {Boolean} [stripLinebreaks] - default: false
  */
 
 function dom_value($node, stripLinebreaks) {
-  var val = isTextarea($node[0]) ? $node.val() : $node.html();
+  let val = isTextarea($node[0]) ? $node.val() : $node.html();
 
   if (stripLinebreaks) {
     return val.replace(/[\n\r]/g, '');
@@ -2063,14 +2063,14 @@ function dom_value($node, stripLinebreaks) {
 
 
 function dom_html($node, isNewlineOnBlock) {
-  var markup = dom_value($node);
+  let markup = dom_value($node);
 
   if (isNewlineOnBlock) {
-    var regexTag = /<(\/?)(\b(?!!)[^>\s]*)(.*?)(\s*\/?>)/g;
+    let regexTag = /<(\/?)(\b(?!!)[^>\s]*)(.*?)(\s*\/?>)/g;
     markup = markup.replace(regexTag, function (match, endSlash, name) {
       name = name.toUpperCase();
-      var isEndOfInlineContainer = /^DIV|^TD|^TH|^P|^LI|^H[1-7]/.test(name) && !!endSlash;
-      var isBlockNode = /^BLOCKQUOTE|^TABLE|^TBODY|^TR|^HR|^UL|^OL/.test(name);
+      let isEndOfInlineContainer = /^DIV|^TD|^TH|^P|^LI|^H[1-7]/.test(name) && !!endSlash;
+      let isBlockNode = /^BLOCKQUOTE|^TABLE|^TBODY|^TR|^HR|^UL|^OL/.test(name);
       return match + (isEndOfInlineContainer || isBlockNode ? '\n' : '');
     });
     markup = markup.trim();
@@ -2080,9 +2080,9 @@ function dom_html($node, isNewlineOnBlock) {
 }
 
 function posFromPlaceholder(placeholder) {
-  var $placeholder = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(placeholder);
-  var pos = $placeholder.offset();
-  var height = $placeholder.outerHeight(true); // include margin
+  let $placeholder = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(placeholder);
+  let pos = $placeholder.offset();
+  let height = $placeholder.outerHeight(true); // include margin
 
   return {
     left: pos.left,
@@ -2115,7 +2115,7 @@ function isCustomStyleTag(node) {
   return node && !isText(node) && lists.contains(node.classList, 'note-styletag');
 }
 
-/* harmony default export */ var dom = ({
+/* harmony default export */ let dom = ({
   /** @property {String} NBSP_CHAR */
   NBSP_CHAR: NBSP_CHAR,
 
@@ -2214,7 +2214,7 @@ function isCustomStyleTag(node) {
 // CONCATENATED MODULE: ./src/js/base/Context.js
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+function _defineProperties(target, props) { for (let i = 0; i < props.length; i++) { let descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
@@ -2223,7 +2223,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 
 
-var Context_Context = /*#__PURE__*/function () {
+let Context_Context = /*#__PURE__*/function () {
   /**
    * @param {jQuery} $note
    * @param {Object} options
@@ -2275,7 +2275,7 @@ var Context_Context = /*#__PURE__*/function () {
   }, {
     key: "reset",
     value: function reset() {
-      var disabled = this.isDisabled();
+      let disabled = this.isDisabled();
       this.code(dom.emptyPara);
 
       this._destroy();
@@ -2289,18 +2289,18 @@ var Context_Context = /*#__PURE__*/function () {
   }, {
     key: "_initialize",
     value: function _initialize() {
-      var _this = this;
+      let _this = this;
 
       // set own id
       this.options.id = func.uniqueId(external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default.a.now()); // set default container for tooltips, popovers, and dialogs
 
       this.options.container = this.options.container || this.layoutInfo.editor; // add optional buttons
 
-      var buttons = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default.a.extend({}, this.options.buttons);
+      let buttons = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default.a.extend({}, this.options.buttons);
       Object.keys(buttons).forEach(function (key) {
         _this.memo('button.' + key, buttons[key]);
       });
-      var modules = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default.a.extend({}, this.options.modules, external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default.a.summernote.plugins || {}); // add and initialize modules
+      let modules = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default.a.extend({}, this.options.modules, external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default.a.summernote.plugins || {}); // add and initialize modules
 
       Object.keys(modules).forEach(function (key) {
         _this.module(key, modules[key], true);
@@ -2312,7 +2312,7 @@ var Context_Context = /*#__PURE__*/function () {
   }, {
     key: "_destroy",
     value: function _destroy() {
-      var _this2 = this;
+      let _this2 = this;
 
       // destroy modules with reversed order
       Object.keys(this.modules).reverse().forEach(function (key) {
@@ -2327,7 +2327,7 @@ var Context_Context = /*#__PURE__*/function () {
   }, {
     key: "code",
     value: function code(html) {
-      var isActivated = this.invoke('codeview.isActivated');
+      let isActivated = this.invoke('codeview.isActivated');
 
       if (html === undefined) {
         this.invoke('codeview.sync');
@@ -2372,9 +2372,9 @@ var Context_Context = /*#__PURE__*/function () {
   }, {
     key: "triggerEvent",
     value: function triggerEvent() {
-      var namespace = lists.head(arguments);
-      var args = lists.tail(lists.from(arguments));
-      var callback = this.options.callbacks[func.namespaceToCamel(namespace, 'on')];
+      let namespace = lists.head(arguments);
+      let args = lists.tail(lists.from(arguments));
+      let callback = this.options.callbacks[func.namespaceToCamel(namespace, 'on')];
 
       if (callback) {
         callback.apply(this.$note[0], args);
@@ -2385,7 +2385,7 @@ var Context_Context = /*#__PURE__*/function () {
   }, {
     key: "initializeModule",
     value: function initializeModule(key) {
-      var module = this.modules[key];
+      let module = this.modules[key];
       module.shouldInitialize = module.shouldInitialize || func.ok;
 
       if (!module.shouldInitialize()) {
@@ -2418,7 +2418,7 @@ var Context_Context = /*#__PURE__*/function () {
   }, {
     key: "removeModule",
     value: function removeModule(key) {
-      var module = this.modules[key];
+      let module = this.modules[key];
 
       if (module.shouldInitialize()) {
         if (module.events) {
@@ -2457,7 +2457,7 @@ var Context_Context = /*#__PURE__*/function () {
   }, {
     key: "createInvokeHandlerAndUpdateState",
     value: function createInvokeHandlerAndUpdateState(namespace, value) {
-      var _this3 = this;
+      let _this3 = this;
 
       return function (event) {
         _this3.createInvokeHandler(namespace, value)(event);
@@ -2468,11 +2468,11 @@ var Context_Context = /*#__PURE__*/function () {
   }, {
     key: "createInvokeHandler",
     value: function createInvokeHandler(namespace, value) {
-      var _this4 = this;
+      let _this4 = this;
 
       return function (event) {
         event.preventDefault();
-        var $target = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(event.target);
+        let $target = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(event.target);
 
         _this4.invoke(namespace, value || $target.closest('[data-value]').data('value'), $target);
       };
@@ -2480,13 +2480,13 @@ var Context_Context = /*#__PURE__*/function () {
   }, {
     key: "invoke",
     value: function invoke() {
-      var namespace = lists.head(arguments);
-      var args = lists.tail(lists.from(arguments));
-      var splits = namespace.split('.');
-      var hasSeparator = splits.length > 1;
-      var moduleName = hasSeparator && lists.head(splits);
-      var methodName = hasSeparator ? lists.last(splits) : lists.head(splits);
-      var module = this.modules[moduleName || 'editor'];
+      let namespace = lists.head(arguments);
+      let args = lists.tail(lists.from(arguments));
+      let splits = namespace.split('.');
+      let hasSeparator = splits.length > 1;
+      let moduleName = hasSeparator && lists.head(splits);
+      let methodName = hasSeparator ? lists.last(splits) : lists.head(splits);
+      let module = this.modules[moduleName || 'editor'];
 
       if (!moduleName && this[methodName]) {
         return this[methodName].apply(this, args);
@@ -2513,27 +2513,27 @@ external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default.a.fn.ex
    * @return {this}
    */
   summernote: function summernote() {
-    var type = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default.a.type(lists.head(arguments));
-    var isExternalAPICalled = type === 'string';
-    var hasInitOptions = type === 'object';
-    var options = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default.a.extend({}, external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default.a.summernote.options, hasInitOptions ? lists.head(arguments) : {}); // Update options
+    let type = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default.a.type(lists.head(arguments));
+    let isExternalAPICalled = type === 'string';
+    let hasInitOptions = type === 'object';
+    let options = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default.a.extend({}, external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default.a.summernote.options, hasInitOptions ? lists.head(arguments) : {}); // Update options
 
     options.langInfo = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default.a.extend(true, {}, external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default.a.summernote.lang['en-US'], external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default.a.summernote.lang[options.lang]);
     options.icons = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default.a.extend(true, {}, external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default.a.summernote.options.icons, options.icons);
     options.tooltip = options.tooltip === 'auto' ? !env.isSupportTouch : options.tooltip;
     this.each(function (idx, note) {
-      var $note = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(note);
+      let $note = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(note);
 
       if (!$note.data('summernote')) {
-        var context = new Context_Context($note, options);
+        let context = new Context_Context($note, options);
         $note.data('summernote', context);
         $note.data('summernote').triggerEvent('init', context.layoutInfo);
       }
     });
-    var $note = this.first();
+    let $note = this.first();
 
     if ($note.length) {
-      var context = $note.data('summernote');
+      let context = $note.data('summernote');
 
       if (isExternalAPICalled) {
         return context.invoke.apply(context, lists.from(arguments));
@@ -2548,7 +2548,7 @@ external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default.a.fn.ex
 // CONCATENATED MODULE: ./src/js/base/core/range.js
 function range_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-function range_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+function range_defineProperties(target, props) { for (let i = 0; i < props.length; i++) { let descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
 function range_createClass(Constructor, protoProps, staticProps) { if (protoProps) range_defineProperties(Constructor.prototype, protoProps); if (staticProps) range_defineProperties(Constructor, staticProps); return Constructor; }
 
@@ -2568,11 +2568,11 @@ function range_createClass(Constructor, protoProps, staticProps) { if (protoProp
  */
 
 function textRangeToPoint(textRange, isStart) {
-  var container = textRange.parentElement();
-  var offset;
-  var tester = document.body.createTextRange();
-  var prevContainer;
-  var childNodes = lists.from(container.childNodes);
+  let container = textRange.parentElement();
+  let offset;
+  let tester = document.body.createTextRange();
+  let prevContainer;
+  let childNodes = lists.from(container.childNodes);
 
   for (offset = 0; offset < childNodes.length; offset++) {
     if (dom.isText(childNodes[offset])) {
@@ -2589,14 +2589,14 @@ function textRangeToPoint(textRange, isStart) {
   }
 
   if (offset !== 0 && dom.isText(childNodes[offset - 1])) {
-    var textRangeStart = document.body.createTextRange();
-    var curTextNode = null;
+    let textRangeStart = document.body.createTextRange();
+    let curTextNode = null;
     textRangeStart.moveToElementText(prevContainer || container);
     textRangeStart.collapse(!prevContainer);
     curTextNode = prevContainer ? prevContainer.nextSibling : container.firstChild;
-    var pointTester = textRange.duplicate();
+    let pointTester = textRange.duplicate();
     pointTester.setEndPoint('StartToStart', textRangeStart);
-    var textCount = pointTester.text.replace(/[\r\n]/g, '').length;
+    let textCount = pointTester.text.replace(/[\r\n]/g, '').length;
 
     while (textCount > curTextNode.nodeValue.length && curTextNode.nextSibling) {
       textCount -= curTextNode.nodeValue.length;
@@ -2604,7 +2604,7 @@ function textRangeToPoint(textRange, isStart) {
     } // [workaround] enforce IE to re-reference curTextNode, hack
 
 
-    var dummy = curTextNode.nodeValue; // eslint-disable-line
+    let dummy = curTextNode.nodeValue; // eslint-disable-line
 
     if (isStart && curTextNode.nextSibling && dom.isText(curTextNode.nextSibling) && textCount === curTextNode.nodeValue.length) {
       textCount -= curTextNode.nodeValue.length;
@@ -2628,12 +2628,12 @@ function textRangeToPoint(textRange, isStart) {
 
 
 function pointToTextRange(point) {
-  var textRangeInfo = function textRangeInfo(container, offset) {
-    var node, isCollapseToStart;
+  let textRangeInfo = function textRangeInfo(container, offset) {
+    let node, isCollapseToStart;
 
     if (dom.isText(container)) {
-      var prevTextNodes = dom.listPrev(container, func.not(dom.isText));
-      var prevContainer = lists.last(prevTextNodes).previousSibling;
+      let prevTextNodes = dom.listPrev(container, func.not(dom.isText));
+      let prevContainer = lists.last(prevTextNodes).previousSibling;
       node = prevContainer || container.parentNode;
       offset += lists.sum(lists.tail(prevTextNodes), dom.nodeLength);
       isCollapseToStart = !prevContainer;
@@ -2655,8 +2655,8 @@ function pointToTextRange(point) {
     };
   };
 
-  var textRange = document.body.createTextRange();
-  var info = textRangeInfo(point.node, point.offset);
+  let textRange = document.body.createTextRange();
+  let info = textRangeInfo(point.node, point.offset);
   textRange.moveToElementText(info.node);
   textRange.collapse(info.collapseToStart);
   textRange.moveStart('character', info.offset);
@@ -2673,7 +2673,7 @@ function pointToTextRange(point) {
    */
 
 
-var range_WrappedRange = /*#__PURE__*/function () {
+let range_WrappedRange = /*#__PURE__*/function () {
   function WrappedRange(sc, so, ec, eo) {
     range_classCallCheck(this, WrappedRange);
 
@@ -2698,12 +2698,12 @@ var range_WrappedRange = /*#__PURE__*/function () {
     key: "nativeRange",
     value: function nativeRange() {
       if (env.isW3CRangeSupport) {
-        var w3cRange = document.createRange();
+        let w3cRange = document.createRange();
         w3cRange.setStart(this.sc, this.so);
         w3cRange.setEnd(this.ec, this.eo);
         return w3cRange;
       } else {
-        var textRange = pointToTextRange({
+        let textRange = pointToTextRange({
           node: this.sc,
           offset: this.so
         });
@@ -2747,10 +2747,10 @@ var range_WrappedRange = /*#__PURE__*/function () {
   }, {
     key: "select",
     value: function select() {
-      var nativeRng = this.nativeRange();
+      let nativeRng = this.nativeRange();
 
       if (env.isW3CRangeSupport) {
-        var selection = document.getSelection();
+        let selection = document.getSelection();
 
         if (selection.rangeCount > 0) {
           selection.removeAllRanges();
@@ -2772,7 +2772,7 @@ var range_WrappedRange = /*#__PURE__*/function () {
   }, {
     key: "scrollIntoView",
     value: function scrollIntoView(container) {
-      var height = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(container).height();
+      let height = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(container).height();
 
       if (container.scrollTop + height < this.sc.offsetTop) {
         container.scrollTop += Math.abs(container.scrollTop + height - this.sc.offsetTop);
@@ -2793,7 +2793,7 @@ var range_WrappedRange = /*#__PURE__*/function () {
        *                                - false: prefer to choose left node
        * @return {BoundaryPoint}
        */
-      var getVisiblePoint = function getVisiblePoint(point, isLeftToRight) {
+      let getVisiblePoint = function getVisiblePoint(point, isLeftToRight) {
         if (!point) {
           return point;
         } // Just use the given point [XXX:Adhoc]
@@ -2812,20 +2812,20 @@ var range_WrappedRange = /*#__PURE__*/function () {
         } // point on block's edge
 
 
-        var block = dom.ancestor(point.node, dom.isBlock);
-        var hasRightNode = false;
+        let block = dom.ancestor(point.node, dom.isBlock);
+        let hasRightNode = false;
 
         if (!hasRightNode) {
-          var prevPoint = dom.prevPoint(point) || {
+          let prevPoint = dom.prevPoint(point) || {
             node: null
           };
           hasRightNode = (dom.isLeftEdgePointOf(point, block) || dom.isVoid(prevPoint.node)) && !isLeftToRight;
         }
 
-        var hasLeftNode = false;
+        let hasLeftNode = false;
 
         if (!hasLeftNode) {
-          var _nextPoint = dom.nextPoint(point) || {
+          let _nextPoint = dom.nextPoint(point) || {
             node: null
           };
 
@@ -2842,12 +2842,12 @@ var range_WrappedRange = /*#__PURE__*/function () {
           isLeftToRight = !isLeftToRight;
         }
 
-        var nextPoint = isLeftToRight ? dom.nextPointUntil(dom.nextPoint(point), dom.isVisiblePoint) : dom.prevPointUntil(dom.prevPoint(point), dom.isVisiblePoint);
+        let nextPoint = isLeftToRight ? dom.nextPointUntil(dom.nextPoint(point), dom.isVisiblePoint) : dom.prevPointUntil(dom.prevPoint(point), dom.isVisiblePoint);
         return nextPoint || point;
       };
 
-      var endPoint = getVisiblePoint(this.getEndPoint(), false);
-      var startPoint = this.isCollapsed() ? endPoint : getVisiblePoint(this.getStartPoint(), true);
+      let endPoint = getVisiblePoint(this.getEndPoint(), false);
+      let startPoint = this.isCollapsed() ? endPoint : getVisiblePoint(this.getStartPoint(), true);
       return new WrappedRange(startPoint.node, startPoint.offset, endPoint.node, endPoint.offset);
     }
     /**
@@ -2864,19 +2864,19 @@ var range_WrappedRange = /*#__PURE__*/function () {
     key: "nodes",
     value: function nodes(pred, options) {
       pred = pred || func.ok;
-      var includeAncestor = options && options.includeAncestor;
-      var fullyContains = options && options.fullyContains; // TODO compare points and sort
+      let includeAncestor = options && options.includeAncestor;
+      let fullyContains = options && options.fullyContains; // TODO compare points and sort
 
-      var startPoint = this.getStartPoint();
-      var endPoint = this.getEndPoint();
-      var nodes = [];
-      var leftEdgeNodes = [];
+      let startPoint = this.getStartPoint();
+      let endPoint = this.getEndPoint();
+      let nodes = [];
+      let leftEdgeNodes = [];
       dom.walkPoint(startPoint, endPoint, function (point) {
         if (dom.isEditable(point.node)) {
           return;
         }
 
-        var node;
+        let node;
 
         if (fullyContains) {
           if (dom.isLeftEdgePoint(point)) {
@@ -2918,14 +2918,14 @@ var range_WrappedRange = /*#__PURE__*/function () {
   }, {
     key: "expand",
     value: function expand(pred) {
-      var startAncestor = dom.ancestor(this.sc, pred);
-      var endAncestor = dom.ancestor(this.ec, pred);
+      let startAncestor = dom.ancestor(this.sc, pred);
+      let endAncestor = dom.ancestor(this.ec, pred);
 
       if (!startAncestor && !endAncestor) {
         return new WrappedRange(this.sc, this.so, this.ec, this.eo);
       }
 
-      var boundaryPoints = this.getPoints();
+      let boundaryPoints = this.getPoints();
 
       if (startAncestor) {
         boundaryPoints.sc = startAncestor;
@@ -2960,8 +2960,8 @@ var range_WrappedRange = /*#__PURE__*/function () {
   }, {
     key: "splitText",
     value: function splitText() {
-      var isSameContainer = this.sc === this.ec;
-      var boundaryPoints = this.getPoints();
+      let isSameContainer = this.sc === this.ec;
+      let boundaryPoints = this.getPoints();
 
       if (dom.isText(this.ec) && !dom.isEdgePoint(this.getEndPoint())) {
         this.ec.splitText(this.eo);
@@ -2991,18 +2991,18 @@ var range_WrappedRange = /*#__PURE__*/function () {
         return this;
       }
 
-      var rng = this.splitText();
-      var nodes = rng.nodes(null, {
+      let rng = this.splitText();
+      let nodes = rng.nodes(null, {
         fullyContains: true
       }); // find new cursor point
 
-      var point = dom.prevPointUntil(rng.getStartPoint(), function (point) {
+      let point = dom.prevPointUntil(rng.getStartPoint(), function (point) {
         return !lists.contains(nodes, point.node);
       });
-      var emptyParents = [];
+      let emptyParents = [];
       external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default.a.each(nodes, function (idx, node) {
         // find empty parents
-        var parent = node.parentNode;
+        let parent = node.parentNode;
 
         if (point.node !== parent && dom.nodeLength(parent) === 1) {
           emptyParents.push(parent);
@@ -3024,7 +3024,7 @@ var range_WrappedRange = /*#__PURE__*/function () {
     key: "makeIsOn",
     value: function makeIsOn(pred) {
       return function () {
-        var ancestor = dom.ancestor(this.sc, pred);
+        let ancestor = dom.ancestor(this.sc, pred);
         return !!ancestor && ancestor === dom.ancestor(this.ec, pred);
       };
     }
@@ -3040,7 +3040,7 @@ var range_WrappedRange = /*#__PURE__*/function () {
         return false;
       }
 
-      var node = dom.ancestor(this.sc, pred);
+      let node = dom.ancestor(this.sc, pred);
       return node && dom.isLeftEdgeOf(this.sc, node);
     }
     /**
@@ -3072,17 +3072,17 @@ var range_WrappedRange = /*#__PURE__*/function () {
        */
 
 
-      var rng = this.normalize();
+      let rng = this.normalize();
 
       if (dom.isParaInline(this.sc) || dom.isPara(this.sc)) {
         return rng;
       } // find inline top ancestor
 
 
-      var topAncestor;
+      let topAncestor;
 
       if (dom.isInline(rng.sc)) {
-        var ancestors = dom.listAncestor(rng.sc, func.not(dom.isInline));
+        let ancestors = dom.listAncestor(rng.sc, func.not(dom.isInline));
         topAncestor = lists.last(ancestors);
 
         if (!dom.isInline(topAncestor)) {
@@ -3094,11 +3094,11 @@ var range_WrappedRange = /*#__PURE__*/function () {
 
       if (topAncestor) {
         // siblings not in paragraph
-        var inlineSiblings = dom.listPrev(topAncestor, dom.isParaInline).reverse();
+        let inlineSiblings = dom.listPrev(topAncestor, dom.isParaInline).reverse();
         inlineSiblings = inlineSiblings.concat(dom.listNext(topAncestor.nextSibling, dom.isParaInline)); // wrap with paragraph
 
         if (inlineSiblings.length) {
-          var para = dom.wrap(lists.head(inlineSiblings), 'p');
+          let para = dom.wrap(lists.head(inlineSiblings), 'p');
           dom.appendChildNodes(para, lists.tail(inlineSiblings));
         }
       }
@@ -3115,13 +3115,13 @@ var range_WrappedRange = /*#__PURE__*/function () {
   }, {
     key: "insertNode",
     value: function insertNode(node) {
-      var rng = this;
+      let rng = this;
 
       if (dom.isText(node) || dom.isInline(node)) {
         rng = this.wrapBodyInlineWithPara().deleteContents();
       }
 
-      var info = dom.splitPoint(rng.getStartPoint(), dom.isInline(node));
+      let info = dom.splitPoint(rng.getStartPoint(), dom.isInline(node));
 
       if (info.rightNode) {
         info.rightNode.parentNode.insertBefore(node, info.rightNode);
@@ -3143,11 +3143,11 @@ var range_WrappedRange = /*#__PURE__*/function () {
     key: "pasteHTML",
     value: function pasteHTML(markup) {
       markup = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default.a.trim(markup);
-      var contentsContainer = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()('<div></div>').html(markup)[0];
-      var childNodes = lists.from(contentsContainer.childNodes); // const rng = this.wrapBodyInlineWithPara().deleteContents();
+      let contentsContainer = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()('<div></div>').html(markup)[0];
+      let childNodes = lists.from(contentsContainer.childNodes); // const rng = this.wrapBodyInlineWithPara().deleteContents();
 
-      var rng = this;
-      var reversed = false;
+      let rng = this;
+      let reversed = false;
 
       if (rng.so >= 0) {
         childNodes = childNodes.reverse();
@@ -3173,7 +3173,7 @@ var range_WrappedRange = /*#__PURE__*/function () {
   }, {
     key: "toString",
     value: function toString() {
-      var nativeRng = this.nativeRange();
+      let nativeRng = this.nativeRange();
       return env.isW3CRangeSupport ? nativeRng.toString() : nativeRng.text;
     }
     /**
@@ -3186,13 +3186,13 @@ var range_WrappedRange = /*#__PURE__*/function () {
   }, {
     key: "getWordRange",
     value: function getWordRange(findAfter) {
-      var endPoint = this.getEndPoint();
+      let endPoint = this.getEndPoint();
 
       if (!dom.isCharPoint(endPoint)) {
         return this;
       }
 
-      var startPoint = dom.prevPointUntil(endPoint, function (point) {
+      let startPoint = dom.prevPointUntil(endPoint, function (point) {
         return !dom.isCharPoint(point);
       });
 
@@ -3214,9 +3214,9 @@ var range_WrappedRange = /*#__PURE__*/function () {
   }, {
     key: "getWordsRange",
     value: function getWordsRange(findAfter) {
-      var endPoint = this.getEndPoint();
+      let endPoint = this.getEndPoint();
 
-      var isNotTextPoint = function isNotTextPoint(point) {
+      let isNotTextPoint = function isNotTextPoint(point) {
         return !dom.isCharPoint(point) && !dom.isSpacePoint(point);
       };
 
@@ -3224,7 +3224,7 @@ var range_WrappedRange = /*#__PURE__*/function () {
         return this;
       }
 
-      var startPoint = dom.prevPointUntil(endPoint, isNotTextPoint);
+      let startPoint = dom.prevPointUntil(endPoint, isNotTextPoint);
 
       if (findAfter) {
         endPoint = dom.nextPointUntil(endPoint, isNotTextPoint);
@@ -3247,19 +3247,19 @@ var range_WrappedRange = /*#__PURE__*/function () {
   }, {
     key: "getWordsMatchRange",
     value: function getWordsMatchRange(regex) {
-      var endPoint = this.getEndPoint();
-      var startPoint = dom.prevPointUntil(endPoint, function (point) {
+      let endPoint = this.getEndPoint();
+      let startPoint = dom.prevPointUntil(endPoint, function (point) {
         if (!dom.isCharPoint(point) && !dom.isSpacePoint(point)) {
           return true;
         }
 
-        var rng = new WrappedRange(point.node, point.offset, endPoint.node, endPoint.offset);
-        var result = regex.exec(rng.toString());
+        let rng = new WrappedRange(point.node, point.offset, endPoint.node, endPoint.offset);
+        let result = regex.exec(rng.toString());
         return result && result.index === 0;
       });
-      var rng = new WrappedRange(startPoint.node, startPoint.offset, endPoint.node, endPoint.offset);
-      var text = rng.toString();
-      var result = regex.exec(text);
+      let rng = new WrappedRange(startPoint.node, startPoint.offset, endPoint.node, endPoint.offset);
+      let text = rng.toString();
+      let result = regex.exec(text);
 
       if (result && result[0].length === text.length) {
         return rng;
@@ -3315,7 +3315,7 @@ var range_WrappedRange = /*#__PURE__*/function () {
   }, {
     key: "getClientRects",
     value: function getClientRects() {
-      var nativeRng = this.nativeRange();
+      let nativeRng = this.nativeRange();
       return nativeRng.getClientRects();
     }
   }]);
@@ -3331,7 +3331,7 @@ var range_WrappedRange = /*#__PURE__*/function () {
  */
 
 
-/* harmony default export */ var range = ({
+/* harmony default export */ let range = ({
   /**
    * create Range Object From arguments or Browser Selection
    *
@@ -3350,10 +3350,10 @@ var range_WrappedRange = /*#__PURE__*/function () {
       eo = so;
       return new range_WrappedRange(sc, so, ec, eo);
     } else {
-      var wrappedRange = this.createFromSelection();
+      let wrappedRange = this.createFromSelection();
 
       if (!wrappedRange && arguments.length === 1) {
-        var bodyElement = arguments[0];
+        let bodyElement = arguments[0];
 
         if (dom.isEditable(bodyElement)) {
           bodyElement = bodyElement.lastChild;
@@ -3366,15 +3366,15 @@ var range_WrappedRange = /*#__PURE__*/function () {
     }
   },
   createFromBodyElement: function createFromBodyElement(bodyElement) {
-    var isCollapseToStart = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
-    var wrappedRange = this.createFromNode(bodyElement);
+    let isCollapseToStart = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
+    let wrappedRange = this.createFromNode(bodyElement);
     return wrappedRange.collapse(isCollapseToStart);
   },
   createFromSelection: function createFromSelection() {
-    var sc, so, ec, eo;
+    let sc, so, ec, eo;
 
     if (env.isW3CRangeSupport) {
-      var selection = document.getSelection();
+      let selection = document.getSelection();
 
       if (!selection || selection.rangeCount === 0) {
         return null;
@@ -3384,20 +3384,20 @@ var range_WrappedRange = /*#__PURE__*/function () {
         return null;
       }
 
-      var nativeRng = selection.getRangeAt(0);
+      let nativeRng = selection.getRangeAt(0);
       sc = nativeRng.startContainer;
       so = nativeRng.startOffset;
       ec = nativeRng.endContainer;
       eo = nativeRng.endOffset;
     } else {
       // IE8: TextRange
-      var textRange = document.selection.createRange();
-      var textRangeEnd = textRange.duplicate();
+      let textRange = document.selection.createRange();
+      let textRangeEnd = textRange.duplicate();
       textRangeEnd.collapse(false);
-      var textRangeStart = textRange;
+      let textRangeStart = textRange;
       textRangeStart.collapse(true);
-      var startPoint = textRangeToPoint(textRangeStart, true);
-      var endPoint = textRangeToPoint(textRangeEnd, false); // same visible point case: range was collapsed.
+      let startPoint = textRangeToPoint(textRangeStart, true);
+      let endPoint = textRangeToPoint(textRangeEnd, false); // same visible point case: range was collapsed.
 
       if (dom.isText(startPoint.node) && dom.isLeftEdgePoint(startPoint) && dom.isTextNode(endPoint.node) && dom.isRightEdgePoint(endPoint) && endPoint.node.nextSibling === startPoint.node) {
         startPoint = endPoint;
@@ -3421,10 +3421,10 @@ var range_WrappedRange = /*#__PURE__*/function () {
    * @return {WrappedRange}
    */
   createFromNode: function createFromNode(node) {
-    var sc = node;
-    var so = 0;
-    var ec = node;
-    var eo = dom.nodeLength(ec); // browsers can't target a picture or void node
+    let sc = node;
+    let so = 0;
+    let ec = node;
+    let eo = dom.nodeLength(ec); // browsers can't target a picture or void node
 
     if (dom.isVoid(sc)) {
       so = dom.listPrev(sc).length - 1;
@@ -3472,10 +3472,10 @@ var range_WrappedRange = /*#__PURE__*/function () {
    * @return {WrappedRange}
    */
   createFromBookmark: function createFromBookmark(editable, bookmark) {
-    var sc = dom.fromOffsetPath(editable, bookmark.s.path);
-    var so = bookmark.s.offset;
-    var ec = dom.fromOffsetPath(editable, bookmark.e.path);
-    var eo = bookmark.e.offset;
+    let sc = dom.fromOffsetPath(editable, bookmark.s.path);
+    let so = bookmark.s.offset;
+    let ec = dom.fromOffsetPath(editable, bookmark.e.path);
+    let eo = bookmark.e.offset;
     return new range_WrappedRange(sc, so, ec, eo);
   },
 
@@ -3489,17 +3489,17 @@ var range_WrappedRange = /*#__PURE__*/function () {
    * @return {WrappedRange}
    */
   createFromParaBookmark: function createFromParaBookmark(bookmark, paras) {
-    var so = bookmark.s.offset;
-    var eo = bookmark.e.offset;
-    var sc = dom.fromOffsetPath(lists.head(paras), bookmark.s.path);
-    var ec = dom.fromOffsetPath(lists.last(paras), bookmark.e.path);
+    let so = bookmark.s.offset;
+    let eo = bookmark.e.offset;
+    let sc = dom.fromOffsetPath(lists.head(paras), bookmark.s.path);
+    let ec = dom.fromOffsetPath(lists.last(paras), bookmark.e.path);
     return new range_WrappedRange(sc, so, ec, eo);
   }
 });
 // CONCATENATED MODULE: ./src/js/base/core/key.js
 
 
-var KEY_MAP = {
+let KEY_MAP = {
   'BACKSPACE': 8,
   'TAB': 9,
   'ENTER': 13,
@@ -3553,7 +3553,7 @@ var KEY_MAP = {
  * @alternateClassName key
  */
 
-/* harmony default export */ var core_key = ({
+/* harmony default export */ let core_key = ({
   /**
    * @method isEdit
    *
@@ -3606,7 +3606,7 @@ function readFileAsDataURL(file) {
   return external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default.a.Deferred(function (deferred) {
     external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default.a.extend(new FileReader(), {
       onload: function onload(e) {
-        var dataURL = e.target.result;
+        let dataURL = e.target.result;
         deferred.resolve(dataURL);
       },
       onerror: function onerror(err) {
@@ -3626,28 +3626,28 @@ function readFileAsDataURL(file) {
 
 function createImage(url) {
   return external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default.a.Deferred(function (deferred) {
-    var $img = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()('<img>');
-    $img.one('load', function () {
-      $img.off('error abort');
-      deferred.resolve($img);
-    }).one('error abort', function () {
-      $img.off('load').detach();
-      deferred.reject($img);
-    }).css({
-      display: 'none'
-    }).appendTo(document.body).attr('src', url);
+    let $img = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()('<img>');
+      $img.one('load', function () {
+        $img.off('error abort');
+        deferred.resolve($img);
+      }).one('error abort', function () {
+        $img.off('load').detach();
+        deferred.reject($img);
+      }).css({
+        display: 'none'
+      }).appendTo(document.body).attr('src', url);
   }).promise();
 }
 // CONCATENATED MODULE: ./src/js/base/editing/History.js
 function History_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-function History_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+function History_defineProperties(target, props) { for (let i = 0; i < props.length; i++) { let descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
 function History_createClass(Constructor, protoProps, staticProps) { if (protoProps) History_defineProperties(Constructor.prototype, protoProps); if (staticProps) History_defineProperties(Constructor, staticProps); return Constructor; }
 
 
 
-var History_History = /*#__PURE__*/function () {
+let History_History = /*#__PURE__*/function () {
   function History(context) {
     History_classCallCheck(this, History);
 
@@ -3661,8 +3661,8 @@ var History_History = /*#__PURE__*/function () {
   History_createClass(History, [{
     key: "makeSnapshot",
     value: function makeSnapshot() {
-      var rng = range.create(this.editable);
-      var emptyBookmark = {
+      let rng = range.create(this.editable);
+      let emptyBookmark = {
         s: {
           path: [],
           offset: 0
@@ -3798,7 +3798,7 @@ var History_History = /*#__PURE__*/function () {
 // CONCATENATED MODULE: ./src/js/base/editing/Style.js
 function Style_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-function Style_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+function Style_defineProperties(target, props) { for (let i = 0; i < props.length; i++) { let descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
 function Style_createClass(Constructor, protoProps, staticProps) { if (protoProps) Style_defineProperties(Constructor.prototype, protoProps); if (staticProps) Style_defineProperties(Constructor, staticProps); return Constructor; }
 
@@ -3808,7 +3808,7 @@ function Style_createClass(Constructor, protoProps, staticProps) { if (protoProp
 
 
 
-var Style_Style = /*#__PURE__*/function () {
+let Style_Style = /*#__PURE__*/function () {
   function Style() {
     Style_classCallCheck(this, Style);
   }
@@ -3831,7 +3831,7 @@ var Style_Style = /*#__PURE__*/function () {
      */
     value: function jQueryCSS($obj, propertyNames) {
       if (env.jqueryVersion < 1.9) {
-        var result = {};
+        let result = {};
         external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default.a.each(propertyNames, function (idx, propertyName) {
           result[propertyName] = $obj.css(propertyName);
         });
@@ -3850,9 +3850,9 @@ var Style_Style = /*#__PURE__*/function () {
   }, {
     key: "fromNode",
     value: function fromNode($node) {
-      var properties = ['font-family', 'font-size', 'text-align', 'list-style-type', 'line-height'];
-      var styleInfo = this.jQueryCSS($node, properties) || {};
-      var fontSize = $node[0].style.fontSize || styleInfo['font-size'];
+      let properties = ['font-family', 'font-size', 'text-align', 'list-style-type', 'line-height'];
+      let styleInfo = this.jQueryCSS($node, properties) || {};
+      let fontSize = $node[0].style.fontSize || styleInfo['font-size'];
       styleInfo['font-size'] = parseInt(fontSize, 10);
       styleInfo['font-size-unit'] = fontSize.match(/[a-z%]+$/);
       return styleInfo;
@@ -3888,16 +3888,16 @@ var Style_Style = /*#__PURE__*/function () {
     key: "styleNodes",
     value: function styleNodes(rng, options) {
       rng = rng.splitText();
-      var nodeName = options && options.nodeName || 'SPAN';
-      var expandClosestSibling = !!(options && options.expandClosestSibling);
-      var onlyPartialContains = !!(options && options.onlyPartialContains);
+      let nodeName = options && options.nodeName || 'SPAN';
+      let expandClosestSibling = !!(options && options.expandClosestSibling);
+      let onlyPartialContains = !!(options && options.onlyPartialContains);
 
       if (rng.isCollapsed()) {
         return [rng.insertNode(dom.create(nodeName))];
       }
 
-      var pred = dom.makePredByNodeName(nodeName);
-      var nodes = rng.nodes(dom.isText, {
+      let pred = dom.makePredByNodeName(nodeName);
+      let nodes = rng.nodes(dom.isText, {
         fullyContains: true
       }).map(function (text) {
         return dom.singleChildAncestor(text, pred) || dom.wrap(text, nodeName);
@@ -3905,7 +3905,7 @@ var Style_Style = /*#__PURE__*/function () {
 
       if (expandClosestSibling) {
         if (onlyPartialContains) {
-          var nodesInRange = rng.nodes(); // compose with partial contains predication
+          let nodesInRange = rng.nodes(); // compose with partial contains predication
 
           pred = func.and(pred, function (node) {
             return lists.contains(nodesInRange, node);
@@ -3913,9 +3913,9 @@ var Style_Style = /*#__PURE__*/function () {
         }
 
         return nodes.map(function (node) {
-          var siblings = dom.withClosestSiblings(node, pred);
-          var head = lists.head(siblings);
-          var tails = lists.tail(siblings);
+          let siblings = dom.withClosestSiblings(node, pred);
+          let head = lists.head(siblings);
+          let tails = lists.tail(siblings);
           external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default.a.each(tails, function (idx, elem) {
             dom.appendChildNodes(head, elem.childNodes);
             dom.remove(elem);
@@ -3936,8 +3936,8 @@ var Style_Style = /*#__PURE__*/function () {
   }, {
     key: "current",
     value: function current(rng) {
-      var $cont = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(!dom.isElement(rng.sc) ? rng.sc.parentNode : rng.sc);
-      var styleInfo = this.fromNode($cont); // document.queryCommandState for toggle state
+      let $cont = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(!dom.isElement(rng.sc) ? rng.sc.parentNode : rng.sc);
+      let styleInfo = this.fromNode($cont); // document.queryCommandState for toggle state
       // [workaround] prevent Firefox nsresult: "0x80004005 (NS_ERROR_FAILURE)"
 
       try {
@@ -3957,17 +3957,17 @@ var Style_Style = /*#__PURE__*/function () {
       if (!rng.isOnList()) {
         styleInfo['list-style'] = 'none';
       } else {
-        var orderedTypes = ['circle', 'disc', 'disc-leading-zero', 'square'];
-        var isUnordered = orderedTypes.indexOf(styleInfo['list-style-type']) > -1;
+        let orderedTypes = ['circle', 'disc', 'disc-leading-zero', 'square'];
+        let isUnordered = orderedTypes.indexOf(styleInfo['list-style-type']) > -1;
         styleInfo['list-style'] = isUnordered ? 'unordered' : 'ordered';
       }
 
-      var para = dom.ancestor(rng.sc, dom.isPara);
+      let para = dom.ancestor(rng.sc, dom.isPara);
 
       if (para && para.style['line-height']) {
         styleInfo['line-height'] = para.style.lineHeight;
       } else {
-        var lineHeight = parseInt(styleInfo['line-height'], 10) / parseInt(styleInfo['font-size'], 10);
+        let lineHeight = parseInt(styleInfo['line-height'], 10) / parseInt(styleInfo['font-size'], 10);
         styleInfo['line-height'] = lineHeight.toFixed(1);
       }
 
@@ -3985,7 +3985,7 @@ var Style_Style = /*#__PURE__*/function () {
 // CONCATENATED MODULE: ./src/js/base/editing/Bullet.js
 function Bullet_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-function Bullet_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+function Bullet_defineProperties(target, props) { for (let i = 0; i < props.length; i++) { let descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
 function Bullet_createClass(Constructor, protoProps, staticProps) { if (protoProps) Bullet_defineProperties(Constructor.prototype, protoProps); if (staticProps) Bullet_defineProperties(Constructor, staticProps); return Constructor; }
 
@@ -3995,7 +3995,7 @@ function Bullet_createClass(Constructor, protoProps, staticProps) { if (protoPro
 
 
 
-var Bullet_Bullet = /*#__PURE__*/function () {
+let Bullet_Bullet = /*#__PURE__*/function () {
   function Bullet() {
     Bullet_classCallCheck(this, Bullet);
   }
@@ -4025,18 +4025,18 @@ var Bullet_Bullet = /*#__PURE__*/function () {
   }, {
     key: "indent",
     value: function indent(editable) {
-      var _this = this;
+      let _this = this;
 
-      var rng = range.create(editable).wrapBodyInlineWithPara();
-      var paras = rng.nodes(dom.isPara, {
+      let rng = range.create(editable).wrapBodyInlineWithPara();
+      let paras = rng.nodes(dom.isPara, {
         includeAncestor: true
       });
-      var clustereds = lists.clusterBy(paras, func.peq2('parentNode'));
+      let clustereds = lists.clusterBy(paras, func.peq2('parentNode'));
       external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default.a.each(clustereds, function (idx, paras) {
-        var head = lists.head(paras);
+        let head = lists.head(paras);
 
         if (dom.isLi(head)) {
-          var previousList = _this.findList(head.previousSibling);
+          let previousList = _this.findList(head.previousSibling);
 
           if (previousList) {
             paras.map(function (para) {
@@ -4068,15 +4068,15 @@ var Bullet_Bullet = /*#__PURE__*/function () {
   }, {
     key: "outdent",
     value: function outdent(editable) {
-      var _this2 = this;
+      let _this2 = this;
 
-      var rng = range.create(editable).wrapBodyInlineWithPara();
-      var paras = rng.nodes(dom.isPara, {
+      let rng = range.create(editable).wrapBodyInlineWithPara();
+      let paras = rng.nodes(dom.isPara, {
         includeAncestor: true
       });
-      var clustereds = lists.clusterBy(paras, func.peq2('parentNode'));
+      let clustereds = lists.clusterBy(paras, func.peq2('parentNode'));
       external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default.a.each(clustereds, function (idx, paras) {
-        var head = lists.head(paras);
+        let head = lists.head(paras);
 
         if (dom.isLi(head)) {
           _this2.releaseList([paras]);
@@ -4100,23 +4100,23 @@ var Bullet_Bullet = /*#__PURE__*/function () {
   }, {
     key: "toggleList",
     value: function toggleList(listName, editable) {
-      var _this3 = this;
+      let _this3 = this;
 
-      var rng = range.create(editable).wrapBodyInlineWithPara();
-      var paras = rng.nodes(dom.isPara, {
+      let rng = range.create(editable).wrapBodyInlineWithPara();
+      let paras = rng.nodes(dom.isPara, {
         includeAncestor: true
       });
-      var bookmark = rng.paraBookmark(paras);
-      var clustereds = lists.clusterBy(paras, func.peq2('parentNode')); // paragraph to list
+      let bookmark = rng.paraBookmark(paras);
+      let clustereds = lists.clusterBy(paras, func.peq2('parentNode')); // paragraph to list
 
       if (lists.find(paras, dom.isPurePara)) {
-        var wrappedParas = [];
+        let wrappedParas = [];
         external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default.a.each(clustereds, function (idx, paras) {
           wrappedParas = wrappedParas.concat(_this3.wrapList(paras, listName));
         });
         paras = wrappedParas; // list to paragraph or change list style
       } else {
-        var diffLists = rng.nodes(dom.isList, {
+        let diffLists = rng.nodes(dom.isList, {
           includeAncestor: true
         }).filter(function (listNode) {
           return !external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default.a.nodeName(listNode, listName);
@@ -4142,11 +4142,11 @@ var Bullet_Bullet = /*#__PURE__*/function () {
   }, {
     key: "wrapList",
     value: function wrapList(paras, listName) {
-      var head = lists.head(paras);
-      var last = lists.last(paras);
-      var prevList = dom.isList(head.previousSibling) && head.previousSibling;
-      var nextList = dom.isList(last.nextSibling) && last.nextSibling;
-      var listNode = prevList || dom.insertAfter(dom.create(listName || 'UL'), last); // P to LI
+      let head = lists.head(paras);
+      let last = lists.last(paras);
+      let prevList = dom.isList(head.previousSibling) && head.previousSibling;
+      let nextList = dom.isList(last.nextSibling) && last.nextSibling;
+      let listNode = prevList || dom.insertAfter(dom.create(listName || 'UL'), last); // P to LI
 
       paras = paras.map(function (para) {
         return dom.isPurePara(para) ? dom.replace(para, 'LI') : para;
@@ -4172,18 +4172,18 @@ var Bullet_Bullet = /*#__PURE__*/function () {
   }, {
     key: "releaseList",
     value: function releaseList(clustereds, isEscapseToBody) {
-      var _this4 = this;
+      let _this4 = this;
 
-      var releasedParas = [];
+      let releasedParas = [];
       external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default.a.each(clustereds, function (idx, paras) {
-        var head = lists.head(paras);
-        var last = lists.last(paras);
-        var headList = isEscapseToBody ? dom.lastAncestor(head, dom.isList) : head.parentNode;
-        var parentItem = headList.parentNode;
+        let head = lists.head(paras);
+        let last = lists.last(paras);
+        let headList = isEscapseToBody ? dom.lastAncestor(head, dom.isList) : head.parentNode;
+        let parentItem = headList.parentNode;
 
         if (headList.parentNode.nodeName === 'LI') {
           paras.map(function (para) {
-            var newList = _this4.findNextSiblings(para);
+            let newList = _this4.findNextSiblings(para);
 
             if (parentItem.nextSibling) {
               parentItem.parentNode.insertBefore(para, parentItem.nextSibling);
@@ -4206,13 +4206,13 @@ var Bullet_Bullet = /*#__PURE__*/function () {
             parentItem.parentNode.removeChild(parentItem);
           }
         } else {
-          var lastList = headList.childNodes.length > 1 ? dom.splitTree(headList, {
+          let lastList = headList.childNodes.length > 1 ? dom.splitTree(headList, {
             node: last.parentNode,
             offset: dom.position(last) + 1
           }, {
             isSkipPaddingBlankHTML: true
           }) : null;
-          var middleList = dom.splitTree(headList, {
+          let middleList = dom.splitTree(headList, {
             node: head.parentNode,
             offset: dom.position(head)
           }, {
@@ -4230,9 +4230,9 @@ var Bullet_Bullet = /*#__PURE__*/function () {
             dom.insertAfter(para, headList);
           }); // remove empty lists
 
-          var rootLists = lists.compact([headList, middleList, lastList]);
+          let rootLists = lists.compact([headList, middleList, lastList]);
           external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default.a.each(rootLists, function (idx, rootList) {
-            var listNodes = [rootList].concat(dom.listDescendant(rootList, dom.isList));
+            let listNodes = [rootList].concat(dom.listDescendant(rootList, dom.isList));
             external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default.a.each(listNodes.reverse(), function (idx, listNode) {
               if (!dom.nodeLength(listNode)) {
                 dom.remove(listNode, true);
@@ -4288,7 +4288,7 @@ var Bullet_Bullet = /*#__PURE__*/function () {
   }, {
     key: "findNextSiblings",
     value: function findNextSiblings(node) {
-      var siblings = [];
+      let siblings = [];
 
       while (node.nextSibling) {
         siblings.push(node.nextSibling);
@@ -4306,7 +4306,7 @@ var Bullet_Bullet = /*#__PURE__*/function () {
 // CONCATENATED MODULE: ./src/js/base/editing/Typing.js
 function Typing_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-function Typing_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+function Typing_defineProperties(target, props) { for (let i = 0; i < props.length; i++) { let descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
 function Typing_createClass(Constructor, protoProps, staticProps) { if (protoProps) Typing_defineProperties(Constructor.prototype, protoProps); if (staticProps) Typing_defineProperties(Constructor, staticProps); return Constructor; }
 
@@ -4321,7 +4321,7 @@ function Typing_createClass(Constructor, protoProps, staticProps) { if (protoPro
  *
  */
 
-var Typing_Typing = /*#__PURE__*/function () {
+let Typing_Typing = /*#__PURE__*/function () {
   function Typing(context) {
     Typing_classCallCheck(this, Typing);
 
@@ -4340,7 +4340,7 @@ var Typing_Typing = /*#__PURE__*/function () {
   Typing_createClass(Typing, [{
     key: "insertTab",
     value: function insertTab(rng, tabsize) {
-      var tab = dom.createText(new Array(tabsize + 1).join(dom.NBSP_CHAR));
+      let tab = dom.createText(new Array(tabsize + 1).join(dom.NBSP_CHAR));
       rng = rng.deleteContents();
       rng.insertNode(tab, true);
       rng = range.create(tab, tabsize);
@@ -4367,8 +4367,8 @@ var Typing_Typing = /*#__PURE__*/function () {
 
       rng = rng.wrapBodyInlineWithPara(); // finding paragraph
 
-      var splitRoot = dom.ancestor(rng.sc, dom.isPara);
-      var nextPara; // on paragraph: split paragraph
+      let splitRoot = dom.ancestor(rng.sc, dom.isPara);
+      let nextPara; // on paragraph: split paragraph
 
       if (splitRoot) {
         // if it is an empty line with li
@@ -4377,7 +4377,7 @@ var Typing_Typing = /*#__PURE__*/function () {
           this.bullet.toggleList(splitRoot.parentNode.nodeName);
           return;
         } else {
-          var blockquote = null;
+          let blockquote = null;
 
           if (this.options.blockquoteBreakingLevel === 1) {
             blockquote = dom.ancestor(splitRoot, dom.isBlockquote);
@@ -4394,7 +4394,7 @@ var Typing_Typing = /*#__PURE__*/function () {
               external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(rng.sc.nextSibling).remove();
             }
 
-            var split = dom.splitTree(blockquote, rng.getStartPoint(), {
+            let split = dom.splitTree(blockquote, rng.getStartPoint(), {
               isDiscardEmptySplits: true
             });
 
@@ -4406,7 +4406,7 @@ var Typing_Typing = /*#__PURE__*/function () {
           } else {
             nextPara = dom.splitTree(splitRoot, rng.getStartPoint()); // not a blockquote, just insert the paragraph
 
-            var emptyAnchors = dom.listDescendant(splitRoot, dom.isEmptyAnchor);
+            let emptyAnchors = dom.listDescendant(splitRoot, dom.isEmptyAnchor);
             emptyAnchors = emptyAnchors.concat(dom.listDescendant(nextPara, dom.isEmptyAnchor));
             external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default.a.each(emptyAnchors, function (idx, anchor) {
               dom.remove(anchor);
@@ -4419,7 +4419,7 @@ var Typing_Typing = /*#__PURE__*/function () {
         } // no paragraph: insert empty paragraph
 
       } else {
-        var next = rng.sc.childNodes[rng.so];
+        let next = rng.sc.childNodes[rng.so];
         nextPara = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(dom.emptyPara)[0];
 
         if (next) {
@@ -4440,7 +4440,7 @@ var Typing_Typing = /*#__PURE__*/function () {
 // CONCATENATED MODULE: ./src/js/base/editing/Table.js
 function Table_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-function Table_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+function Table_defineProperties(target, props) { for (let i = 0; i < props.length; i++) { let descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
 function Table_createClass(Constructor, protoProps, staticProps) { if (protoProps) Table_defineProperties(Constructor.prototype, protoProps); if (staticProps) Table_defineProperties(Constructor, staticProps); return Constructor; }
 
@@ -4456,13 +4456,13 @@ function Table_createClass(Constructor, protoProps, staticProps) { if (protoProp
  * @param {object} domTable Dom element of table to make changes.
  */
 
-var TableResultAction = function TableResultAction(startPoint, where, action, domTable) {
-  var _startPoint = {
+let TableResultAction = function TableResultAction(startPoint, where, action, domTable) {
+  let _startPoint = {
     'colPos': 0,
     'rowPos': 0
   };
-  var _virtualTable = [];
-  var _actionCellList = []; /// ///////////////////////////////////////////
+  let _virtualTable = [];
+  let _actionCellList = []; /// ///////////////////////////////////////////
   // Private functions
   /// ///////////////////////////////////////////
 
@@ -4497,7 +4497,7 @@ var TableResultAction = function TableResultAction(startPoint, where, action, do
 
 
   function setVirtualTablePosition(rowIndex, cellIndex, baseRow, baseCell, isRowSpan, isColSpan, isVirtualCell) {
-    var objPosition = {
+    let objPosition = {
       'baseRow': baseRow,
       'baseCell': baseCell,
       'isRowSpan': isRowSpan,
@@ -4546,7 +4546,7 @@ var TableResultAction = function TableResultAction(startPoint, where, action, do
       return cellIndex;
     }
 
-    var newCellIndex = cellIndex;
+    let newCellIndex = cellIndex;
 
     while (_virtualTable[rowIndex][newCellIndex]) {
       newCellIndex++;
@@ -4565,28 +4565,28 @@ var TableResultAction = function TableResultAction(startPoint, where, action, do
 
 
   function addCellInfoToVirtual(row, cell) {
-    var cellIndex = recoverCellIndex(row.rowIndex, cell.cellIndex);
-    var cellHasColspan = cell.colSpan > 1;
-    var cellHasRowspan = cell.rowSpan > 1;
-    var isThisSelectedCell = row.rowIndex === _startPoint.rowPos && cell.cellIndex === _startPoint.colPos;
+    let cellIndex = recoverCellIndex(row.rowIndex, cell.cellIndex);
+    let cellHasColspan = cell.colSpan > 1;
+    let cellHasRowspan = cell.rowSpan > 1;
+    let isThisSelectedCell = row.rowIndex === _startPoint.rowPos && cell.cellIndex === _startPoint.colPos;
     setVirtualTablePosition(row.rowIndex, cellIndex, row, cell, cellHasRowspan, cellHasColspan, false); // Add span rows to virtual Table.
 
-    var rowspanNumber = cell.attributes.rowSpan ? parseInt(cell.attributes.rowSpan.value, 10) : 0;
+    let rowspanNumber = cell.attributes.rowSpan ? parseInt(cell.attributes.rowSpan.value, 10) : 0;
 
     if (rowspanNumber > 1) {
-      for (var rp = 1; rp < rowspanNumber; rp++) {
-        var rowspanIndex = row.rowIndex + rp;
+      for (let rp = 1; rp < rowspanNumber; rp++) {
+        let rowspanIndex = row.rowIndex + rp;
         adjustStartPoint(rowspanIndex, cellIndex, cell, isThisSelectedCell);
         setVirtualTablePosition(rowspanIndex, cellIndex, row, cell, true, cellHasColspan, true);
       }
     } // Add span cols to virtual table.
 
 
-    var colspanNumber = cell.attributes.colSpan ? parseInt(cell.attributes.colSpan.value, 10) : 0;
+    let colspanNumber = cell.attributes.colSpan ? parseInt(cell.attributes.colSpan.value, 10) : 0;
 
     if (colspanNumber > 1) {
-      for (var cp = 1; cp < colspanNumber; cp++) {
-        var cellspanIndex = recoverCellIndex(row.rowIndex, cellIndex + cp);
+      for (let cp = 1; cp < colspanNumber; cp++) {
+        let cellspanIndex = recoverCellIndex(row.rowIndex, cellIndex + cp);
         adjustStartPoint(row.rowIndex, cellspanIndex, cell, isThisSelectedCell);
         setVirtualTablePosition(row.rowIndex, cellspanIndex, row, cell, cellHasRowspan, true, true);
       }
@@ -4613,12 +4613,12 @@ var TableResultAction = function TableResultAction(startPoint, where, action, do
 
 
   function createVirtualTable() {
-    var rows = domTable.rows;
+    let rows = domTable.rows;
 
-    for (var rowIndex = 0; rowIndex < rows.length; rowIndex++) {
-      var cells = rows[rowIndex].cells;
+    for (let rowIndex = 0; rowIndex < rows.length; rowIndex++) {
+      let cells = rows[rowIndex].cells;
 
-      for (var cellIndex = 0; cellIndex < cells.length; cellIndex++) {
+      for (let cellIndex = 0; cellIndex < cells.length; cellIndex++) {
         addCellInfoToVirtual(rows[rowIndex], cells[cellIndex]);
       }
     }
@@ -4695,22 +4695,22 @@ var TableResultAction = function TableResultAction(startPoint, where, action, do
 
 
   this.getActionList = function () {
-    var fixedRow = where === TableResultAction.where.Row ? _startPoint.rowPos : -1;
-    var fixedCol = where === TableResultAction.where.Column ? _startPoint.colPos : -1;
-    var actualPosition = 0;
-    var canContinue = true;
+    let fixedRow = where === TableResultAction.where.Row ? _startPoint.rowPos : -1;
+    let fixedCol = where === TableResultAction.where.Column ? _startPoint.colPos : -1;
+    let actualPosition = 0;
+    let canContinue = true;
 
     while (canContinue) {
-      var rowPosition = fixedRow >= 0 ? fixedRow : actualPosition;
-      var colPosition = fixedCol >= 0 ? fixedCol : actualPosition;
-      var row = _virtualTable[rowPosition];
+      let rowPosition = fixedRow >= 0 ? fixedRow : actualPosition;
+      let colPosition = fixedCol >= 0 ? fixedCol : actualPosition;
+      let row = _virtualTable[rowPosition];
 
       if (!row) {
         canContinue = false;
         return _actionCellList;
       }
 
-      var cell = row[colPosition];
+      let cell = row[colPosition];
 
       if (!cell) {
         canContinue = false;
@@ -4718,7 +4718,7 @@ var TableResultAction = function TableResultAction(startPoint, where, action, do
       } // Define action to be applied in this cell
 
 
-      var resultAction = TableResultAction.resultAction.Ignore;
+      let resultAction = TableResultAction.resultAction.Ignore;
 
       switch (action) {
         case TableResultAction.requestAction.Add:
@@ -4779,7 +4779,7 @@ TableResultAction.resultAction = {
  *
  */
 
-var Table_Table = /*#__PURE__*/function () {
+let Table_Table = /*#__PURE__*/function () {
   function Table() {
     Table_classCallCheck(this, Table);
   }
@@ -4794,10 +4794,10 @@ var Table_Table = /*#__PURE__*/function () {
      * @param {Boolean} isShift
      */
     value: function tab(rng, isShift) {
-      var cell = dom.ancestor(rng.commonAncestor(), dom.isCell);
-      var table = dom.ancestor(cell, dom.isTable);
-      var cells = dom.listDescendant(table, dom.isCell);
-      var nextCell = lists[isShift ? 'prev' : 'next'](cells, cell);
+      let cell = dom.ancestor(rng.commonAncestor(), dom.isCell);
+      let table = dom.ancestor(cell, dom.isTable);
+      let cells = dom.listDescendant(table, dom.isCell);
+      let nextCell = lists[isShift ? 'prev' : 'next'](cells, cell);
 
       if (nextCell) {
         range.create(nextCell, 0).select();
@@ -4814,16 +4814,16 @@ var Table_Table = /*#__PURE__*/function () {
   }, {
     key: "addRow",
     value: function addRow(rng, position) {
-      var cell = dom.ancestor(rng.commonAncestor(), dom.isCell);
-      var currentTr = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(cell).closest('tr');
-      var trAttributes = this.recoverAttributes(currentTr);
-      var html = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()('<tr' + trAttributes + '></tr>');
-      var vTable = new TableResultAction(cell, TableResultAction.where.Row, TableResultAction.requestAction.Add, external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(currentTr).closest('table')[0]);
-      var actions = vTable.getActionList();
+      let cell = dom.ancestor(rng.commonAncestor(), dom.isCell);
+      let currentTr = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(cell).closest('tr');
+      let trAttributes = this.recoverAttributes(currentTr);
+      let html = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()('<tr' + trAttributes + '></tr>');
+      let vTable = new TableResultAction(cell, TableResultAction.where.Row, TableResultAction.requestAction.Add, external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(currentTr).closest('table')[0]);
+      let actions = vTable.getActionList();
 
-      for (var idCell = 0; idCell < actions.length; idCell++) {
-        var currentCell = actions[idCell];
-        var tdAttributes = this.recoverAttributes(currentCell.baseCell);
+      for (let idCell = 0; idCell < actions.length; idCell++) {
+        let currentCell = actions[idCell];
+        let tdAttributes = this.recoverAttributes(currentCell.baseCell);
 
         switch (currentCell.action) {
           case TableResultAction.resultAction.AddCell:
@@ -4833,17 +4833,17 @@ var Table_Table = /*#__PURE__*/function () {
           case TableResultAction.resultAction.SumSpanCount:
             {
               if (position === 'top') {
-                var baseCellTr = currentCell.baseCell.parent;
-                var isTopFromRowSpan = (!baseCellTr ? 0 : currentCell.baseCell.closest('tr').rowIndex) <= currentTr[0].rowIndex;
+                let baseCellTr = currentCell.baseCell.parent;
+                let isTopFromRowSpan = (!baseCellTr ? 0 : currentCell.baseCell.closest('tr').rowIndex) <= currentTr[0].rowIndex;
 
                 if (isTopFromRowSpan) {
-                  var newTd = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()('<div></div>').append(external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()('<td' + tdAttributes + '>' + dom.blank + '</td>').removeAttr('rowspan')).html();
+                  let newTd = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()('<div></div>').append(external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()('<td' + tdAttributes + '>' + dom.blank + '</td>').removeAttr('rowspan')).html();
                   html.append(newTd);
                   break;
                 }
               }
 
-              var rowspanNumber = parseInt(currentCell.baseCell.rowSpan, 10);
+              let rowspanNumber = parseInt(currentCell.baseCell.rowSpan, 10);
               rowspanNumber++;
               currentCell.baseCell.setAttribute('rowSpan', rowspanNumber);
             }
@@ -4854,10 +4854,10 @@ var Table_Table = /*#__PURE__*/function () {
       if (position === 'top') {
         currentTr.before(html);
       } else {
-        var cellHasRowspan = cell.rowSpan > 1;
+        let cellHasRowspan = cell.rowSpan > 1;
 
         if (cellHasRowspan) {
-          var lastTrIndex = currentTr[0].rowIndex + (cell.rowSpan - 2);
+          let lastTrIndex = currentTr[0].rowIndex + (cell.rowSpan - 2);
           external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(currentTr).parent().find('tr')[lastTrIndex]).after(external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(html));
           return;
         }
@@ -4876,16 +4876,16 @@ var Table_Table = /*#__PURE__*/function () {
   }, {
     key: "addCol",
     value: function addCol(rng, position) {
-      var cell = dom.ancestor(rng.commonAncestor(), dom.isCell);
-      var row = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(cell).closest('tr');
-      var rowsGroup = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(row).siblings();
+      let cell = dom.ancestor(rng.commonAncestor(), dom.isCell);
+      let row = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(cell).closest('tr');
+      let rowsGroup = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(row).siblings();
       rowsGroup.push(row);
-      var vTable = new TableResultAction(cell, TableResultAction.where.Column, TableResultAction.requestAction.Add, external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(row).closest('table')[0]);
-      var actions = vTable.getActionList();
+      let vTable = new TableResultAction(cell, TableResultAction.where.Column, TableResultAction.requestAction.Add, external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(row).closest('table')[0]);
+      let actions = vTable.getActionList();
 
-      for (var actionIndex = 0; actionIndex < actions.length; actionIndex++) {
-        var currentCell = actions[actionIndex];
-        var tdAttributes = this.recoverAttributes(currentCell.baseCell);
+      for (let actionIndex = 0; actionIndex < actions.length; actionIndex++) {
+        let currentCell = actions[actionIndex];
+        let tdAttributes = this.recoverAttributes(currentCell.baseCell);
 
         switch (currentCell.action) {
           case TableResultAction.resultAction.AddCell:
@@ -4899,7 +4899,7 @@ var Table_Table = /*#__PURE__*/function () {
 
           case TableResultAction.resultAction.SumSpanCount:
             if (position === 'right') {
-              var colspanNumber = parseInt(currentCell.baseCell.colSpan, 10);
+              let colspanNumber = parseInt(currentCell.baseCell.colSpan, 10);
               colspanNumber++;
               currentCell.baseCell.setAttribute('colSpan', colspanNumber);
             } else {
@@ -4920,15 +4920,15 @@ var Table_Table = /*#__PURE__*/function () {
   }, {
     key: "recoverAttributes",
     value: function recoverAttributes(el) {
-      var resultStr = '';
+      let resultStr = '';
 
       if (!el) {
         return resultStr;
       }
 
-      var attrList = el.attributes || [];
+      let attrList = el.attributes || [];
 
-      for (var i = 0; i < attrList.length; i++) {
+      for (let i = 0; i < attrList.length; i++) {
         if (attrList[i].name.toLowerCase() === 'id') {
           continue;
         }
@@ -4950,22 +4950,22 @@ var Table_Table = /*#__PURE__*/function () {
   }, {
     key: "deleteRow",
     value: function deleteRow(rng) {
-      var cell = dom.ancestor(rng.commonAncestor(), dom.isCell);
-      var row = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(cell).closest('tr');
-      var cellPos = row.children('td, th').index(external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(cell));
-      var rowPos = row[0].rowIndex;
-      var vTable = new TableResultAction(cell, TableResultAction.where.Row, TableResultAction.requestAction.Delete, external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(row).closest('table')[0]);
-      var actions = vTable.getActionList();
+      let cell = dom.ancestor(rng.commonAncestor(), dom.isCell);
+      let row = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(cell).closest('tr');
+      let cellPos = row.children('td, th').index(external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(cell));
+      let rowPos = row[0].rowIndex;
+      let vTable = new TableResultAction(cell, TableResultAction.where.Row, TableResultAction.requestAction.Delete, external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(row).closest('table')[0]);
+      let actions = vTable.getActionList();
 
-      for (var actionIndex = 0; actionIndex < actions.length; actionIndex++) {
+      for (let actionIndex = 0; actionIndex < actions.length; actionIndex++) {
         if (!actions[actionIndex]) {
           continue;
         }
 
-        var baseCell = actions[actionIndex].baseCell;
-        var virtualPosition = actions[actionIndex].virtualTable;
-        var hasRowspan = baseCell.rowSpan && baseCell.rowSpan > 1;
-        var rowspanNumber = hasRowspan ? parseInt(baseCell.rowSpan, 10) : 0;
+        let baseCell = actions[actionIndex].baseCell;
+        let virtualPosition = actions[actionIndex].virtualTable;
+        let hasRowspan = baseCell.rowSpan && baseCell.rowSpan > 1;
+        let rowspanNumber = hasRowspan ? parseInt(baseCell.rowSpan, 10) : 0;
 
         switch (actions[actionIndex].action) {
           case TableResultAction.resultAction.Ignore:
@@ -4973,13 +4973,13 @@ var Table_Table = /*#__PURE__*/function () {
 
           case TableResultAction.resultAction.AddCell:
             {
-              var nextRow = row.next('tr')[0];
+              let nextRow = row.next('tr')[0];
 
               if (!nextRow) {
                 continue;
               }
 
-              var cloneRow = row[0].cells[cellPos];
+              let cloneRow = row[0].cells[cellPos];
 
               if (hasRowspan) {
                 if (rowspanNumber > 2) {
@@ -5034,13 +5034,13 @@ var Table_Table = /*#__PURE__*/function () {
   }, {
     key: "deleteCol",
     value: function deleteCol(rng) {
-      var cell = dom.ancestor(rng.commonAncestor(), dom.isCell);
-      var row = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(cell).closest('tr');
-      var cellPos = row.children('td, th').index(external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(cell));
-      var vTable = new TableResultAction(cell, TableResultAction.where.Column, TableResultAction.requestAction.Delete, external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(row).closest('table')[0]);
-      var actions = vTable.getActionList();
+      let cell = dom.ancestor(rng.commonAncestor(), dom.isCell);
+      let row = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(cell).closest('tr');
+      let cellPos = row.children('td, th').index(external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(cell));
+      let vTable = new TableResultAction(cell, TableResultAction.where.Column, TableResultAction.requestAction.Delete, external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(row).closest('table')[0]);
+      let actions = vTable.getActionList();
 
-      for (var actionIndex = 0; actionIndex < actions.length; actionIndex++) {
+      for (let actionIndex = 0; actionIndex < actions.length; actionIndex++) {
         if (!actions[actionIndex]) {
           continue;
         }
@@ -5051,11 +5051,11 @@ var Table_Table = /*#__PURE__*/function () {
 
           case TableResultAction.resultAction.SubtractSpanCount:
             {
-              var baseCell = actions[actionIndex].baseCell;
-              var hasColspan = baseCell.colSpan && baseCell.colSpan > 1;
+              let baseCell = actions[actionIndex].baseCell;
+              let hasColspan = baseCell.colSpan && baseCell.colSpan > 1;
 
               if (hasColspan) {
-                var colspanNumber = baseCell.colSpan ? parseInt(baseCell.colSpan, 10) : 0;
+                let colspanNumber = baseCell.colSpan ? parseInt(baseCell.colSpan, 10) : 0;
 
                 if (colspanNumber > 2) {
                   colspanNumber--;
@@ -5092,23 +5092,23 @@ var Table_Table = /*#__PURE__*/function () {
   }, {
     key: "createTable",
     value: function createTable(colCount, rowCount, options) {
-      var tds = [];
-      var tdHTML;
+      let tds = [];
+      let tdHTML;
 
-      for (var idxCol = 0; idxCol < colCount; idxCol++) {
+      for (let idxCol = 0; idxCol < colCount; idxCol++) {
         tds.push('<td>' + dom.blank + '</td>');
       }
 
       tdHTML = tds.join('');
-      var trs = [];
-      var trHTML;
+      let trs = [];
+      let trHTML;
 
-      for (var idxRow = 0; idxRow < rowCount; idxRow++) {
+      for (let idxRow = 0; idxRow < rowCount; idxRow++) {
         trs.push('<tr>' + tdHTML + '</tr>');
       }
 
       trHTML = trs.join('');
-      var $table = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()('<table>' + trHTML + '</table>');
+      let $table = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()('<table>' + trHTML + '</table>');
 
       if (options && options.tableClassName) {
         $table.addClass(options.tableClassName);
@@ -5126,7 +5126,7 @@ var Table_Table = /*#__PURE__*/function () {
   }, {
     key: "deleteTable",
     value: function deleteTable(rng) {
-      var cell = dom.ancestor(rng.commonAncestor(), dom.isCell);
+      let cell = dom.ancestor(rng.commonAncestor(), dom.isCell);
       external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(cell).closest('table').remove();
     }
   }]);
@@ -5138,7 +5138,7 @@ var Table_Table = /*#__PURE__*/function () {
 // CONCATENATED MODULE: ./src/js/base/module/Editor.js
 function Editor_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-function Editor_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+function Editor_defineProperties(target, props) { for (let i = 0; i < props.length; i++) { let descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
 function Editor_createClass(Constructor, protoProps, staticProps) { if (protoProps) Editor_defineProperties(Constructor.prototype, protoProps); if (staticProps) Editor_defineProperties(Constructor, staticProps); return Constructor; }
 
@@ -5155,14 +5155,14 @@ function Editor_createClass(Constructor, protoProps, staticProps) { if (protoPro
 
 
 
-var KEY_BOGUS = 'bogus';
+let KEY_BOGUS = 'bogus';
 /**
  * @class Editor
  */
 
-var Editor_Editor = /*#__PURE__*/function () {
+let Editor_Editor = /*#__PURE__*/function () {
   function Editor(context) {
-    var _this = this;
+    let _this = this;
 
     Editor_classCallCheck(this, Editor);
 
@@ -5194,9 +5194,9 @@ var Editor_Editor = /*#__PURE__*/function () {
     this.context.memo('help.insertHorizontalRule', this.lang.help.insertHorizontalRule);
     this.context.memo('help.fontName', this.lang.help.fontName); // native commands(with execCommand), generate function for execCommand
 
-    var commands = ['bold', 'italic', 'underline', 'strikethrough', 'superscript', 'subscript', 'justifyLeft', 'justifyCenter', 'justifyRight', 'justifyFull', 'formatBlock', 'removeFormat', 'backColor'];
+    let commands = ['bold', 'italic', 'underline', 'strikethrough', 'superscript', 'subscript', 'justifyLeft', 'justifyCenter', 'justifyRight', 'justifyFull', 'formatBlock', 'removeFormat', 'backColor'];
 
-    for (var idx = 0, len = commands.length; idx < len; idx++) {
+    for (let idx = 0, len = commands.length; idx < len; idx++) {
       this[commands[idx]] = function (sCmd) {
         return function (value) {
           _this.beforeCommand();
@@ -5214,17 +5214,17 @@ var Editor_Editor = /*#__PURE__*/function () {
       return _this.fontStyling('font-family', env.validFontName(value));
     });
     this.fontSize = this.wrapCommand(function (value) {
-      var unit = _this.currentStyle()['font-size-unit'];
+      let unit = _this.currentStyle()['font-size-unit'];
 
       return _this.fontStyling('font-size', value + unit);
     });
     this.fontSizeUnit = this.wrapCommand(function (value) {
-      var size = _this.currentStyle()['font-size'];
+      let size = _this.currentStyle()['font-size'];
 
       return _this.fontStyling('font-size', size + value);
     });
 
-    for (var _idx = 1; _idx <= 6; _idx++) {
+    for (let _idx = 1; _idx <= 6; _idx++) {
       this['formatH' + _idx] = function (idx) {
         return function () {
           _this.formatBlock('H' + idx);
@@ -5260,7 +5260,7 @@ var Editor_Editor = /*#__PURE__*/function () {
         return;
       }
 
-      var rng = _this.getLastRange();
+      let rng = _this.getLastRange();
 
       rng.insertNode(node);
 
@@ -5276,9 +5276,9 @@ var Editor_Editor = /*#__PURE__*/function () {
         return;
       }
 
-      var rng = _this.getLastRange();
+      let rng = _this.getLastRange();
 
-      var textNode = rng.insertNode(dom.createText(text));
+      let textNode = rng.insertNode(dom.createText(text));
 
       _this.setLastRange(range.create(textNode, dom.nodeLength(textNode)).select());
     });
@@ -5294,7 +5294,7 @@ var Editor_Editor = /*#__PURE__*/function () {
 
       markup = _this.context.invoke('codeview.purify', markup);
 
-      var contents = _this.getLastRange().pasteHTML(markup);
+      let contents = _this.getLastRange().pasteHTML(markup);
 
       _this.setLastRange(range.createFromNodeAfter(lists.last(contents)).select());
     });
@@ -5305,7 +5305,7 @@ var Editor_Editor = /*#__PURE__*/function () {
      */
 
     this.formatBlock = this.wrapCommand(function (tagName, $target) {
-      var onApplyCustomStyle = _this.options.callbacks.onApplyCustomStyle;
+      let onApplyCustomStyle = _this.options.callbacks.onApplyCustomStyle;
 
       if (onApplyCustomStyle) {
         onApplyCustomStyle.call(_this, $target, _this.context, _this.onFormatBlock);
@@ -5318,7 +5318,7 @@ var Editor_Editor = /*#__PURE__*/function () {
      */
 
     this.insertHorizontalRule = this.wrapCommand(function () {
-      var hrNode = _this.getLastRange().insertNode(dom.create('HR'));
+      let hrNode = _this.getLastRange().insertNode(dom.create('HR'));
 
       if (hrNode.nextSibling) {
         _this.setLastRange(range.create(hrNode.nextSibling, 0).normalize().select());
@@ -5341,20 +5341,20 @@ var Editor_Editor = /*#__PURE__*/function () {
      */
 
     this.createLink = this.wrapCommand(function (linkInfo) {
-      var linkUrl = linkInfo.url;
-      var linkText = linkInfo.text;
-      var isNewWindow = linkInfo.isNewWindow;
-      var checkProtocol = linkInfo.checkProtocol;
+      let linkUrl = linkInfo.url;
+      let linkText = linkInfo.text;
+      let isNewWindow = linkInfo.isNewWindow;
+      let checkProtocol = linkInfo.checkProtocol;
 
-      var rng = linkInfo.range || _this.getLastRange();
+      let rng = linkInfo.range || _this.getLastRange();
 
-      var additionalTextLength = linkText.length - rng.toString().length;
+      let additionalTextLength = linkText.length - rng.toString().length;
 
       if (additionalTextLength > 0 && _this.isLimited(additionalTextLength)) {
         return;
       }
 
-      var isTextChanged = rng.toString() !== linkText; // handle spaced urls from input
+      let isTextChanged = rng.toString() !== linkText; // handle spaced urls from input
 
       if (typeof linkUrl === 'string') {
         linkUrl = linkUrl.trim();
@@ -5367,11 +5367,11 @@ var Editor_Editor = /*#__PURE__*/function () {
         linkUrl = /^([A-Za-z][A-Za-z0-9+-.]*\:|#|\/)/.test(linkUrl) ? linkUrl : _this.options.defaultProtocol + linkUrl;
       }
 
-      var anchors = [];
+      let anchors = [];
 
       if (isTextChanged) {
         rng = rng.deleteContents();
-        var anchor = rng.insertNode(external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()('<A>' + linkText + '</A>')[0]);
+        let anchor = rng.insertNode(external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()('<A>' + linkText + '</A>')[0]);
         anchors.push(anchor);
       } else {
         anchors = _this.style.styleNodes(rng, {
@@ -5402,8 +5402,8 @@ var Editor_Editor = /*#__PURE__*/function () {
      */
 
     this.color = this.wrapCommand(function (colorInfo) {
-      var foreColor = colorInfo.foreColor;
-      var backColor = colorInfo.backColor;
+      let foreColor = colorInfo.foreColor;
+      let backColor = colorInfo.backColor;
 
       if (foreColor) {
         document.execCommand('foreColor', false, foreColor);
@@ -5429,9 +5429,9 @@ var Editor_Editor = /*#__PURE__*/function () {
      */
 
     this.insertTable = this.wrapCommand(function (dim) {
-      var dimension = dim.split('x');
+      let dimension = dim.split('x');
 
-      var rng = _this.getLastRange().deleteContents();
+      let rng = _this.getLastRange().deleteContents();
 
       rng.insertNode(_this.table.createTable(dimension[0], dimension[1], _this.options));
     });
@@ -5440,7 +5440,7 @@ var Editor_Editor = /*#__PURE__*/function () {
      */
 
     this.removeMedia = this.wrapCommand(function () {
-      var $target = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(_this.restoreTarget()).parent();
+      let $target = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(_this.restoreTarget()).parent();
 
       if ($target.closest('figure').length) {
         $target.closest('figure').remove();
@@ -5457,7 +5457,7 @@ var Editor_Editor = /*#__PURE__*/function () {
      */
 
     this.floatMe = this.wrapCommand(function (value) {
-      var $target = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(_this.restoreTarget());
+      let $target = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(_this.restoreTarget());
       $target.toggleClass('note-float-left', value === 'left');
       $target.toggleClass('note-float-right', value === 'right');
       $target.css('float', value === 'none' ? '' : value);
@@ -5468,7 +5468,7 @@ var Editor_Editor = /*#__PURE__*/function () {
      */
 
     this.resize = this.wrapCommand(function (value) {
-      var $target = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(_this.restoreTarget());
+      let $target = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(_this.restoreTarget());
       value = parseFloat(value);
 
       if (value === 0) {
@@ -5485,7 +5485,7 @@ var Editor_Editor = /*#__PURE__*/function () {
   Editor_createClass(Editor, [{
     key: "initialize",
     value: function initialize() {
-      var _this2 = this;
+      let _this2 = this;
 
       // bind custom events
       this.$editable.on('keydown', function (event) {
@@ -5508,7 +5508,7 @@ var Editor_Editor = /*#__PURE__*/function () {
         }
 
         if (_this2.isLimited(1, event)) {
-          var lastRange = _this2.getLastRange();
+          let lastRange = _this2.getLastRange();
 
           if (lastRange.eo - lastRange.so === 0) {
             return false;
@@ -5608,8 +5608,8 @@ var Editor_Editor = /*#__PURE__*/function () {
   }, {
     key: "handleKeyMap",
     value: function handleKeyMap(event) {
-      var keyMap = this.options.keyMap[env.isMac ? 'mac' : 'pc'];
-      var keys = [];
+      let keyMap = this.options.keyMap[env.isMac ? 'mac' : 'pc'];
+      let keys = [];
 
       if (event.metaKey) {
         keys.push('CMD');
@@ -5623,13 +5623,13 @@ var Editor_Editor = /*#__PURE__*/function () {
         keys.push('SHIFT');
       }
 
-      var keyName = core_key.nameFromCode[event.keyCode];
+      let keyName = core_key.nameFromCode[event.keyCode];
 
       if (keyName) {
         keys.push(keyName);
       }
 
-      var eventName = keyMap[keys.join('+')];
+      let eventName = keyMap[keys.join('+')];
 
       if (keyName === 'TAB' && !this.options.tabDisable) {
         this.afterCommand();
@@ -5694,10 +5694,10 @@ var Editor_Editor = /*#__PURE__*/function () {
   }, {
     key: "createRangeFromList",
     value: function createRangeFromList(lst) {
-      var startRange = range.createFromNodeBefore(lists.head(lst));
-      var startPoint = startRange.getStartPoint();
-      var endRange = range.createFromNodeAfter(lists.last(lst));
-      var endPoint = endRange.getEndPoint();
+      let startRange = range.createFromNodeBefore(lists.head(lst));
+      let startPoint = startRange.getStartPoint();
+      let endRange = range.createFromNodeAfter(lists.last(lst));
+      let endPoint = endRange.getEndPoint();
       return range.create(startPoint.node, startPoint.offset, endPoint.node, endPoint.offset);
     }
     /**
@@ -5794,7 +5794,7 @@ var Editor_Editor = /*#__PURE__*/function () {
   }, {
     key: "currentStyle",
     value: function currentStyle() {
-      var rng = range.create();
+      let rng = range.create();
 
       if (rng) {
         rng = rng.normalize();
@@ -5882,7 +5882,7 @@ var Editor_Editor = /*#__PURE__*/function () {
   }, {
     key: "tab",
     value: function tab() {
-      var rng = this.getLastRange();
+      let rng = this.getLastRange();
 
       if (rng.isCollapsed() && rng.isOnCell()) {
         this.table.tab(rng);
@@ -5905,7 +5905,7 @@ var Editor_Editor = /*#__PURE__*/function () {
   }, {
     key: "untab",
     value: function untab() {
-      var rng = this.getLastRange();
+      let rng = this.getLastRange();
 
       if (rng.isCollapsed() && rng.isOnCell()) {
         this.table.tab(rng, true);
@@ -5939,8 +5939,7 @@ var Editor_Editor = /*#__PURE__*/function () {
   }, {
     key: "insertImage",
     value: function insertImage(src, param) {
-      var _this3 = this;
-
+      let _this3 = this;
       return createImage(src, param).then(function ($image) {
         _this3.beforeCommand();
 
@@ -5953,7 +5952,7 @@ var Editor_Editor = /*#__PURE__*/function () {
 
           $image.css('width', Math.min(_this3.$editable.width(), $image.width()));
         }
-
+        $image.toggleClass("img-fluid")
         $image.show();
 
         _this3.getLastRange().insertNode($image[0]);
@@ -5964,6 +5963,7 @@ var Editor_Editor = /*#__PURE__*/function () {
       }).fail(function (e) {
         _this3.context.triggerEvent('image.upload.error', e);
       });
+
     }
     /**
      * insertImages
@@ -5973,10 +5973,10 @@ var Editor_Editor = /*#__PURE__*/function () {
   }, {
     key: "insertImagesAsDataURL",
     value: function insertImagesAsDataURL(files) {
-      var _this4 = this;
+      let _this4 = this;
 
       external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default.a.each(files, function (idx, file) {
-        var filename = file.name;
+        let filename = file.name;
 
         if (_this4.options.maximumImageFileSize && _this4.options.maximumImageFileSize < file.size) {
           _this4.context.triggerEvent('image.upload.error', _this4.lang.image.maximumFileSizeError);
@@ -5997,7 +5997,7 @@ var Editor_Editor = /*#__PURE__*/function () {
   }, {
     key: "insertImagesOrCallback",
     value: function insertImagesOrCallback(files) {
-      var callbacks = this.options.callbacks; // If onImageUpload set,
+      let callbacks = this.options.callbacks; // If onImageUpload set,
 
       if (callbacks.onImageUpload) {
         this.context.triggerEvent('image.upload', files); // else insert Image as dataURL
@@ -6013,7 +6013,7 @@ var Editor_Editor = /*#__PURE__*/function () {
   }, {
     key: "getSelectedText",
     value: function getSelectedText() {
-      var rng = this.getLastRange(); // if range on anchor, expand range with anchor
+      let rng = this.getLastRange(); // if range on anchor, expand range with anchor
 
       if (rng.isOnAnchor()) {
         rng = range.createFromNode(dom.ancestor(rng.sc, dom.isAnchor));
@@ -6034,11 +6034,11 @@ var Editor_Editor = /*#__PURE__*/function () {
         }
 
         if ($target && $target.length) {
-          var className = $target[0].className || '';
+          let className = $target[0].className || '';
 
           if (className) {
-            var currentRange = this.createRange();
-            var $parent = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()([currentRange.sc, currentRange.ec]).closest(tagName);
+            let currentRange = this.createRange();
+            let $parent = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()([currentRange.sc, currentRange.ec]).closest(tagName);
             $parent.addClass(className);
           }
         }
@@ -6052,16 +6052,16 @@ var Editor_Editor = /*#__PURE__*/function () {
   }, {
     key: "fontStyling",
     value: function fontStyling(target, value) {
-      var rng = this.getLastRange();
+      let rng = this.getLastRange();
 
       if (rng !== '') {
-        var spans = this.style.styleNodes(rng);
+        let spans = this.style.styleNodes(rng);
         this.$editor.find('.note-status-output').html('');
         external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(spans).css(target, value); // [workaround] added styled bogus span for style
         //  - also bogus character needed for cursor position
 
         if (rng.isCollapsed()) {
-          var firstSpan = lists.head(spans);
+          let firstSpan = lists.head(spans);
 
           if (firstSpan && !dom.nodeLength(firstSpan)) {
             firstSpan.innerHTML = dom.ZERO_WIDTH_NBSP_CHAR;
@@ -6073,7 +6073,7 @@ var Editor_Editor = /*#__PURE__*/function () {
           this.setLastRange(this.createRangeFromList(spans).select());
         }
       } else {
-        var noteStatusOutput = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default.a.now();
+        let noteStatusOutput = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default.a.now();
         this.$editor.find('.note-status-output').html('<div id="note-status-output-' + noteStatusOutput + '" class="alert alert-info">' + this.lang.output.noSelection + '</div>');
         setTimeout(function () {
           external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()('#note-status-output-' + noteStatusOutput).remove();
@@ -6089,10 +6089,10 @@ var Editor_Editor = /*#__PURE__*/function () {
   }, {
     key: "unlink",
     value: function unlink() {
-      var rng = this.getLastRange();
+      let rng = this.getLastRange();
 
       if (rng.isOnAnchor()) {
-        var anchor = dom.ancestor(rng.sc, dom.isAnchor);
+        let anchor = dom.ancestor(rng.sc, dom.isAnchor);
         rng = range.createFromNode(anchor);
         rng.select();
         this.setLastRange();
@@ -6114,10 +6114,10 @@ var Editor_Editor = /*#__PURE__*/function () {
   }, {
     key: "getLinkInfo",
     value: function getLinkInfo() {
-      var rng = this.getLastRange().expand(dom.isAnchor); // Get the first anchor on range(for edit).
+      let rng = this.getLastRange().expand(dom.isAnchor); // Get the first anchor on range(for edit).
 
-      var $anchor = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(lists.head(rng.nodes(dom.isAnchor)));
-      var linkInfo = {
+      let $anchor = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(lists.head(rng.nodes(dom.isAnchor)));
+      let linkInfo = {
         range: rng,
         text: rng.toString(),
         url: $anchor.length ? $anchor.attr('href') : ''
@@ -6133,7 +6133,7 @@ var Editor_Editor = /*#__PURE__*/function () {
   }, {
     key: "addRow",
     value: function addRow(position) {
-      var rng = this.getLastRange(this.$editable);
+      let rng = this.getLastRange(this.$editable);
 
       if (rng.isCollapsed() && rng.isOnCell()) {
         this.beforeCommand();
@@ -6144,7 +6144,7 @@ var Editor_Editor = /*#__PURE__*/function () {
   }, {
     key: "addCol",
     value: function addCol(position) {
-      var rng = this.getLastRange(this.$editable);
+      let rng = this.getLastRange(this.$editable);
 
       if (rng.isCollapsed() && rng.isOnCell()) {
         this.beforeCommand();
@@ -6155,7 +6155,7 @@ var Editor_Editor = /*#__PURE__*/function () {
   }, {
     key: "deleteRow",
     value: function deleteRow() {
-      var rng = this.getLastRange(this.$editable);
+      let rng = this.getLastRange(this.$editable);
 
       if (rng.isCollapsed() && rng.isOnCell()) {
         this.beforeCommand();
@@ -6166,7 +6166,7 @@ var Editor_Editor = /*#__PURE__*/function () {
   }, {
     key: "deleteCol",
     value: function deleteCol() {
-      var rng = this.getLastRange(this.$editable);
+      let rng = this.getLastRange(this.$editable);
 
       if (rng.isCollapsed() && rng.isOnCell()) {
         this.beforeCommand();
@@ -6177,7 +6177,7 @@ var Editor_Editor = /*#__PURE__*/function () {
   }, {
     key: "deleteTable",
     value: function deleteTable() {
-      var rng = this.getLastRange(this.$editable);
+      let rng = this.getLastRange(this.$editable);
 
       if (rng.isCollapsed() && rng.isOnCell()) {
         this.beforeCommand();
@@ -6194,11 +6194,11 @@ var Editor_Editor = /*#__PURE__*/function () {
   }, {
     key: "resizeTo",
     value: function resizeTo(pos, $target, bKeepRatio) {
-      var imageSize;
+      let imageSize;
 
       if (bKeepRatio) {
-        var newRatio = pos.y / pos.x;
-        var ratio = $target.data('ratio');
+        let newRatio = pos.y / pos.x;
+        let ratio = $target.data('ratio');
         imageSize = {
           width: ratio > newRatio ? pos.x : pos.y / ratio,
           height: ratio > newRatio ? pos.x * ratio : pos.y
@@ -6271,13 +6271,13 @@ var Editor_Editor = /*#__PURE__*/function () {
 // CONCATENATED MODULE: ./src/js/base/module/Clipboard.js
 function Clipboard_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-function Clipboard_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+function Clipboard_defineProperties(target, props) { for (let i = 0; i < props.length; i++) { let descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
 function Clipboard_createClass(Constructor, protoProps, staticProps) { if (protoProps) Clipboard_defineProperties(Constructor.prototype, protoProps); if (staticProps) Clipboard_defineProperties(Constructor, staticProps); return Constructor; }
 
 
 
-var Clipboard_Clipboard = /*#__PURE__*/function () {
+let Clipboard_Clipboard = /*#__PURE__*/function () {
   function Clipboard(context) {
     Clipboard_classCallCheck(this, Clipboard);
 
@@ -6299,12 +6299,12 @@ var Clipboard_Clipboard = /*#__PURE__*/function () {
   }, {
     key: "pasteByEvent",
     value: function pasteByEvent(event) {
-      var _this = this;
+      let _this = this;
 
-      var clipboardData = event.originalEvent.clipboardData;
+      let clipboardData = event.originalEvent.clipboardData;
 
       if (clipboardData && clipboardData.items && clipboardData.items.length) {
-        var item = clipboardData.items.length > 1 ? clipboardData.items[1] : lists.head(clipboardData.items);
+        let item = clipboardData.items.length > 1 ? clipboardData.items[1] : lists.head(clipboardData.items);
 
         if (item.kind === 'file' && item.type.indexOf('image/') !== -1) {
           // paste img file
@@ -6318,7 +6318,7 @@ var Clipboard_Clipboard = /*#__PURE__*/function () {
         }
       } else if (window.clipboardData) {
         // for IE
-        var text = window.clipboardData.getData('text');
+        let text = window.clipboardData.getData('text');
 
         if (this.context.invoke('editor.isLimited', text.length)) {
           event.preventDefault();
@@ -6339,13 +6339,13 @@ var Clipboard_Clipboard = /*#__PURE__*/function () {
 // CONCATENATED MODULE: ./src/js/base/module/Dropzone.js
 function Dropzone_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-function Dropzone_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+function Dropzone_defineProperties(target, props) { for (let i = 0; i < props.length; i++) { let descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
 function Dropzone_createClass(Constructor, protoProps, staticProps) { if (protoProps) Dropzone_defineProperties(Constructor.prototype, protoProps); if (staticProps) Dropzone_defineProperties(Constructor, staticProps); return Constructor; }
 
 
 
-var Dropzone_Dropzone = /*#__PURE__*/function () {
+let Dropzone_Dropzone = /*#__PURE__*/function () {
   function Dropzone(context) {
     Dropzone_classCallCheck(this, Dropzone);
 
@@ -6386,15 +6386,15 @@ var Dropzone_Dropzone = /*#__PURE__*/function () {
   }, {
     key: "attachDragAndDropEvent",
     value: function attachDragAndDropEvent() {
-      var _this = this;
+      let _this = this;
 
-      var collection = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()();
-      var $dropzoneMessage = this.$dropzone.find('.note-dropzone-message');
+      let collection = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()();
+      let $dropzoneMessage = this.$dropzone.find('.note-dropzone-message');
 
       this.documentEventHandlers.onDragenter = function (e) {
-        var isCodeview = _this.context.invoke('codeview.isActivated');
+        let isCodeview = _this.context.invoke('codeview.isActivated');
 
-        var hasEditorSize = _this.$editor.width() > 0 && _this.$editor.height() > 0;
+        let hasEditorSize = _this.$editor.width() > 0 && _this.$editor.height() > 0;
 
         if (!isCodeview && !collection.length && hasEditorSize) {
           _this.$editor.addClass('dragover');
@@ -6440,7 +6440,7 @@ var Dropzone_Dropzone = /*#__PURE__*/function () {
       }); // attach dropImage
 
       this.$dropzone.on('drop', function (event) {
-        var dataTransfer = event.originalEvent.dataTransfer; // stop the browser from opening the dropped content
+        let dataTransfer = event.originalEvent.dataTransfer; // stop the browser from opening the dropped content
 
         event.preventDefault();
 
@@ -6455,7 +6455,7 @@ var Dropzone_Dropzone = /*#__PURE__*/function () {
               return;
             }
 
-            var content = dataTransfer.getData(type);
+            let content = dataTransfer.getData(type);
 
             if (type.toLowerCase().indexOf('text') > -1) {
               _this.context.invoke('editor.pasteHTML', content);
@@ -6471,7 +6471,7 @@ var Dropzone_Dropzone = /*#__PURE__*/function () {
   }, {
     key: "destroy",
     value: function destroy() {
-      var _this2 = this;
+      let _this2 = this;
 
       Object.keys(this.documentEventHandlers).forEach(function (key) {
         _this2.$eventListener.off(key.substr(2).toLowerCase(), _this2.documentEventHandlers[key]);
@@ -6485,15 +6485,15 @@ var Dropzone_Dropzone = /*#__PURE__*/function () {
 
 
 // CONCATENATED MODULE: ./src/js/base/module/Codeview.js
-function _createForOfIteratorHelper(o) { if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) { if (Array.isArray(o) || (o = _unsupportedIterableToArray(o))) { var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var it, normalCompletion = true, didErr = false, err; return { s: function s() { it = o[Symbol.iterator](); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
+function _createForOfIteratorHelper(o) { if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) { if (Array.isArray(o) || (o = _unsupportedIterableToArray(o))) { let i = 0; let F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } let it, normalCompletion = true, didErr = false, err; return { s: function s() { it = o[Symbol.iterator](); }, n: function n() { let step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
 
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(n); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); let n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(n); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
 
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (let i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
 
 function Codeview_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-function Codeview_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+function Codeview_defineProperties(target, props) { for (let i = 0; i < props.length; i++) { let descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
 function Codeview_createClass(Constructor, protoProps, staticProps) { if (protoProps) Codeview_defineProperties(Constructor.prototype, protoProps); if (staticProps) Codeview_defineProperties(Constructor, staticProps); return Constructor; }
 
@@ -6503,7 +6503,7 @@ function Codeview_createClass(Constructor, protoProps, staticProps) { if (protoP
  * @class Codeview
  */
 
-var Codeview_CodeView = /*#__PURE__*/function () {
+let Codeview_CodeView = /*#__PURE__*/function () {
   function CodeView(context) {
     Codeview_classCallCheck(this, CodeView);
 
@@ -6522,8 +6522,8 @@ var Codeview_CodeView = /*#__PURE__*/function () {
   Codeview_createClass(CodeView, [{
     key: "sync",
     value: function sync(html) {
-      var isCodeview = this.isActivated();
-      var CodeMirror = this.CodeMirrorConstructor;
+      let isCodeview = this.isActivated();
+      let CodeMirror = this.CodeMirrorConstructor;
 
       if (isCodeview) {
         if (html) {
@@ -6542,7 +6542,7 @@ var Codeview_CodeView = /*#__PURE__*/function () {
   }, {
     key: "initialize",
     value: function initialize() {
-      var _this = this;
+      let _this = this;
 
       this.$codable.on('keyup', function (event) {
         if (event.keyCode === core_key.code.ESCAPE) {
@@ -6588,19 +6588,19 @@ var Codeview_CodeView = /*#__PURE__*/function () {
         value = value.replace(this.options.codeviewFilterRegex, ''); // allow specific iframe tag
 
         if (this.options.codeviewIframeFilter) {
-          var whitelist = this.options.codeviewIframeWhitelistSrc.concat(this.options.codeviewIframeWhitelistSrcBase);
+          let whitelist = this.options.codeviewIframeWhitelistSrc.concat(this.options.codeviewIframeWhitelistSrcBase);
           value = value.replace(/(<iframe.*?>.*?(?:<\/iframe>)?)/gi, function (tag) {
             // remove if src attribute is duplicated
             if (/<.+src(?==?('|"|\s)?)[\s\S]+src(?=('|"|\s)?)[^>]*?>/i.test(tag)) {
               return '';
             }
 
-            var _iterator = _createForOfIteratorHelper(whitelist),
+            let _iterator = _createForOfIteratorHelper(whitelist),
                 _step;
 
             try {
               for (_iterator.s(); !(_step = _iterator.n()).done;) {
-                var src = _step.value;
+                let src = _step.value;
 
                 // pass if src is trusted
                 if (new RegExp('src="(https?:)?\/\/' + src.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&') + '\/(.+)"').test(tag)) {
@@ -6627,9 +6627,9 @@ var Codeview_CodeView = /*#__PURE__*/function () {
   }, {
     key: "activate",
     value: function activate() {
-      var _this2 = this;
+      let _this2 = this;
 
-      var CodeMirror = this.CodeMirrorConstructor;
+      let CodeMirror = this.CodeMirrorConstructor;
       this.$codable.val(dom.html(this.$editable, this.options.prettifyHtml));
       this.$codable.height(this.$editable.height());
       this.context.invoke('toolbar.updateCodeview', true);
@@ -6638,10 +6638,10 @@ var Codeview_CodeView = /*#__PURE__*/function () {
       this.$codable.focus(); // activate CodeMirror as codable
 
       if (CodeMirror) {
-        var cmEditor = CodeMirror.fromTextArea(this.$codable[0], this.options.codemirror); // CodeMirror TernServer
+        let cmEditor = CodeMirror.fromTextArea(this.$codable[0], this.options.codemirror); // CodeMirror TernServer
 
         if (this.options.codemirror.tern) {
-          var server = new CodeMirror.TernServer(this.options.codemirror.tern);
+          let server = new CodeMirror.TernServer(this.options.codemirror.tern);
           cmEditor.ternServer = server;
           cmEditor.on('cursorActivity', function (cm) {
             server.updateArgHints(cm);
@@ -6673,16 +6673,16 @@ var Codeview_CodeView = /*#__PURE__*/function () {
   }, {
     key: "deactivate",
     value: function deactivate() {
-      var CodeMirror = this.CodeMirrorConstructor; // deactivate CodeMirror as codable
+      let CodeMirror = this.CodeMirrorConstructor; // deactivate CodeMirror as codable
 
       if (CodeMirror) {
-        var cmEditor = this.$codable.data('cmEditor');
+        let cmEditor = this.$codable.data('cmEditor');
         this.$codable.val(cmEditor.getValue());
         cmEditor.toTextArea();
       }
 
-      var value = this.purify(dom.value(this.$codable, this.options.prettifyHtml) || dom.emptyPara);
-      var isChange = this.$editable.html() !== value;
+      let value = this.purify(dom.value(this.$codable, this.options.prettifyHtml) || dom.emptyPara);
+      let isChange = this.$editable.html() !== value;
       this.$editable.html(value);
       this.$editable.height(this.options.height ? this.$codable.height() : 'auto');
       this.$editor.removeClass('codeview');
@@ -6711,14 +6711,14 @@ var Codeview_CodeView = /*#__PURE__*/function () {
 // CONCATENATED MODULE: ./src/js/base/module/Statusbar.js
 function Statusbar_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-function Statusbar_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+function Statusbar_defineProperties(target, props) { for (let i = 0; i < props.length; i++) { let descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
 function Statusbar_createClass(Constructor, protoProps, staticProps) { if (protoProps) Statusbar_defineProperties(Constructor.prototype, protoProps); if (staticProps) Statusbar_defineProperties(Constructor, staticProps); return Constructor; }
 
 
-var EDITABLE_PADDING = 24;
+let EDITABLE_PADDING = 24;
 
-var Statusbar_Statusbar = /*#__PURE__*/function () {
+let Statusbar_Statusbar = /*#__PURE__*/function () {
   function Statusbar(context) {
     Statusbar_classCallCheck(this, Statusbar);
 
@@ -6731,7 +6731,7 @@ var Statusbar_Statusbar = /*#__PURE__*/function () {
   Statusbar_createClass(Statusbar, [{
     key: "initialize",
     value: function initialize() {
-      var _this = this;
+      let _this = this;
 
       if (this.options.airMode || this.options.disableResizeEditor) {
         this.destroy();
@@ -6742,10 +6742,10 @@ var Statusbar_Statusbar = /*#__PURE__*/function () {
         event.preventDefault();
         event.stopPropagation();
 
-        var editableTop = _this.$editable.offset().top - _this.$document.scrollTop();
+        let editableTop = _this.$editable.offset().top - _this.$document.scrollTop();
 
-        var onMouseMove = function onMouseMove(event) {
-          var height = event.clientY - (editableTop + EDITABLE_PADDING);
+        let onMouseMove = function onMouseMove(event) {
+          let height = event.clientY - (editableTop + EDITABLE_PADDING);
           height = _this.options.minheight > 0 ? Math.max(height, _this.options.minheight) : height;
           height = _this.options.maxHeight > 0 ? Math.min(height, _this.options.maxHeight) : height;
 
@@ -6772,15 +6772,15 @@ var Statusbar_Statusbar = /*#__PURE__*/function () {
 // CONCATENATED MODULE: ./src/js/base/module/Fullscreen.js
 function Fullscreen_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-function Fullscreen_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+function Fullscreen_defineProperties(target, props) { for (let i = 0; i < props.length; i++) { let descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
 function Fullscreen_createClass(Constructor, protoProps, staticProps) { if (protoProps) Fullscreen_defineProperties(Constructor.prototype, protoProps); if (staticProps) Fullscreen_defineProperties(Constructor, staticProps); return Constructor; }
 
 
 
-var Fullscreen_Fullscreen = /*#__PURE__*/function () {
+let Fullscreen_Fullscreen = /*#__PURE__*/function () {
   function Fullscreen(context) {
-    var _this = this;
+    let _this = this;
 
     Fullscreen_classCallCheck(this, Fullscreen);
 
@@ -6849,16 +6849,16 @@ var Fullscreen_Fullscreen = /*#__PURE__*/function () {
 // CONCATENATED MODULE: ./src/js/base/module/Handle.js
 function Handle_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-function Handle_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+function Handle_defineProperties(target, props) { for (let i = 0; i < props.length; i++) { let descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
 function Handle_createClass(Constructor, protoProps, staticProps) { if (protoProps) Handle_defineProperties(Constructor.prototype, protoProps); if (staticProps) Handle_defineProperties(Constructor, staticProps); return Constructor; }
 
 
 
 
-var Handle_Handle = /*#__PURE__*/function () {
+let Handle_Handle = /*#__PURE__*/function () {
   function Handle(context) {
-    var _this = this;
+    let _this = this;
 
     Handle_classCallCheck(this, Handle);
 
@@ -6888,7 +6888,7 @@ var Handle_Handle = /*#__PURE__*/function () {
   Handle_createClass(Handle, [{
     key: "initialize",
     value: function initialize() {
-      var _this2 = this;
+      let _this2 = this;
 
       this.$handle = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(['<div class="note-handle">', '<div class="note-control-selection">', '<div class="note-control-selection-bg"></div>', '<div class="note-control-holder note-control-nw"></div>', '<div class="note-control-holder note-control-ne"></div>', '<div class="note-control-holder note-control-sw"></div>', '<div class="', this.options.disableResizeImage ? 'note-control-holder' : 'note-control-sizing', ' note-control-se"></div>', this.options.disableResizeImage ? '' : '<div class="note-control-selection-info"></div>', '</div>', '</div>'].join('')).prependTo(this.$editingArea);
       this.$handle.on('mousedown', function (event) {
@@ -6896,13 +6896,13 @@ var Handle_Handle = /*#__PURE__*/function () {
           event.preventDefault();
           event.stopPropagation();
 
-          var $target = _this2.$handle.find('.note-control-selection').data('target');
+          let $target = _this2.$handle.find('.note-control-selection').data('target');
 
-          var posStart = $target.offset();
+          let posStart = $target.offset();
 
-          var scrollTop = _this2.$document.scrollTop();
+          let scrollTop = _this2.$document.scrollTop();
 
-          var onMouseMove = function onMouseMove(event) {
+          let onMouseMove = function onMouseMove(event) {
             _this2.context.invoke('editor.resizeTo', {
               x: event.clientX - posStart.left,
               y: event.clientY - (posStart.top - scrollTop)
@@ -6944,19 +6944,18 @@ var Handle_Handle = /*#__PURE__*/function () {
         return false;
       }
 
-      var isImage = dom.isImg(target);
-      var $selection = this.$handle.find('.note-control-selection');
+      let isImage = dom.isImg(target);
+      let $selection = this.$handle.find('.note-control-selection');
       this.context.invoke('imagePopover.update', target, event);
 
       if (isImage) {
-        var $image = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(target);
-        var position = $image.position();
-        var pos = {
+        let $image = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(target);
+        let position = $image.position();
+        let pos = {
           left: position.left + parseInt($image.css('marginLeft'), 10),
           top: position.top + parseInt($image.css('marginTop'), 10)
         }; // exclude margin
-
-        var imageSize = {
+        let imageSize = {
           w: $image.outerWidth(false),
           h: $image.outerHeight(false)
         };
@@ -6967,10 +6966,11 @@ var Handle_Handle = /*#__PURE__*/function () {
           width: imageSize.w,
           height: imageSize.h
         }).data('target', $image); // save current image element.
-
-        var origImageObj = new Image();
+        let origImageObj = new Image();
         origImageObj.src = $image.attr('src');
-        var sizingText = imageSize.w + 'x' + imageSize.h + ' (' + this.lang.image.original + ': ' + origImageObj.width + 'x' + origImageObj.height + ')';
+
+        $image.wrap('<a data-fancybox="gallery" href='+$image.attr('src')+'></a>');
+        let sizingText = imageSize.w + 'x' + imageSize.h + ' (' + this.lang.image.original + ': ' + origImageObj.width + 'x' + origImageObj.height + ')';
         $selection.find('.note-control-selection-info').text(sizingText);
         this.context.invoke('editor.saveTarget', target);
       } else {
@@ -7000,19 +7000,19 @@ var Handle_Handle = /*#__PURE__*/function () {
 // CONCATENATED MODULE: ./src/js/base/module/AutoLink.js
 function AutoLink_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-function AutoLink_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+function AutoLink_defineProperties(target, props) { for (let i = 0; i < props.length; i++) { let descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
 function AutoLink_createClass(Constructor, protoProps, staticProps) { if (protoProps) AutoLink_defineProperties(Constructor.prototype, protoProps); if (staticProps) AutoLink_defineProperties(Constructor, staticProps); return Constructor; }
 
 
 
 
-var defaultScheme = 'http://';
-var linkPattern = /^([A-Za-z][A-Za-z0-9+-.]*\:[\/]{2}|tel:|mailto:[A-Z0-9._%+-]+@)?(www\.)?(.+)$/i;
+let defaultScheme = 'http://';
+let linkPattern = /^([A-Za-z][A-Za-z0-9+-.]*\:[\/]{2}|tel:|mailto:[A-Z0-9._%+-]+@)?(www\.)?(.+)$/i;
 
-var AutoLink_AutoLink = /*#__PURE__*/function () {
+let AutoLink_AutoLink = /*#__PURE__*/function () {
   function AutoLink(context) {
-    var _this = this;
+    let _this = this;
 
     AutoLink_classCallCheck(this, AutoLink);
 
@@ -7047,13 +7047,13 @@ var AutoLink_AutoLink = /*#__PURE__*/function () {
         return;
       }
 
-      var keyword = this.lastWordRange.toString();
-      var match = keyword.match(linkPattern);
+      let keyword = this.lastWordRange.toString();
+      let match = keyword.match(linkPattern);
 
       if (match && (match[1] || match[2])) {
-        var link = match[1] ? keyword : defaultScheme + keyword;
-        var urlText = this.options.showDomainOnlyForAutolink ? keyword.replace(/^(?:https?:\/\/)?(?:tel?:?)?(?:mailto?:?)?(?:www\.)?/i, '').split('/')[0] : keyword;
-        var node = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()('<a />').html(urlText).attr('href', link)[0];
+        let link = match[1] ? keyword : defaultScheme + keyword;
+        let urlText = this.options.showDomainOnlyForAutolink ? keyword.replace(/^(?:https?:\/\/)?(?:tel?:?)?(?:mailto?:?)?(?:www\.)?/i, '').split('/')[0] : keyword;
+        let node = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()('<a />').html(urlText).attr('href', link)[0];
 
         if (this.context.options.linkTargetBlank) {
           external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(node).attr('target', '_blank');
@@ -7068,7 +7068,7 @@ var AutoLink_AutoLink = /*#__PURE__*/function () {
     key: "handleKeydown",
     value: function handleKeydown(e) {
       if (lists.contains([core_key.code.ENTER, core_key.code.SPACE], e.keyCode)) {
-        var wordRange = this.context.invoke('editor.createRange').getWordRange();
+        let wordRange = this.context.invoke('editor.createRange').getWordRange();
         this.lastWordRange = wordRange;
       }
     }
@@ -7088,7 +7088,7 @@ var AutoLink_AutoLink = /*#__PURE__*/function () {
 // CONCATENATED MODULE: ./src/js/base/module/AutoSync.js
 function AutoSync_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-function AutoSync_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+function AutoSync_defineProperties(target, props) { for (let i = 0; i < props.length; i++) { let descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
 function AutoSync_createClass(Constructor, protoProps, staticProps) { if (protoProps) AutoSync_defineProperties(Constructor.prototype, protoProps); if (staticProps) AutoSync_defineProperties(Constructor, staticProps); return Constructor; }
 
@@ -7097,9 +7097,9 @@ function AutoSync_createClass(Constructor, protoProps, staticProps) { if (protoP
  * textarea auto sync.
  */
 
-var AutoSync_AutoSync = /*#__PURE__*/function () {
+let AutoSync_AutoSync = /*#__PURE__*/function () {
   function AutoSync(context) {
-    var _this = this;
+    let _this = this;
 
     AutoSync_classCallCheck(this, AutoSync);
 
@@ -7125,7 +7125,7 @@ var AutoSync_AutoSync = /*#__PURE__*/function () {
 // CONCATENATED MODULE: ./src/js/base/module/AutoReplace.js
 function AutoReplace_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-function AutoReplace_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+function AutoReplace_defineProperties(target, props) { for (let i = 0; i < props.length; i++) { let descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
 function AutoReplace_createClass(Constructor, protoProps, staticProps) { if (protoProps) AutoReplace_defineProperties(Constructor.prototype, protoProps); if (staticProps) AutoReplace_defineProperties(Constructor, staticProps); return Constructor; }
 
@@ -7133,9 +7133,9 @@ function AutoReplace_createClass(Constructor, protoProps, staticProps) { if (pro
 
 
 
-var AutoReplace_AutoReplace = /*#__PURE__*/function () {
+let AutoReplace_AutoReplace = /*#__PURE__*/function () {
   function AutoReplace(context) {
-    var _this = this;
+    let _this = this;
 
     AutoReplace_classCallCheck(this, AutoReplace);
 
@@ -7177,11 +7177,11 @@ var AutoReplace_AutoReplace = /*#__PURE__*/function () {
         return;
       }
 
-      var self = this;
-      var keyword = this.lastWord.toString();
+      let self = this;
+      let keyword = this.lastWord.toString();
       this.options.match(keyword, function (match) {
         if (match) {
-          var node = '';
+          let node = '';
 
           if (typeof match === 'string') {
             node = dom.createText(match);
@@ -7209,7 +7209,7 @@ var AutoReplace_AutoReplace = /*#__PURE__*/function () {
       }
 
       if (lists.contains(this.keys, e.keyCode)) {
-        var wordRange = this.context.invoke('editor.createRange').getWordRange();
+        let wordRange = this.context.invoke('editor.createRange').getWordRange();
         this.lastWord = wordRange;
       }
 
@@ -7231,15 +7231,15 @@ var AutoReplace_AutoReplace = /*#__PURE__*/function () {
 // CONCATENATED MODULE: ./src/js/base/module/Placeholder.js
 function Placeholder_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-function Placeholder_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+function Placeholder_defineProperties(target, props) { for (let i = 0; i < props.length; i++) { let descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
 function Placeholder_createClass(Constructor, protoProps, staticProps) { if (protoProps) Placeholder_defineProperties(Constructor.prototype, protoProps); if (staticProps) Placeholder_defineProperties(Constructor, staticProps); return Constructor; }
 
 
 
-var Placeholder_Placeholder = /*#__PURE__*/function () {
+let Placeholder_Placeholder = /*#__PURE__*/function () {
   function Placeholder(context) {
-    var _this = this;
+    let _this = this;
 
     Placeholder_classCallCheck(this, Placeholder);
 
@@ -7270,7 +7270,7 @@ var Placeholder_Placeholder = /*#__PURE__*/function () {
   }, {
     key: "initialize",
     value: function initialize() {
-      var _this2 = this;
+      let _this2 = this;
 
       this.$placeholder = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()('<div class="note-placeholder">');
       this.$placeholder.on('click', function () {
@@ -7286,7 +7286,7 @@ var Placeholder_Placeholder = /*#__PURE__*/function () {
   }, {
     key: "update",
     value: function update() {
-      var isShow = !this.context.invoke('codeview.isActivated') && this.context.invoke('editor.isEmpty');
+      let isShow = !this.context.invoke('codeview.isActivated') && this.context.invoke('editor.isEmpty');
       this.$placeholder.toggle(isShow);
     }
   }]);
@@ -7298,7 +7298,7 @@ var Placeholder_Placeholder = /*#__PURE__*/function () {
 // CONCATENATED MODULE: ./src/js/base/module/Buttons.js
 function Buttons_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-function Buttons_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+function Buttons_defineProperties(target, props) { for (let i = 0; i < props.length; i++) { let descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
 function Buttons_createClass(Constructor, protoProps, staticProps) { if (protoProps) Buttons_defineProperties(Constructor.prototype, protoProps); if (staticProps) Buttons_defineProperties(Constructor, staticProps); return Constructor; }
 
@@ -7307,7 +7307,7 @@ function Buttons_createClass(Constructor, protoProps, staticProps) { if (protoPr
 
 
 
-var Buttons_Buttons = /*#__PURE__*/function () {
+let Buttons_Buttons = /*#__PURE__*/function () {
   function Buttons(context) {
     Buttons_classCallCheck(this, Buttons);
 
@@ -7322,7 +7322,7 @@ var Buttons_Buttons = /*#__PURE__*/function () {
   Buttons_createClass(Buttons, [{
     key: "representShortcut",
     value: function representShortcut(editorMethod) {
-      var shortcut = this.invertedKeyMap[editorMethod];
+      let shortcut = this.invertedKeyMap[editorMethod];
 
       if (!this.options.shortcuts || !shortcut) {
         return '';
@@ -7377,7 +7377,7 @@ var Buttons_Buttons = /*#__PURE__*/function () {
   }, {
     key: "colorPalette",
     value: function colorPalette(className, tooltip, backColor, foreColor) {
-      var _this = this;
+      let _this = this;
 
       return this.ui.buttonGroup({
         className: 'note-color ' + className,
@@ -7386,7 +7386,7 @@ var Buttons_Buttons = /*#__PURE__*/function () {
           contents: this.ui.icon(this.options.icons.font + ' note-recent-color'),
           tooltip: tooltip,
           click: function click(e) {
-            var $button = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(e.currentTarget);
+            let $button = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(e.currentTarget);
 
             if (backColor && foreColor) {
               _this.context.invoke('editor.color', {
@@ -7404,7 +7404,7 @@ var Buttons_Buttons = /*#__PURE__*/function () {
             }
           },
           callback: function callback($button) {
-            var $recentColor = $button.find('.note-recent-color');
+            let $recentColor = $button.find('.note-recent-color');
 
             if (backColor) {
               $recentColor.css('background-color', _this.options.colorButton.backColor);
@@ -7430,7 +7430,7 @@ var Buttons_Buttons = /*#__PURE__*/function () {
           '<div class="note-holder-custom" id="foreColorPalette" data-event="foreColor"></div>', '</div>'].join('') : ''),
           callback: function callback($dropdown) {
             $dropdown.find('.note-holder').each(function (idx, item) {
-              var $holder = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(item);
+              let $holder = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(item);
               $holder.append(_this.ui.palette({
                 colors: _this.options.colors,
                 colorsName: _this.options.colorsName,
@@ -7441,9 +7441,9 @@ var Buttons_Buttons = /*#__PURE__*/function () {
             });
             /* TODO: do we have to record recent custom colors within cookies? */
 
-            var customColors = [['#FFFFFF', '#FFFFFF', '#FFFFFF', '#FFFFFF', '#FFFFFF', '#FFFFFF', '#FFFFFF', '#FFFFFF']];
+            let customColors = [['#FFFFFF', '#FFFFFF', '#FFFFFF', '#FFFFFF', '#FFFFFF', '#FFFFFF', '#FFFFFF', '#FFFFFF']];
             $dropdown.find('.note-holder-custom').each(function (idx, item) {
-              var $holder = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(item);
+              let $holder = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(item);
               $holder.append(_this.ui.palette({
                 colors: customColors,
                 colorsName: customColors,
@@ -7454,8 +7454,8 @@ var Buttons_Buttons = /*#__PURE__*/function () {
             });
             $dropdown.find('input[type=color]').each(function (idx, item) {
               external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(item).change(function () {
-                var $chip = $dropdown.find('#' + external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(this).data('event')).find('.note-color-btn').first();
-                var color = this.value.toUpperCase();
+                let $chip = $dropdown.find('#' + external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(this).data('event')).find('.note-color-btn').first();
+                let color = this.value.toUpperCase();
                 $chip.css('background-color', color).attr('aria-label', color).attr('data-value', color).attr('data-original-title', color);
                 $chip.click();
               });
@@ -7463,26 +7463,26 @@ var Buttons_Buttons = /*#__PURE__*/function () {
           },
           click: function click(event) {
             event.stopPropagation();
-            var $parent = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()('.' + className).find('.note-dropdown-menu');
-            var $button = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(event.target);
-            var eventName = $button.data('event');
-            var value = $button.attr('data-value');
+            let $parent = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()('.' + className).find('.note-dropdown-menu');
+            let $button = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(event.target);
+            let eventName = $button.data('event');
+            let value = $button.attr('data-value');
 
             if (eventName === 'openPalette') {
-              var $picker = $parent.find('#' + value);
-              var $palette = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()($parent.find('#' + $picker.data('event')).find('.note-color-row')[0]); // Shift palette chips
+              let $picker = $parent.find('#' + value);
+              let $palette = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()($parent.find('#' + $picker.data('event')).find('.note-color-row')[0]); // Shift palette chips
 
-              var $chip = $palette.find('.note-color-btn').last().detach(); // Set chip attributes
+              let $chip = $palette.find('.note-color-btn').last().detach(); // Set chip attributes
 
-              var color = $picker.val();
+              let color = $picker.val();
               $chip.css('background-color', color).attr('aria-label', color).attr('data-value', color).attr('data-original-title', color);
               $palette.prepend($chip);
               $picker.click();
             } else {
               if (lists.contains(['backColor', 'foreColor'], eventName)) {
-                var key = eventName === 'backColor' ? 'background-color' : 'color';
-                var $color = $button.closest('.note-color').find('.note-recent-color');
-                var $currentButton = $button.closest('.note-color').find('.note-current-color-button');
+                let key = eventName === 'backColor' ? 'background-color' : 'color';
+                let $color = $button.closest('.note-color').find('.note-recent-color');
+                let $currentButton = $button.closest('.note-color').find('.note-current-color-button');
                 $color.css(key, value);
                 $currentButton.attr('data-' + eventName, value);
               }
@@ -7496,7 +7496,7 @@ var Buttons_Buttons = /*#__PURE__*/function () {
   }, {
     key: "addToolbarButtons",
     value: function addToolbarButtons() {
-      var _this2 = this;
+      let _this2 = this;
 
       this.context.memo('button.style', function () {
         return _this2.ui.buttonGroup([_this2.button({
@@ -7519,18 +7519,18 @@ var Buttons_Buttons = /*#__PURE__*/function () {
               };
             }
 
-            var tag = item.tag;
-            var title = item.title;
-            var style = item.style ? ' style="' + item.style + '" ' : '';
-            var className = item.className ? ' class="' + item.className + '"' : '';
+            let tag = item.tag;
+            let title = item.title;
+            let style = item.style ? ' style="' + item.style + '" ' : '';
+            let className = item.className ? ' class="' + item.className + '"' : '';
             return '<' + tag + style + className + '>' + title + '</' + tag + '>';
           },
           click: _this2.context.createInvokeHandler('editor.formatBlock')
         })]).render();
       });
 
-      var _loop = function _loop(styleIdx, styleLen) {
-        var item = _this2.options.styleTags[styleIdx];
+      let _loop = function _loop(styleIdx, styleLen) {
+        let item = _this2.options.styleTags[styleIdx];
 
         _this2.context.memo('button.style.' + item, function () {
           return _this2.button({
@@ -7542,7 +7542,7 @@ var Buttons_Buttons = /*#__PURE__*/function () {
         });
       };
 
-      for (var styleIdx = 0, styleLen = this.options.styleTags.length; styleIdx < styleLen; styleIdx++) {
+      for (let styleIdx = 0, styleLen = this.options.styleTags.length; styleIdx < styleLen; styleIdx++) {
         _loop(styleIdx, styleLen);
       }
 
@@ -7602,7 +7602,7 @@ var Buttons_Buttons = /*#__PURE__*/function () {
         }).render();
       });
       this.context.memo('button.fontname', function () {
-        var styleInfo = _this2.context.invoke('editor.currentStyle');
+        let styleInfo = _this2.context.invoke('editor.currentStyle');
 
         if (_this2.options.addDefaultFonts) {
           // Add 'default' fonts into the fontnames array if not exist
@@ -7690,32 +7690,32 @@ var Buttons_Buttons = /*#__PURE__*/function () {
           click: _this2.context.createInvokeHandler('editor.insertOrderedList')
         }).render();
       });
-      var justifyLeft = this.button({
+      let justifyLeft = this.button({
         contents: this.ui.icon(this.options.icons.alignLeft),
         tooltip: this.lang.paragraph.left + this.representShortcut('justifyLeft'),
         click: this.context.createInvokeHandler('editor.justifyLeft')
       });
-      var justifyCenter = this.button({
+      let justifyCenter = this.button({
         contents: this.ui.icon(this.options.icons.alignCenter),
         tooltip: this.lang.paragraph.center + this.representShortcut('justifyCenter'),
         click: this.context.createInvokeHandler('editor.justifyCenter')
       });
-      var justifyRight = this.button({
+      let justifyRight = this.button({
         contents: this.ui.icon(this.options.icons.alignRight),
         tooltip: this.lang.paragraph.right + this.representShortcut('justifyRight'),
         click: this.context.createInvokeHandler('editor.justifyRight')
       });
-      var justifyFull = this.button({
+      let justifyFull = this.button({
         contents: this.ui.icon(this.options.icons.alignJustify),
         tooltip: this.lang.paragraph.justify + this.representShortcut('justifyFull'),
         click: this.context.createInvokeHandler('editor.justifyFull')
       });
-      var outdent = this.button({
+      let outdent = this.button({
         contents: this.ui.icon(this.options.icons.outdent),
         tooltip: this.lang.paragraph.outdent + this.representShortcut('outdent'),
         click: this.context.createInvokeHandler('editor.outdent')
       });
-      var indent = this.button({
+      let indent = this.button({
         contents: this.ui.icon(this.options.icons.indent),
         tooltip: this.lang.paragraph.indent + this.representShortcut('indent'),
         click: this.context.createInvokeHandler('editor.indent')
@@ -7772,7 +7772,7 @@ var Buttons_Buttons = /*#__PURE__*/function () {
           items: ['<div class="note-dimension-picker">', '<div class="note-dimension-picker-mousecatcher" data-event="insertTable" data-value="1x1"></div>', '<div class="note-dimension-picker-highlighted"></div>', '<div class="note-dimension-picker-unhighlighted"></div>', '</div>', '<div class="note-dimension-display">1 x 1</div>'].join('')
         })], {
           callback: function callback($node) {
-            var $catcher = $node.find('.note-dimension-picker-mousecatcher');
+            let $catcher = $node.find('.note-dimension-picker-mousecatcher');
             $catcher.css({
               width: _this2.options.insertTableMaxSize.col + 'em',
               height: _this2.options.insertTableMaxSize.row + 'em'
@@ -7857,7 +7857,7 @@ var Buttons_Buttons = /*#__PURE__*/function () {
   }, {
     key: "addImagePopoverButtons",
     value: function addImagePopoverButtons() {
-      var _this3 = this;
+      let _this3 = this;
 
       // Image Size Buttons
       this.context.memo('button.resizeFull', function () {
@@ -7922,7 +7922,7 @@ var Buttons_Buttons = /*#__PURE__*/function () {
   }, {
     key: "addLinkPopoverButtons",
     value: function addLinkPopoverButtons() {
-      var _this4 = this;
+      let _this4 = this;
 
       this.context.memo('button.linkDialogShow', function () {
         return _this4.button({
@@ -7949,7 +7949,7 @@ var Buttons_Buttons = /*#__PURE__*/function () {
   }, {
     key: "addTablePopoverButtons",
     value: function addTablePopoverButtons() {
-      var _this5 = this;
+      let _this5 = this;
 
       this.context.memo('button.addRowUp', function () {
         return _this5.button({
@@ -8011,16 +8011,16 @@ var Buttons_Buttons = /*#__PURE__*/function () {
   }, {
     key: "build",
     value: function build($container, groups) {
-      for (var groupIdx = 0, groupLen = groups.length; groupIdx < groupLen; groupIdx++) {
-        var group = groups[groupIdx];
-        var groupName = Array.isArray(group) ? group[0] : group;
-        var buttons = Array.isArray(group) ? group.length === 1 ? [group[0]] : group[1] : [group];
-        var $group = this.ui.buttonGroup({
+      for (let groupIdx = 0, groupLen = groups.length; groupIdx < groupLen; groupIdx++) {
+        let group = groups[groupIdx];
+        let groupName = Array.isArray(group) ? group[0] : group;
+        let buttons = Array.isArray(group) ? group.length === 1 ? [group[0]] : group[1] : [group];
+        let $group = this.ui.buttonGroup({
           className: 'note-' + groupName
         }).render();
 
-        for (var idx = 0, len = buttons.length; idx < len; idx++) {
-          var btn = this.context.memo('button.' + buttons[idx]);
+        for (let idx = 0, len = buttons.length; idx < len; idx++) {
+          let btn = this.context.memo('button.' + buttons[idx]);
 
           if (btn) {
             $group.append(typeof btn === 'function' ? btn(this.context) : btn);
@@ -8037,10 +8037,10 @@ var Buttons_Buttons = /*#__PURE__*/function () {
   }, {
     key: "updateCurrentStyle",
     value: function updateCurrentStyle($container) {
-      var _this6 = this;
+      let _this6 = this;
 
-      var $cont = $container || this.$toolbar;
-      var styleInfo = this.context.invoke('editor.currentStyle');
+      let $cont = $container || this.$toolbar;
+      let styleInfo = this.context.invoke('editor.currentStyle');
       this.updateBtnStates($cont, {
         '.note-btn-bold': function noteBtnBold() {
           return styleInfo['font-bold'] === 'bold';
@@ -8063,42 +8063,42 @@ var Buttons_Buttons = /*#__PURE__*/function () {
       });
 
       if (styleInfo['font-family']) {
-        var fontNames = styleInfo['font-family'].split(',').map(function (name) {
+        let fontNames = styleInfo['font-family'].split(',').map(function (name) {
           return name.replace(/[\'\"]/g, '').replace(/\s+$/, '').replace(/^\s+/, '');
         });
-        var fontName = lists.find(fontNames, this.isFontInstalled.bind(this));
+        let fontName = lists.find(fontNames, this.isFontInstalled.bind(this));
         $cont.find('.dropdown-fontname a').each(function (idx, item) {
-          var $item = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(item); // always compare string to avoid creating another func.
+          let $item = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(item); // always compare string to avoid creating another func.
 
-          var isChecked = $item.data('value') + '' === fontName + '';
+          let isChecked = $item.data('value') + '' === fontName + '';
           $item.toggleClass('checked', isChecked);
         });
         $cont.find('.note-current-fontname').text(fontName).css('font-family', fontName);
       }
 
       if (styleInfo['font-size']) {
-        var fontSize = styleInfo['font-size'];
+        let fontSize = styleInfo['font-size'];
         $cont.find('.dropdown-fontsize a').each(function (idx, item) {
-          var $item = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(item); // always compare with string to avoid creating another func.
+          let $item = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(item); // always compare with string to avoid creating another func.
 
-          var isChecked = $item.data('value') + '' === fontSize + '';
+          let isChecked = $item.data('value') + '' === fontSize + '';
           $item.toggleClass('checked', isChecked);
         });
         $cont.find('.note-current-fontsize').text(fontSize);
-        var fontSizeUnit = styleInfo['font-size-unit'];
+        let fontSizeUnit = styleInfo['font-size-unit'];
         $cont.find('.dropdown-fontsizeunit a').each(function (idx, item) {
-          var $item = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(item);
-          var isChecked = $item.data('value') + '' === fontSizeUnit + '';
+          let $item = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(item);
+          let isChecked = $item.data('value') + '' === fontSizeUnit + '';
           $item.toggleClass('checked', isChecked);
         });
         $cont.find('.note-current-fontsizeunit').text(fontSizeUnit);
       }
 
       if (styleInfo['line-height']) {
-        var lineHeight = styleInfo['line-height'];
+        let lineHeight = styleInfo['line-height'];
         $cont.find('.dropdown-line-height li a').each(function (idx, item) {
           // always compare with string to avoid creating another func.
-          var isChecked = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(item).data('value') + '' === lineHeight + '';
+          let isChecked = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(item).data('value') + '' === lineHeight + '';
           _this6.className = isChecked ? 'checked' : '';
         });
       }
@@ -8106,7 +8106,7 @@ var Buttons_Buttons = /*#__PURE__*/function () {
   }, {
     key: "updateBtnStates",
     value: function updateBtnStates($container, infos) {
-      var _this7 = this;
+      let _this7 = this;
 
       external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default.a.each(infos, function (selector, pred) {
         _this7.ui.toggleBtnActive($container.find(selector), pred());
@@ -8115,17 +8115,17 @@ var Buttons_Buttons = /*#__PURE__*/function () {
   }, {
     key: "tableMoveHandler",
     value: function tableMoveHandler(event) {
-      var PX_PER_EM = 18;
-      var $picker = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(event.target.parentNode); // target is mousecatcher
+      let PX_PER_EM = 18;
+      let $picker = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(event.target.parentNode); // target is mousecatcher
 
-      var $dimensionDisplay = $picker.next();
-      var $catcher = $picker.find('.note-dimension-picker-mousecatcher');
-      var $highlighted = $picker.find('.note-dimension-picker-highlighted');
-      var $unhighlighted = $picker.find('.note-dimension-picker-unhighlighted');
-      var posOffset; // HTML5 with jQuery - e.offsetX is undefined in Firefox
+      let $dimensionDisplay = $picker.next();
+      let $catcher = $picker.find('.note-dimension-picker-mousecatcher');
+      let $highlighted = $picker.find('.note-dimension-picker-highlighted');
+      let $unhighlighted = $picker.find('.note-dimension-picker-unhighlighted');
+      let posOffset; // HTML5 with jQuery - e.offsetX is undefined in Firefox
 
       if (event.offsetX === undefined) {
-        var posCatcher = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(event.target).offset();
+        let posCatcher = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(event.target).offset();
         posOffset = {
           x: event.pageX - posCatcher.left,
           y: event.pageY - posCatcher.top
@@ -8137,7 +8137,7 @@ var Buttons_Buttons = /*#__PURE__*/function () {
         };
       }
 
-      var dim = {
+      let dim = {
         c: Math.ceil(posOffset.x / PX_PER_EM) || 1,
         r: Math.ceil(posOffset.y / PX_PER_EM) || 1
       };
@@ -8170,13 +8170,13 @@ var Buttons_Buttons = /*#__PURE__*/function () {
 // CONCATENATED MODULE: ./src/js/base/module/Toolbar.js
 function Toolbar_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-function Toolbar_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+function Toolbar_defineProperties(target, props) { for (let i = 0; i < props.length; i++) { let descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
 function Toolbar_createClass(Constructor, protoProps, staticProps) { if (protoProps) Toolbar_defineProperties(Constructor.prototype, protoProps); if (staticProps) Toolbar_defineProperties(Constructor, staticProps); return Constructor; }
 
 
 
-var Toolbar_Toolbar = /*#__PURE__*/function () {
+let Toolbar_Toolbar = /*#__PURE__*/function () {
   function Toolbar(context) {
     Toolbar_classCallCheck(this, Toolbar);
 
@@ -8202,7 +8202,7 @@ var Toolbar_Toolbar = /*#__PURE__*/function () {
   }, {
     key: "initialize",
     value: function initialize() {
-      var _this = this;
+      let _this = this;
 
       this.options.toolbar = this.options.toolbar || [];
 
@@ -8242,22 +8242,22 @@ var Toolbar_Toolbar = /*#__PURE__*/function () {
         return false;
       }
 
-      var editorHeight = this.$editor.outerHeight();
-      var editorWidth = this.$editor.width();
-      var toolbarHeight = this.$toolbar.height();
-      var statusbarHeight = this.$statusbar.height(); // check if the web app is currently using another static bar
+      let editorHeight = this.$editor.outerHeight();
+      let editorWidth = this.$editor.width();
+      let toolbarHeight = this.$toolbar.height();
+      let statusbarHeight = this.$statusbar.height(); // check if the web app is currently using another static bar
 
-      var otherBarHeight = 0;
+      let otherBarHeight = 0;
 
       if (this.options.otherStaticBar) {
         otherBarHeight = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(this.options.otherStaticBar).outerHeight();
       }
 
-      var currentOffset = this.$document.scrollTop();
-      var editorOffsetTop = this.$editor.offset().top;
-      var editorOffsetBottom = editorOffsetTop + editorHeight;
-      var activateOffset = editorOffsetTop - otherBarHeight;
-      var deactivateOffsetBottom = editorOffsetBottom - otherBarHeight - toolbarHeight - statusbarHeight;
+      let currentOffset = this.$document.scrollTop();
+      let editorOffsetTop = this.$editor.offset().top;
+      let editorOffsetBottom = editorOffsetTop + editorHeight;
+      let activateOffset = editorOffsetTop - otherBarHeight;
+      let deactivateOffsetBottom = editorOffsetBottom - otherBarHeight - toolbarHeight - statusbarHeight;
 
       if (!this.isFollowing && currentOffset > activateOffset && currentOffset < deactivateOffsetBottom - toolbarHeight) {
         this.isFollowing = true;
@@ -8318,7 +8318,7 @@ var Toolbar_Toolbar = /*#__PURE__*/function () {
   }, {
     key: "activate",
     value: function activate(isIncludeCodeview) {
-      var $btn = this.$toolbar.find('button');
+      let $btn = this.$toolbar.find('button');
 
       if (!isIncludeCodeview) {
         $btn = $btn.not('.note-codeview-keep');
@@ -8329,7 +8329,7 @@ var Toolbar_Toolbar = /*#__PURE__*/function () {
   }, {
     key: "deactivate",
     value: function deactivate(isIncludeCodeview) {
-      var $btn = this.$toolbar.find('button');
+      let $btn = this.$toolbar.find('button');
 
       if (!isIncludeCodeview) {
         $btn = $btn.not('.note-codeview-keep');
@@ -8346,7 +8346,7 @@ var Toolbar_Toolbar = /*#__PURE__*/function () {
 // CONCATENATED MODULE: ./src/js/base/module/LinkDialog.js
 function LinkDialog_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-function LinkDialog_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+function LinkDialog_defineProperties(target, props) { for (let i = 0; i < props.length; i++) { let descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
 function LinkDialog_createClass(Constructor, protoProps, staticProps) { if (protoProps) LinkDialog_defineProperties(Constructor.prototype, protoProps); if (staticProps) LinkDialog_defineProperties(Constructor, staticProps); return Constructor; }
 
@@ -8355,7 +8355,7 @@ function LinkDialog_createClass(Constructor, protoProps, staticProps) { if (prot
 
 
 
-var LinkDialog_LinkDialog = /*#__PURE__*/function () {
+let LinkDialog_LinkDialog = /*#__PURE__*/function () {
   function LinkDialog(context) {
     LinkDialog_classCallCheck(this, LinkDialog);
 
@@ -8371,8 +8371,8 @@ var LinkDialog_LinkDialog = /*#__PURE__*/function () {
   LinkDialog_createClass(LinkDialog, [{
     key: "initialize",
     value: function initialize() {
-      var $container = this.options.dialogsInBody ? this.$body : this.options.container;
-      var body = ['<div class="form-group note-form-group">', "<label for=\"note-dialog-link-txt-".concat(this.options.id, "\" class=\"note-form-label\">").concat(this.lang.link.textToDisplay, "</label>"), "<input id=\"note-dialog-link-txt-".concat(this.options.id, "\" class=\"note-link-text form-control note-form-control note-input\" type=\"text\"/>"), '</div>', '<div class="form-group note-form-group">', "<label for=\"note-dialog-link-url-".concat(this.options.id, "\" class=\"note-form-label\">").concat(this.lang.link.url, "</label>"), "<input id=\"note-dialog-link-url-".concat(this.options.id, "\" class=\"note-link-url form-control note-form-control note-input\" type=\"text\" value=\"http://\"/>"), '</div>', !this.options.disableLinkTarget ? external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()('<div/>').append(this.ui.checkbox({
+      let $container = this.options.dialogsInBody ? this.$body : this.options.container;
+      let body = ['<div class="form-group note-form-group">', "<label for=\"note-dialog-link-txt-".concat(this.options.id, "\" class=\"note-form-label\">").concat(this.lang.link.textToDisplay, "</label>"), "<input id=\"note-dialog-link-txt-".concat(this.options.id, "\" class=\"note-link-text form-control note-form-control note-input\" type=\"text\"/>"), '</div>', '<div class="form-group note-form-group">', "<label for=\"note-dialog-link-url-".concat(this.options.id, "\" class=\"note-form-label\">").concat(this.lang.link.url, "</label>"), "<input id=\"note-dialog-link-url-".concat(this.options.id, "\" class=\"note-link-url form-control note-form-control note-input\" type=\"text\" value=\"http://\"/>"), '</div>', !this.options.disableLinkTarget ? external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()('<div/>').append(this.ui.checkbox({
         className: 'sn-checkbox-open-in-new-window',
         text: this.lang.link.openInNewWindow,
         checked: true
@@ -8381,8 +8381,8 @@ var LinkDialog_LinkDialog = /*#__PURE__*/function () {
         text: this.lang.link.useProtocol,
         checked: true
       }).render()).html()].join('');
-      var buttonClass = 'btn btn-primary note-btn note-btn-primary note-link-btn';
-      var footer = "<input type=\"button\" href=\"#\" class=\"".concat(buttonClass, "\" value=\"").concat(this.lang.link.insert, "\" disabled>");
+      let buttonClass = 'btn btn-primary note-btn note-btn-primary note-link-btn';
+      let footer = "<input type=\"button\" href=\"#\" class=\"".concat(buttonClass, "\" value=\"").concat(this.lang.link.insert, "\" disabled>");
       this.$dialog = this.ui.dialog({
         className: 'link-dialog',
         title: this.lang.link.insert,
@@ -8426,18 +8426,18 @@ var LinkDialog_LinkDialog = /*#__PURE__*/function () {
   }, {
     key: "showLinkDialog",
     value: function showLinkDialog(linkInfo) {
-      var _this = this;
+      let _this = this;
 
       return external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default.a.Deferred(function (deferred) {
-        var $linkText = _this.$dialog.find('.note-link-text');
+        let $linkText = _this.$dialog.find('.note-link-text');
 
-        var $linkUrl = _this.$dialog.find('.note-link-url');
+        let $linkUrl = _this.$dialog.find('.note-link-url');
 
-        var $linkBtn = _this.$dialog.find('.note-link-btn');
+        let $linkBtn = _this.$dialog.find('.note-link-btn');
 
-        var $openInNewWindow = _this.$dialog.find('.sn-checkbox-open-in-new-window input[type=checkbox]');
+        let $openInNewWindow = _this.$dialog.find('.sn-checkbox-open-in-new-window input[type=checkbox]');
 
-        var $useProtocol = _this.$dialog.find('.sn-checkbox-use-protocol input[type=checkbox]');
+        let $useProtocol = _this.$dialog.find('.sn-checkbox-use-protocol input[type=checkbox]');
 
         _this.ui.onDialogShown(_this.$dialog, function () {
           _this.context.triggerEvent('dialog.shown'); // If no url was given and given text is valid URL then copy that into URL Field
@@ -8474,9 +8474,9 @@ var LinkDialog_LinkDialog = /*#__PURE__*/function () {
 
           _this.bindEnterKey($linkText, $linkBtn);
 
-          var isNewWindowChecked = linkInfo.isNewWindow !== undefined ? linkInfo.isNewWindow : _this.context.options.linkTargetBlank;
+          let isNewWindowChecked = linkInfo.isNewWindow !== undefined ? linkInfo.isNewWindow : _this.context.options.linkTargetBlank;
           $openInNewWindow.prop('checked', isNewWindowChecked);
-          var useProtocolChecked = linkInfo.url ? false : _this.context.options.useProtocol;
+          let useProtocolChecked = linkInfo.url ? false : _this.context.options.useProtocol;
           $useProtocol.prop('checked', useProtocolChecked);
           $linkBtn.one('click', function (event) {
             event.preventDefault();
@@ -8513,9 +8513,9 @@ var LinkDialog_LinkDialog = /*#__PURE__*/function () {
   }, {
     key: "show",
     value: function show() {
-      var _this2 = this;
+      let _this2 = this;
 
-      var linkInfo = this.context.invoke('editor.getLinkInfo');
+      let linkInfo = this.context.invoke('editor.getLinkInfo');
       this.context.invoke('editor.saveRange');
       this.showLinkDialog(linkInfo).then(function (linkInfo) {
         _this2.context.invoke('editor.restoreRange');
@@ -8534,7 +8534,7 @@ var LinkDialog_LinkDialog = /*#__PURE__*/function () {
 // CONCATENATED MODULE: ./src/js/base/module/LinkPopover.js
 function LinkPopover_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-function LinkPopover_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+function LinkPopover_defineProperties(target, props) { for (let i = 0; i < props.length; i++) { let descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
 function LinkPopover_createClass(Constructor, protoProps, staticProps) { if (protoProps) LinkPopover_defineProperties(Constructor.prototype, protoProps); if (staticProps) LinkPopover_defineProperties(Constructor, staticProps); return Constructor; }
 
@@ -8542,9 +8542,9 @@ function LinkPopover_createClass(Constructor, protoProps, staticProps) { if (pro
 
 
 
-var LinkPopover_LinkPopover = /*#__PURE__*/function () {
+let LinkPopover_LinkPopover = /*#__PURE__*/function () {
   function LinkPopover(context) {
-    var _this = this;
+    let _this = this;
 
     LinkPopover_classCallCheck(this, LinkPopover);
 
@@ -8572,11 +8572,11 @@ var LinkPopover_LinkPopover = /*#__PURE__*/function () {
       this.$popover = this.ui.popover({
         className: 'note-link-popover',
         callback: function callback($node) {
-          var $content = $node.find('.popover-content,.note-popover-content');
+          let $content = $node.find('.popover-content,.note-popover-content');
           $content.prepend('<span><a target="_blank"></a>&nbsp;</span>');
         }
       }).render().appendTo(this.options.container);
-      var $content = this.$popover.find('.popover-content,.note-popover-content');
+      let $content = this.$popover.find('.popover-content,.note-popover-content');
       this.context.invoke('buttons.build', $content, this.options.popover.link);
       this.$popover.on('mousedown', function (e) {
         e.preventDefault();
@@ -8596,14 +8596,14 @@ var LinkPopover_LinkPopover = /*#__PURE__*/function () {
         return;
       }
 
-      var rng = this.context.invoke('editor.getLastRange');
+      let rng = this.context.invoke('editor.getLastRange');
 
       if (rng.isCollapsed() && rng.isOnAnchor()) {
-        var anchor = dom.ancestor(rng.sc, dom.isAnchor);
-        var href = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(anchor).attr('href');
+        let anchor = dom.ancestor(rng.sc, dom.isAnchor);
+        let href = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(anchor).attr('href');
         this.$popover.find('a').attr('href', href).text(href);
-        var pos = dom.posFromPlaceholder(anchor);
-        var containerOffset = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(this.options.container).offset();
+        let pos = dom.posFromPlaceholder(anchor);
+        let containerOffset = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(this.options.container).offset();
         pos.top -= containerOffset.top;
         pos.left -= containerOffset.left;
         this.$popover.css({
@@ -8629,7 +8629,7 @@ var LinkPopover_LinkPopover = /*#__PURE__*/function () {
 // CONCATENATED MODULE: ./src/js/base/module/ImageDialog.js
 function ImageDialog_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-function ImageDialog_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+function ImageDialog_defineProperties(target, props) { for (let i = 0; i < props.length; i++) { let descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
 function ImageDialog_createClass(Constructor, protoProps, staticProps) { if (protoProps) ImageDialog_defineProperties(Constructor.prototype, protoProps); if (staticProps) ImageDialog_defineProperties(Constructor, staticProps); return Constructor; }
 
@@ -8637,7 +8637,7 @@ function ImageDialog_createClass(Constructor, protoProps, staticProps) { if (pro
 
 
 
-var ImageDialog_ImageDialog = /*#__PURE__*/function () {
+let ImageDialog_ImageDialog = /*#__PURE__*/function () {
   function ImageDialog(context) {
     ImageDialog_classCallCheck(this, ImageDialog);
 
@@ -8652,18 +8652,18 @@ var ImageDialog_ImageDialog = /*#__PURE__*/function () {
   ImageDialog_createClass(ImageDialog, [{
     key: "initialize",
     value: function initialize() {
-      var imageLimitation = '';
+      let imageLimitation = '';
 
       if (this.options.maximumImageFileSize) {
-        var unit = Math.floor(Math.log(this.options.maximumImageFileSize) / Math.log(1024));
-        var readableSize = (this.options.maximumImageFileSize / Math.pow(1024, unit)).toFixed(2) * 1 + ' ' + ' KMGTP'[unit] + 'B';
+        let unit = Math.floor(Math.log(this.options.maximumImageFileSize) / Math.log(1024));
+        let readableSize = (this.options.maximumImageFileSize / Math.pow(1024, unit)).toFixed(2) * 1 + ' ' + ' KMGTP'[unit] + 'B';
         imageLimitation = "<small>".concat(this.lang.image.maximumFileSize + ' : ' + readableSize, "</small>");
       }
 
-      var $container = this.options.dialogsInBody ? this.$body : this.options.container;
-      var body = ['<div class="form-group note-form-group note-group-select-from-files">', '<label for="note-dialog-image-file-' + this.options.id + '" class="note-form-label">' + this.lang.image.selectFromFiles + '</label>', '<input id="note-dialog-image-file-' + this.options.id + '" class="note-image-input form-control-file note-form-control note-input" ', ' type="file" name="files" accept="image/*" multiple="multiple"/>', imageLimitation, '</div>', '<div class="form-group note-group-image-url">', '<label for="note-dialog-image-url-' + this.options.id + '" class="note-form-label">' + this.lang.image.url + '</label>', '<input id="note-dialog-image-url-' + this.options.id + '" class="note-image-url form-control note-form-control note-input" type="text"/>', '</div>'].join('');
-      var buttonClass = 'btn btn-primary note-btn note-btn-primary note-image-btn';
-      var footer = "<input type=\"button\" href=\"#\" class=\"".concat(buttonClass, "\" value=\"").concat(this.lang.image.insert, "\" disabled>");
+      let $container = this.options.dialogsInBody ? this.$body : this.options.container;
+      let body = ['<div class="form-group note-form-group note-group-select-from-files">', '<label for="note-dialog-image-file-' + this.options.id + '" class="note-form-label">' + this.lang.image.selectFromFiles + '</label>', '<input id="note-dialog-image-file-' + this.options.id + '" class="note-image-input form-control-file note-form-control note-input" ', ' type="file" name="files" accept="image/*" multiple="multiple"/>', imageLimitation, '</div>', '<div class="form-group note-group-image-url">', '<label for="note-dialog-image-url-' + this.options.id + '" class="note-form-label">' + this.lang.image.url + '</label>', '<input id="note-dialog-image-url-' + this.options.id + '" class="note-image-url form-control note-form-control note-input" type="text"/>', '</div>'].join('');
+      let buttonClass = 'btn btn-primary note-btn note-btn-primary note-image-btn';
+      let footer = "<input type=\"button\" href=\"#\" class=\"".concat(buttonClass, "\" value=\"").concat(this.lang.image.insert, "\" disabled>");
       this.$dialog = this.ui.dialog({
         title: this.lang.image.insert,
         fade: this.options.dialogsFade,
@@ -8690,7 +8690,7 @@ var ImageDialog_ImageDialog = /*#__PURE__*/function () {
   }, {
     key: "show",
     value: function show() {
-      var _this = this;
+      let _this = this;
 
       this.context.invoke('editor.saveRange');
       this.showImageDialog().then(function (data) {
@@ -8725,14 +8725,14 @@ var ImageDialog_ImageDialog = /*#__PURE__*/function () {
   }, {
     key: "showImageDialog",
     value: function showImageDialog() {
-      var _this2 = this;
+      let _this2 = this;
 
       return external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default.a.Deferred(function (deferred) {
-        var $imageInput = _this2.$dialog.find('.note-image-input');
+        let $imageInput = _this2.$dialog.find('.note-image-input');
 
-        var $imageUrl = _this2.$dialog.find('.note-image-url');
+        let $imageUrl = _this2.$dialog.find('.note-image-url');
 
-        var $imageBtn = _this2.$dialog.find('.note-image-btn');
+        let $imageBtn = _this2.$dialog.find('.note-image-btn');
 
         _this2.ui.onDialogShown(_this2.$dialog, function () {
           _this2.context.triggerEvent('dialog.shown'); // Cloning imageInput to clear element.
@@ -8779,7 +8779,7 @@ var ImageDialog_ImageDialog = /*#__PURE__*/function () {
 // CONCATENATED MODULE: ./src/js/base/module/ImagePopover.js
 function ImagePopover_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-function ImagePopover_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+function ImagePopover_defineProperties(target, props) { for (let i = 0; i < props.length; i++) { let descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
 function ImagePopover_createClass(Constructor, protoProps, staticProps) { if (protoProps) ImagePopover_defineProperties(Constructor.prototype, protoProps); if (staticProps) ImagePopover_defineProperties(Constructor, staticProps); return Constructor; }
 
@@ -8792,9 +8792,9 @@ function ImagePopover_createClass(Constructor, protoProps, staticProps) { if (pr
  *  Handle.js will receive the events and invoke 'imagePopover.update'.
  */
 
-var ImagePopover_ImagePopover = /*#__PURE__*/function () {
+let ImagePopover_ImagePopover = /*#__PURE__*/function () {
   function ImagePopover(context) {
-    var _this = this;
+    let _this = this;
 
     ImagePopover_classCallCheck(this, ImagePopover);
 
@@ -8820,7 +8820,7 @@ var ImagePopover_ImagePopover = /*#__PURE__*/function () {
       this.$popover = this.ui.popover({
         className: 'note-image-popover'
       }).render().appendTo(this.options.container);
-      var $content = this.$popover.find('.popover-content,.note-popover-content');
+      let $content = this.$popover.find('.popover-content,.note-popover-content');
       this.context.invoke('buttons.build', $content, this.options.popover.image);
       this.$popover.on('mousedown', function (e) {
         e.preventDefault();
@@ -8835,9 +8835,9 @@ var ImagePopover_ImagePopover = /*#__PURE__*/function () {
     key: "update",
     value: function update(target, event) {
       if (dom.isImg(target)) {
-        var position = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(target).offset();
-        var containerOffset = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(this.options.container).offset();
-        var pos = {};
+        let position = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(target).offset();
+        let containerOffset = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(this.options.container).offset();
+        let pos = {};
 
         if (this.options.popatmouse) {
           pos.left = event.pageX - 20;
@@ -8871,7 +8871,7 @@ var ImagePopover_ImagePopover = /*#__PURE__*/function () {
 // CONCATENATED MODULE: ./src/js/base/module/TablePopover.js
 function TablePopover_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-function TablePopover_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+function TablePopover_defineProperties(target, props) { for (let i = 0; i < props.length; i++) { let descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
 function TablePopover_createClass(Constructor, protoProps, staticProps) { if (protoProps) TablePopover_defineProperties(Constructor.prototype, protoProps); if (staticProps) TablePopover_defineProperties(Constructor, staticProps); return Constructor; }
 
@@ -8880,9 +8880,9 @@ function TablePopover_createClass(Constructor, protoProps, staticProps) { if (pr
 
 
 
-var TablePopover_TablePopover = /*#__PURE__*/function () {
+let TablePopover_TablePopover = /*#__PURE__*/function () {
   function TablePopover(context) {
-    var _this = this;
+    let _this = this;
 
     TablePopover_classCallCheck(this, TablePopover);
 
@@ -8913,7 +8913,7 @@ var TablePopover_TablePopover = /*#__PURE__*/function () {
       this.$popover = this.ui.popover({
         className: 'note-table-popover'
       }).render().appendTo(this.options.container);
-      var $content = this.$popover.find('.popover-content,.note-popover-content');
+      let $content = this.$popover.find('.popover-content,.note-popover-content');
       this.context.invoke('buttons.build', $content, this.options.popover.table); // [workaround] Disable Firefox's default table editor
 
       if (env.isFF) {
@@ -8936,11 +8936,11 @@ var TablePopover_TablePopover = /*#__PURE__*/function () {
         return false;
       }
 
-      var isCell = dom.isCell(target);
+      let isCell = dom.isCell(target);
 
       if (isCell) {
-        var pos = dom.posFromPlaceholder(target);
-        var containerOffset = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(this.options.container).offset();
+        let pos = dom.posFromPlaceholder(target);
+        let containerOffset = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(this.options.container).offset();
         pos.top -= containerOffset.top;
         pos.left -= containerOffset.left;
         this.$popover.css({
@@ -8968,7 +8968,7 @@ var TablePopover_TablePopover = /*#__PURE__*/function () {
 // CONCATENATED MODULE: ./src/js/base/module/VideoDialog.js
 function VideoDialog_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-function VideoDialog_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+function VideoDialog_defineProperties(target, props) { for (let i = 0; i < props.length; i++) { let descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
 function VideoDialog_createClass(Constructor, protoProps, staticProps) { if (protoProps) VideoDialog_defineProperties(Constructor.prototype, protoProps); if (staticProps) VideoDialog_defineProperties(Constructor, staticProps); return Constructor; }
 
@@ -8976,7 +8976,7 @@ function VideoDialog_createClass(Constructor, protoProps, staticProps) { if (pro
 
 
 
-var VideoDialog_VideoDialog = /*#__PURE__*/function () {
+let VideoDialog_VideoDialog = /*#__PURE__*/function () {
   function VideoDialog(context) {
     VideoDialog_classCallCheck(this, VideoDialog);
 
@@ -8991,10 +8991,10 @@ var VideoDialog_VideoDialog = /*#__PURE__*/function () {
   VideoDialog_createClass(VideoDialog, [{
     key: "initialize",
     value: function initialize() {
-      var $container = this.options.dialogsInBody ? this.$body : this.options.container;
-      var body = ['<div class="form-group note-form-group row-fluid">', "<label for=\"note-dialog-video-url-".concat(this.options.id, "\" class=\"note-form-label\">").concat(this.lang.video.url, " <small class=\"text-muted\">").concat(this.lang.video.providers, "</small></label>"), "<input id=\"note-dialog-video-url-".concat(this.options.id, "\" class=\"note-video-url form-control note-form-control note-input\" type=\"text\"/>"), '</div>'].join('');
-      var buttonClass = 'btn btn-primary note-btn note-btn-primary note-video-btn';
-      var footer = "<input type=\"button\" href=\"#\" class=\"".concat(buttonClass, "\" value=\"").concat(this.lang.video.insert, "\" disabled>");
+      let $container = this.options.dialogsInBody ? this.$body : this.options.container;
+      let body = ['<div class="form-group note-form-group row-fluid">', "<label for=\"note-dialog-video-url-".concat(this.options.id, "\" class=\"note-form-label\">").concat(this.lang.video.url, " <small class=\"text-muted\">").concat(this.lang.video.providers, "</small></label>"), "<input id=\"note-dialog-video-url-".concat(this.options.id, "\" class=\"note-video-url form-control note-form-control note-input\" type=\"text\"/>"), '</div>'].join('');
+      let buttonClass = 'btn btn-primary note-btn note-btn-primary note-video-btn';
+      let footer = "<input type=\"button\" href=\"#\" class=\"".concat(buttonClass, "\" value=\"").concat(this.lang.video.insert, "\" disabled>");
       this.$dialog = this.ui.dialog({
         title: this.lang.video.insert,
         fade: this.options.dialogsFade,
@@ -9022,42 +9022,42 @@ var VideoDialog_VideoDialog = /*#__PURE__*/function () {
     key: "createVideoNode",
     value: function createVideoNode(url) {
       // video url patterns(youtube, instagram, vimeo, dailymotion, youku, mp4, ogg, webm)
-      var ytRegExp = /\/\/(?:(?:www|m)\.)?(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=))([\w|-]{11})(?:(?:[\?&]t=)(\S+))?$/;
-      var ytRegExpForStart = /^(?:(\d+)h)?(?:(\d+)m)?(?:(\d+)s)?$/;
-      var ytMatch = url.match(ytRegExp);
-      var igRegExp = /(?:www\.|\/\/)instagram\.com\/p\/(.[a-zA-Z0-9_-]*)/;
-      var igMatch = url.match(igRegExp);
-      var vRegExp = /\/\/vine\.co\/v\/([a-zA-Z0-9]+)/;
-      var vMatch = url.match(vRegExp);
-      var vimRegExp = /\/\/(player\.)?vimeo\.com\/([a-z]*\/)*(\d+)[?]?.*/;
-      var vimMatch = url.match(vimRegExp);
-      var dmRegExp = /.+dailymotion.com\/(video|hub)\/([^_]+)[^#]*(#video=([^_&]+))?/;
-      var dmMatch = url.match(dmRegExp);
-      var youkuRegExp = /\/\/v\.youku\.com\/v_show\/id_(\w+)=*\.html/;
-      var youkuMatch = url.match(youkuRegExp);
-      var qqRegExp = /\/\/v\.qq\.com.*?vid=(.+)/;
-      var qqMatch = url.match(qqRegExp);
-      var qqRegExp2 = /\/\/v\.qq\.com\/x?\/?(page|cover).*?\/([^\/]+)\.html\??.*/;
-      var qqMatch2 = url.match(qqRegExp2);
-      var mp4RegExp = /^.+.(mp4|m4v)$/;
-      var mp4Match = url.match(mp4RegExp);
-      var oggRegExp = /^.+.(ogg|ogv)$/;
-      var oggMatch = url.match(oggRegExp);
-      var webmRegExp = /^.+.(webm)$/;
-      var webmMatch = url.match(webmRegExp);
-      var fbRegExp = /(?:www\.|\/\/)facebook\.com\/([^\/]+)\/videos\/([0-9]+)/;
-      var fbMatch = url.match(fbRegExp);
-      var $video;
+      let ytRegExp = /\/\/(?:(?:www|m)\.)?(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=))([\w|-]{11})(?:(?:[\?&]t=)(\S+))?$/;
+      let ytRegExpForStart = /^(?:(\d+)h)?(?:(\d+)m)?(?:(\d+)s)?$/;
+      let ytMatch = url.match(ytRegExp);
+      let igRegExp = /(?:www\.|\/\/)instagram\.com\/p\/(.[a-zA-Z0-9_-]*)/;
+      let igMatch = url.match(igRegExp);
+      let vRegExp = /\/\/vine\.co\/v\/([a-zA-Z0-9]+)/;
+      let vMatch = url.match(vRegExp);
+      let vimRegExp = /\/\/(player\.)?vimeo\.com\/([a-z]*\/)*(\d+)[?]?.*/;
+      let vimMatch = url.match(vimRegExp);
+      let dmRegExp = /.+dailymotion.com\/(video|hub)\/([^_]+)[^#]*(#video=([^_&]+))?/;
+      let dmMatch = url.match(dmRegExp);
+      let youkuRegExp = /\/\/v\.youku\.com\/v_show\/id_(\w+)=*\.html/;
+      let youkuMatch = url.match(youkuRegExp);
+      let qqRegExp = /\/\/v\.qq\.com.*?vid=(.+)/;
+      let qqMatch = url.match(qqRegExp);
+      let qqRegExp2 = /\/\/v\.qq\.com\/x?\/?(page|cover).*?\/([^\/]+)\.html\??.*/;
+      let qqMatch2 = url.match(qqRegExp2);
+      let mp4RegExp = /^.+.(mp4|m4v)$/;
+      let mp4Match = url.match(mp4RegExp);
+      let oggRegExp = /^.+.(ogg|ogv)$/;
+      let oggMatch = url.match(oggRegExp);
+      let webmRegExp = /^.+.(webm)$/;
+      let webmMatch = url.match(webmRegExp);
+      let fbRegExp = /(?:www\.|\/\/)facebook\.com\/([^\/]+)\/videos\/([0-9]+)/;
+      let fbMatch = url.match(fbRegExp);
+      let $video;
 
       if (ytMatch && ytMatch[1].length === 11) {
-        var youtubeId = ytMatch[1];
-        var start = 0;
+        let youtubeId = ytMatch[1];
+        let start = 0;
 
         if (typeof ytMatch[2] !== 'undefined') {
-          var ytMatchForStart = ytMatch[2].match(ytRegExpForStart);
+          let ytMatchForStart = ytMatch[2].match(ytRegExpForStart);
 
           if (ytMatchForStart) {
-            for (var n = [3600, 60, 1], i = 0, r = n.length; i < r; i++) {
+            for (let n = [3600, 60, 1], i = 0, r = n.length; i < r; i++) {
               start += typeof ytMatchForStart[i + 1] !== 'undefined' ? n[i] * parseInt(ytMatchForStart[i + 1], 10) : 0;
             }
           }
@@ -9075,7 +9075,7 @@ var VideoDialog_VideoDialog = /*#__PURE__*/function () {
       } else if (youkuMatch && youkuMatch[1].length) {
         $video = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()('<iframe webkitallowfullscreen mozallowfullscreen allowfullscreen>').attr('frameborder', 0).attr('height', '498').attr('width', '510').attr('src', '//player.youku.com/embed/' + youkuMatch[1]);
       } else if (qqMatch && qqMatch[1].length || qqMatch2 && qqMatch2[2].length) {
-        var vid = qqMatch && qqMatch[1].length ? qqMatch[1] : qqMatch2[2];
+        let vid = qqMatch && qqMatch[1].length ? qqMatch[1] : qqMatch2[2];
         $video = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()('<iframe webkitallowfullscreen mozallowfullscreen allowfullscreen>').attr('frameborder', 0).attr('height', '310').attr('width', '500').attr('src', 'https://v.qq.com/txp/iframe/player.html?vid=' + vid + '&amp;auto=0');
       } else if (mp4Match || oggMatch || webmMatch) {
         $video = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()('<video controls>').attr('src', url).attr('width', '640').attr('height', '360');
@@ -9092,9 +9092,9 @@ var VideoDialog_VideoDialog = /*#__PURE__*/function () {
   }, {
     key: "show",
     value: function show() {
-      var _this = this;
+      let _this = this;
 
-      var text = this.context.invoke('editor.getSelectedText');
+      let text = this.context.invoke('editor.getSelectedText');
       this.context.invoke('editor.saveRange');
       this.showVideoDialog(text).then(function (url) {
         // [workaround] hide dialog before restore range for IE range focus
@@ -9103,7 +9103,7 @@ var VideoDialog_VideoDialog = /*#__PURE__*/function () {
         _this.context.invoke('editor.restoreRange'); // build node
 
 
-        var $node = _this.createVideoNode(url);
+        let $node = _this.createVideoNode(url);
 
         if ($node) {
           // insert video node
@@ -9125,12 +9125,12 @@ var VideoDialog_VideoDialog = /*#__PURE__*/function () {
     value: function showVideoDialog()
     /* text */
     {
-      var _this2 = this;
+      let _this2 = this;
 
       return external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default.a.Deferred(function (deferred) {
-        var $videoUrl = _this2.$dialog.find('.note-video-url');
+        let $videoUrl = _this2.$dialog.find('.note-video-url');
 
-        var $videoBtn = _this2.$dialog.find('.note-video-btn');
+        let $videoBtn = _this2.$dialog.find('.note-video-btn');
 
         _this2.ui.onDialogShown(_this2.$dialog, function () {
           _this2.context.triggerEvent('dialog.shown');
@@ -9172,14 +9172,14 @@ var VideoDialog_VideoDialog = /*#__PURE__*/function () {
 // CONCATENATED MODULE: ./src/js/base/module/HelpDialog.js
 function HelpDialog_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-function HelpDialog_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+function HelpDialog_defineProperties(target, props) { for (let i = 0; i < props.length; i++) { let descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
 function HelpDialog_createClass(Constructor, protoProps, staticProps) { if (protoProps) HelpDialog_defineProperties(Constructor.prototype, protoProps); if (staticProps) HelpDialog_defineProperties(Constructor, staticProps); return Constructor; }
 
 
 
 
-var HelpDialog_HelpDialog = /*#__PURE__*/function () {
+let HelpDialog_HelpDialog = /*#__PURE__*/function () {
   function HelpDialog(context) {
     HelpDialog_classCallCheck(this, HelpDialog);
 
@@ -9194,8 +9194,8 @@ var HelpDialog_HelpDialog = /*#__PURE__*/function () {
   HelpDialog_createClass(HelpDialog, [{
     key: "initialize",
     value: function initialize() {
-      var $container = this.options.dialogsInBody ? this.$body : this.options.container;
-      var body = ['<p class="text-center">', '<a href="http://summernote.org/" target="_blank">Summernote 0.8.18</a> · ', '<a href="https://github.com/summernote/summernote" target="_blank">Project</a> · ', '<a href="https://github.com/summernote/summernote/issues" target="_blank">Issues</a>', '</p>'].join('');
+      let $container = this.options.dialogsInBody ? this.$body : this.options.container;
+      let body = ['<p class="text-center">', '<a href="http://summernote.org/" target="_blank">Summernote 0.8.18</a> · ', '<a href="https://github.com/summernote/summernote" target="_blank">Project</a> · ', '<a href="https://github.com/summernote/summernote/issues" target="_blank">Issues</a>', '</p>'].join('');
       this.$dialog = this.ui.dialog({
         title: this.lang.options.help,
         fade: this.options.dialogsFade,
@@ -9218,12 +9218,12 @@ var HelpDialog_HelpDialog = /*#__PURE__*/function () {
   }, {
     key: "createShortcutList",
     value: function createShortcutList() {
-      var _this = this;
+      let _this = this;
 
-      var keyMap = this.options.keyMap[env.isMac ? 'mac' : 'pc'];
+      let keyMap = this.options.keyMap[env.isMac ? 'mac' : 'pc'];
       return Object.keys(keyMap).map(function (key) {
-        var command = keyMap[key];
-        var $row = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()('<div><div class="help-list-item"></div></div>');
+        let command = keyMap[key];
+        let $row = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()('<div><div class="help-list-item"></div></div>');
         $row.append(external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()('<label><kbd>' + key + '</kdb></label>').css({
           'width': 180,
           'margin-right': 10
@@ -9240,7 +9240,7 @@ var HelpDialog_HelpDialog = /*#__PURE__*/function () {
   }, {
     key: "showHelpDialog",
     value: function showHelpDialog() {
-      var _this2 = this;
+      let _this2 = this;
 
       return external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default.a.Deferred(function (deferred) {
         _this2.ui.onDialogShown(_this2.$dialog, function () {
@@ -9255,7 +9255,7 @@ var HelpDialog_HelpDialog = /*#__PURE__*/function () {
   }, {
     key: "show",
     value: function show() {
-      var _this3 = this;
+      let _this3 = this;
 
       this.context.invoke('editor.saveRange');
       this.showHelpDialog().then(function () {
@@ -9271,18 +9271,18 @@ var HelpDialog_HelpDialog = /*#__PURE__*/function () {
 // CONCATENATED MODULE: ./src/js/base/module/AirPopover.js
 function AirPopover_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-function AirPopover_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+function AirPopover_defineProperties(target, props) { for (let i = 0; i < props.length; i++) { let descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
 function AirPopover_createClass(Constructor, protoProps, staticProps) { if (protoProps) AirPopover_defineProperties(Constructor.prototype, protoProps); if (staticProps) AirPopover_defineProperties(Constructor, staticProps); return Constructor; }
 
 
 
-var AIRMODE_POPOVER_X_OFFSET = -5;
-var AIRMODE_POPOVER_Y_OFFSET = 5;
+let AIRMODE_POPOVER_X_OFFSET = -5;
+let AIRMODE_POPOVER_Y_OFFSET = 5;
 
-var AirPopover_AirPopover = /*#__PURE__*/function () {
+let AirPopover_AirPopover = /*#__PURE__*/function () {
   function AirPopover(context) {
-    var _this = this;
+    let _this = this;
 
     AirPopover_classCallCheck(this, AirPopover);
 
@@ -9336,12 +9336,12 @@ var AirPopover_AirPopover = /*#__PURE__*/function () {
   }, {
     key: "initialize",
     value: function initialize() {
-      var _this2 = this;
+      let _this2 = this;
 
       this.$popover = this.ui.popover({
         className: 'note-air-popover'
       }).render().appendTo(this.options.container);
-      var $content = this.$popover.find('.popover-content');
+      let $content = this.$popover.find('.popover-content');
       this.context.invoke('buttons.build', $content, this.options.popover.air); // disable hiding this popover preemptively by 'summernote.blur' event.
 
       this.$popover.on('mousedown', function () {
@@ -9360,14 +9360,14 @@ var AirPopover_AirPopover = /*#__PURE__*/function () {
   }, {
     key: "update",
     value: function update(forcelyOpen) {
-      var styleInfo = this.context.invoke('editor.currentStyle');
+      let styleInfo = this.context.invoke('editor.currentStyle');
 
       if (styleInfo.range && (!styleInfo.range.isCollapsed() || forcelyOpen)) {
-        var rect = {
+        let rect = {
           left: this.pageX,
           top: this.pageY
         };
-        var containerOffset = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(this.options.container).offset();
+        let containerOffset = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(this.options.container).offset();
         rect.top -= containerOffset.top;
         rect.left -= containerOffset.left;
         this.$popover.css({
@@ -9405,7 +9405,7 @@ var AirPopover_AirPopover = /*#__PURE__*/function () {
 // CONCATENATED MODULE: ./src/js/base/module/HintPopover.js
 function HintPopover_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-function HintPopover_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+function HintPopover_defineProperties(target, props) { for (let i = 0; i < props.length; i++) { let descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
 function HintPopover_createClass(Constructor, protoProps, staticProps) { if (protoProps) HintPopover_defineProperties(Constructor.prototype, protoProps); if (staticProps) HintPopover_defineProperties(Constructor, staticProps); return Constructor; }
 
@@ -9415,11 +9415,11 @@ function HintPopover_createClass(Constructor, protoProps, staticProps) { if (pro
 
 
 
-var POPOVER_DIST = 5;
+let POPOVER_DIST = 5;
 
-var HintPopover_HintPopover = /*#__PURE__*/function () {
+let HintPopover_HintPopover = /*#__PURE__*/function () {
   function HintPopover(context) {
-    var _this = this;
+    let _this = this;
 
     HintPopover_classCallCheck(this, HintPopover);
 
@@ -9453,7 +9453,7 @@ var HintPopover_HintPopover = /*#__PURE__*/function () {
   }, {
     key: "initialize",
     value: function initialize() {
-      var _this2 = this;
+      let _this2 = this;
 
       this.lastWordRange = null;
       this.matchingWord = null;
@@ -9490,13 +9490,13 @@ var HintPopover_HintPopover = /*#__PURE__*/function () {
   }, {
     key: "moveDown",
     value: function moveDown() {
-      var $current = this.$content.find('.note-hint-item.active');
-      var $next = $current.next();
+      let $current = this.$content.find('.note-hint-item.active');
+      let $next = $current.next();
 
       if ($next.length) {
         this.selectItem($next);
       } else {
-        var $nextGroup = $current.parent().next();
+        let $nextGroup = $current.parent().next();
 
         if (!$nextGroup.length) {
           $nextGroup = this.$content.find('.note-hint-group').first();
@@ -9508,13 +9508,13 @@ var HintPopover_HintPopover = /*#__PURE__*/function () {
   }, {
     key: "moveUp",
     value: function moveUp() {
-      var $current = this.$content.find('.note-hint-item.active');
-      var $prev = $current.prev();
+      let $current = this.$content.find('.note-hint-item.active');
+      let $prev = $current.prev();
 
       if ($prev.length) {
         this.selectItem($prev);
       } else {
-        var $prevGroup = $current.parent().prev();
+        let $prevGroup = $current.parent().prev();
 
         if (!$prevGroup.length) {
           $prevGroup = this.$content.find('.note-hint-group').last();
@@ -9526,15 +9526,15 @@ var HintPopover_HintPopover = /*#__PURE__*/function () {
   }, {
     key: "replace",
     value: function replace() {
-      var $item = this.$content.find('.note-hint-item.active');
+      let $item = this.$content.find('.note-hint-item.active');
 
       if ($item.length) {
-        var node = this.nodeFromItem($item); // If matchingWord length = 0 -> capture OK / open hint / but as mention capture "" (\w*)
+        let node = this.nodeFromItem($item); // If matchingWord length = 0 -> capture OK / open hint / but as mention capture "" (\w*)
 
         if (this.matchingWord !== null && this.matchingWord.length === 0) {
           this.lastWordRange.so = this.lastWordRange.eo; // Else si > 0 and normal case -> adjust range "before" for correct position of insertion
         } else if (this.matchingWord !== null && this.matchingWord.length > 0 && !this.lastWordRange.isCollapsed()) {
-          var rangeCompute = this.lastWordRange.eo - this.lastWordRange.so - this.matchingWord.length;
+          let rangeCompute = this.lastWordRange.eo - this.lastWordRange.so - this.matchingWord.length;
 
           if (rangeCompute > 0) {
             this.lastWordRange.so += rangeCompute;
@@ -9544,7 +9544,7 @@ var HintPopover_HintPopover = /*#__PURE__*/function () {
         this.lastWordRange.insertNode(node);
 
         if (this.options.hintSelect === 'next') {
-          var blank = document.createTextNode('');
+          let blank = document.createTextNode('');
           external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(node).after(blank);
           range.createFromNodeBefore(blank).select();
         } else {
@@ -9559,9 +9559,9 @@ var HintPopover_HintPopover = /*#__PURE__*/function () {
   }, {
     key: "nodeFromItem",
     value: function nodeFromItem($item) {
-      var hint = this.hints[$item.data('index')];
-      var item = $item.data('item');
-      var node = hint.content ? hint.content(item) : item;
+      let hint = this.hints[$item.data('index')];
+      let item = $item.data('item');
+      let node = hint.content ? hint.content(item) : item;
 
       if (typeof node === 'string') {
         node = dom.createText(node);
@@ -9572,11 +9572,11 @@ var HintPopover_HintPopover = /*#__PURE__*/function () {
   }, {
     key: "createItemTemplates",
     value: function createItemTemplates(hintIdx, items) {
-      var hint = this.hints[hintIdx];
+      let hint = this.hints[hintIdx];
       return items.map(function (item
       /*, idx */
       ) {
-        var $item = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()('<div class="note-hint-item"/>');
+        let $item = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()('<div class="note-hint-item"/>');
         $item.append(hint.template ? hint.template(item) : item + '');
         $item.data({
           'index': hintIdx,
@@ -9606,10 +9606,10 @@ var HintPopover_HintPopover = /*#__PURE__*/function () {
   }, {
     key: "searchKeyword",
     value: function searchKeyword(index, keyword, callback) {
-      var hint = this.hints[index];
+      let hint = this.hints[index];
 
       if (hint && hint.match.test(keyword) && hint.search) {
-        var matches = hint.match.exec(keyword);
+        let matches = hint.match.exec(keyword);
         this.matchingWord = matches[0];
         hint.search(matches[1], callback);
       } else {
@@ -9619,9 +9619,9 @@ var HintPopover_HintPopover = /*#__PURE__*/function () {
   }, {
     key: "createGroup",
     value: function createGroup(idx, keyword) {
-      var _this3 = this;
+      let _this3 = this;
 
-      var $group = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()('<div class="note-hint-group note-hint-group-' + idx + '"></div>');
+      let $group = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()('<div class="note-hint-group note-hint-group-' + idx + '"></div>');
       this.searchKeyword(idx, keyword, function (items) {
         items = items || [];
 
@@ -9636,12 +9636,12 @@ var HintPopover_HintPopover = /*#__PURE__*/function () {
   }, {
     key: "handleKeyup",
     value: function handleKeyup(e) {
-      var _this4 = this;
+      let _this4 = this;
 
       if (!lists.contains([core_key.code.ENTER, core_key.code.UP, core_key.code.DOWN], e.keyCode)) {
-        var _range = this.context.invoke('editor.getLastRange');
+        let _range = this.context.invoke('editor.getLastRange');
 
-        var wordRange, keyword;
+        let wordRange, keyword;
 
         if (this.options.hintMode === 'words') {
           wordRange = _range.getWordsRange(_range);
@@ -9666,8 +9666,8 @@ var HintPopover_HintPopover = /*#__PURE__*/function () {
 
         if (this.hints.length && keyword) {
           this.$content.empty();
-          var bnd = func.rect2bnd(lists.last(wordRange.getClientRects()));
-          var containerOffset = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(this.options.container).offset();
+          let bnd = func.rect2bnd(lists.last(wordRange.getClientRects()));
+          let containerOffset = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(this.options.container).offset();
 
           if (bnd) {
             bnd.top -= containerOffset.top;
@@ -10005,22 +10005,22 @@ external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default.a.summe
 __webpack_require__.r(__webpack_exports__);
 
 // EXTERNAL MODULE: external {"root":"jQuery","commonjs2":"jquery","commonjs":"jquery","amd":"jquery"}
-var external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_ = __webpack_require__(0);
-var external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default = /*#__PURE__*/__webpack_require__.n(external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_);
+let external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_ = __webpack_require__(0);
+let external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default = /*#__PURE__*/__webpack_require__.n(external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_);
 
 // EXTERNAL MODULE: ./src/js/base/renderer.js
-var renderer = __webpack_require__(1);
+let renderer = __webpack_require__(1);
 
 // CONCATENATED MODULE: ./src/js/lite/ui/TooltipUI.js
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+function _defineProperties(target, props) { for (let i = 0; i < props.length; i++) { let descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
 
 
-var TooltipUI_TooltipUI = /*#__PURE__*/function () {
+let TooltipUI_TooltipUI = /*#__PURE__*/function () {
   function TooltipUI($node, options) {
     _classCallCheck(this, TooltipUI);
 
@@ -10035,9 +10035,9 @@ var TooltipUI_TooltipUI = /*#__PURE__*/function () {
     this.$tooltip = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(['<div class="note-tooltip">', '<div class="note-tooltip-arrow"></div>', '<div class="note-tooltip-content"></div>', '</div>'].join('')); // define event
 
     if (this.options.trigger !== 'manual') {
-      var showCallback = this.show.bind(this);
-      var hideCallback = this.hide.bind(this);
-      var toggleCallback = this.toggle.bind(this);
+      let showCallback = this.show.bind(this);
+      let hideCallback = this.hide.bind(this);
+      let toggleCallback = this.toggle.bind(this);
       this.options.trigger.split(' ').forEach(function (eventName) {
         if (eventName === 'hover') {
           $node.off('mouseenter mouseleave');
@@ -10054,21 +10054,21 @@ var TooltipUI_TooltipUI = /*#__PURE__*/function () {
   _createClass(TooltipUI, [{
     key: "show",
     value: function show() {
-      var $node = this.$node;
-      var offset = $node.offset();
-      var targetOffset = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(this.options.target).offset();
+      let $node = this.$node;
+      let offset = $node.offset();
+      let targetOffset = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(this.options.target).offset();
       offset.top -= targetOffset.top;
       offset.left -= targetOffset.left;
-      var $tooltip = this.$tooltip;
-      var title = this.options.title || $node.attr('title') || $node.data('title');
-      var placement = this.options.placement || $node.data('placement');
+      let $tooltip = this.$tooltip;
+      let title = this.options.title || $node.attr('title') || $node.data('title');
+      let placement = this.options.placement || $node.data('placement');
       $tooltip.addClass(placement);
       $tooltip.find('.note-tooltip-content').text(title);
       $tooltip.appendTo(this.options.target);
-      var nodeWidth = $node.outerWidth();
-      var nodeHeight = $node.outerHeight();
-      var tooltipWidth = $tooltip.outerWidth();
-      var tooltipHeight = $tooltip.outerHeight();
+      let nodeWidth = $node.outerWidth();
+      let nodeHeight = $node.outerHeight();
+      let tooltipWidth = $tooltip.outerWidth();
+      let tooltipHeight = $tooltip.outerHeight();
 
       if (placement === 'bottom') {
         $tooltip.css({
@@ -10097,7 +10097,7 @@ var TooltipUI_TooltipUI = /*#__PURE__*/function () {
   }, {
     key: "hide",
     value: function hide() {
-      var _this = this;
+      let _this = this;
 
       this.$tooltip.removeClass('in');
       setTimeout(function () {
@@ -10118,17 +10118,17 @@ var TooltipUI_TooltipUI = /*#__PURE__*/function () {
   return TooltipUI;
 }();
 
-/* harmony default export */ var ui_TooltipUI = (TooltipUI_TooltipUI);
+/* harmony default export */ let ui_TooltipUI = (TooltipUI_TooltipUI);
 // CONCATENATED MODULE: ./src/js/lite/ui/DropdownUI.js
 function DropdownUI_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-function DropdownUI_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+function DropdownUI_defineProperties(target, props) { for (let i = 0; i < props.length; i++) { let descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
 function DropdownUI_createClass(Constructor, protoProps, staticProps) { if (protoProps) DropdownUI_defineProperties(Constructor.prototype, protoProps); if (staticProps) DropdownUI_defineProperties(Constructor, staticProps); return Constructor; }
 
 
 
-var DropdownUI_DropdownUI = /*#__PURE__*/function () {
+let DropdownUI_DropdownUI = /*#__PURE__*/function () {
   function DropdownUI($node, options) {
     DropdownUI_classCallCheck(this, DropdownUI);
 
@@ -10142,7 +10142,7 @@ var DropdownUI_DropdownUI = /*#__PURE__*/function () {
   DropdownUI_createClass(DropdownUI, [{
     key: "setEvent",
     value: function setEvent() {
-      var _this = this;
+      let _this = this;
 
       this.$button.on('click', function (e) {
         _this.toggle();
@@ -10153,7 +10153,7 @@ var DropdownUI_DropdownUI = /*#__PURE__*/function () {
   }, {
     key: "clear",
     value: function clear() {
-      var $parent = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()('.note-btn-group.open');
+      let $parent = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()('.note-btn-group.open');
       $parent.find('.note-btn.active').removeClass('active');
       $parent.removeClass('open');
     }
@@ -10162,11 +10162,11 @@ var DropdownUI_DropdownUI = /*#__PURE__*/function () {
     value: function show() {
       this.$button.addClass('active');
       this.$button.parent().addClass('open');
-      var $dropdown = this.$button.next();
-      var offset = $dropdown.offset();
-      var width = $dropdown.outerWidth();
-      var windowWidth = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(window).width();
-      var targetMarginRight = parseFloat(external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(this.options.target).css('margin-right'));
+      let $dropdown = this.$button.next();
+      let offset = $dropdown.offset();
+      let width = $dropdown.outerWidth();
+      let windowWidth = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(window).width();
+      let targetMarginRight = parseFloat(external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(this.options.target).css('margin-right'));
 
       if (offset.left + width > windowWidth - targetMarginRight) {
         $dropdown.css('margin-left', windowWidth - targetMarginRight - (offset.left + width));
@@ -10183,7 +10183,7 @@ var DropdownUI_DropdownUI = /*#__PURE__*/function () {
   }, {
     key: "toggle",
     value: function toggle() {
-      var isOpened = this.$button.parent().hasClass('open');
+      let isOpened = this.$button.parent().hasClass('open');
       this.clear();
 
       if (isOpened) {
@@ -10207,17 +10207,17 @@ external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(docum
   external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(e.target).closest('.note-dropdown-menu').parent().removeClass('open');
   external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(e.target).closest('.note-dropdown-menu').parent().find('.note-btn.active').removeClass('active');
 });
-/* harmony default export */ var ui_DropdownUI = (DropdownUI_DropdownUI);
+/* harmony default export */ let ui_DropdownUI = (DropdownUI_DropdownUI);
 // CONCATENATED MODULE: ./src/js/lite/ui/ModalUI.js
 function ModalUI_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-function ModalUI_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+function ModalUI_defineProperties(target, props) { for (let i = 0; i < props.length; i++) { let descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
 function ModalUI_createClass(Constructor, protoProps, staticProps) { if (protoProps) ModalUI_defineProperties(Constructor.prototype, protoProps); if (staticProps) ModalUI_defineProperties(Constructor, staticProps); return Constructor; }
 
 
 
-var ModalUI_ModalUI = /*#__PURE__*/function () {
+let ModalUI_ModalUI = /*#__PURE__*/function () {
   function ModalUI($node
   /*, options */
   ) {
@@ -10230,7 +10230,7 @@ var ModalUI_ModalUI = /*#__PURE__*/function () {
   ModalUI_createClass(ModalUI, [{
     key: "show",
     value: function show() {
-      var _this = this;
+      let _this = this;
 
       this.$backdrop.appendTo(document.body).show();
       this.$modal.addClass('open').show();
@@ -10257,23 +10257,23 @@ var ModalUI_ModalUI = /*#__PURE__*/function () {
   return ModalUI;
 }();
 
-/* harmony default export */ var ui_ModalUI = (ModalUI_ModalUI);
+/* harmony default export */ let ui_ModalUI = (ModalUI_ModalUI);
 // CONCATENATED MODULE: ./src/js/lite/ui.js
 
 
 
 
 
-var editor = renderer["a" /* default */].create('<div class="note-editor note-frame"/>');
-var toolbar = renderer["a" /* default */].create('<div class="note-toolbar" role="toolbar"/>');
-var editingArea = renderer["a" /* default */].create('<div class="note-editing-area"/>');
-var codable = renderer["a" /* default */].create('<textarea class="note-codable" aria-multiline="true"/>');
-var editable = renderer["a" /* default */].create('<div class="note-editable" contentEditable="true" role="textbox" aria-multiline="true"/>');
-var statusbar = renderer["a" /* default */].create(['<output class="note-status-output" role="status" aria-live="polite"></output>', '<div class="note-statusbar" role="status">', '<div class="note-resizebar" aria-label="resize">', '<div class="note-icon-bar"></div>', '<div class="note-icon-bar"></div>', '<div class="note-icon-bar"></div>', '</div>', '</div>'].join(''));
-var airEditor = renderer["a" /* default */].create('<div class="note-editor note-airframe"/>');
-var airEditable = renderer["a" /* default */].create(['<div class="note-editable" contentEditable="true" role="textbox" aria-multiline="true"></div>', '<output class="note-status-output" role="status" aria-live="polite"></output>'].join(''));
-var buttonGroup = renderer["a" /* default */].create('<div class="note-btn-group">');
-var ui_button = renderer["a" /* default */].create('<button type="button" class="note-btn" tabindex="-1">', function ($node, options) {
+let editor = renderer["a" /* default */].create('<div class="note-editor note-frame"/>');
+let toolbar = renderer["a" /* default */].create('<div class="note-toolbar" role="toolbar"/>');
+let editingArea = renderer["a" /* default */].create('<div class="note-editing-area"/>');
+let codable = renderer["a" /* default */].create('<textarea class="note-codable" aria-multiline="true"/>');
+let editable = renderer["a" /* default */].create('<div class="note-editable" contentEditable="true" role="textbox" aria-multiline="true"/>');
+let statusbar = renderer["a" /* default */].create(['<output class="note-status-output" role="status" aria-live="polite"></output>', '<div class="note-statusbar" role="status">', '<div class="note-resizebar" aria-label="resize">', '<div class="note-icon-bar"></div>', '<div class="note-icon-bar"></div>', '<div class="note-icon-bar"></div>', '</div>', '</div>'].join(''));
+let airEditor = renderer["a" /* default */].create('<div class="note-editor note-airframe"/>');
+let airEditable = renderer["a" /* default */].create(['<div class="note-editable" contentEditable="true" role="textbox" aria-multiline="true"></div>', '<output class="note-status-output" role="status" aria-live="polite"></output>'].join(''));
+let buttonGroup = renderer["a" /* default */].create('<div class="note-btn-group">');
+let ui_button = renderer["a" /* default */].create('<button type="button" class="note-btn" tabindex="-1">', function ($node, options) {
   // set button type
   if (options && options.tooltip) {
     $node.attr({
@@ -10301,11 +10301,11 @@ var ui_button = renderer["a" /* default */].create('<button type="button" class=
     $node.addClass('note-codeview-keep');
   }
 });
-var dropdown = renderer["a" /* default */].create('<div class="note-dropdown-menu" role="list">', function ($node, options) {
-  var markup = Array.isArray(options.items) ? options.items.map(function (item) {
-    var value = typeof item === 'string' ? item : item.value || '';
-    var content = options.template ? options.template(item) : item;
-    var $temp = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()('<a class="note-dropdown-item" href="#" data-value="' + value + '" role="listitem" aria-label="' + value + '"></a>');
+let dropdown = renderer["a" /* default */].create('<div class="note-dropdown-menu" role="list">', function ($node, options) {
+  let markup = Array.isArray(options.items) ? options.items.map(function (item) {
+    let value = typeof item === 'string' ? item : item.value || '';
+    let content = options.template ? options.template(item) : item;
+    let $temp = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()('<a class="note-dropdown-item" href="#" data-value="' + value + '" role="listitem" aria-label="' + value + '"></a>');
     $temp.html(content).data('item', item);
     return $temp;
   }) : options.items;
@@ -10313,9 +10313,9 @@ var dropdown = renderer["a" /* default */].create('<div class="note-dropdown-men
     'aria-label': options.title
   });
   $node.on('click', '> .note-dropdown-item', function (e) {
-    var $a = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(this);
-    var item = $a.data('item');
-    var value = $a.data('value');
+    let $a = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(this);
+    let item = $a.data('item');
+    let value = $a.data('value');
 
     if (item.click) {
       item.click($a);
@@ -10328,11 +10328,11 @@ var dropdown = renderer["a" /* default */].create('<div class="note-dropdown-men
     $node.addClass('note-codeview-keep');
   }
 });
-var dropdownCheck = renderer["a" /* default */].create('<div class="note-dropdown-menu note-check" role="list">', function ($node, options) {
-  var markup = Array.isArray(options.items) ? options.items.map(function (item) {
-    var value = typeof item === 'string' ? item : item.value || '';
-    var content = options.template ? options.template(item) : item;
-    var $temp = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()('<a class="note-dropdown-item" href="#" data-value="' + value + '" role="listitem" aria-label="' + item + '"></a>');
+let dropdownCheck = renderer["a" /* default */].create('<div class="note-dropdown-menu note-check" role="list">', function ($node, options) {
+  let markup = Array.isArray(options.items) ? options.items.map(function (item) {
+    let value = typeof item === 'string' ? item : item.value || '';
+    let content = options.template ? options.template(item) : item;
+    let $temp = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()('<a class="note-dropdown-item" href="#" data-value="' + value + '" role="listitem" aria-label="' + item + '"></a>');
     $temp.html([icon(options.checkClassName), ' ', content]).data('item', item);
     return $temp;
   }) : options.items;
@@ -10340,9 +10340,9 @@ var dropdownCheck = renderer["a" /* default */].create('<div class="note-dropdow
     'aria-label': options.title
   });
   $node.on('click', '> .note-dropdown-item', function (e) {
-    var $a = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(this);
-    var item = $a.data('item');
-    var value = $a.data('value');
+    let $a = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(this);
+    let item = $a.data('item');
+    let value = $a.data('value');
 
     if (item.click) {
       item.click($a);
@@ -10356,11 +10356,11 @@ var dropdownCheck = renderer["a" /* default */].create('<div class="note-dropdow
   }
 });
 
-var dropdownButtonContents = function dropdownButtonContents(contents, options) {
+let dropdownButtonContents = function dropdownButtonContents(contents, options) {
   return contents + ' ' + icon(options.icons.caret, 'span');
 };
 
-var dropdownButton = function dropdownButton(opt, callback) {
+let dropdownButton = function dropdownButton(opt, callback) {
   return buttonGroup([ui_button({
     className: 'dropdown-toggle',
     contents: opt.title + ' ' + icon('note-icon-caret'),
@@ -10378,7 +10378,7 @@ var dropdownButton = function dropdownButton(opt, callback) {
   }).render();
 };
 
-var dropdownCheckButton = function dropdownCheckButton(opt, callback) {
+let dropdownCheckButton = function dropdownCheckButton(opt, callback) {
   return buttonGroup([ui_button({
     className: 'dropdown-toggle',
     contents: opt.title + ' ' + icon('note-icon-caret'),
@@ -10397,7 +10397,7 @@ var dropdownCheckButton = function dropdownCheckButton(opt, callback) {
   }).render();
 };
 
-var paragraphDropdownButton = function paragraphDropdownButton(opt) {
+let paragraphDropdownButton = function paragraphDropdownButton(opt) {
   return buttonGroup([ui_button({
     className: 'dropdown-toggle',
     contents: opt.title + ' ' + icon('note-icon-caret'),
@@ -10414,18 +10414,18 @@ var paragraphDropdownButton = function paragraphDropdownButton(opt) {
   })])]).render();
 };
 
-var ui_tableMoveHandler = function tableMoveHandler(event, col, row) {
-  var PX_PER_EM = 18;
-  var $picker = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(event.target.parentNode); // target is mousecatcher
+let ui_tableMoveHandler = function tableMoveHandler(event, col, row) {
+  let PX_PER_EM = 18;
+  let $picker = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(event.target.parentNode); // target is mousecatcher
 
-  var $dimensionDisplay = $picker.next();
-  var $catcher = $picker.find('.note-dimension-picker-mousecatcher');
-  var $highlighted = $picker.find('.note-dimension-picker-highlighted');
-  var $unhighlighted = $picker.find('.note-dimension-picker-unhighlighted');
-  var posOffset; // HTML5 with jQuery - e.offsetX is undefined in Firefox
+  let $dimensionDisplay = $picker.next();
+  let $catcher = $picker.find('.note-dimension-picker-mousecatcher');
+  let $highlighted = $picker.find('.note-dimension-picker-highlighted');
+  let $unhighlighted = $picker.find('.note-dimension-picker-unhighlighted');
+  let posOffset; // HTML5 with jQuery - e.offsetX is undefined in Firefox
 
   if (event.offsetX === undefined) {
-    var posCatcher = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(event.target).offset();
+    let posCatcher = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(event.target).offset();
     posOffset = {
       x: event.pageX - posCatcher.left,
       y: event.pageY - posCatcher.top
@@ -10437,7 +10437,7 @@ var ui_tableMoveHandler = function tableMoveHandler(event, col, row) {
     };
   }
 
-  var dim = {
+  let dim = {
     c: Math.ceil(posOffset.x / PX_PER_EM) || 1,
     r: Math.ceil(posOffset.y / PX_PER_EM) || 1
   };
@@ -10462,7 +10462,7 @@ var ui_tableMoveHandler = function tableMoveHandler(event, col, row) {
   $dimensionDisplay.html(dim.c + ' x ' + dim.r);
 };
 
-var tableDropdownButton = function tableDropdownButton(opt) {
+let tableDropdownButton = function tableDropdownButton(opt) {
   return buttonGroup([ui_button({
     className: 'dropdown-toggle',
     contents: opt.title + ' ' + icon('note-icon-caret'),
@@ -10475,7 +10475,7 @@ var tableDropdownButton = function tableDropdownButton(opt) {
     items: ['<div class="note-dimension-picker">', '<div class="note-dimension-picker-mousecatcher" data-event="insertTable" data-value="1x1"></div>', '<div class="note-dimension-picker-highlighted"></div>', '<div class="note-dimension-picker-unhighlighted"></div>', '</div>', '<div class="note-dimension-display">1 x 1</div>'].join('')
   })], {
     callback: function callback($node) {
-      var $catcher = $node.find('.note-dimension-picker-mousecatcher');
+      let $catcher = $node.find('.note-dimension-picker-mousecatcher');
       $catcher.css({
         width: opt.col + 'em',
         height: opt.row + 'em'
@@ -10486,18 +10486,18 @@ var tableDropdownButton = function tableDropdownButton(opt) {
   }).render();
 };
 
-var palette = renderer["a" /* default */].create('<div class="note-color-palette"/>', function ($node, options) {
-  var contents = [];
+let palette = renderer["a" /* default */].create('<div class="note-color-palette"/>', function ($node, options) {
+  let contents = [];
 
-  for (var row = 0, rowSize = options.colors.length; row < rowSize; row++) {
-    var eventName = options.eventName;
-    var colors = options.colors[row];
-    var colorsName = options.colorsName[row];
-    var buttons = [];
+  for (let row = 0, rowSize = options.colors.length; row < rowSize; row++) {
+    let eventName = options.eventName;
+    let colors = options.colors[row];
+    let colorsName = options.colorsName[row];
+    let buttons = [];
 
-    for (var col = 0, colSize = colors.length; col < colSize; col++) {
-      var color = colors[col];
-      var colorName = colorsName[col];
+    for (let col = 0, colSize = colors.length; col < colSize; col++) {
+      let color = colors[col];
+      let colorName = colorsName[col];
       buttons.push(['<button type="button" class="note-btn note-color-btn"', 'style="background-color:', color, '" ', 'data-event="', eventName, '" ', 'data-value="', color, '" ', 'data-title="', colorName, '" ', 'aria-label="', colorName, '" ', 'data-toggle="button" tabindex="-1"></button>'].join(''));
     }
 
@@ -10512,7 +10512,7 @@ var palette = renderer["a" /* default */].create('<div class="note-color-palette
   });
 });
 
-var ui_colorDropdownButton = function colorDropdownButton(opt, type) {
+let ui_colorDropdownButton = function colorDropdownButton(opt, type) {
   return buttonGroup({
     className: 'note-color',
     children: [ui_button({
@@ -10521,7 +10521,7 @@ var ui_colorDropdownButton = function colorDropdownButton(opt, type) {
       tooltip: opt.lang.color.recent,
       click: opt.currentClick,
       callback: function callback($button) {
-        var $recentColor = $button.find('.note-recent-color');
+        let $recentColor = $button.find('.note-recent-color');
 
         if (type !== 'foreColor') {
           $recentColor.css('background-color', '#FFFF00');
@@ -10539,7 +10539,7 @@ var ui_colorDropdownButton = function colorDropdownButton(opt, type) {
       items: ['<div>', '<div class="note-btn-group btn-background-color">', '<div class="note-palette-title">' + opt.lang.color.background + '</div>', '<div>', '<button type="button" class="note-color-reset note-btn note-btn-block" data-event="backColor" data-value="transparent">', opt.lang.color.transparent, '</button>', '</div>', '<div class="note-holder" data-event="backColor"></div>', '<div class="btn-sm">', '<input type="color" id="html5bcp" class="note-btn btn-default" value="#21104A" style="width:100%;" data-value="cp">', '<button type="button" class="note-color-reset btn" data-event="backColor" data-value="cpbackColor">', opt.lang.color.cpSelect, '</button>', '</div>', '</div>', '<div class="note-btn-group btn-foreground-color">', '<div class="note-palette-title">' + opt.lang.color.foreground + '</div>', '<div>', '<button type="button" class="note-color-reset note-btn note-btn-block" data-event="removeFormat" data-value="foreColor">', opt.lang.color.resetToDefault, '</button>', '</div>', '<div class="note-holder" data-event="foreColor"></div>', '<div class="btn-sm">', '<input type="color" id="html5fcp" class="note-btn btn-default" value="#21104A" style="width:100%;" data-value="cp">', '<button type="button" class="note-color-reset btn" data-event="foreColor" data-value="cpforeColor">', opt.lang.color.cpSelect, '</button>', '</div>', '</div>', '</div>'].join(''),
       callback: function callback($dropdown) {
         $dropdown.find('.note-holder').each(function () {
-          var $holder = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(this);
+          let $holder = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(this);
           $holder.append(palette({
             colors: opt.colors,
             eventName: $holder.data('event')
@@ -10559,11 +10559,11 @@ var ui_colorDropdownButton = function colorDropdownButton(opt, type) {
         }
       },
       click: function click(event) {
-        var $button = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(event.target);
-        var eventName = $button.data('event');
-        var value = $button.data('value');
-        var foreinput = document.getElementById('html5fcp').value;
-        var backinput = document.getElementById('html5bcp').value;
+        let $button = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(event.target);
+        let eventName = $button.data('event');
+        let value = $button.data('value');
+        let foreinput = document.getElementById('html5fcp').value;
+        let backinput = document.getElementById('html5bcp').value;
 
         if (value === 'cp') {
           event.stopPropagation();
@@ -10574,9 +10574,9 @@ var ui_colorDropdownButton = function colorDropdownButton(opt, type) {
         }
 
         if (eventName && value) {
-          var key = eventName === 'backColor' ? 'background-color' : 'color';
-          var $color = $button.closest('.note-color').find('.note-recent-color');
-          var $currentButton = $button.closest('.note-color').find('.note-current-color-button');
+          let key = eventName === 'backColor' ? 'background-color' : 'color';
+          let $color = $button.closest('.note-color').find('.note-recent-color');
+          let $currentButton = $button.closest('.note-color').find('.note-current-color-button');
           $color.css(key, value);
           $currentButton.attr('data-' + eventName, value);
 
@@ -10593,7 +10593,7 @@ var ui_colorDropdownButton = function colorDropdownButton(opt, type) {
   }).render();
 };
 
-var dialog = renderer["a" /* default */].create('<div class="note-modal" aria-hidden="false" tabindex="-1" role="dialog"/>', function ($node, options) {
+let dialog = renderer["a" /* default */].create('<div class="note-modal" aria-hidden="false" tabindex="-1" role="dialog"/>', function ($node, options) {
   if (options.fade) {
     $node.addClass('fade');
   }
@@ -10605,9 +10605,9 @@ var dialog = renderer["a" /* default */].create('<div class="note-modal" aria-hi
   $node.data('modal', new ui_ModalUI($node, options));
 });
 
-var videoDialog = function videoDialog(opt) {
-  var body = '<div class="note-form-group">' + '<label for="note-dialog-video-url-' + opt.id + '" class="note-form-label">' + opt.lang.video.url + ' <small class="text-muted">' + opt.lang.video.providers + '</small></label>' + '<input id="note-dialog-video-url-' + opt.id + '" class="note-video-url note-input" type="text"/>' + '</div>';
-  var footer = ['<button type="button" href="#" class="note-btn note-btn-primary note-video-btn disabled" disabled>', opt.lang.video.insert, '</button>'].join('');
+let videoDialog = function videoDialog(opt) {
+  let body = '<div class="note-form-group">' + '<label for="note-dialog-video-url-' + opt.id + '" class="note-form-label">' + opt.lang.video.url + ' <small class="text-muted">' + opt.lang.video.providers + '</small></label>' + '<input id="note-dialog-video-url-' + opt.id + '" class="note-video-url note-input" type="text"/>' + '</div>';
+  let footer = ['<button type="button" href="#" class="note-btn note-btn-primary note-video-btn disabled" disabled>', opt.lang.video.insert, '</button>'].join('');
   return dialog({
     title: opt.lang.video.insert,
     fade: opt.fade,
@@ -10616,9 +10616,9 @@ var videoDialog = function videoDialog(opt) {
   }).render();
 };
 
-var imageDialog = function imageDialog(opt) {
-  var body = '<div class="note-form-group note-group-select-from-files">' + '<label for="note-dialog-image-file-' + opt.id + '" class="note-form-label">' + opt.lang.image.selectFromFiles + '</label>' + '<input id="note-dialog-image-file-' + opt.id + '" class="note-note-image-input note-input" type="file" name="files" accept="image/*" multiple="multiple"/>' + opt.imageLimitation + '</div>' + '<div class="note-form-group">' + '<label for="note-dialog-image-url-' + opt.id + '" class="note-form-label">' + opt.lang.image.url + '</label>' + '<input id="note-dialog-image-url-' + opt.id + '" class="note-image-url note-input" type="text"/>' + '</div>';
-  var footer = ['<button href="#" type="button" class="note-btn note-btn-primary note-btn-large note-image-btn disabled" disabled>', opt.lang.image.insert, '</button>'].join('');
+let imageDialog = function imageDialog(opt) {
+  let body = '<div class="note-form-group note-group-select-from-files">' + '<label for="note-dialog-image-file-' + opt.id + '" class="note-form-label">' + opt.lang.image.selectFromFiles + '</label>' + '<input id="note-dialog-image-file-' + opt.id + '" class="note-note-image-input note-input" type="file" name="files" accept="image/*" multiple="multiple"/>' + opt.imageLimitation + '</div>' + '<div class="note-form-group">' + '<label for="note-dialog-image-url-' + opt.id + '" class="note-form-label">' + opt.lang.image.url + '</label>' + '<input id="note-dialog-image-url-' + opt.id + '" class="note-image-url note-input" type="text"/>' + '</div>';
+  let footer = ['<button href="#" type="button" class="note-btn note-btn-primary note-btn-large note-image-btn disabled" disabled>', opt.lang.image.insert, '</button>'].join('');
   return dialog({
     title: opt.lang.image.insert,
     fade: opt.fade,
@@ -10627,9 +10627,9 @@ var imageDialog = function imageDialog(opt) {
   }).render();
 };
 
-var linkDialog = function linkDialog(opt) {
-  var body = '<div class="note-form-group">' + '<label for="note-dialog-link-txt-' + opt.id + '" class="note-form-label">' + opt.lang.link.textToDisplay + '</label>' + '<input id="note-dialog-link-txt-' + opt.id + '" class="note-link-text note-input" type="text"/>' + '</div>' + '<div class="note-form-group">' + '<label for="note-dialog-link-url-' + opt.id + '" class="note-form-label">' + opt.lang.link.url + '</label>' + '<input id="note-dialog-link-url-' + opt.id + '" class="note-link-url note-input" type="text" value="http://"/>' + '</div>' + (!opt.disableLinkTarget ? '<div class="checkbox"><label for="note-dialog-link-nw-' + opt.id + '"><input id="note-dialog-link-nw-' + opt.id + '" type="checkbox" checked> ' + opt.lang.link.openInNewWindow + '</label></div>' : '') + '<div class="checkbox"><label for="note-dialog-link-up-' + opt.id + '"><input id="note-dialog-link-up-' + opt.id + '" type="checkbox" checked> ' + opt.lang.link.useProtocol + '</label></div>';
-  var footer = ['<button href="#" type="button" class="note-btn note-btn-primary note-link-btn disabled" disabled>', opt.lang.link.insert, '</button>'].join('');
+let linkDialog = function linkDialog(opt) {
+  let body = '<div class="note-form-group">' + '<label for="note-dialog-link-txt-' + opt.id + '" class="note-form-label">' + opt.lang.link.textToDisplay + '</label>' + '<input id="note-dialog-link-txt-' + opt.id + '" class="note-link-text note-input" type="text"/>' + '</div>' + '<div class="note-form-group">' + '<label for="note-dialog-link-url-' + opt.id + '" class="note-form-label">' + opt.lang.link.url + '</label>' + '<input id="note-dialog-link-url-' + opt.id + '" class="note-link-url note-input" type="text" value="http://"/>' + '</div>' + (!opt.disableLinkTarget ? '<div class="checkbox"><label for="note-dialog-link-nw-' + opt.id + '"><input id="note-dialog-link-nw-' + opt.id + '" type="checkbox" checked> ' + opt.lang.link.openInNewWindow + '</label></div>' : '') + '<div class="checkbox"><label for="note-dialog-link-up-' + opt.id + '"><input id="note-dialog-link-up-' + opt.id + '" type="checkbox" checked> ' + opt.lang.link.useProtocol + '</label></div>';
+  let footer = ['<button href="#" type="button" class="note-btn note-btn-primary note-link-btn disabled" disabled>', opt.lang.link.insert, '</button>'].join('');
   return dialog({
     className: 'link-dialog',
     title: opt.lang.link.insert,
@@ -10639,24 +10639,24 @@ var linkDialog = function linkDialog(opt) {
   }).render();
 };
 
-var popover = renderer["a" /* default */].create(['<div class="note-popover bottom">', '<div class="note-popover-arrow"></div>', '<div class="popover-content note-children-container"></div>', '</div>'].join(''), function ($node, options) {
-  var direction = typeof options.direction !== 'undefined' ? options.direction : 'bottom';
+let popover = renderer["a" /* default */].create(['<div class="note-popover bottom">', '<div class="note-popover-arrow"></div>', '<div class="popover-content note-children-container"></div>', '</div>'].join(''), function ($node, options) {
+  let direction = typeof options.direction !== 'undefined' ? options.direction : 'bottom';
   $node.addClass(direction).hide();
 
   if (options.hideArrow) {
     $node.find('.note-popover-arrow').hide();
   }
 });
-var ui_checkbox = renderer["a" /* default */].create('<div class="checkbox"></div>', function ($node, options) {
+let ui_checkbox = renderer["a" /* default */].create('<div class="checkbox"></div>', function ($node, options) {
   $node.html(['<label' + (options.id ? ' for="note-' + options.id + '"' : '') + '>', '<input role="checkbox" type="checkbox"' + (options.id ? ' id="note-' + options.id + '"' : ''), options.checked ? ' checked' : '', ' aria-checked="' + (options.checked ? 'true' : 'false') + '"/>', options.text ? options.text : '', '</label>'].join(''));
 });
 
-var icon = function icon(iconClassName, tagName) {
+let icon = function icon(iconClassName, tagName) {
   tagName = tagName || 'i';
   return '<' + tagName + ' class="' + iconClassName + '"/>';
 };
 
-var ui = function ui(editorOptions) {
+let ui = function ui(editorOptions) {
   return {
     editor: editor,
     toolbar: toolbar,
@@ -10729,7 +10729,7 @@ var ui = function ui(editorOptions) {
       return $dialog.find('.note-modal-body');
     },
     createLayout: function createLayout($note) {
-      var $editor = (editorOptions.airMode ? airEditor([editingArea([codable(), airEditable()])]) : editorOptions.toolbarPosition === 'bottom' ? editor([editingArea([codable(), editable()]), toolbar(), statusbar()]) : editor([toolbar(), editingArea([codable(), editable()]), statusbar()])).render();
+      let $editor = (editorOptions.airMode ? airEditor([editingArea([codable(), airEditable()])]) : editorOptions.toolbarPosition === 'bottom' ? editor([editingArea([codable(), editable()]), toolbar(), statusbar()]) : editor([toolbar(), editingArea([codable(), editable()]), statusbar()])).render();
       $editor.insertAfter($note);
       return {
         note: $note,
@@ -10751,12 +10751,12 @@ var ui = function ui(editorOptions) {
   };
 };
 
-/* harmony default export */ var lite_ui = (ui);
+/* harmony default export */ let lite_ui = (ui);
 // EXTERNAL MODULE: ./src/js/base/settings.js + 37 modules
-var settings = __webpack_require__(3);
+let settings = __webpack_require__(3);
 
 // EXTERNAL MODULE: ./src/styles/summernote-lite.scss
-var summernote_lite = __webpack_require__(6);
+let summernote_lite = __webpack_require__(6);
 
 // CONCATENATED MODULE: ./src/js/lite/settings.js
 
