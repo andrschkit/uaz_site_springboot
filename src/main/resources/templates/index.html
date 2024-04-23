@@ -8,6 +8,8 @@
   <title>УАЗ Росатом</title>
   <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
   <link href="/StyleSheets/style.css" rel="stylesheet"/>
+  <link href="/StyleSheets/style_carousel.css" rel="stylesheet"/>
+  <link href="/StyleSheets/style_mobile.css" rel="stylesheet"/>
   <link rel="shortcut icon" href="/images/Logo.svg" type="image/x-icon"/>
 </head>
 
@@ -16,39 +18,47 @@
 <header th:insert="blocks/header.html"> </header>
 
 <main>
-  <div id="carouselExampleCaptions" class="carousel slide border-bottom"  data-bs-ride="carousel" data-bs-interval="3000" data-bs-pause="false">
+  <div id="carouselUazPresent" class="carousel slide border-bottom" data-bs-ride="carousel" data-bs-interval="3000" data-bs-pause="false">
+
     <div class="carousel-indicators">
       <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
       <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
       <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
       <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
     </div>
+
     <div class="carousel-inner normal-text" >
       <a th:href="@{/projects/ordinka}" class="carousel-item active">
-        <img src="/images/carousel_img/ordinka.jpg" class="d-block w-100" alt="...">
-        <div class="carousel-caption cartext-decor">
+        <img src="/images/carousel_img/ordinka.jpg" alt="...">
+        <div class="carousel-caption carouseltext-decor">
           <h>Большая Ордынка</h>
         </div>
       </a>
       <a th:href="@{/projects/kitay}" class="carousel-item">
-        <img src="/images/carousel_img/kitay.jpg" class="d-block w-100" alt="...">
-        <div class="carousel-caption cartext-decor">
+        <img src="/images/carousel_img/kitay.jpg"alt="...">
+        <div class="carousel-caption carouseltext-decor">
           <h>Китайгородский проезд</h>
         </div>
       </a>
       <a th:href="@{/projects/monetka}" class="carousel-item">
-        <img src="/images/carousel_img/monetka.jpg" class="d-block w-100" alt="...">
-        <div class="carousel-caption cartext-decor">
+        <img src="/images/carousel_img/monetka.jpg" alt="...">
+        <div class="carousel-caption carouseltext-decor">
           <h>Старомонетный переулок</h>
         </div>
       </a>
       <a th:href="@{/projects/vdnh}" class="carousel-item">
-        <img src="/images/carousel_img/vdnh.jpg" class="d-block w-100" alt="...">
-        <div class="carousel-caption cartext-decor">
+        <img src="/images/carousel_img/vdnh.jpg" alt="...">
+        <div class="carousel-caption carouseltext-decor">
           <h>Павильон №19. «Атом»</h>
         </div>
       </a>
     </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselUazPresent" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselUazPresent" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    </button>
   </div>
 </main>
 

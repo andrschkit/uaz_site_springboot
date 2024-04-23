@@ -7,7 +7,9 @@
     <meta name="author" content="Andrew Shcherbakov">
     <title>Медиацентр</title>
     <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="/fancybox-3.0/dist/jquery.fancybox.min.css" />
     <link href="/StyleSheets/style.css" rel="stylesheet"/>
+    <link href="/StyleSheets/style_mobile.css" rel="stylesheet"/>
     <link rel="shortcut icon" href="/images/Logo.svg" type="image/x-icon"/>
 </head>
 
@@ -25,7 +27,7 @@
         <div class="container-fluid">
             <div class="container">
                 <div class="row">
-                    <div class="col-sm-12 mt-2" style="width: auto">
+                    <div class="col-sm-12 mt-2" style="width: 100%">
                         <div th:action="@{/singlePost}" method="get">
                             <label  id="post_id" class="hidden" th:text="${singlePost.getId}"></label>
                             <div th:utext="${singlePost.getContent}">Статья</div>
@@ -43,6 +45,8 @@
 <footer th:insert="blocks/footer.html"> </footer>
 
 <script src="/js/jquery-3.7.1.js"></script>
+<script src="/fancybox-3.0/dist/jquery-3.6.4.min.js"></script>
+<script src="/fancybox-3.0/dist/jquery.fancybox.min.js"></script>
 <script src="/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="/js/script.js"></script>
 <script src="/js/script_post_edit.js"></script>

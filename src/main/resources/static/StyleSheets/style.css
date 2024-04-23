@@ -26,6 +26,13 @@ font-family: "BestChoiceDemo", sans-serif;
 background-color: #FFFAFA;
 
 }
+.head_font{
+    font-weight:400!important
+}
+.static_hover{
+    background-color: #025EA1;
+    color: white;
+}
 .headlogo{
     margin-left: 1rem;
 }
@@ -129,12 +136,6 @@ background-color: #FFFAFA;
     border-right: 1px solid #bebebe;
     height: 30px;
 }
-.static_hover{
-    padding: -5px;
-    border-bottom: 5px solid #025EA1;
-    margin-bottom: -5px;
-    color: #025EA1;
-}
 .hidden{
     display: none;
 }
@@ -218,7 +219,7 @@ background-color: #FFFAFA;
       font-size: 14px;
       color: #32a1ce;
       margin-bottom: -0.3rem !important;
-      
+
     }
     .btn_select {
       border: 1px solid #32a1ce;
@@ -258,7 +259,7 @@ background-color: #FFFAFA;
       color: #32a1ce;
       font-size: 13px;
       margin-bottom: -0.3rem !important;
-      
+
     }
     .btn_select {
       border: 1px solid #32a1ce;
@@ -297,7 +298,7 @@ background-color: #FFFAFA;
       max-width: 65px;
         height: 48px;
       margin-bottom: -0.3rem !important;
-      
+
     }
     .btn_select {
       border: 1px solid #32a1ce;
