@@ -6968,8 +6968,6 @@ let Handle_Handle = /*#__PURE__*/function () {
         }).data('target', $image); // save current image element.
         let origImageObj = new Image();
         origImageObj.src = $image.attr('src');
-
-        $image.wrap('<a data-fancybox="gallery" href='+$image.attr('src')+'></a>');
         let sizingText = imageSize.w + 'x' + imageSize.h + ' (' + this.lang.image.original + ': ' + origImageObj.width + 'x' + origImageObj.height + ')';
         $selection.find('.note-control-selection-info').text(sizingText);
         this.context.invoke('editor.saveTarget', target);

@@ -1,5 +1,17 @@
 /* Верстка мобилки*/
-@media only screen and (max-width: 530px) {
+@media only screen and (max-width: 991px) {
+    .right_border{
+        display: none;
+    }
+    .navbar-nav{
+        align-content: center;
+        align-items: center;
+    }
+    .nav-item{
+        max-width: 200px;
+    }
+}
+@media only screen and (max-width: 545px) {
     .btn-modal {
         background-color: white;
         border: 1px solid #32a1ce;
@@ -32,11 +44,14 @@
         max-width: 140px;
         margin-bottom: -0.5rem !important;
     }
+    .right_border_logo{
+        height: 37px;
+    }
     .head_font {
         font-size: 30px;
     }
 }
-@media only screen and (max-width: 397px) {
+@media only screen and (max-width: 408px) {
     .btn-modal {
         background-color: white;
         border: 1px solid #32a1ce;
@@ -66,14 +81,13 @@
         margin-bottom: -0.3rem !important;
     }
     .headlogo{
-        max-width: 140px;
         margin-bottom: -0.3rem !important;
     }
     .head_font{
         font-size: 25px;
     }
 }
-@media only screen and (max-width: 368px) {
+@media only screen and (max-width: 396px) {
     .btn-modal {
         background-color: white;
         border: 1px solid #32a1ce;
@@ -85,6 +99,7 @@
         text-align:center;
         padding: 5px 0px;
         max-width: 65px;
+        height: 48px;
         margin-bottom: -0.3rem !important;
 
     }
@@ -105,8 +120,12 @@
         margin-bottom: -0.3rem !important;
     }
     .headlogo{
+        margin-left: 5px;
         max-width: 125px;
         margin-bottom: -0.3rem !important;
+    }
+    .right_border_logo{
+        height: 32px;
     }
     .head_font{
         font-size: 20px;

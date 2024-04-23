@@ -4,17 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="63d29c66-ea9a-40cb-a3d4-b579f5e1bd53" name="Changes" comment="NF: adding fancybox with bugs">
+    <list default="true" id="63d29c66-ea9a-40cb-a3d4-b579f5e1bd53" name="Changes" comment="NF: new header and footer style">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controllers/MediaPostController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controllers/MediaPostController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/StyleSheets/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/StyleSheets/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/addPost.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/postEditor/addPost.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/blocks/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/blocks/footer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/blocks/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/blocks/header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/editPost.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/postEditor/editPost.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/singlePost.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/postEditor/singlePost.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/StyleSheets/style_carousel.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/StyleSheets/style_carousel.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/StyleSheets/style_mobile.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/StyleSheets/style_mobile.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/summernote-0.8.20/summernote-lite.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/summernote-0.8.20/summernote-lite.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -139,6 +134,7 @@
       <workItem from="1712812455126" duration="4939000" />
       <workItem from="1712827400464" duration="26313000" />
       <workItem from="1713157902028" duration="51084000" />
+      <workItem from="1713877547530" duration="649000" />
     </task>
     <task id="LOCAL-00001" summary="Started commit">
       <option name="closed" value="true" />
@@ -223,7 +219,14 @@
       <option name="project" value="LOCAL" />
       <updated>1712836018468</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="NF: new header and footer style">
+      <created>1713876914772</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1713876914772</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -252,7 +255,8 @@
     <MESSAGE value="NF: Add WYSIWYG" />
     <MESSAGE value="BF: Base working with WYSIWYG" />
     <MESSAGE value="NF:Short content for title box WYSIWYG" />
-    <option name="LAST_COMMIT_MESSAGE" value="NF:Short content for title box WYSIWYG" />
+    <MESSAGE value="NF: new header and footer style" />
+    <option name="LAST_COMMIT_MESSAGE" value="NF: new header and footer style" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
