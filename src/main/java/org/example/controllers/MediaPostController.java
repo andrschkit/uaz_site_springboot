@@ -19,7 +19,7 @@ public class MediaPostController {
     @GetMapping(URL_ADD_POSTS)
     public String editor(Model model) {
         model.addAttribute("singlePost", new MediaPost());
-        return "addPost";
+        return "postEditor/addPost";
     }
     @PostMapping(URL_ADD_POSTS)
     public String save(
@@ -36,7 +36,7 @@ public class MediaPostController {
             Model model) {
         MediaPost singlePost=mediaService.findPropertyById(postId);
         model.addAttribute("singlePost", singlePost);
-        return "/singlePost";
+        return "/postEditor/singlePost";
     }
     @GetMapping(URL_EDIT_POSTS)
     public String editPost(
@@ -44,7 +44,7 @@ public class MediaPostController {
             Model model) {
         MediaPost singlePost=mediaService.findPropertyById(postId);
         model.addAttribute("singlePost", singlePost);
-        return "/editPost";
+        return "/postEditor/editPost";
     }
     @PostMapping(URL_EDIT_POSTS)
     public String saveEdit(

@@ -1,8 +1,9 @@
 <div th:fragment="header">
     <header class="navbar navbar-expand-lg d-flex justify-content-center py-1 nav_border">
         <div class="container-fluid d-flex flex-wrap">
-            <a th:href="@{/}" class="d-flex justify-content-start headlogo mb-lg-0 ms-sm-5">
+            <a th:href="@{/}" class="d-flex justify-content-start headlogo mb-lg-0 ">
                 <div><img src="/images/Logo.svg" height="60" width="60" class="img-fluid anim_logo" alt=""></div>
+                <div class="right_border_logo"></div>
                 <div><img src="/images/Name.svg" height="60" width="150" class="img-fluid" alt=""></div>
             </a>
             <div class="navbar navbar-expand-xl mx-auto d-flex justify-content-end me-1 animate-top">
@@ -25,30 +26,29 @@
         </div>
     </header>
 
-    <nav class="navbar navbar-expand-lg py-1  border-bottom nav_border">
+    <nav class="navbar navbar-expand-lg border-bottom nav_border">
         <div class="container-fluid d-flex flex-wrap">
-            <a class="navbar-brand btn me_house nav-butt change-pics" th:href="@{/}" aria-current="page">
-                <div>
-                    <div class="change-pic">
-                        <img id="nav_house" src="/images/house_black.svg" height="30px" width="30px" alt=""/>
-                    </div>
-                    <div class="change-pic">
-                        <img src="/images/house_white.svg" height="30px" width="30px" alt=""/>
-                    </div>
-                </div>
+            <a class=" nav-item me_house" th:href="@{/}" aria-current="page">
+                <img id="nav_house" class="nav-link" src="/images/house_black.svg" height="30px" width="30px" alt=""/>
             </a>
+            <div class="right_border" style=" margin-bottom: 10px"></div>
 
             <button class="navbar-toggler ms-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Переключатель навигации">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
-                    <li class="nav-item h2-text"><a th:href="@{/projects}" class="nav-link nav-butt px-2">Проекты</a></li>
-                    <li class="nav-item h2-text"><a th:href="@{/media}" class="nav-link nav-butt px-2">Медиацентр</a></li>
-                    <li class="nav-item h2-text"><a th:href="@{/vacancies}" class="nav-link nav-butt px-2">Вакансии</a></li>
-                    <li class="nav-item h2-text"><a th:href="@{/providers}" class="nav-link nav-butt px-2">Поставщикам</a></li>
-                    <li class="nav-item h2-text"><a th:href="@{/history}" class="nav-link nav-butt px-2">История</a></li>
-                    <li class="nav-item h2-text"><a href="http://10.87.45.30:8090/" class="nav-link nav-butt px-2">Инвентарная база</a></li>
+                    <a class="nav-item h2-text" th:href="@{/projects}">Проекты</a>
+                    <div class="right_border"></div>
+                    <a class="nav-item h2-text" th:href="@{/media}">Медиацентр</a>
+                    <div class="right_border"></div>
+                    <a class="nav-item h2-text" th:href="@{/vacancies}">Вакансии</a>
+                    <div class="right_border"></div>
+                    <a class="nav-item h2-text" th:href="@{/providers}">Поставщикам</a>
+                    <div class="right_border"></div>
+                    <a class="nav-item h2-text" th:href="@{/history}">История</a>
+                    <div class="right_border"></div>
+                    <a class="nav-item h2-text" href="http://10.87.45.30:8090/">Инвентарная база</a>
                 </ul>
             </div>
         </div>

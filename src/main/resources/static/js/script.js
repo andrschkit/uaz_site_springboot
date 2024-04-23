@@ -1,13 +1,11 @@
 //Кнопки вкладок Header
-let nav_item=document.getElementsByClassName('nav-butt');
-let nav_house=document.getElementById("nav_house");
+let nav_item=document.getElementsByClassName('nav-item');
 
 nav_item=[].slice.call(nav_item);
 
 switch (window.location.pathname) {
     case '/':
         nav_item[0].classList.add('static_hover');
-        nav_house.src="/images/house_white.svg"
         break;
     case '/projects':
         nav_item[1].classList.add('static_hover');
