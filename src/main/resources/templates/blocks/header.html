@@ -1,23 +1,31 @@
 <div th:fragment="header">
-    <header class="navbar navbar-expand-lg d-flex justify-content-center py-1 nav_border">
+    <header class="navbar navbar-expand-lg d-flex justify-content-center py-1 nav_border top_header_main">
         <div class="container-fluid d-flex flex-wrap">
             <a th:href="@{/}" class="d-flex justify-content-start headlogo mb-lg-0 ">
-                <div><img src="/images/Logo.svg" height="60" width="60" class="img-fluid anim_logo" alt=""></div>
+                <div><img src="/images/icons_swg/main_logo/Logo.svg" height="60" width="60" class="img-fluid anim_logo" alt=""></div>
                 <div class="right_border_logo"></div>
-                <div><img src="/images/Name.svg" height="60" width="150" class="img-fluid" alt=""></div>
+                <div><img src="/images/icons_swg/main_logo/Name.svg" height="60" width="150" class="img-fluid" alt=""></div>
             </a>
-            <div class="navbar navbar-expand-xl mx-auto d-flex justify-content-end me-1 animate-top">
-                <div class="collapse navbar-collapse" >
-                    <div class="contact-decor">Тел: <a  href="tel:+74951234567" class="phone-decor">+7 (495) 123-45-67</a></div>
-                    <div class="contact-decor mx-4">EMail: <a  href="mailto:uaz@book.ru" class="mail-decor">uaz@book.ru</a></div>
+            <div class="header_contact_segment animate-top">
+                <div class="contact_header">
+                    <a href="tel:+74999492525" class="phone-decor">
+                        <img src="/images/icons_swg/callback/phone_blue.svg"/>+7 (499) 949-25-27
+                    </a>
+                    <a href="mailto:uaz@domatom.ru" class="mail-decor">
+                        <img src="/images/icons_swg/callback/mailblue.svg"/>uaz@domatom.ru
+                    </a>
                 </div>
-                <div class="navbar mx-auto w-auto d-flex justify-content-center ms-1">
-                    <div class="col-xs-8">
-                        <a class="btn btn-my btn-modal me-3" data-bs-toggle="modal" href="#ModalToggle" role="button">Обратная связь</a>
-                    </div>
+                <div class="header_btn_group">
+                    <a class="btn_select_modal" data-bs-toggle="modal" href="#ModalToggle">
+                        <div><img src="/images/icons_swg/callback/mailgrey.svg"/></div>
+                        <div class="shadow_eng">
+                            <span><img src="/images/icons_swg/callback/mailwhite.svg"/></span>
+                        </div>
+                    </a>
+                    <div class="right_border_select"></div>
                     <a class="btn_select" href="#">
-                        <div>RU</div>
-                        <div class="shadow">
+                        <div>RUS</div>
+                        <div class="shadow_eng">
                             <span>EN</span>
                         </div>
                     </a>
@@ -26,10 +34,10 @@
         </div>
     </header>
 
-    <nav class="navbar navbar-expand-lg border-bottom nav_border">
-        <div class="container-fluid d-flex flex-wrap">
+    <nav class="navbar navbar-expand-lg border-bottom nav_border top_header_second">
+        <div class="container-fluid d-flex flex-wrap top_header_second_flex">
             <a class=" nav-item me_house" th:href="@{/}" aria-current="page">
-                <img id="nav_house" class="nav-link" src="/images/house_black.svg" height="30px" width="30px" alt=""/>
+                <img id="nav_house" class="nav-link" src="/images/icons_swg/home_page/house_black.svg" height="30px" width="30px" alt=""/>
             </a>
             <div class="right_border" style=" margin-bottom: 10px"></div>
 

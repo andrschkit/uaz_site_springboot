@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Andrew Shcherbakov">
+    <title>О Комании</title>
+    <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="/StyleSheets/style.css" rel="stylesheet"/>
+    <link href="/StyleSheets/style_mobile.css" rel="stylesheet"/>
+    <link rel="shortcut icon" href="/images/icons_swg/main_logo/Logo.svg" type="image/x-icon"/>
+</head>
+
+<body>
+
+<header th:insert="blocks/header.html"> </header>
+
+<main>
+    <div class="preloader"></div>
+    <div style="display:none;" id="myDiv" class="animate-bottom">
+        <div class="pricing-header p-3 pb-md-4 mx-auto text-center border-bottom border-3">
+            <h1 class="display-4 fw-normal">О Компании АО "УАЗ"</h1>
+        </div>
+
+        <div class="container my-5 mb-cont news_decor">
+            <a th:href="@{/projects/ordinka}" style="color:black; text-decoration: none;">
+                <div class="row p-5 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg ">
+                    <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
+                        <h1 class="display-4 fw-bold h-2">Большая Ордынка</h1>
+                        <p class="lead">Главное здание Госкорпорации Росатом.</p>
+                    </div>
+                    <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden img-shadow">
+                        <img class="rounded-lg-3 d-block" src="/images/projects_img/ordinka/prew_ordinka.jpg" alt="" width="720" style="max-height: 400px; object-fit: cover;">
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</main>
+
+<div class="btn-up btn-up_hide"> <img src="/images/up-arrow.svg" alt=""/></div>
+
+<footer th:insert="blocks/footer.html"> </footer>
+
+<script src="/js/jquery-3.7.1.js"></script>
+<script src="/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="/js/script.js"></script>
+
+</body>
+</html>

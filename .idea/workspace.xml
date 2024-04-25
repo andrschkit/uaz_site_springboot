@@ -4,12 +4,40 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="63d29c66-ea9a-40cb-a3d4-b579f5e1bd53" name="Changes" comment="NF: new header and footer style">
+    <list default="true" id="63d29c66-ea9a-40cb-a3d4-b579f5e1bd53" name="Changes" comment="BF: mistakes after merge">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/about.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/StyleSheets/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/StyleSheets/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/StyleSheets/style_carousel.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/StyleSheets/style_carousel.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/StyleSheets/style_mobile.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/StyleSheets/style_mobile.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/summernote-0.8.20/summernote-lite.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/summernote-0.8.20/summernote-lite.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/Logo.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/images/icons_swg/main_logo/Logo.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/Logo_footer.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/images/icons_swg/main_logo/Logo_footer.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/Name.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/images/icons_swg/main_logo/Name.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/Name_footer.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/images/icons_swg/main_logo/Name_footer.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/Untitled.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/house_black.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/images/icons_swg/home_page/house_black.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/house_white.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/images/icons_swg/home_page/house_white.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/mail.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/images/icons_swg/callback/mail.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/map.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/images/icons_swg/callback/map.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/ostapenkodesign.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/images/icons_swg/main_logo/ostapenkodesign.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/phone.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/images/icons_swg/callback/phone.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/znak.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/Росатом.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/blocks/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/blocks/footer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/blocks/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/blocks/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/history.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/history.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/media.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/media.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/postEditor/addPost.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/postEditor/addPost.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/postEditor/editPost.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/postEditor/editPost.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/postEditor/singlePost.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/postEditor/singlePost.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/projects.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/projects.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/projects/kitay.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/projects/kitay.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/projects/monetka.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/projects/monetka.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/projects/ordinka.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/projects/ordinka.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/projects/vdnh.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/projects/vdnh.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/providers.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/providers.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/vacancies.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/vacancies.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,8 +49,8 @@
       <list>
         <option value="Interface" />
         <option value="Class" />
-        <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -75,11 +103,11 @@
       <recent name="C:\Users\Andrew\Documents\Projects\uaz_site_springboot\src\main\resources" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\User\Documents\GitHub\uaz_site_springboot\src\main\resources\static\images\icons_swg\main_logo" />
+      <recent name="C:\Users\User\Documents\GitHub\uaz_site_springboot\src\main\resources\static\images\icons_swg\callback" />
+      <recent name="C:\Users\User\Documents\GitHub\uaz_site_springboot\src\main\resources\static\images\icons_swg\home_page" />
       <recent name="C:\Users\User\Documents\GitHub\uaz_site_springboot\src\main\resources\templates\postEditor" />
       <recent name="C:\Users\User\Documents\GitHub\uaz_site_springboot\src\main\resources\static" />
-      <recent name="C:\Users\User\Documents\GitHub\uaz_site_springboot\src\main\resources\static\summernote-0.8.18\bs4" />
-      <recent name="C:\Users\User\Documents\GitHub\uaz_site_springboot\src\main\resources\static\js" />
-      <recent name="C:\Users\User\Documents\GitHub\uaz_site_springboot\src\main\resources\static\summernote-0.8.18" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="org.example.dto" />
@@ -134,7 +162,7 @@
       <workItem from="1712812455126" duration="4939000" />
       <workItem from="1712827400464" duration="26313000" />
       <workItem from="1713157902028" duration="51084000" />
-      <workItem from="1713877547530" duration="649000" />
+      <workItem from="1713877547530" duration="32972000" />
     </task>
     <task id="LOCAL-00001" summary="Started commit">
       <option name="closed" value="true" />
@@ -226,7 +254,14 @@
       <option name="project" value="LOCAL" />
       <updated>1713876914772</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="BF: mistakes after merge">
+      <created>1713878286037</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1713878286037</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -256,7 +291,8 @@
     <MESSAGE value="BF: Base working with WYSIWYG" />
     <MESSAGE value="NF:Short content for title box WYSIWYG" />
     <MESSAGE value="NF: new header and footer style" />
-    <option name="LAST_COMMIT_MESSAGE" value="NF: new header and footer style" />
+    <MESSAGE value="BF: mistakes after merge" />
+    <option name="LAST_COMMIT_MESSAGE" value="BF: mistakes after merge" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
