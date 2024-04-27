@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Andrew Shcherbakov">
+    <title>Услуги</title>
+    <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="/StyleSheets/style.css" rel="stylesheet"/>
+    <link href="/StyleSheets/style_mobile.css" rel="stylesheet"/>
+    <link rel="shortcut icon" href="/images/icons_swg/main_logo/Logo.svg" type="image/x-icon"/>
+</head>
+
+<body>
+
+<header th:insert="blocks/header.html"> </header>
+
+<main>
+    <div class="preloader"></div>
+    <div style="display:none;" id="myDiv" class="animate-bottom">
+        <div class="pricing-header p-3 pb-md-4 mx-auto text-center border-bottom border-3">
+            <h1 class="display-4 fw-normal">Услуги АО "УАЗ"</h1>
+        </div>
+        <div class="container_squares">
+            <a th:href="@{/projects/ordinka}" class="container_square news_decor" style="color:black; text-decoration: none;">
+                <div class="card_title_content">
+                    <h1 class="">Большая Ордынка</h1>
+                    <p class="">Главное здание Госкорпорации Росатом.</p>
+                </div>
+                <div class="card_img img-shadow">
+                    <img class="rounded-lg-3 d-block" src="/images/projects_img/ordinka/prew_ordinka.jpg" alt="" width="720" style="max-height: 400px; object-fit: cover;">
+                </div>
+            </a>
+            <a th:href="@{/projects/ordinka}" class="container_square news_decor" style="color:black; text-decoration: none;">
+                <div class="card_title_content">
+                    <h1 class="">Большая Ордынка</h1>
+                    <p class="">Главное здание Госкорпорации Росатом.</p>
+                </div>
+                <div class="card_img img-shadow">
+                    <img class="rounded-lg-3 d-block" src="/images/projects_img/ordinka/prew_ordinka.jpg" alt="" width="720" style="max-height: 400px; object-fit: cover;">
+                </div>
+            </a>
+            <a th:href="@{/projects/ordinka}" class="container_square news_decor" style="color:black; text-decoration: none;">
+                <div class="card_title_content">
+                    <h1 class="">Большая Ордынка</h1>
+                    <p class="">Главное здание Госкорпорации Росатом.</p>
+                </div>
+                <div class="card_img img-shadow">
+                    <img class="rounded-lg-3 d-block" src="/images/projects_img/ordinka/prew_ordinka.jpg" alt="" width="720" style="max-height: 400px; object-fit: cover;">
+                </div>
+            </a>
+            <div></div>
+            <a th:href="@{/projects/ordinka}" class="container_square news_decor" style="color:black; text-decoration: none;">
+                <div class="card_title_content">
+                    <h1 class="">Большая Ордынка</h1>
+                    <p class="">Главное здание Госкорпорации Росатом.</p>
+                </div>
+                <div class="card_img img-shadow">
+                    <img class="rounded-lg-3 d-block" src="/images/projects_img/ordinka/prew_ordinka.jpg" alt="" width="720" style="max-height: 400px; object-fit: cover;">
+                </div>
+            </a>
+        </div>
+    </div>
+</main>
+
+<div class="btn-up btn-up_hide"> <img src="/images/up-arrow.svg" alt=""/></div>
+
+<footer th:insert="blocks/footer.html"> </footer>
+
+<script src="/js/jquery-3.7.1.js"></script>
+<script src="/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="/js/script.js"></script>
+
+</body>
+</html>

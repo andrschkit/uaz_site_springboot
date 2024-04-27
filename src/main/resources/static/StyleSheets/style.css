@@ -42,7 +42,7 @@ body {
     margin-left: 0.45rem;
 }
 .right_border_logo{
-    border-right: 2px solid #bebebe;
+    border-right: 2px solid #d7d7d7;
     margin-left: 10px;
     height: 60px;
 }
@@ -59,7 +59,7 @@ footer{
 .container_footer{
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
-    border-top: 3px solid #bebebe;
+    border-top: 3px solid #d7d7d7;
     padding-top: 5px;
 }
 .footer_logo {
@@ -76,9 +76,11 @@ footer{
     font-size: 20px;
 }
 .nav_links a{
+    text-decoration: none;
     cursor: pointer;
     justify-content: start;
     padding-left: 5rem;
+    color: white;
 }
 .contact_footer{
     display: grid;
@@ -107,16 +109,14 @@ footer{
     margin-left: 5rem;
 }
 
-.img-shadow{
-    box-shadow: -0.2em -0.2em 0.9em #5F6062;
-}
-
 /*NavBar*/
 .top_header_main{
-height: 82px;
+    height: 82px;
+    border-bottom: 2px solid #d7d7d7;
 }
 .top_header_second{
-height: 55px;
+    height: 55px;
+    border-bottom: 2px solid #d7d7d7;
 }
 .top_header_second_flex{
     margin-bottom: 1px;
@@ -130,6 +130,35 @@ height: 55px;
 .nav_border{
     padding: 5px;
     border-bottom: 2px solid #dddddd;
+}
+.dropdown{
+
+}
+.dropdown:hover{
+    padding: -7px;
+    border-bottom: 5px solid #025EA1;
+    margin-bottom: -5px;
+    color: #025EA1;
+}
+.dropdown ul{
+    margin-top: 4px;
+}
+.dropdown-menu{
+    border-radius: 1px;
+}
+.dropdown-item {
+    font-size: 18px;
+    background-color: white;
+}
+
+.dropdown-item:hover{
+    transition: all ease-out 0.08s;
+    background-color: white;
+    color: black;
+    border-left:5px solid #025EA1;
+}
+.dropdown:hover .dropdown-menu {
+    display: block;
 }
 .nav-item{
     padding-top: 5px;
@@ -150,7 +179,7 @@ height: 55px;
 }
 .right_border{
     margin-top: 8px;
-    border-right: 1px solid #bebebe;
+    border-right: 1px solid #d7d7d7;
     height: 30px;
 }
 .static_hover{
@@ -198,13 +227,13 @@ height: 55px;
 }
 /*Кнопка выбора языка*/
 .btn_select_modal {
-    border: 1px solid  #bebebe;
+    border: 1px solid  #d7d7d7;
     margin-left: 25px;
     width: 50px;
     height: 50px;
     border-radius: 50%;
     text-decoration: none;
-    color:  #bebebe;
+    color:  #d7d7d7;
     font-size: 16px;
     text-align: center;
     line-height: 47px;
@@ -213,12 +242,12 @@ height: 55px;
     overflow: hidden;
 }
 .btn_select {
-    border: 1px solid  #bebebe;
+    border: 1px solid  #d7d7d7;
     width: 50px;
     height: 50px;
     border-radius: 50%;
     text-decoration: none;
-    color:  #bebebe;
+    color:  #d7d7d7;
     font-size: 16px;
     text-align: center;
     line-height: 50px;
@@ -229,7 +258,7 @@ height: 55px;
 .right_border_select{
     margin-top: 2px;
     width: 10px;
-    border-right: 1px solid #bebebe;
+    border-right: 1px solid #d7d7d7;
     height: 45px;
 }
 .shadow_eng {
@@ -274,9 +303,6 @@ height: 55px;
 }
 .me-footer {
     margin-left: 2.5rem !important;
-}
-.mb-cont {
-    margin-bottom: 4rem !important;
 }
 .mt-hist {
     margin-top: 2rem !important;
@@ -494,9 +520,83 @@ height: 55px;
     padding-bottom: 10px;
     margin-bottom: 10px;
 }
+/*content pages decor*/
+/*squares content*/
+.container_squares{
+    margin-left: 2rem;
+    margin-right: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.container_square{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 7px;
+    margin: 2rem 3rem;
+    max-width: 650px;
+    max-height: 400px;
+    box-shadow: 0.3em 0.3em 1.3em 0.01em #5F6062;
+}
+.card_title_content{
+    margin: 2rem 5rem;
+}
+.card_title_content h1{
+    font-size: 35px;
+}
+.card_title_content p{
+    font-size: 20px;
+}
+.card_img{
+    display: block;
+    overflow: hidden;
+    max-width: 450px;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+.img-shadow{
+    box-shadow: -0.2em -0.2em 0.9em #5F6062;
+}
 .news_decor{
     background: white;
 }
+.pricing-header h1{
+    font-size: 45px;
+}
+
+.container_square_licenses{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 7px;
+    margin: 2rem 3rem;
+    max-width: 650px;
+    max-height: 400px;
+    box-shadow: 0.3em 0.3em 1.3em 0.01em #5F6062;
+}
+.licenses_card_img{
+    display: block;
+    max-width: 450px;
+    max-height: 240px;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+.licenses_card_img img{
+    display: block;
+    max-height: 240px;
+    width:450px;
+    top: 50px;
+    object-fit: cover;
+    object-position: top;
+    transition: all ease-in-out 0.2s;
+}
+.container_square_licenses:hover .licenses_card_img{
+    overflow: visible;
+}
+.container_square_licenses:hover .licenses_card_img img{
+    max-height: 700px;
+}
+/*long content*/
 /* Выбор файла */
 .input-file-row {
     display: inline-block;

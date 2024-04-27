@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Andrew Shcherbakov">
+    <title>Контакты</title>
+    <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="/StyleSheets/style.css" rel="stylesheet"/>
+    <link href="/StyleSheets/style_mobile.css" rel="stylesheet"/>
+    <link rel="shortcut icon" href="/images/icons_swg/main_logo/Logo.svg" type="image/x-icon"/>
+</head>
+
+<body>
+
+<header th:insert="blocks/header.html"> </header>
+
+<main>
+    <div class="preloader"></div>
+    <div style="display:none;" id="myDiv" class="animate-bottom">
+        <div class="pricing-header p-3 pb-md-4 mx-auto text-center border-bottom border-3 mb-5">
+            <h3 class="display-4 head_font fw-normal">Контакты</h3>
+        </div>
+
+        <div class="container-fluid mx-auto">
+            <div class="row">
+                <div class="col-lg-10 col-md-10 col-sm-10 col-15 mx-auto ">
+                    <div class="card mx-auto mb-5">
+                        <div class="card-header">
+                            Контакты
+                        </div>
+                        <div class="container-fluid">
+                            <div class="row gy-5 mb-5 mt-5">
+                                <div class="w-auto mx-auto" style="min-width: 300px">
+                                    <div><img src="/images/soon_vac.svg" height="1400px" width="700px" class="img-fluid animated-box" alt=""></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<div class="btn-up btn-up_hide"> <img src="/images/up-arrow.svg" alt=""/></div>
+
+<footer th:insert="blocks/footer.html"> </footer>
+
+<script src="/js/jquery-3.7.1.js"></script>
+<script src="/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="/js/script.js"></script>
+
+</body>
+</html>

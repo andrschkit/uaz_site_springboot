@@ -27,26 +27,41 @@ public class MainController {
     public String mainPage(Model model) {
         return "index";
     }
-
-    @GetMapping(URL_PROJECTS)
-    public String projectsPage(Model model) {
-        return "projects";
+    @GetMapping(URL_ABOUT)
+    public String aboutPage(Model model) {
+        return "about";
     }
-    @GetMapping(URL_PROVIDERS)
-    public String providersPage(Model model) {
-        return "providers";
+    @GetMapping(URL_SERVICES)
+    public String servicesPage(Model model) {
+        return "services";
     }
-    @GetMapping(URL_VACANCIES)
-    public String vacanciesPage(Model model) {
-        return "vacancies";
+    @GetMapping(URL_PROJECTS_REPAIR)
+    public String projectsRepairPage(Model model) {
+        return "objects_repair";
     }
-    @GetMapping(URL_MEDIA)
+    @GetMapping(URL_PROJECTS_SUPPORT)
+    public String projectsSupportPage(Model model) {
+        return "objects_support";
+    }
+    @GetMapping(URL_LICENSES)
+    public String licensesPage(Model model) {
+        return "licenses";
+    }
+    @GetMapping(URL_NEWS)
     public String mediaPage(Model model) {
         List<MediaPost> postList = new ArrayList<>();
         postList= mediaService.findAllPosts();
         model.addAttribute("posts",
                 postList);
-        return "media";
+        return "news";
+    }
+    @GetMapping(URL_MEDIA_CENTER)
+    public String mediaCenterPage(Model model) {
+        return "mediacenter";
+    }
+    @GetMapping(URL_CONTACTS)
+    public String contactsPage(Model model) {
+        return "contacts";
     }
     @GetMapping(URL_HISTORY)
     public String historyPage(Model model) {

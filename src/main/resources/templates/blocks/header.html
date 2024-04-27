@@ -1,5 +1,5 @@
 <div th:fragment="header">
-    <header class="navbar navbar-expand-lg d-flex justify-content-center py-1 nav_border top_header_main">
+    <header class="navbar navbar-expand-lg d-flex justify-content-center py-1 top_header_main">
         <div class="container-fluid d-flex flex-wrap">
             <a th:href="@{/}" class="d-flex justify-content-start headlogo mb-lg-0 ">
                 <div><img src="/images/icons_swg/main_logo/Logo.svg" height="60" width="60" class="img-fluid anim_logo" alt=""></div>
@@ -34,7 +34,7 @@
         </div>
     </header>
 
-    <nav class="navbar navbar-expand-lg border-bottom nav_border top_header_second">
+    <nav class="navbar navbar-expand-lg top_header_second">
         <div class="container-fluid d-flex flex-wrap top_header_second_flex">
             <a class=" nav-item me_house" th:href="@{/}" aria-current="page">
                 <img id="nav_house" class="nav-link" src="/images/icons_swg/home_page/house_black.svg" height="30px" width="30px" alt=""/>
@@ -46,17 +46,29 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
-                    <a class="nav-item h2-text" th:href="@{/projects}">Проекты</a>
+                    <a class="nav-item h2-text" th:href="@{/about}">О Компании</a>
                     <div class="right_border"></div>
-                    <a class="nav-item h2-text" th:href="@{/media}">Медиацентр</a>
+                    <a class="nav-item h2-text" th:href="@{/services}">Услуги</a>
                     <div class="right_border"></div>
-                    <a class="nav-item h2-text" th:href="@{/vacancies}">Вакансии</a>
+                    <div class="dropdown">
+                        <a class="nav-item h2-text" type="button" id="dropdownMenuButton1"  aria-expanded="false">
+                            Объекты
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                            <li><a class="dropdown-item" th:href="@{/objects_repair}">Стройка/ремонт</a></li>
+                            <li><a class="dropdown-item" th:href="@{/objects_support}">Эксплуатация</a></li>
+                        </ul>
+                    </div>
+
                     <div class="right_border"></div>
-                    <a class="nav-item h2-text" th:href="@{/providers}">Поставщикам</a>
+                    <a class="nav-item h2-text" th:href="@{/licenses}">Лицензии</a>
                     <div class="right_border"></div>
-                    <a class="nav-item h2-text" th:href="@{/history}">История</a>
+                    <a class="nav-item h2-text" th:href="@{/news}">Новости</a>
                     <div class="right_border"></div>
-                    <a class="nav-item h2-text" href="http://10.87.45.30:8090/">Инвентарная база</a>
+                    <a class="nav-item h2-text" th:href="@{/mediacenter}">Медиацентр</a>
+                    <div class="right_border"></div>
+                    <a class="nav-item h2-text" th:href="@{/contacts}">Контакты</a>
+                    <div class="right_border"></div>
                 </ul>
             </div>
         </div>

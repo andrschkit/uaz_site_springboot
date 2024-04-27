@@ -1,5 +1,8 @@
 /* Верстка мобилки*/
 @media only screen and (max-width: 991px) {
+    .top_header_second{
+        height: auto;
+    }
     .right_border{
         display: none;
     }

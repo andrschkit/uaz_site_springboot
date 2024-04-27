@@ -28,7 +28,7 @@ public class MediaPostController {
             @RequestParam("short_content") String short_content,
             @RequestParam("content") String content){
         mediaService.save(title_image, title, short_content, content);
-        return "redirect:"+URL_MEDIA;
+        return "redirect:"+URL_NEWS;
     }
     @GetMapping(URL_POST)
     public String singlePost(
@@ -55,7 +55,7 @@ public class MediaPostController {
             @RequestParam("content") String content,
             Model model){
         mediaService.saveEdit(postId, title_image, title, short_content, content);
-        return "redirect:"+URL_MEDIA;
+        return "redirect:"+URL_NEWS;
     }
 
 }

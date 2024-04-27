@@ -7,20 +7,29 @@ switch (window.location.pathname) {
     case '/':
         nav_item[0].classList.add('static_hover');
         break;
-    case '/projects':
+    case '/about':
         nav_item[1].classList.add('static_hover');
         break;
-    case '/media':
+    case '/services':
         nav_item[2].classList.add('static_hover');
         break;
-    case '/vacancies':
+    case '/objects_repair':
         nav_item[3].classList.add('static_hover');
         break;
-    case '/providers':
+    case '/objects_support':
+        nav_item[3].classList.add('static_hover');
+        break;
+    case '/licenses':
         nav_item[4].classList.add('static_hover');
         break;
-    case '/history':
+    case '/news':
         nav_item[5].classList.add('static_hover');
+        break;
+    case '/mediacenter':
+        nav_item[6].classList.add('static_hover');
+        break;
+    case '/contacts':
+        nav_item[7].classList.add('static_hover');
         break;
     default:
 

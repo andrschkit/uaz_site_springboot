@@ -2,10 +2,14 @@ package org.example;
 
 public final class StaticString {
     public static final String URL_MAIN_PAGE = "/";
-    public static final String URL_PROJECTS = "/projects";
-    public static final String URL_PROVIDERS = "/providers";
-    public static final String URL_VACANCIES = "/vacancies";
-    public static final String URL_MEDIA = "/media";
+    public static final String URL_ABOUT = "/about";
+    public static final String URL_SERVICES = "/services";
+    public static final String URL_PROJECTS_REPAIR = "/objects_repair";
+    public static final String URL_PROJECTS_SUPPORT = "/objects_support";
+    public static final String URL_LICENSES = "/licenses";
+    public static final String URL_NEWS = "/news";
+    public static final String URL_MEDIA_CENTER = "/mediacenter";
+    public static final String URL_CONTACTS = "/contacts";
     public static final String URL_HISTORY = "/history";
     public static final String URL_ADD_POSTS = "/addPost";
     public static final String URL_EDIT_POSTS = "/editPost";
