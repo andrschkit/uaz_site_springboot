@@ -6,6 +6,7 @@ h1 {
 }
 h2 {
     font-family: Arial Black, serif;
+    text-transform: uppercase;
 }
 h3 {
     font-family: Arial Black, serif;
@@ -105,7 +106,7 @@ footer{
 .uaz_copyright a{
     text-decoration: none;
     color: white;
-    cursor: inherit;
+    cursor: unset;
     font-size: 14px;
     margin-left: 5rem;
 }
@@ -522,6 +523,30 @@ footer{
     margin-bottom: 10px;
 }
 /*content pages decor*/
+/*Contacts*/
+.contact_text{
+    display: flex;
+    flex-direction: column;
+    margin: 2rem 2rem;
+    align-items: start;
+    justify-items: start;
+    text-align: start;
+}
+.contact_text h2{
+    margin-right: 30px;
+    font-size: 18px;
+}
+
+.contact_ph_ml{
+    display: flex;
+    flex-direction: column;
+}
+.contact_ph_ml a{
+    margin-left: 10px;
+}
+.selected_rout{
+    font-weight: 700;
+}
 /*squares content*/
 .container_squares{
     margin-left: 2rem;
