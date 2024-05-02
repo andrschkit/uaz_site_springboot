@@ -4,26 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="63d29c66-ea9a-40cb-a3d4-b579f5e1bd53" name="Changes" comment="NF: full new visual">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/contacts.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/licenses.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/mediacenter.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/objects_support.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/services.html" afterDir="false" />
+    <list default="true" id="63d29c66-ea9a-40cb-a3d4-b579f5e1bd53" name="Changes" comment="NF: half past new design adding">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/StaticString.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/StaticString.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controllers/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controllers/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controllers/MediaPostController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controllers/MediaPostController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/StyleSheets/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/StyleSheets/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/StyleSheets/style_mobile.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/StyleSheets/style_mobile.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/blocks/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/blocks/footer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/blocks/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/blocks/header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/media.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/news.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/projects.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/objects_repair.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/providers.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/vacancies.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/licenses/Atom_license03-115.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/images/licenses/Atom_license03-115.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/licenses.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/licenses.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -148,7 +133,8 @@
       <workItem from="1712812455126" duration="4939000" />
       <workItem from="1712827400464" duration="26313000" />
       <workItem from="1713157902028" duration="51084000" />
-      <workItem from="1713877547530" duration="83739000" />
+      <workItem from="1713877547530" duration="84688000" />
+      <workItem from="1714625894830" duration="5696000" />
     </task>
     <task id="LOCAL-00001" summary="Started commit">
       <option name="closed" value="true" />
@@ -254,7 +240,14 @@
       <option name="project" value="LOCAL" />
       <updated>1714044379941</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="NF: half past new design adding">
+      <created>1714225129275</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1714225129275</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -286,7 +279,8 @@
     <MESSAGE value="NF: new header and footer style" />
     <MESSAGE value="BF: mistakes after merge" />
     <MESSAGE value="NF: full new visual" />
-    <option name="LAST_COMMIT_MESSAGE" value="NF: full new visual" />
+    <MESSAGE value="NF: half past new design adding" />
+    <option name="LAST_COMMIT_MESSAGE" value="NF: half past new design adding" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
