@@ -524,6 +524,9 @@ footer{
 }
 /*content pages decor*/
 /*Contacts*/
+.contact_card{
+    box-shadow:0 1rem 3rem #a8a8a8;
+}
 .contact_text{
     display: flex;
     flex-direction: column;
@@ -562,7 +565,7 @@ footer{
     margin: 2rem 3rem;
     max-width: 650px;
     max-height: 400px;
-    box-shadow: 0.3em 0.3em 1.3em 0.01em #5F6062;
+    box-shadow:0 1rem 3rem #a8a8a8;
 }
 .card_title_content{
     margin: 2rem 5rem;

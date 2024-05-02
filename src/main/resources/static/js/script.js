@@ -25,11 +25,8 @@ switch (window.location.pathname) {
     case '/news':
         nav_item[5].classList.add('static_hover');
         break;
-    case '/mediacenter':
-        nav_item[6].classList.add('static_hover');
-        break;
     case '/contacts':
-        nav_item[7].classList.add('static_hover');
+        nav_item[6].classList.add('static_hover');
         break;
     default:
 
