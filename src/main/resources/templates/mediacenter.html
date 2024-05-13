@@ -8,6 +8,7 @@
     <title>Новости</title>
     <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
     <link href="/StyleSheets/style.css" rel="stylesheet"/>
+    <link href="/StyleSheets/style_cards.css" rel="stylesheet"/>
     <link href="/StyleSheets/style_mobile.css" rel="stylesheet"/>
     <link rel="shortcut icon" href="/images/icons_swg/main_logo/Logo.svg" type="image/x-icon"/>
 </head>
@@ -19,8 +20,8 @@
 <main>
     <div class="preloader"></div>
     <div style="display:none;" id="myDiv" class="animate-bottom">
-        <div class="pricing-header p-3 pb-md-4 mx-auto text-center border-bottom border-3 mb-5">
-            <h3 class="display-4 fw-normal ">Новости АО "УАЗ"</h3>
+        <div class="mx-auto text-center">
+            <h1>Новости АО "УАЗ"</h1>
         </div>
         <div class="container my-5 mb-cont news_decor">
             <a th:action="@{/addPost}" method="get" style="color:black; text-decoration: none;">

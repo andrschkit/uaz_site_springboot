@@ -11,6 +11,11 @@ public final class StaticString {
     public static final String URL_MEDIA_CENTER = "/mediacenter";
     public static final String URL_CONTACTS = "/contacts";
     public static final String URL_HISTORY = "/history";
+    public static final String URL_SERVICES_TECHNICAL_SERVICE = "services/technical_service";
+    public static final String URL_SERVICES_TECHNICAL_EVENTS = "services/technical_events";
+    public static final String URL_SERVICES_EXPLOITATION = "services/exploitation";
+    public static final String URL_SERVICES_CLEANING = "services/cleaning";
+    public static final String URL_SERVICES_BUILDING = "services/building";
     public static final String URL_ADD_POSTS = "/addPost";
     public static final String URL_EDIT_POSTS = "/editPost";
     public static final String URL_POST = "/singlePost";

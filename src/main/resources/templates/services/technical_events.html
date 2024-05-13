@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Andrew Shcherbakov">
+    <title>Услуги</title>
+    <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="/fancybox-3.0/dist/jquery.fancybox.min.css" />
+    <link href="/StyleSheets/style.css" rel="stylesheet"/>
+    <link href="/StyleSheets/style_mobile.css" rel="stylesheet"/>
+    <link href="/StyleSheets/style_article.css" rel="stylesheet"/>
+    <link rel="shortcut icon" href="/images/icons_swg/main_logo/Logo.svg" type="image/x-icon"/>
+</head>
+
+<body>
+
+<header th:insert="blocks/header.html"> </header>
+
+<main>
+    <div class="preloader"></div>
+    <div style="display:none;" id="myDiv" class="animate-bottom">
+        <div class="mx-auto text-center">
+            <h1>Организационно технические мероприятия</h1>
+        </div>
+        <div class="card mx-auto mb-5 article_card">
+            <div class="container_article">
+
+                <h3>Сопровождение договоров</h3>
+                <div class="article_paragraph floating_right">
+
+                    <div class="article_text">
+                        <label>
+                            <a class="floating" href="/images/services_img/technical_service/electro.JPG" data-fancybox="images" data-caption="Обслуживание электроустановок">
+                                <img src="/images/services_img/technical_service/electro_min.jpg" class="img_article  pic_scale_anim" alt=""/>
+                            </a>
+                            <p>Сопровождение (взаимодействие от имени Заказчика с руководителями и инспекторами ресурсоснабжающих
+                            организаций по вопросам эксплуатации Объекта и обеспечения его коммунальными услугами, получение
+                            и передача Заказчику первичных учетных документов и пр.) договоров Заказчика с ресурсоснабжающими
+                            организациями на поставку коммунальных услуг (энергоснабжения, теплоснабжения, водоснабжения,
+                            канализации и водоотведения) на Объект. Взаимодействие с городскими надзорными органами по вопросам,
+                            входящим в обязательства по договору, от имени Заказчика. Прием и сопровождение представителей городских
+                            надзорных органов и представителей ресурсоснабжающих организаций, предоставляющих коммунальные услуги, при
+                            проведении ими инспекционных проверок, касающихся функционирования систем, на Объекте.
+                            <p>
+                            Установка и подключение дополнительных электроустановочных изделий и электроприборов.
+                            Ведение эксплуатационной документации в соответствии с требованиями нормативных документов и рекомендациями изготовителей оборудования.
+                        </label>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</main>
+
+<div class="btn-up btn-up_hide"> <img src="/images/up-arrow.svg" alt=""/></div>
+
+<footer th:insert="blocks/footer.html"> </footer>
+
+<script src="/js/jquery-3.7.1.js"></script>
+<script src="/fancybox-3.0/dist/jquery-3.6.4.min.js"></script>
+<script src="/fancybox-3.0/dist/jquery.fancybox.min.js"></script>
+<script src="/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="/js/script.js"></script>
+
+</body>
+</html>

@@ -63,6 +63,28 @@ public class MainController {
     public String contactsPage(Model model) {
         return "contacts";
     }
+
+    //articles
+    @GetMapping(URL_SERVICES_TECHNICAL_SERVICE)
+    public String technicalServicePage(Model model) {
+        return "services/technical_service";
+    }
+    @GetMapping(URL_SERVICES_TECHNICAL_EVENTS)
+    public String technicalEventsPage(Model model) {
+        return "services/technical_events";
+    }
+    @GetMapping(URL_SERVICES_EXPLOITATION)
+    public String exploitationPage(Model model) {
+        return "services/exploitation";
+    }
+    @GetMapping(URL_SERVICES_CLEANING)
+    public String cleaningPage(Model model) {
+        return "services/cleaning";
+    }
+    @GetMapping(URL_SERVICES_BUILDING)
+    public String buildingPage(Model model) {
+        return "services/building";
+    }
     @GetMapping(URL_HISTORY)
     public String historyPage(Model model) {
         return "history";

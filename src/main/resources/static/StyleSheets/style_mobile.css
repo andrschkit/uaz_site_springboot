@@ -15,18 +15,6 @@
     }
 }
 @media only screen and (max-width: 545px) {
-    .btn-modal {
-        background-color: white;
-        border: 1px solid #32a1ce;
-        border-radius: 3px;
-        padding: 8px 15px;
-        text-align: center;
-        text-decoration: none;
-        font-size: 14px;
-        color: #32a1ce;
-        margin-bottom: -0.3rem !important;
-
-    }
     .btn_select {
         border: 1px solid #32a1ce;
         background: white;
@@ -49,23 +37,8 @@
     .right_border_logo{
         height: 37px;
     }
-    .head_font {
-        font-size: 30px;
-    }
 }
 @media only screen and (max-width: 408px) {
-    .btn-modal {
-        background-color: white;
-        border: 1px solid #32a1ce;
-        border-radius: 3px;
-        padding: 8px 15px;
-        text-align: center;
-        text-decoration: none;
-        color: #32a1ce;
-        font-size: 13px;
-        margin-bottom: -0.3rem !important;
-
-    }
     .btn_select {
         border: 1px solid #32a1ce;
         background: white;
@@ -85,26 +58,8 @@
     .headlogo{
         margin-bottom: -0.3rem !important;
     }
-    .head_font{
-        font-size: 25px;
-    }
 }
 @media only screen and (max-width: 396px) {
-    .btn-modal {
-        background-color: white;
-        border: 1px solid #32a1ce;
-        border-radius: 3px;
-        text-align: center;
-        text-decoration: none;
-        color: #32a1ce;
-        font-size: 12px;
-        text-align:center;
-        padding: 5px 0px;
-        max-width: 65px;
-        height: 48px;
-        margin-bottom: -0.3rem !important;
-
-    }
     .btn_select {
         border: 1px solid #32a1ce;
         background: white;
@@ -128,8 +83,5 @@
     }
     .right_border_logo{
         height: 32px;
-    }
-    .head_font{
-        font-size: 20px;
     }
 }

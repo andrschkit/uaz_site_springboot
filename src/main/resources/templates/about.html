@@ -8,6 +8,7 @@
     <title>О Комании</title>
     <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
     <link href="/StyleSheets/style.css" rel="stylesheet"/>
+    <link href="/StyleSheets/style_cards.css" rel="stylesheet"/>
     <link href="/StyleSheets/style_mobile.css" rel="stylesheet"/>
     <link rel="shortcut icon" href="/images/icons_swg/main_logo/Logo.svg" type="image/x-icon"/>
 </head>
@@ -19,47 +20,50 @@
 <main>
     <div class="preloader"></div>
     <div style="display:none;" id="myDiv" class="animate-bottom">
-        <div class="pricing-header p-3 pb-md-4 mx-auto text-center border-bottom border-3">
-            <h1 class="display-4 fw-normal">О Компании АО "УАЗ"</h1>
+        <div class="mx-auto text-center">
+            <h1>О Компании АО "УАЗ"</h1>
         </div>
         <div class="container_squares">
-                <a th:href="@{/projects/ordinka}" class="container_square news_decor" style="color:black; text-decoration: none;">
-                        <div class="card_title_content">
-                            <h1 class="">Большая Ордынка</h1>
-                            <p class="">Главное здание Госкорпорации Росатом.</p>
-                        </div>
-                        <div class="card_img img-shadow">
-                            <img class="rounded-lg-3 d-block" src="/images/projects_img/ordinka/prew_ordinka.jpg" alt="" width="720" style="max-height: 400px; object-fit: cover;">
-                        </div>
-                </a>
-                <a th:href="@{/projects/ordinka}" class="container_square news_decor" style="color:black; text-decoration: none;">
-                    <div class="card_title_content">
-                        <h1 class="">Большая Ордынка</h1>
-                        <p class="">Главное здание Госкорпорации Росатом.</p>
-                    </div>
-                    <div class="card_img img-shadow">
-                        <img class="rounded-lg-3 d-block" src="/images/projects_img/ordinka/prew_ordinka.jpg" alt="" width="720" style="max-height: 400px; object-fit: cover;">
-                    </div>
-                </a>
-                <a th:href="@{/projects/ordinka}" class="container_square news_decor" style="color:black; text-decoration: none;">
-                    <div class="card_title_content">
-                        <h1 class="">Большая Ордынка</h1>
-                        <p class="">Главное здание Госкорпорации Росатом.</p>
-                    </div>
-                    <div class="card_img img-shadow">
-                        <img class="rounded-lg-3 d-block" src="/images/projects_img/ordinka/prew_ordinka.jpg" alt="" width="720" style="max-height: 400px; object-fit: cover;">
-                    </div>
-                </a>
-            <div></div>
-                <a th:href="@{/projects/ordinka}" class="container_square news_decor" style="color:black; text-decoration: none;">
-                    <div class="card_title_content">
-                        <h1 class="">Большая Ордынка</h1>
-                        <p class="">Главное здание Госкорпорации Росатом.</p>
-                    </div>
-                    <div class="card_img img-shadow">
-                        <img class="rounded-lg-3 d-block" src="/images/projects_img/ordinka/prew_ordinka.jpg" alt="" width="720" style="max-height: 400px; object-fit: cover;">
-                    </div>
-                </a>
+            <a th:href="@{/projects/ordinka}" class="container_square news_decor">
+                <div class="card_title_content">
+                    <h3>Проектирование, эксплуатация и контроль</h3>
+                </div>
+                <div class="card_img">
+                    <img  src="/images/projects_img/ordinka/prew_ordinka.jpg" alt="" >
+                </div>
+            </a>
+            <a th:href="@{/projects/ordinka}" class="container_square news_decor" >
+                <div class="card_title_content">
+                    <h3>Организационно технические мероприятия</h3>
+                </div>
+                <div class="card_img">
+                    <img src="/images/projects_img/ordinka/prew_ordinka.jpg" alt="" >
+                </div>
+            </a>
+            <a th:href="@{/projects/ordinka}" class="container_square news_decor">
+                <div class="card_title_content">
+                    <h3>Техническое обслуживание объектов недвижимости</h3>
+                </div>
+                <div class="card_img">
+                    <img src="/images/projects_img/ordinka/prew_ordinka.jpg" alt="">
+                </div>
+            </a>
+            <a th:href="@{/projects/ordinka}" class="container_square news_decor">
+                <div class="card_title_content">
+                    <h3>Клининг, благоустройство и такелаж</h3>
+                </div>
+                <div class="card_img">
+                    <img src="/images/projects_img/ordinka/prew_ordinka.jpg" alt="" >
+                </div>
+            </a>
+            <a th:href="@{/projects/ordinka}" class="container_square news_decor">
+                <div class="card_title_content">
+                    <h3 class="">Строительство и ремонт</h3>
+                </div>
+                <div class="card_img">
+                    <img src="/images/projects_img/ordinka/prew_ordinka.jpg" alt="" >
+                </div>
+            </a>
         </div>
     </div>
 </main>
