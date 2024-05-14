@@ -5,7 +5,7 @@ public final class StaticString {
     public static final String URL_ABOUT = "/about";
     public static final String URL_SERVICES = "/services";
     public static final String URL_PROJECTS_REPAIR = "/objects_repair";
-    public static final String URL_PROJECTS_SUPPORT = "/objects_support";
+    public static final String URL_PROJECTS_EXPLOITATION = "/objects_exploitation";
     public static final String URL_LICENSES = "/licenses";
     public static final String URL_NEWS = "/news";
     public static final String URL_MEDIA_CENTER = "/mediacenter";

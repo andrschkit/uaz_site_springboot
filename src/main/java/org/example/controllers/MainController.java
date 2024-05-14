@@ -39,9 +39,9 @@ public class MainController {
     public String projectsRepairPage(Model model) {
         return "objects_repair";
     }
-    @GetMapping(URL_PROJECTS_SUPPORT)
-    public String projectsSupportPage(Model model) {
-        return "objects_support";
+    @GetMapping(URL_PROJECTS_EXPLOITATION)
+    public String projectsExploitationPage(Model model) {
+        return "objects_exploitation";
     }
     @GetMapping(URL_LICENSES)
     public String licensesPage(Model model) {

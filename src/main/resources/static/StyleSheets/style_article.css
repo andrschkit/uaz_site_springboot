@@ -21,28 +21,29 @@
     margin-bottom: 2rem;
     border-bottom: 2px solid #d7d7d7;
 }
-.article_text{
+.article_text_short{
     display: inline-flex;
     flex-direction: column;
     align-content: center;
     justify-content: center;
     font-size: 25px;
 }
-span{
-    line-height: 100px;
+.article_text_long{
+    font-size: 25px;
+}
+.article_text_short p{
+    margin-bottom: 5px;
     text-align: start;
 }
-.article_text p{
+.article_text_long p{
     margin-bottom: 5px;
+    text-align: start;
 }
 .floating_left{
     flex-direction: row
 }
 .floating_right{
     flex-direction: row-reverse;
-}
-.floating{
-    float: right;
 }
 .img_article{
     max-width: 300px;

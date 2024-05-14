@@ -1,10 +1,135 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Andrew Shcherbakov">
+    <title>Услуги</title>
+    <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="/fancybox-3.0/dist/jquery.fancybox.min.css" />
+    <link href="/StyleSheets/style.css" rel="stylesheet"/>
+    <link href="/StyleSheets/style_mobile.css" rel="stylesheet"/>
+    <link href="/StyleSheets/style_article.css" rel="stylesheet"/>
+    <link rel="shortcut icon" href="/images/icons_swg/main_logo/Logo.svg" type="image/x-icon"/>
 </head>
+
 <body>
+
+<header th:insert="blocks/header.html"> </header>
+
+<main>
+    <div class="preloader"></div>
+    <div style="display:none;" id="myDiv" class="animate-bottom">
+        <div class="mx-auto text-center">
+            <h1>Клининг/благоустройство/такелаж</h1>
+        </div>
+        <div class="card mx-auto mb-5 article_card">
+            <div class="container_article">
+
+                <h3>Санитарно-техническое содержание Объекта (уборка помещений Объекта и прилегающих территорий)</h3>
+                <div class="article_paragraph floating_right">
+                    <a href="/images/services_img/technical_service/electro.JPG" data-fancybox="images" data-caption="Обслуживание электроустановок">
+                        <img src="/images/services_img/technical_service/electro_min.jpg" class="img_article  pic_scale_anim" alt=""/>
+                    </a>
+                    <div class="article_text_short">
+                        <p>Ежедневная, поддерживающая и генеральная уборки офисных помещений и мест общего пользования
+                            Объекта в соответствии с разработанным Регламентом по комплексной уборке офисных помещений
+                            и мест общего пользования Объекта.
+                        </p>
+                        <p>Комплексная (ручная и механизированная) уборка прилегающих территорий, линейных сооружений и построек
+                            в соответствии с Регламентом и объемами работ по комплексной ручной и механизированной уборке прилегающих территорий;
+                        </p>
+                        <p>Уход за газонами, оформление прилегающей территории цветочными насаждениями, посев травы, полив и скашивание.</p>
+                    </div>
+                </div>
+
+                <h3>Эксплуатационное обслуживание Объекта</h3>
+                <div class="article_paragraph floating_left">
+                    <div class="article_text_long">
+                        <a style="float: left" href="/images/services_img/technical_service/electro.JPG" data-fancybox="images" data-caption="Обслуживание электроустановок">
+                            <img src="/images/services_img/technical_service/electro_min.jpg" class="img_article  pic_scale_anim" alt=""/>
+                        </a>
+                        <p>Мытье оконного остекления, в том числе методом промышленного альпинизма.
+                        </p>
+                        <p>Очистка кровли и карнизов от снега и наледи методом промышленного альпинизма.
+                        </p>
+                        <p>Организация оказания услуг по обращению с твердыми коммунальными отходами (ТКО)
+                            IV, V классов опасности, которая включает: складирование (накопление), прием (сбор)
+                            отходов путем их погрузки в/на мусоровоз в местах (на площадках) накопления, обеспечение
+                            их транспортировки, обработки, обезвреживания, утилизации и размещения на объектах размещения
+                            и обезвреживания отходов в соответствии с законодательством Российской Федерации с привлечением
+                            операторов по обращению с ТКО и (или) регионального оператора по обращению с ТКО и заключением с
+                            ними от имени и за счет Заказчика договора/договоров на обращение с ТКО;
+                        </p>
+                        <p>Вывоз снега.
+                        </p>
+                        <p>Проведение дезинсекции и дератизации помещений Зданий и территории.
+                        </p>
+                        <p>Стирка и обслуживание штор и жалюзи.
+                        </p>
+                        <p>Химическая чистка мебели, ковровых покрытий, штор, жалюзи.
+                        </p>
+                        <p>Организация оказания услуг по утилизации ртутьсодержащих
+                            отходов с привлечением федерального оператора по обращению с отходами I и II классов опасности.
+                        </p>
+                        <p>Организация оказания услуг по утилизации макулатуры, металлолома и мебели с привлечением
+                            специализированных организации по приему макулатуры, лома и отходов цветных и (или)
+                            черных металлов, мебели и заключением с ними от имени и за счет Заказчика договора/договоров
+                            на утилизацию макулатуры, металлолома, мебели.
+                        </p>
+                        <p>Уничтожение документов в промышленном шредере.
+                        </p>
+                        <p>Услуги гардероба.
+                        </p>
+                        <p>Замена грязезащитных ковриков.
+                        </p>
+                        <p>Обслуживание аквариумов.
+                        </p>
+                        <p>Оформление и обслуживание цветочных композиций, растений.
+                        </p>
+                        <p>Обслуживание и мелкий ремонт/регулировка окон, дверей, замков.
+                        </p>
+                        <p>Сборка, разборка, мелкий ремонт мебели.
+                        </p>
+                        <p>Размещение и замена информационных плакатов и листовок на специальных настенных информационных стендах.
+                        </p>
+
+                    </div>
+                </div>
+
+                <h3>Такелажные работы</h3>
+                <div class="article_paragraph floating_right">
+                    <a href="/images/services_img/technical_service/electro.JPG" data-fancybox="images" data-caption="Обслуживание электроустановок">
+                        <img src="/images/services_img/technical_service/electro_min.jpg" class="img_article  pic_scale_anim" alt=""/>
+                    </a>
+                    <div class="article_text_short">
+                        <p>
+                            Погрузочно-разгрузочные работы с грузами массой от 5 кг до 80 кг.
+                        </p>
+                        <p>Транспортировка грузов вручную, тележками в пределах Объекта и прилегающих территорий.
+                        </p>
+                        <p>Разнос питьевой воды и замена бутылей в кулерах, установленных в помещениях Объекта.
+                        </p>
+                        <p>Перемещение рабочих мест в пределах Объекта.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</main>
+
+<div class="btn-up btn-up_hide"> <img src="/images/up-arrow.svg" alt=""/></div>
+
+<footer th:insert="blocks/footer.html"> </footer>
+
+<script src="/js/jquery-3.7.1.js"></script>
+<script src="/fancybox-3.0/dist/jquery-3.6.4.min.js"></script>
+<script src="/fancybox-3.0/dist/jquery.fancybox.min.js"></script>
+<script src="/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="/js/script.js"></script>
 
 </body>
 </html>

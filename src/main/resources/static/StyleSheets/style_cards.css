@@ -120,6 +120,7 @@
     color: #3b3b3b;
     width: 520px;
     margin-bottom: 6rem;
+    margin-right: 10rem;
     margin-left: 2rem;
 
 }
@@ -127,16 +128,14 @@
     font-size: 25px;
 }
 .card_long_img{
-    display: block;
     width: 540px;
     height: 400px;
-    margin-left: 10rem;
 }
 
 .card_long_img img{
-    display: block;
     object-fit: fill;
+    max-height: 110%;
     border-radius: 4px;
-    object-position: top;
+    object-position: center center;
     box-shadow:0 1rem 3rem #4f4f4f;
 }

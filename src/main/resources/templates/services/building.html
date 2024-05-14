@@ -1,10 +1,111 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Andrew Shcherbakov">
+    <title>Услуги</title>
+    <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="/fancybox-3.0/dist/jquery.fancybox.min.css" />
+    <link href="/StyleSheets/style.css" rel="stylesheet"/>
+    <link href="/StyleSheets/style_mobile.css" rel="stylesheet"/>
+    <link href="/StyleSheets/style_article.css" rel="stylesheet"/>
+    <link rel="shortcut icon" href="/images/icons_swg/main_logo/Logo.svg" type="image/x-icon"/>
 </head>
+
 <body>
+
+<header th:insert="blocks/header.html"> </header>
+
+<main>
+    <div class="preloader"></div>
+    <div style="display:none;" id="myDiv" class="animate-bottom">
+        <div class="mx-auto text-center">
+            <h1>Строительство и ремонт</h1>
+        </div>
+        <div class="card mx-auto mb-5 article_card">
+            <div class="container_article">
+
+                <h3>Фасадные работы</h3>
+                <div class="article_paragraph floating_right">
+                    <a  href="/images/services_img/technical_service/electro.JPG" data-fancybox="images" data-caption="Обслуживание электроустановок">
+                        <img src="/images/services_img/technical_service/electro_min.jpg" class="img_article  pic_scale_anim" alt=""/>
+                    </a>
+                    <div class="article_text_short">
+                        <p>Устройство фасада: замена оконных блоков и отливов, ремонт оконных и дверных откосов, восстановительный ремонт
+                            оштукатуренного фасада с последующей окраской, устройство вентилируемого фасада, ремонт и восстановление крылец
+                            и входных групп.
+                        </p>
+                    </div>
+                </div>
+
+                <h3>Кровельные работы</h3>
+                <div class="article_paragraph floating_left">
+                    <a  href="/images/services_img/technical_service/electro.JPG" data-fancybox="images" data-caption="Обслуживание электроустановок">
+                        <img src="/images/services_img/technical_service/electro_min.jpg" class="img_article  pic_scale_anim" alt=""/>
+                    </a>
+                    <div class="article_text_short">
+                        <p>Капитальный и текущий ремонты скатной (с применением металлического листового кровельного покрытия) и плоской
+                            (с применением рулонного кровельного покрытия) крыш, ремонт оснований плоской кровли, замена пришедших в негодность
+                            элементов стропильной системы скатной крыши, ремонт чердачных помещений.
+                        </p>
+                    </div>
+                </div>
+
+                <h3>Работы внутри помещений</h3>
+                <div class="article_paragraph floating_right">
+                    <div class="article_text_long">
+                        <a style="float: right" href="/images/services_img/technical_service/electro.JPG" data-fancybox="images" data-caption="Обслуживание электроустановок">
+                            <img src="/images/services_img/technical_service/electro_min.jpg" class="img_article  pic_scale_anim" alt=""/>
+                        </a>
+                        <p>Выполнение полного комплекса демонтажных работ внутри помещений, возведение перегородок из различных материалов и
+                            различной геометрической формы и сложности (комплектные системы КНАУФ, кирпич, пенобетонные блоки, пазогребневые
+                            блоки и другие материалы, предназначенные для возведения стен и перегородок), облицовка стен с применением тепло
+                            и звукоизоляционных материалов, возведение различных конструкций перегородок из стекла, установка всех типов дверей
+                            любой сложности. Отделочные работы всех видов (штукатурка, шпаклёвка, оклейка стен виниловыми и флизелиновыми обоями
+                            под окраску, окраска стен, оклеенных флизелиновыми обоями и стеклохолстом, декоративная штукатурка, плиточные работы,
+                            облицовочные деревянные и ПВХ панели).
+                        </p>
+                        <p>Выполнение всех видов работ по устройству чернового основания пола (выравнивающие стяжки, наливные полы, устройство обмазочной
+                            и оклеечной гидроизоляции). Укладка всех видов напольных покрытий (линолеум, рулонный ковролин, ковровая плитка, ламинат,
+                            паркетная доска, кварцвиниловая плитка, керамогранит и др.), реставрация и восстановительный ремонт полов из штучного паркета,
+                            мраморных и гранитных полов.
+                        </p>
+                        <p>Выполнение работ по ремонту оштукатуренных потолков, монтажу подвесных потолочных систем типа «Армстронг», «Экофон», «Изофон»
+                            и др., комплектных подвесных потолочных систем КНАУФ (одноуровневых и многоуровневых), комбинированных потолочных систем
+                            (КНАУФ в сочетании с потолочными системами «Армстронг» и «Экофон»), натяжных потолков
+                        </p>
+                    </div>
+                </div>
+
+                <h3>Работы по инженерным системам</h3>
+                <div class="article_paragraph floating_left">
+                    <a  href="/images/services_img/technical_service/electro.JPG" data-fancybox="images" data-caption="Обслуживание электроустановок">
+                        <img src="/images/services_img/technical_service/electro_min.jpg" class="img_article  pic_scale_anim" alt=""/>
+                    </a>
+                    <div class="article_text_short">
+                        <p>Выполнение всего комплекса работ по ремонту или полной замене инженерных систем здания: ремонт или полная замена инженерных
+                            систем здания (электроснабжение, вентиляция и кондиционирование, отопление, водоснабжение и водоотведение, слаботочные
+                            системы, системы пожарной безопасности и контроля доступа).
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</main>
+
+<div class="btn-up btn-up_hide"> <img src="/images/up-arrow.svg" alt=""/></div>
+
+<footer th:insert="blocks/footer.html"> </footer>
+
+<script src="/js/jquery-3.7.1.js"></script>
+<script src="/fancybox-3.0/dist/jquery-3.6.4.min.js"></script>
+<script src="/fancybox-3.0/dist/jquery.fancybox.min.js"></script>
+<script src="/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="/js/script.js"></script>
 
 </body>
 </html>
