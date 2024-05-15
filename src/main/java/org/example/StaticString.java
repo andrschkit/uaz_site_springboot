@@ -19,6 +19,24 @@ public final class StaticString {
     public static final String URL_ADD_POSTS = "/addPost";
     public static final String URL_EDIT_POSTS = "/editPost";
     public static final String URL_POST = "/singlePost";
+
+    //projects
+    public static final String URL_PROJECT_REPAIR_GORKIY_PARK = "projects/repair/gorkiy_park";
+    public static final String URL_PROJECT_REPAIR_CMT = "projects/repair/cmt";
+    public static final String URL_PROJECT_REPAIR_KALUZHSKAYA = "projects/repair/kaluzhskaya";
+    public static final String URL_PROJECT_REPAIR_KITAI_SECOND_FLOOR = "projects/repair/kitai_second_floоr";
+    public static final String URL_PROJECT_REPAIR_KITAI_DEMONTAZH = "projects/repair/kitai_demontazh";
+    public static final String URL_PROJECT_REPAIR_DEDAL = "projects/repair/dedal";
+    public static final String URL_PROJECT_REPAIR_REP = "projects/repair/rep";
+    public static final String URL_PROJECT_REPAIR_NAGAT_UAZ = "projects/repair/nagat_uaz";
+    public static final String URL_PROJECT_REPAIR_TECHNOPARK = "projects/repair/technopark";
+
+    public static final String URL_PROJECT_EXPLOITATION_KROVLIA = "projects/exploitation/krovlia";
+    public static final String URL_PROJECT_EXPLOITATION_SPORT = "projects/exploitation/sport";
+    public static final String URL_PROJECT_EXPLOITATION_HALL = "projects/exploitation/hall";
+    public static final String URL_PROJECT_EXPLOITATION_MEDPUNKT = "projects/exploitation/medpunkt";
+    public static final String URL_PROJECT_EXPLOITATION_FASAD = "projects/exploitation/fasad";
+
     public static final String URL_PROJECT_ORDINKA = "/projects/ordinka";
     public static final String URL_PROJECT_KITAY = "/projects/kitay";
     public static final String URL_PROJECT_VDNH = "/projects/vdnh";

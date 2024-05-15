@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Andrew Shcherbakov">
+    <title>Услуги</title>
+    <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="/fancybox-3.0/dist/jquery.fancybox.min.css" />
+    <link href="/StyleSheets/style.css" rel="stylesheet"/>
+    <link href="/StyleSheets/style_mobile.css" rel="stylesheet"/>
+    <link href="/StyleSheets/style_projects.css" rel="stylesheet"/>
+    <link rel="shortcut icon" href="/images/icons_swg/main_logo/Logo.svg" type="image/x-icon"/>
+</head>
+
+<body>
+
+<header th:insert="blocks/header.html"> </header>
+
+<main>
+    <div class="preloader"></div>
+    <div style="display:none;" id="myDiv" class="animate-bottom">
+        <div class="mx-auto text-center">
+            <h1>Атомный энергопромышленный комплекс</h1>
+        </div>
+        <div class="container_project">
+
+            <div class="project_text">
+                <p><label class="selected_rout">Заказчик:</label> Акционерное общество «Атомный энергопромышленный комплекс»</p>
+                <p><label class="selected_rout">Адрес:</label> г. Москва, Китайгородский проезд, д., стр.1</p>
+                <p><label class="selected_rout">Тип объекта:</label> административное здание</p>
+                <p><label class="selected_rout">Площадь:</label> 23 000 кв.м.</p>
+                <p><label class="selected_rout">Период выполнения ремонтных работ:</label> июль 2020 - август 2020</p>
+            </div>
+
+            <div class="project_gallery">
+                <a data-fancybox="gallery" data-caption="" href="/images/projects_img/repair/kitai_demontazh/IMG_20200929_085045.jpg">
+                    <img class="img_project pic_scale_anim" src="/images/projects_img/repair/kitai_demontazh/IMG_20200929_085045.jpg" alt="">
+                </a>
+                <a data-fancybox="gallery" data-caption="" href="/images/projects_img/repair/kitai_demontazh/IMG_20200929_085404.jpg">
+                    <img class="img_project pic_scale_anim" src="/images/projects_img/repair/kitai_demontazh/IMG_20200929_085404.jpg" alt="">
+                </a>
+            </div>
+
+        </div>
+    </div>
+</main>
+
+<div class="btn-up btn-up_hide"> <img src="/images/up-arrow.svg" alt=""/></div>
+
+<footer th:insert="blocks/footer.html"> </footer>
+
+<script src="/js/jquery-3.7.1.js"></script>
+<script src="/fancybox-3.0/dist/jquery-3.6.4.min.js"></script>
+<script src="/fancybox-3.0/dist/jquery.fancybox.min.js"></script>
+<script src="/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="/js/script.js"></script>
+
+</body>
+</html>

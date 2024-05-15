@@ -16,7 +16,7 @@ switch (window.location.pathname) {
     case '/objects_repair':
         nav_item[3].classList.add('static_hover');
         break;
-    case '/objects_support':
+    case '/objects_exploitation':
         nav_item[3].classList.add('static_hover');
         break;
     case '/licenses':

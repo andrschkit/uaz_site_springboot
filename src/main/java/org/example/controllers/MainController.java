@@ -89,6 +89,60 @@ public class MainController {
     public String historyPage(Model model) {
         return "history";
     }
+
+    //projects
+    @GetMapping(URL_PROJECT_REPAIR_GORKIY_PARK)
+    public String projectRepairGorkiyPark(Model model) {
+        return "projects/repair/gorkiy_park";
+    }
+    @GetMapping(URL_PROJECT_REPAIR_CMT)
+    public String projectRepairCMT(Model model) {
+        return "projects/repair/cmt";
+    }
+    @GetMapping(URL_PROJECT_REPAIR_KALUZHSKAYA)
+    public String projectRepairKaluzhkaya(Model model) {
+        return "projects/repair/kaluzhskaya";
+    }
+    @GetMapping(URL_PROJECT_REPAIR_KITAI_SECOND_FLOOR)
+    public String projectRepairKitaiSecondFloor(Model model) {
+        return "projects/repair/kitai_second_floоr";
+    }
+    @GetMapping(URL_PROJECT_REPAIR_KITAI_DEMONTAZH)
+    public String projectRepairKitaiDemontazh(Model model) {
+        return "projects/repair/kitai_demontazh";
+    }
+    @GetMapping(URL_PROJECT_REPAIR_DEDAL)
+    public String projectRepairDedal(Model model) {
+        return "projects/repair/dedal";
+    }
+    @GetMapping(URL_PROJECT_REPAIR_REP)
+    public String projectRepairRep(Model model) {
+        return "projects/repair/rep";
+    }
+    @GetMapping(URL_PROJECT_REPAIR_NAGAT_UAZ)
+    public String projectRepairNagatUaz(Model model) { return "projects/repair/nagat_uaz"; }
+    @GetMapping(URL_PROJECT_REPAIR_TECHNOPARK)
+    public String projectRepairTechnopark(Model model) { return "projects/repair/technopark"; }
+    //projects exploitation
+    @GetMapping(URL_PROJECT_EXPLOITATION_KROVLIA)
+    public String projectExploitationKrovlia(Model model) { return "projects/exploitation/krovlia"; }
+    @GetMapping(URL_PROJECT_EXPLOITATION_SPORT)
+    public String projectExploitationSport(Model model) {
+        return "projects/exploitation/sport";
+    }
+    @GetMapping(URL_PROJECT_EXPLOITATION_HALL)
+    public String projectExploitationHall(Model model) {
+        return "projects/exploitation/hall";
+    }
+    @GetMapping(URL_PROJECT_EXPLOITATION_MEDPUNKT)
+    public String projectExploitationMedpunkt(Model model) {
+        return "projects/exploitation/medpunkt";
+    }
+    @GetMapping(URL_PROJECT_EXPLOITATION_FASAD)
+    public String projectExploitationFasad(Model model) {
+        return "projects/exploitation/fasad";
+    }
+
     @GetMapping(URL_PROJECT_ORDINKA)
     public String projectOrdinkaPage(Model model) {
         return "projects/ordinka";

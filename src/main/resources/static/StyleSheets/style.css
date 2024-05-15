@@ -541,7 +541,7 @@ footer{
     transition: 0.3s;
 }
 .pic_scale_anim:hover{
-    transform: scale(1.01);
+    transform: scale(1.03);
 }
 /* Стили Галереи */
 .thumb img {

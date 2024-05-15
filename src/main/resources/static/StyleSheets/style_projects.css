@@ -1,0 +1,51 @@
+.container_project{
+    display: inline-flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.container_project h3{
+    text-align: start;
+    margin-top: 25px;
+    margin-left: 174px;
+}
+.selected_rout{
+    font-family: "RosatomWebBold", "Arial", sans-serif;
+}
+.project_text{
+    display: inline-flex;
+    margin-left: 174px;
+    margin-right: 174px;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    font-size: 23px;
+}
+
+.project_text p{
+    text-indent: 0;
+    margin-bottom:0 ;
+    text-align: start;
+}
+
+.project_gallery{
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.project_gallery a{
+    width: 350px;
+    height: 260px;
+    border-radius: 3px;
+    margin: 25px 25px;
+
+}
+.img_project{
+    object-fit: cover;
+    width: 350px;
+    height: 260px;
+    overflow: hidden;
+    border-radius: 3px;
+    box-shadow:0 1rem 3rem #a8a8a8;
+    margin:20px 20px;
+}
