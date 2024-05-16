@@ -1,0 +1,23 @@
+.container_about{
+    display: inline-flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 0 10%;
+}
+
+.about_text{
+    display: inline-flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    font-size: 23px;
+}
+
+.selected_rout{
+    font-family: "RosatomWebBold", "Arial", sans-serif;
+}
+
+.about_text p{
+    margin-bottom:10px ;
+    text-align: start;
+}
