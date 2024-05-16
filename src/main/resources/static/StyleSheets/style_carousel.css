@@ -15,7 +15,7 @@
     height: 200px; /* высота изображения */
     object-fit: cover;
 }
-.cartext-decor {
+.carousel_text {
     color:     #FFFFFF;
     font-weight: bold;
     font-size: 35px;

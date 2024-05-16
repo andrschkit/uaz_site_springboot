@@ -85,11 +85,37 @@ public class MainController {
     public String buildingPage(Model model) {
         return "services/building";
     }
-    @GetMapping(URL_HISTORY)
-    public String historyPage(Model model) {
-        return "history";
+    //about
+    @GetMapping(URL_ABOUT_HISTORY)
+    public String aboutHistoryPage(Model model) {
+        return "about/history";
     }
-
+    @GetMapping(URL_ABOUT_ADVANTAGE)
+    public String aboutAdvantagePage(Model model) {
+        return "about/advantage";
+    }
+    @GetMapping(URL_ABOUT_DOCUMENTS)
+    public String aboutDocumentsPage(Model model) {
+        return "about/documents";
+    }
+    @GetMapping(URL_ABOUT_OHRANA_TRUDA)
+    public String aboutOhranaTrudaPage(Model model) {
+        return "about/ohrana_truda";
+    }
+    @GetMapping(URL_ABOUT_PROVIDERS)
+    public String aboutProvidersPage(Model model) {
+        return "about/providers";
+    }
+    @GetMapping(URL_ABOUT_QUALITY)
+    public String aboutQualityPage(Model model) {
+        return "about/quality";
+    }
+    @GetMapping(URL_ABOUT_SOCIAL)
+    public String aboutSocialPage(Model model) {
+        return "about/social";
+    }
+    @GetMapping(URL_ABOUT_VACANCIES)
+    public String aboutVacanciesPage(Model model) { return "about/vacancies"; }
     //projects
     @GetMapping(URL_PROJECT_REPAIR_GORKIY_PARK)
     public String projectRepairGorkiyPark(Model model) {
@@ -142,22 +168,18 @@ public class MainController {
     public String projectExploitationFasad(Model model) {
         return "projects/exploitation/fasad";
     }
+    @GetMapping(URL_PROJECT_EXPLOITATION_KITAY)
+    public String projectExploitationKitay(Model model) {
+        return "projects/exploitation/kitay";
+    }
+    @GetMapping(URL_PROJECT_EXPLOITATION_VDNH)
+    public String projectExploitationVdnh(Model model) {
+        return "projects/exploitation/vdnh";
+    }
+    @GetMapping(URL_PROJECT_EXPLOITATION_ORDINKA)
+    public String projectExploitationOrdinka(Model model) {
+        return "projects/exploitation/ordinka";
+    }
 
-    @GetMapping(URL_PROJECT_ORDINKA)
-    public String projectOrdinkaPage(Model model) {
-        return "projects/ordinka";
-    }
-    @GetMapping(URL_PROJECT_KITAY)
-    public String projectKitayPage(Model model) {
-        return "projects/kitay";
-    }
-    @GetMapping(URL_PROJECT_VDNH)
-    public String projectVdnhPage(Model model) {
-        return "projects/vdnh";
-    }
-    @GetMapping(URL_PROJECT_MONETKA)
-    public String projectMonetkaPage(Model model) {
-        return "projects/monetka";
-    }
 
 }

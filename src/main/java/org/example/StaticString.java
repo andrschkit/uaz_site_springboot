@@ -10,7 +10,14 @@ public final class StaticString {
     public static final String URL_NEWS = "/news";
     public static final String URL_MEDIA_CENTER = "/mediacenter";
     public static final String URL_CONTACTS = "/contacts";
-    public static final String URL_HISTORY = "/history";
+    public static final String URL_ABOUT_HISTORY = "about/history";
+    public static final String URL_ABOUT_ADVANTAGE = "about/advantage";
+    public static final String URL_ABOUT_DOCUMENTS = "about/documents";
+    public static final String URL_ABOUT_OHRANA_TRUDA = "about/ohrana_truda";
+    public static final String URL_ABOUT_PROVIDERS = "about/providers";
+    public static final String URL_ABOUT_QUALITY = "about/quality";
+    public static final String URL_ABOUT_SOCIAL = "about/social";
+    public static final String URL_ABOUT_VACANCIES = "about/vacancies";
     public static final String URL_SERVICES_TECHNICAL_SERVICE = "services/technical_service";
     public static final String URL_SERVICES_TECHNICAL_EVENTS = "services/technical_events";
     public static final String URL_SERVICES_EXPLOITATION = "services/exploitation";
@@ -37,10 +44,9 @@ public final class StaticString {
     public static final String URL_PROJECT_EXPLOITATION_MEDPUNKT = "projects/exploitation/medpunkt";
     public static final String URL_PROJECT_EXPLOITATION_FASAD = "projects/exploitation/fasad";
 
-    public static final String URL_PROJECT_ORDINKA = "/projects/ordinka";
-    public static final String URL_PROJECT_KITAY = "/projects/kitay";
-    public static final String URL_PROJECT_VDNH = "/projects/vdnh";
-    public static final String URL_PROJECT_MONETKA = "/projects/monetka";
+    public static final String URL_PROJECT_EXPLOITATION_KITAY = "projects/exploitation/kitay";
+    public static final String URL_PROJECT_EXPLOITATION_VDNH = "projects/exploitation/vdnh";
+    public static final String URL_PROJECT_EXPLOITATION_ORDINKA = "projects/exploitation/ordinka";
     public static final String URL_API_MESSAGE = "/api/message";
 
     public static final String MESSAGE_ENTER_NAME = "Поле имени не должно быть пустым!";
