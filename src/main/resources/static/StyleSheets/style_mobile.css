@@ -16,6 +16,9 @@
     .contact_footer a{
         font-size: 14px;
     }
+    .uaz_copyright a{
+        margin-left: 2rem;
+    }
     .contact_footer a img{
         margin-right: 15px;
     }
@@ -45,79 +48,105 @@
     }
 
 }
-@media only screen and (max-width: 740px) {
+@media only screen and (max-width: 650px) {
+    .right_border_hidden{
+        display: flex;
+    }
+    .contact_header{
+        justify-content: center;
+        align-items: center;
+        margin-right: 0px;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: 1px solid  #d7d7d7;
+    }
+    .phone-decor{
+        font-size: 0px;
 
-
+    }
+    .phone-decor img{
+        margin-right: 0px;
+    }
+    .mail-decor{
+        display: none;
+    }
 
 }
 @media only screen and (max-width: 545px) {
-    .btn_select {
-        border: 1px solid #32a1ce;
-        background: white;
-        width: 39px;
-        height: 39px;
-        text-decoration: none;
-        color: #32a1ce;
-        font-size: 14px;
-        text-align: center;
-        line-height: 39px;
-        cursor: pointer;
-        position: relative;
-        overflow: hidden;
-        margin-bottom: -0.3rem !important;
+    .top_header_main{
+        height: 60px;
     }
-    .headlogo{
-        max-width: 140px;
-        margin-bottom: -0.5rem !important;
+    .header_contact_segment{
+        align-items: center;
+        margin-right: 1rem;
+    }
+    .head_main_logo head_logo{
+        max-height: 40px;
     }
     .right_border_logo{
         height: 37px;
     }
+    .contact_footer a img{
+        display: none;
+    }
+    .btn_select_modal {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+    }
+    .btn_select_modal img {
+        width: 25px;
+        margin-bottom: 2px;
+    }
+    .btn_select {
+        width: 40px;
+        height: 40px;
+        font-size: 15px;
+        line-height: 40px;
+    }
+    .contact_header{
+        width: 40px;
+        height: 40px;
+    }
+    .phone-decor img{
+        width: 25px;
+    }
+    .right_border_hidden{
+        height: 38px;
+    }
+    .right_border_select{
+        height: 38px;
+    }
+
+    .right_border_logo{
+        height: 38px;
+    }
+
+    .head_main_logo .head_logo{
+        height: 40px;
+    }
+    .head_main_logo .head_name{
+        height: 40px;
+    }
+
 }
 @media only screen and (max-width: 408px) {
-    .btn_select {
-        border: 1px solid #32a1ce;
-        background: white;
-        width: 37px;
-        height: 37px;
-        border-radius: 3px;
-        text-decoration: none;
-        color: #32a1ce;
-        font-size: 12px;
-        text-align: center;
-        line-height: 37px;
-        cursor: pointer;
-        position: relative;
-        overflow: hidden;
-        margin-bottom: -0.3rem !important;
-    }
-    .headlogo{
-        margin-bottom: -0.3rem !important;
-    }
 }
-@media only screen and (max-width: 396px) {
-    .btn_select {
-        border: 1px solid #32a1ce;
-        background: white;
-        width: 37px;
-        height: 48px;
-        border-radius: 3px;
-        text-decoration: none;
-        color: #32a1ce;
-        font-size: 12px;
-        text-align: center;
-        line-height: 48px;
-        cursor: pointer;
-        position: relative;
-        overflow: hidden;
-        margin-bottom: -0.3rem !important;
+@media only screen and (max-width: 348px) {
+    .container_main_head{
+        flex-wrap: wrap;
+        justify-content: center;
     }
-    .headlogo{
-        margin-left: 5px;
-        max-width: 125px;
-        margin-bottom: -0.3rem !important;
+    .top_header_main{
+        height: auto;
     }
-    .right_border_logo{
-        height: 32px;
+    .head_main_logo{
+        width: auto;
+        margin-bottom: 10px;
+    }
+    .header_contact_segment{
+        margin-right: 0px;
+        margin-left: 15px;
     }
 }
