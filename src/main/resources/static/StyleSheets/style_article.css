@@ -51,6 +51,10 @@
     box-shadow:0 1rem 3rem #a8a8a8;
     margin:0 20px;
 }
+.img_article_horizontal{
+    max-width: 450px;
+
+}
 
 .container_squares{
     display: inline-flex;

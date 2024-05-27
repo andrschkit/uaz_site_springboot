@@ -6,8 +6,6 @@
 }
 
 .about_text{
-    display: inline-flex;
-    flex-direction: column;
     align-content: center;
     justify-content: center;
     font-size: 23px;
@@ -20,4 +18,8 @@
 .about_text p{
     margin-bottom:10px ;
     text-align: start;
+}
+.default{
+    border: 0px solid #7F7F7F; /* Параметры рамки */
+    background: none; /* Цвет фона */
 }
