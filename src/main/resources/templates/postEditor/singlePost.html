@@ -9,6 +9,7 @@
     <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
     <link rel="stylesheet" href="/fancybox-3.0/dist/jquery.fancybox.min.css" />
     <link href="/StyleSheets/style.css" rel="stylesheet"/>
+    <link href="/StyleSheets/style_input_post.css" rel="stylesheet"/>
     <link href="/StyleSheets/style_mobile.css" rel="stylesheet"/>
     <link rel="shortcut icon" href="/images/icons_swg/main_logo/Logo.svg" type="image/x-icon"/>
 </head>
@@ -21,7 +22,11 @@
     <div class="preloader"></div>
     <div th:object="${singlePost}" id="myDiv" class="animate-bottom">
         <div class="mx-auto text-center">
+            <h1 ></h1>
+        </div>
+        <div class="mx-auto text-center header_news">
             <h1 th:text="${singlePost.getTitle}"></h1>
+            <a id="btn_edit"  class="btn btn_news"><img src="/images/icons_swg/edit.ico"></a>
         </div>
 
         <div class="container-fluid">
@@ -33,7 +38,6 @@
                     </div>
                 </div>
             </div>
-            <a id="btn_edit" class="btn btn-primary mb-3">Редактировать статью</a>
         </div>
     </div>
 </main>

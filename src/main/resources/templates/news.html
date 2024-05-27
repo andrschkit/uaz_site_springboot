@@ -9,6 +9,7 @@
   <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
   <link href="/StyleSheets/style.css" rel="stylesheet"/>
     <link href="/StyleSheets/style_cards.css" rel="stylesheet"/>
+    <link href="/StyleSheets/style_input_post.css" rel="stylesheet"/>
     <link href="/StyleSheets/style_mobile.css" rel="stylesheet"/>
   <link rel="shortcut icon" href="/images/icons_swg/main_logo/Logo.svg" type="image/x-icon"/>
 </head>
@@ -21,8 +22,9 @@
   <div class="preloader"></div>
   <div style="display:none;" id="myDiv" class="animate-bottom">
 
-      <div class="mx-auto text-center">
+      <div class="mx-auto text-center header_news">
           <h1>Новости АО "УАЗ"</h1>
+          <a th:href="@{/addPost}" class="btn btn_news"><img src="/images/icons_swg/add.ico"></a>
       </div>
 
       <div class="container_long_squares">
@@ -39,7 +41,6 @@
               </div>
           </a>
       </div>
-      <a th:href="@{/addPost}" class="btn btn-primary mb-3">Добавить статью</a>
 
   </div>  
 </main>

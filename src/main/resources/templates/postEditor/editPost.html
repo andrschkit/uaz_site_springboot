@@ -21,9 +21,6 @@
 <main>
     <div class="preloader"></div>
     <div style="display:none;" id="myDiv" class="animate-bottom">
-        <div class="mx-auto text-center">
-            <h1>Редактор Статей</h1>
-        </div>
 
         <div class="container-fluid">
 
@@ -31,6 +28,10 @@
 
                 <div class="row">
                     <form th:action="@{/editPost}" method="post" enctype="multipart/form-data" th:object="${singlePost}">
+                        <div class="mx-auto text-center header_news">
+                            <h1>Редактор Статей</h1>
+                            <button class="btn btn_news" type="submit"><img src="/images/icons_swg/save.svg"></button>
+                        </div>
                         <div th:insert="blocks/inputPost" style="width: 100%"></div>
                     </form>
                 </div>
