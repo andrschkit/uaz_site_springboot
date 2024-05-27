@@ -1,10 +1,75 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Andrew Shcherbakov">
+    <title>О Компании</title>
+    <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="/fancybox-3.0/dist/jquery.fancybox.min.css" />
+    <link href="/StyleSheets/style.css" rel="stylesheet"/>
+    <link href="/StyleSheets/style_mobile.css" rel="stylesheet"/>
+    <link href="/StyleSheets/style_about.css" rel="stylesheet"/>
+    <link rel="shortcut icon" href="/images/icons_swg/main_logo/Logo.svg" type="image/x-icon"/>
 </head>
+
 <body>
+
+<header th:insert="blocks/header.html"> </header>
+
+<main>
+    <div class="preloader"></div>
+    <div style="display:none;" id="myDiv" class="animate-bottom">
+        <div class="mx-auto text-center">
+            <h1>Преимущества</h1>
+        </div>
+        <div class="container_about">
+
+            <div class="about_text">
+                <figure class="signright default pic_scale_anim">
+                    <a href="/images/about_img/advantage_img/advantage_1.jpg" data-fancybox="images" data-caption="Работа диспетчеркого пункта">
+                        <img src="/images/about_img/advantage_img/advantage_1_min.jpg" alt="Реагирование на вызов" style=" max-height:500px; border-radius: 3px" class="img-fluid"/>
+                    </a>
+                    <figcaption>Работа диспетчеркого пункта</figcaption>
+                </figure>
+                <p>
+                    - Стабильность
+                    АО «УАЗ» начиная с 1952 г., занимается комплексным обслуживанием инженерных систем зданий, осуществляет их монтаж,
+                    выполняет строительные и ремонтно-отделочные работы, работы по реконструкции, проектированию, а также предоставляет услуги клининга.
+                </p>
+                <p>
+                    - Широкий штат и профессионализм сотрудников
+                    Лучшие специалисты используют разработанные регламенты, личный опыт и системы отчетности, чтобы оказывать качественный сервис.
+                </p>
+                <p>
+                    - Скорость принятия решения и выполнения работ
+                    Благодаря компетенции сотрудников и использованию современных технологий,
+                    принятие решения по каждому вопросу занимает минимальное время, а выполнение работ осуществляется в сжатые сроки.
+                </p>
+                <p>
+                    - Диспетчерский пункт 24/7
+                    Оперативное реагирование на вызовы и оказание помощи в любое время дня и ночи, в выходные и праздничные дни.
+                </p>
+                <p>
+                    - Контроль качества услуг и гарантия на работы
+                    Благодаря внутренней системе контроля качество услуг контролируется на всех этапах, а по окончанию предоставляется гарантия на работы.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</main>
+
+<div class="btn-up btn-up_hide"> <img src="/images/up-arrow.svg" alt=""/></div>
+
+<footer th:insert="blocks/footer.html"> </footer>
+
+<script src="/js/jquery-3.7.1.js"></script>
+<script src="/fancybox-3.0/dist/jquery-3.6.4.min.js"></script>
+<script src="/fancybox-3.0/dist/jquery.fancybox.min.js"></script>
+<script src="/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="/js/script.js"></script>
 
 </body>
 </html>

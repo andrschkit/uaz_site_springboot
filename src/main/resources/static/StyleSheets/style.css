@@ -186,8 +186,8 @@ footer{
     margin-bottom: 1px;
 }
 .header_contact_segment{
-    display: grid;
-    grid-template-columns: 2fr 1fr;
+    display: flex;
+    flex-direction: row;
     align-content: center;
     justify-items: end;
 }
@@ -251,8 +251,8 @@ footer{
     display: none;
 }
 .contact_header{
-    display: grid;
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
     justify-content: end;
     align-items: center;
     margin-right: 15px;
@@ -313,6 +313,13 @@ footer{
     overflow: hidden;
 }
 .right_border_select{
+    margin-top: 2px;
+    width: 10px;
+    border-right: 1px solid #d7d7d7;
+    height: 45px;
+}
+.right_border_hidden{
+    display: none;
     margin-top: 2px;
     width: 10px;
     border-right: 1px solid #d7d7d7;

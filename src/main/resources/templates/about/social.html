@@ -1,10 +1,84 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Andrew Shcherbakov">
+    <title>О Компании</title>
+    <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="/fancybox-3.0/dist/jquery.fancybox.min.css" />
+    <link href="/StyleSheets/style.css" rel="stylesheet"/>
+    <link href="/StyleSheets/style_mobile.css" rel="stylesheet"/>
+    <link href="/StyleSheets/style_about.css" rel="stylesheet"/>
+    <link rel="shortcut icon" href="/images/icons_swg/main_logo/Logo.svg" type="image/x-icon"/>
 </head>
+
 <body>
+
+<header th:insert="blocks/header.html"> </header>
+
+<main>
+    <div class="preloader"></div>
+    <div style="display:none;" id="myDiv" class="animate-bottom">
+        <div class="mx-auto text-center">
+            <h1>Социальная политика</h1>
+        </div>
+        <div class="container_about">
+
+            <div class="about_text">
+                <figure class="signright default pic_scale_anim">
+                    <a href="/images/about_img/social_img/social_1.jpg" data-fancybox="images" data-caption="">
+                        <img src="/images/about_img/social_img/social_1_min.jpg" alt="" style=" max-height:500px; border-radius: 3px" class="img-fluid"/>
+                    </a>
+                </figure>
+                <p>
+                   Сотрудники АО «УАЗ» - главная ценность компании, в связи с чем им создаются максимально комфортные условия работы и самореализации.
+                </p>
+                <p>
+                    В АО «УАЗ» на постоянной основе проводятся мероприятия, связанные с предоставлением работникам
+                    дополнительных льгот, услуг и выплат социального характера.
+                </p>
+                <p>
+                    Социальная политика направлена на повышение эффективности работы, создание
+                    условий социальной защищенности работников, формирование благоприятного социально-психологического
+                    климата в коллективе, а также создание позитивного имиджа компании.
+                </p>
+                <p>
+                Для реализации социальной политики в Обществе утверждены и действуют:
+                </p>
+                <p>
+                - Положение об оказании материальной помощи работникам;
+                <p>
+                - Методические рекомендации по формированию комплекса мероприятий по поддержке работников предпенсионного возраста;
+                <p>
+                - Программы добровольного медицинского страхования работников;
+                <p>
+                - Программа добровольного страхования от несчастных случаев и болезней.
+                <p>
+                Также наши сотрудники имеют возможность:
+                <p>
+                - пройти бесплатное обучение;
+                <p>
+                - совмещать работу и учебу;
+                <p>
+                - получения профессионального и карьерного роста.
+
+            </div>
+
+        </div>
+    </div>
+</main>
+
+<div class="btn-up btn-up_hide"> <img src="/images/up-arrow.svg" alt=""/></div>
+
+<footer th:insert="blocks/footer.html"> </footer>
+
+<script src="/js/jquery-3.7.1.js"></script>
+<script src="/fancybox-3.0/dist/jquery-3.6.4.min.js"></script>
+<script src="/fancybox-3.0/dist/jquery.fancybox.min.js"></script>
+<script src="/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="/js/script.js"></script>
 
 </body>
 </html>

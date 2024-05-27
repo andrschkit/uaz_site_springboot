@@ -1,10 +1,94 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Andrew Shcherbakov">
+    <title>О Компании</title>
+    <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="/fancybox-3.0/dist/jquery.fancybox.min.css" />
+    <link href="/StyleSheets/style.css" rel="stylesheet"/>
+    <link href="/StyleSheets/style_mobile.css" rel="stylesheet"/>
+    <link href="/StyleSheets/style_about.css" rel="stylesheet"/>
+    <link rel="shortcut icon" href="/images/icons_swg/main_logo/Logo.svg" type="image/x-icon"/>
 </head>
+
 <body>
+
+<header th:insert="blocks/header.html"> </header>
+
+<main>
+    <div class="preloader"></div>
+    <div style="display:none;" id="myDiv" class="animate-bottom">
+        <div class="mx-auto text-center">
+            <h1>Политика в области качества</h1>
+        </div>
+        <div class="container_about">
+
+            <div class="about_text">
+                <p>
+                АО «УАЗ» - надежная, постоянно развивающаяся компания с многолетней историей,
+                занимается комплексным обслуживанием инженерных систем зданий, осуществляет их монтаж,
+                выполняет строительные и ремонтно-отделочные работы, работы по реконструкции, проектированию,
+                а также предоставляет услуги клининга.
+                </p>
+                <figure class="signright default pic_scale_anim">
+                    <a href="/images/about_img/quality_img/quality_1.jpg" data-fancybox="images" data-caption="Работа хостес АО УАЗ ">
+                        <img src="/images/about_img/quality_img/quality_1_min.jpg" alt="Работа хостес АО УАЗ" style=" max-height:500px; border-radius: 3px" class="img-fluid"/>
+                    </a>
+                    <figcaption>Работа хостес АО "УАЗ"</figcaption>
+                </figure>
+                <p>
+                Основные цели и принципы Общества:
+                </p>
+                <p>
+                - приоритетная цель - обеспечение безопасности объектов в сфере ответственности Общества,
+                    а также ядерной, радиационной, технической, промышленной, пожарной, экологической безопасности
+                    и охраны труда при осуществлении уставной деятельности;
+                </p>
+                <p>
+                - выполнение работ, оказание услуг с высоким качеством, и соответствующих требованиям
+                    и ожиданиям заказчика, нормативным требованиям стандартов, нормам и правилам действующего
+                    законодательства Российской Федерации, с безусловным соблюдением безопасных условий труда персонала
+                    и минимальным воздействием на окружающую среду;
+                </p>
+                <p>
+                - внедрение и постоянное улучшение системы менеджмента качества (далее - СМК),
+                отвечающей требованиям международных стандартов ISO 9001:2015, ISO 14001:2015, ISO 45001:2018,
+                на основе регулярного анализа качества поставляемых услуг на основании данных, предоставляемых заказчиком,
+                и информации, относящейся к внутренним и внешним факторам контекста деятельности Общества;
+                </p>
+                <p>
+                - четкое распределение ответственности и полномочий персонала посредством совершенствования организационной структуры Общества;
+                </p>
+                <p>
+                - повышение квалификации и компетентности работников за счет обучения в специализированных организациях,
+                участия в семинарах, конференциях, а также за счет распространения внутрикорпоративных знаний;
+                </p>
+                <p>
+                - повышение личной заинтересованности работников в безопасной и эффективной работе путем материального
+                и морального стимулирования, а также формирования у персонала приверженности к основным принципам
+                культуры безопасности;
+                </p>
+                <p>
+                - обеспечение действий, направленных на минимизацию рисков, влияющих на достижение целей Общества.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</main>
+
+<div class="btn-up btn-up_hide"> <img src="/images/up-arrow.svg" alt=""/></div>
+
+<footer th:insert="blocks/footer.html"> </footer>
+
+<script src="/js/jquery-3.7.1.js"></script>
+<script src="/fancybox-3.0/dist/jquery-3.6.4.min.js"></script>
+<script src="/fancybox-3.0/dist/jquery.fancybox.min.js"></script>
+<script src="/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="/js/script.js"></script>
 
 </body>
 </html>
