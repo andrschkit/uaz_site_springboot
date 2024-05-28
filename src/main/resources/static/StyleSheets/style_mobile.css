@@ -43,8 +43,14 @@
         align-content: center;
         align-items: center;
     }
+
     .nav-item{
         max-width: 200px;
+        padding-bottom:10px;
+    }
+    .top_header_second_flex{
+        margin-top: -5px;
+        margin-bottom: -5px;
     }
 
 }
@@ -130,8 +136,32 @@
         height: 40px;
     }
 
+    .nav-item{
+        max-width: 200px;
+        padding-bottom:10px;
+    }
+    .top_header_second_flex{
+        margin-top: -6px;
+        margin-bottom: -4px;
+    }
+    .static_hover{
+        padding: -6px;
+        border-bottom: 5px solid #025EA1;
+        margin-bottom: -5px;
+        color: #025EA1;
+    }
+    .navbar-toggler{
+        width: 47px;
+        height: 30px;
+    }
+    .navbar-toggler-icon{
+        width: 22px;
+        height: 22px;
+    }
+
 }
 @media only screen and (max-width: 408px) {
+
 }
 @media only screen and (max-width: 348px) {
     .container_main_head{

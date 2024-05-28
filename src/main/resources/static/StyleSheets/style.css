@@ -201,7 +201,11 @@ footer{
     border-bottom: 2px solid #d7d7d7;
 }
 .top_header_second_flex{
-    margin-bottom: 1px;
+    display: flex;
+    width: 100%;
+    flex-wrap: inherit;
+    align-items: center;
+    justify-content: space-between;
 }
 .header_contact_segment{
     display: flex;
@@ -238,6 +242,9 @@ footer{
 .dropdown:hover .dropdown-menu {
     display: block;
 }
+.navbar-toggler{
+    margin-right: 2rem;
+}
 .nav-item{
     padding-top: 5px;
     padding-bottom:10px;
@@ -249,6 +256,7 @@ footer{
     justify-content: center;
     margin: 2px 10px 0px 10px;
 }
+
 .nav-item:hover {
     padding: -7px;
     border-bottom: 5px solid #025EA1;
@@ -384,9 +392,6 @@ footer{
 }
 
 /* Центрирование и маржины */
-.ms-toggle {
-    margin-right: 1rem !important;
-}
 .me-footer {
     margin-left: 2.5rem !important;
 }
@@ -395,9 +400,7 @@ footer{
 }
 .me_house {
     width: 50px;
-    margin-left: 1rem !important;
-    padding-top: 5px;
-    padding-bottom:10px;
+    margin-left: 2rem;
 }
 
 /* Декорации и шрифты */
