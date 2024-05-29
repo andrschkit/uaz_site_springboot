@@ -1,32 +1,41 @@
 //Кнопки вкладок Header
-let nav_item=document.getElementsByClassName('nav-item');
+let home=document.getElementById('home');
+let services=document.getElementById('services');
+let objects=document.getElementById('objects');
+let licenses=document.getElementById('licenses');
+let news=document.getElementById('news');
+let contacts=document.getElementById('contacts');
+let about=document.getElementById('about');
+let repair=document.getElementById('repair');
+let exploitation=document.getElementById('exploitation');
 
-nav_item=[].slice.call(nav_item);
 
 switch (window.location.pathname) {
     case '/':
-        nav_item[0].classList.add('static_hover');
+        home.classList.add('static_hover');
         break;
     case '/about':
-        nav_item[1].classList.add('static_hover');
+        about.classList.add('static_hover');
         break;
     case '/services':
-        nav_item[2].classList.add('static_hover');
+        services.classList.add('static_hover');
         break;
     case '/objects_repair':
-        nav_item[3].classList.add('static_hover');
+        objects.classList.add('static_hover');
+        repair.classList.add('static_hover');
         break;
     case '/objects_exploitation':
-        nav_item[3].classList.add('static_hover');
+        objects.classList.add('static_hover');
+        exploitation.classList.add('static_hover');
         break;
     case '/licenses':
-        nav_item[4].classList.add('static_hover');
+        licenses.classList.add('static_hover');
         break;
     case '/news':
-        nav_item[5].classList.add('static_hover');
+        news.classList.add('static_hover');
         break;
     case '/contacts':
-        nav_item[6].classList.add('static_hover');
+        contacts.classList.add('static_hover');
         break;
     default:
 

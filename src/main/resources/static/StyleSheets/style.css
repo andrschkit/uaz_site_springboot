@@ -246,6 +246,9 @@ footer{
 .dropdown:hover .dropdown-menu {
     display: block;
 }
+.mobile_item{
+    display: none;
+}
 .navbar-toggler{
     margin-right: 2rem;
 }

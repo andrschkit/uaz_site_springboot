@@ -61,6 +61,12 @@
         height: 60px;
         left: 47%;
     }
+    .mobile_item{
+        display: block;
+    }
+    .desktop_item{
+        display: none;
+    }
 
 }
 @media only screen and (max-width: 650px) {
