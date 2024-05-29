@@ -98,7 +98,11 @@ body {
 
 }
 #myDiv{
-    min-height: 67vh;
+    min-height: 75vh;
+    flex-grow: 1;
+}
+#myDiv_no_preload{
+    min-height: 75vh;
     flex-grow: 1;
 }
 .head_main_logo{
@@ -135,7 +139,7 @@ footer{
     grid-template-columns: 1fr 2fr 1fr;
     border-top: 3px solid #d7d7d7;
     padding-top: 5px;
-    margin-top: 3rem;
+    margin-top: 1.2rem;
 }
 .footer_logo {
     margin-left: 5rem;
@@ -485,7 +489,7 @@ footer{
 .preloader {
     position:relative;
     content: url("/images/icons_swg/main_logo/Logo.svg");
-    left: 50%;
+    left: 48%;
     border-radius: 50%;
     margin-top: 30vh;
     margin-bottom: 70vh;

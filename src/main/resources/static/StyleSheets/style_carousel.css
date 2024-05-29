@@ -7,7 +7,7 @@
 }
 .carousel-item img {
     width: 100%;
-    height: 64vh; /* высота изображения */
+    height: 70vh; /* высота изображения */
     object-fit: cover;
 }
 .card-body img {

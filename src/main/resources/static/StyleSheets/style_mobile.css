@@ -25,6 +25,10 @@
     .uaz_copyright{
         font-size: 14px;
     }
+    .preloader {
+        width: 70px;
+        height: 70px;
+    }
 }
 @media only screen and (max-width: 991px) {
     .container_footer{
@@ -51,6 +55,11 @@
     .top_header_second_flex{
         margin-top: -5px;
         margin-bottom: -5px;
+    }
+    .preloader {
+        width: 60px;
+        height: 60px;
+        left: 47%;
     }
 
 }
@@ -152,16 +161,30 @@
     }
     .navbar-toggler{
         width: 47px;
-        height: 30px;
+        height: 33px;
     }
     .navbar-toggler-icon{
         width: 22px;
         height: 22px;
     }
+    #nav_house{
+        height: 25px;
+        width: 25px;
+    }
+    .me_house {
+         width: 35px;
+         margin-left: 2rem;
+     }
+    .preloader {
+        left: 45%;
+    }
 
 }
 @media only screen and (max-width: 408px) {
-
+    .preloader {
+        width: 45px;
+        height: 45px;
+    }
 }
 @media only screen and (max-width: 348px) {
     .container_main_head{
