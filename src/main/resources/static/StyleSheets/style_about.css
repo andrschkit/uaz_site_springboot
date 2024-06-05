@@ -1,5 +1,5 @@
 .container_about{
-    display: inline-flex;
+    display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     margin: 0 10%;
@@ -26,4 +26,27 @@
 .default{
     border: 0px solid #7F7F7F; /* Параметры рамки */
     background: none; /* Цвет фона */
+}
+
+@media only screen and (max-width: 1000px) {
+    .container_about {
+        margin: 0 5%;
+    }
+    .ul_style{
+        margin-left: 20px;
+    }
+    .default{
+        width: 100%;
+    }
+    .signright{
+        margin: 0 0 0 0;
+    }
+}
+@media only screen and (max-width: 690px) {
+    .container_about {
+        margin: 0 10px;
+    }
+    .ul_style{
+        margin-left: 10px;
+    }
 }

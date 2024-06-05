@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="63d29c66-ea9a-40cb-a3d4-b579f5e1bd53" name="Changes" comment="NF: changes from Dmitriy">
+    <list default="true" id="63d29c66-ea9a-40cb-a3d4-b579f5e1bd53" name="Changes" comment="NF: main pages mobile">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/StyleSheets/style_cards.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/StyleSheets/style_cards.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/news.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/news.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/objects_repair.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/objects_repair.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/StyleSheets/style_about.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/StyleSheets/style_about.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/StyleSheets/style_article.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/StyleSheets/style_article.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/StyleSheets/style_projects.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/StyleSheets/style_projects.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -312,7 +312,14 @@
       <option name="project" value="LOCAL" />
       <updated>1717567511764</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="NF: main pages mobile">
+      <created>1717581413528</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1717581413528</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -366,7 +373,8 @@
     <MESSAGE value="NF: 80% static filling+ footer bug fix" />
     <MESSAGE value="NF: unresolved images" />
     <MESSAGE value="NF: changes from Dmitriy" />
-    <option name="LAST_COMMIT_MESSAGE" value="NF: changes from Dmitriy" />
+    <MESSAGE value="NF: main pages mobile" />
+    <option name="LAST_COMMIT_MESSAGE" value="NF: main pages mobile" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

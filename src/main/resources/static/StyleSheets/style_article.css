@@ -45,11 +45,23 @@
 .floating_right{
     flex-direction: row-reverse;
 }
+.article_paragraph a{
+    flex-grow: 1;
+    display: flex;
+    border-radius: 3px;
+    margin: 20px 20px;
+    max-width: 350px;
+    width: 300px;
+    height: auto;
+    max-height: 400px;
+}
 .img_article{
-    max-width: 300px;
+    display: flex;
+    flex-grow: 1;
+    overflow: hidden;
     border-radius: 3px;
     box-shadow:0 1rem 3rem #a8a8a8;
-    margin:0 20px;
+    margin:10px 10px;
 }
 .img_article_horizontal{
     max-width: 450px;
@@ -96,4 +108,19 @@
     border-radius: 4px;
     object-position: center center;
     box-shadow:0 1rem 3rem #4f4f4f;
+}
+
+@media only screen and (max-width: 1000px) {
+    .floating_left{
+        display: inline;
+    }
+    .floating_right{
+        display: inline;
+    }
+    .float_right {
+        float: right; /* Выравнивание по правому краю */
+    }
+    .float_left {
+        float: left; /* Выравнивание по правому краю */
+    }
 }

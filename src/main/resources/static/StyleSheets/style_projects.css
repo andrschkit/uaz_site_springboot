@@ -28,24 +28,100 @@
 }
 
 .project_gallery{
-    display: inline-flex;
+    display: flex;
     flex-direction: row;
-    justify-content: center;
     flex-wrap: wrap;
+    justify-content: center;
+    margin: 1rem 140px 3rem;
 }
 .project_gallery a{
-    width: 350px;
-    height: 260px;
+    flex-grow: 1;
+    display: flex;
+    border-radius: 3px;
+    margin: 20px 20px;
+    max-width: 350px;
+    width: 300px;
+    height: auto;
+    max-height: 400px;
+}
+.img_project{
+    display: flex;
+    flex-grow: 1;
+    overflow: hidden;
+    border-radius: 3px;
+    box-shadow:0 1rem 3rem #a8a8a8;
+    margin:10px 10px;
+}
+/*.project_gallery a{
+    text-decoration: none;
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    align-items: center;
     border-radius: 3px;
     margin: 25px 25px;
+    width: 300px;
+    max-width: 350px;
+    max-height: 400px;
+    overflow: hidden;
 
 }
 .img_project{
     object-fit: cover;
-    width: 350px;
-    height: 260px;
+    flex-grow: 1;
+    max-width:100%;
+    max-height:300px;
     overflow: hidden;
     border-radius: 3px;
     box-shadow:0 1rem 3rem #a8a8a8;
     margin:20px 20px;
+
+}
+*/
+@media only screen and (max-width: 1000px) {
+    .container_project h3{
+        margin-left:100px;
+    }
+    .project_text{
+        margin-left: 100px;
+        margin-right: 100px;
+        font-size: 20px;
+
+    }
+    .project_gallery{
+        margin: 1rem 10px 3rem;
+    }
+}
+@media only screen and (max-width: 780px) {
+    .container_project h3{
+        margin-left: 40px;
+    }
+    .project_text{
+        margin-left: 40px;
+        margin-right: 40px;
+
+    }
+    .project_gallery a{
+        margin: 10px 10px;
+        max-width: 550px;
+        width: 250px;
+        height: auto;
+        max-height: 400px;
+    }
+    .img_project{
+        margin:5px 5px;
+    }
+
+}
+@media only screen and (max-width: 550px) {
+    .container_project h3{
+        margin-left: 20px;
+    }
+    .project_text{
+        margin-left: 20px;
+        margin-right: 20px;
+        font-size: 20px;
+
+    }
+
 }
