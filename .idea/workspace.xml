@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="63d29c66-ea9a-40cb-a3d4-b579f5e1bd53" name="Changes" comment="NF: main pages mobile">
+    <list default="true" id="63d29c66-ea9a-40cb-a3d4-b579f5e1bd53" name="Changes" comment="NF: just services remained">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/StyleSheets/style_about.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/StyleSheets/style_about.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/StyleSheets/style_article.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/StyleSheets/style_article.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/StyleSheets/style_projects.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/StyleSheets/style_projects.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/services/building.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/services/building.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -319,7 +318,14 @@
       <option name="project" value="LOCAL" />
       <updated>1717581413528</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="NF: just services remained">
+      <created>1717591907329</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1717591907329</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -374,7 +380,8 @@
     <MESSAGE value="NF: unresolved images" />
     <MESSAGE value="NF: changes from Dmitriy" />
     <MESSAGE value="NF: main pages mobile" />
-    <option name="LAST_COMMIT_MESSAGE" value="NF: main pages mobile" />
+    <MESSAGE value="NF: just services remained" />
+    <option name="LAST_COMMIT_MESSAGE" value="NF: just services remained" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
