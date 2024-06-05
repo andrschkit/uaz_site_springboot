@@ -26,8 +26,8 @@
           <a th:href="@{/addPost}" class="btn btn_news"><img src="/images/icons_swg/add.ico"></a>
       </div>
 
-      <div class="container_long_squares">
-          <a th:action="@{/addPost}" method="get">
+
+          <a th:action="@{/addPost}" method="get" class="container_long_squares">
               <div class="current_news container_long_square news_decor" th:each="el:${posts}">
                   <label  class="post_id hidden" th:text="${el.getId}"></label>
                   <div class="card_long_title_content">
@@ -39,7 +39,6 @@
                   </div>
               </div>
           </a>
-      </div>
 
   </div>  
 </main>

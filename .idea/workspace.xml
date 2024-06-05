@@ -4,39 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="63d29c66-ea9a-40cb-a3d4-b579f5e1bd53" name="Changes" comment="NF: unresolved images">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/carousel_img/cleaning.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/licenses/Atom_license03-101_min.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/licenses/Atom_license03-115_min.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/licenses/LicenseMCHS2020-20211_min.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/licenses/LicenseMCHS_HORS1_min.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/licenses/License_FSB1_min.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/licenses/MincultRu1_min.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="63d29c66-ea9a-40cb-a3d4-b579f5e1bd53" name="Changes" comment="NF: changes from Dmitriy">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/StyleSheets/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/StyleSheets/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/StyleSheets/style_about.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/StyleSheets/style_about.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/StyleSheets/style_article.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/StyleSheets/style_article.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/StyleSheets/style_cards.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/StyleSheets/style_cards.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/StyleSheets/style_carousel.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/StyleSheets/style_carousel.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/StyleSheets/style_mobile.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/StyleSheets/style_mobile.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/carousel_img/ordinka.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/images/carousel_img/ordinka.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/carousel_img/sport.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/images/carousel_img/sport.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/licenses/Atom_license03-101.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/images/licenses/Atom_license03-101.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/about/advantage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/about/advantage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/about/history.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/about/history.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/about/ohrana_truda.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/about/ohrana_truda.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/about/providers.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/about/providers.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/about/quality.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/about/quality.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/about/social.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/about/social.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/licenses.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/licenses.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/news.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/news.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/objects_exploitation.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/objects_exploitation.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/objects_repair.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/objects_repair.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/services.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/services.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/services/cleaning.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/services/cleaning.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -333,7 +305,14 @@
       <option name="project" value="LOCAL" />
       <updated>1715789936026</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="NF: changes from Dmitriy">
+      <created>1717567511764</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1717567511764</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -386,7 +365,8 @@
     <MESSAGE value="NF: 74% static filling" />
     <MESSAGE value="NF: 80% static filling+ footer bug fix" />
     <MESSAGE value="NF: unresolved images" />
-    <option name="LAST_COMMIT_MESSAGE" value="NF: unresolved images" />
+    <MESSAGE value="NF: changes from Dmitriy" />
+    <option name="LAST_COMMIT_MESSAGE" value="NF: changes from Dmitriy" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
