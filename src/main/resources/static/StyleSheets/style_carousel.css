@@ -18,6 +18,55 @@
 .carousel_text {
     color:     #FFFFFF;
     font-weight: bold;
-    font-size: 35px;
-    text-shadow: 5px 5px 5px  #5F6062;
+    text-shadow: 6px 6px 6px #4a4a4b;
+}
+.carousel_text h2{
+    font-size: 60px;
+}
+.carousel-caption{
+    margin-bottom: 3rem;
+}
+
+@media only screen and (max-width: 1000px) {
+    /*Licenses*/
+    .carousel_text h2{
+        font-size: 50px;
+    }
+    .carousel-caption{
+        margin-bottom: 2rem;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    /*Licenses*/
+    .carousel_text h2{
+        font-size: 45px;
+    }
+    .carousel-caption{
+        margin-bottom: 1rem;
+    }
+}
+@media only screen and (max-width: 500px) {
+    /*Licenses*/
+    .carousel_text h2{
+        font-size: 35px;
+    }
+    .carousel-caption{
+        margin-bottom: 0.5rem;
+    }
+}
+@media only screen and (max-width: 415px) {
+    /*Licenses*/
+    .carousel_text h2{
+        font-size: 30px;
+    }
+    .carousel-caption{
+        margin-bottom: 0;
+    }
+}
+@media only screen and (max-width: 350px) {
+    /*Licenses*/
+    .carousel_text h2{
+        font-size: 25px;
+    }
 }

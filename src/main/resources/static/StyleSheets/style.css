@@ -63,6 +63,7 @@ h2 {
 h3 {
     font-family: "RosatomWebBold", "Arial", sans-serif;
     font-size: 30px;
+    text-align: center;
 }
 h4 {
     font-family: "RosatomWebBold", "Arial", sans-serif;
@@ -75,7 +76,17 @@ h5 {
     font-size: 35px;
 }
 p {
+    text-indent: 50px; /* Отступ первой строки в пикселах */
+    width: 100%;
+    text-align: justify;
+}
+.p_start{
+    text-align: start;
     text-indent: 20px; /* Отступ первой строки в пикселах */
+}
+.ul_style{
+    list-style-type: square;
+    margin-left: 70px;
 }
 br{
     right: 20px;
@@ -97,13 +108,19 @@ body {
     background-attachment:fixed;
 
 }
+label{
+    display: inline;
+}
 #myDiv{
     min-height: 75vh;
     flex-grow: 1;
+    display: none;
+    text-align: center;
 }
 #myDiv_no_preload{
     min-height: 75vh;
     flex-grow: 1;
+    text-align: center;
 }
 .head_main_logo{
     display: flex;
@@ -511,11 +528,6 @@ footer{
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
-}
-
-#myDiv {
-    display: none;
-    text-align: center;
 }
 
 .loaded_hiding .preloader {

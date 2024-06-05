@@ -1,13 +1,14 @@
 /*squares content*/
 .news_decor{
     background: white;
+    text-decoration: none;
 }
 
 .container_squares{
-    display: inline-flex;
+    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content:center;
     margin-top: 1rem;
     margin-bottom: 3rem;
 }
@@ -15,6 +16,7 @@
 .container_square{
     text-decoration: none;
     display: flex;
+    flex-grow: 1;
     flex-direction: column;
     align-items: center;
     border-radius: 7px;
@@ -22,7 +24,7 @@
     margin-left: 1.5rem;
     margin-right: 1.5rem;
     max-width: 540px;
-    height: 400px;
+    max-height: 400px;
     box-shadow:0 1rem 3rem #a8a8a8;
     overflow: hidden;
 }
@@ -47,21 +49,22 @@
 
 /*licenses content*/
 .container_squares_licenses{
-    display: inline-flex;
+    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
 }
 .container_square_licenses{
     display: flex;
+    flex-grow: 1;
     flex-direction: column;
     align-items: center;
     border-radius: 7px;
     margin-left: 1rem;
     margin-right: 1rem;
     margin-bottom: 3.3rem;
+    width: 500px;
     max-width: 500px;
-    max-height: 600px;
     box-shadow:0 1rem 3rem #a8a8a8;
 }
 .card_title_licenses_content{
@@ -69,27 +72,27 @@
     margin: 1rem 6rem;
 }
 .licenses_card_img{
-    display: block;
-    max-width: 450px;
-    max-height: 350px;
+    display: flex;
+    width: 450px;
+    max-width: 500px;
     margin-left: 2rem;
     margin-right: 2rem;
+    margin-bottom: 2rem;
     box-shadow:0 1rem 3rem #a8a8a8;
 }
 .licenses_card_img img{
-    display: block;
-    max-height: 350px;
+    display: flex;
     width:450px;
+    max-width: 500px;
     top: 50px;
     object-fit: cover;
     object-position: top;
     transition: all ease-in-out 0.2s;
 }
 .container_square_licenses:hover .licenses_card_img{
-    overflow: visible;
 }
 .container_square_licenses:hover .licenses_card_img img{
-    max-height: 700px;
+    transform: scale(1.092);
 }
 /*long content*/
 .container_long_squares{
@@ -127,6 +130,7 @@
 }
 .card_long_title_content p{
     font-size: 25px;
+    text-align: center;
 }
 .card_long_img{
     width: 540px;
@@ -140,4 +144,96 @@
     border-radius: 4px;
     object-position: center center;
     box-shadow:0 1rem 3rem #4f4f4f;
+}
+
+/*mobile version*/
+@media only screen and (max-width: 1773px) {
+    .container_square {
+        width: 540px;
+        max-width: 700px;
+    }
+    .card_title_content{
+        margin: 20px 1rem;
+    }
+    .card_img{
+        width: 100%;
+        max-width: 650px;
+    }
+
+    .card_img img{
+        width: 100%;
+    }
+    /*Licenses*/
+    .container_square_licenses{
+        width: 420px;
+    }
+
+    .licenses_card_img{
+        width: 380px;
+    }
+    .licenses_card_img img{
+        width:380px;
+    }
+    /*Licenses*/
+}
+@media only screen and (max-width: 1177px) {
+    .container_square {
+        width: 540px;
+        max-width: 700px;
+    }
+}
+@media only screen and (max-width: 545px) {
+    .card_title_licenses_content h5{
+        font-size: 25px;
+    }
+    .card_title_content{
+        margin: 10px 1rem;
+    }
+    .container_square {
+        width: auto;
+        max-width: none;
+        max-height: 300px;
+    }
+    .card_title_content h3{
+        font-size: 23px;
+    }
+    .card_img img{
+        width: 100%;
+        object-position: bottom center;
+    }
+}
+@media only screen and (max-width: 412px) {
+    /*Licenses*/
+    .container_square_licenses{
+        width: 320px;
+        max-width: 350px;
+    }
+
+    .licenses_card_img{
+        width: 320px;
+        max-width: 350px;
+    }
+    .licenses_card_img img{
+        width:320px;
+        max-width: 350px;
+    }
+    .container_square_licenses:hover .licenses_card_img img{
+        transform: none;
+    }
+}
+@media only screen and (max-width: 320px) {
+    /*Licenses*/
+    .container_square_licenses{
+        width: 270px;
+    }
+
+    .licenses_card_img{
+        width: 265px;
+    }
+    .licenses_card_img img{
+        width:265px;
+    }
+    .container_square_licenses:hover .licenses_card_img img{
+        transform: none;
+    }
 }

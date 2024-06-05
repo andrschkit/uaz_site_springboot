@@ -33,11 +33,11 @@
 }
 .article_text_short p{
     margin-bottom: 5px;
-    text-align: start;
+    text-align: justify;
 }
 .article_text_long p{
     margin-bottom: 5px;
-    text-align: start;
+    text-align: justify;
 }
 .floating_left{
     flex-direction: row

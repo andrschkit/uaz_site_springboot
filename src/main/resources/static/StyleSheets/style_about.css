@@ -17,7 +17,11 @@
 
 .about_text p{
     margin-bottom:10px ;
-    text-align: start;
+    text-align: justify;
+}
+.about_text li{
+    margin-bottom:10px ;
+    text-align: justify;
 }
 .default{
     border: 0px solid #7F7F7F; /* Параметры рамки */
