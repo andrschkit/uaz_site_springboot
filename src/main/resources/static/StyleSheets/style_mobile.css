@@ -190,6 +190,13 @@
     .text-center h1{
         font-size: 30px;
     }
+    .news-text {
+        font-size: 18px;
+    }
+    .animate-bottom{
+        margin-right: 1%;
+        margin-left: 1%;
+    }
 
 }
 @media only screen and (max-width: 408px) {
@@ -213,5 +220,11 @@
     .header_contact_segment{
         margin-right: 0px;
         margin-left: 15px;
+    }
+    .text-center h1{
+        font-size: 20px;
+    }
+    .news-text {
+        font-size: 14px;
     }
 }

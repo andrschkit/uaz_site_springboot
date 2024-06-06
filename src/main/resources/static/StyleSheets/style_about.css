@@ -8,7 +8,7 @@
 .about_text{
     align-content: center;
     justify-content: center;
-    font-size: 23px;
+    font-size: 21px;
 }
 
 .selected_rout{
@@ -48,5 +48,14 @@
     }
     .ul_style{
         margin-left: 10px;
+    }
+}@media only screen and (max-width: 500px) {
+    .about_text{
+        font-size: 17px;
+    }
+}
+@media only screen and (max-width: 360px) {
+    .about_text{
+        font-size: 14px;
     }
 }

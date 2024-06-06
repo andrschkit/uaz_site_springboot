@@ -4,10 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="63d29c66-ea9a-40cb-a3d4-b579f5e1bd53" name="Changes" comment="NF: just services remained">
+    <list default="true" id="63d29c66-ea9a-40cb-a3d4-b579f5e1bd53" name="Changes" comment="NF: Service sketch">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/StyleSheets/style_about.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/StyleSheets/style_about.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/StyleSheets/style_article.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/StyleSheets/style_article.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/StyleSheets/style_mobile.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/StyleSheets/style_mobile.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/StyleSheets/style_projects.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/StyleSheets/style_projects.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/blocks/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/blocks/header.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/services/building.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/services/building.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/services/cleaning.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/services/cleaning.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/services/exploitation.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/services/exploitation.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/services/technical_events.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/services/technical_events.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/services/technical_service.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/services/technical_service.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -143,6 +151,7 @@
       <workItem from="1715580650381" duration="24801000" />
       <workItem from="1715669210640" duration="16341000" />
       <workItem from="1715843074852" duration="15415000" />
+      <workItem from="1717650736998" duration="13411000" />
     </task>
     <task id="LOCAL-00001" summary="Started commit">
       <option name="closed" value="true" />
@@ -325,7 +334,14 @@
       <option name="project" value="LOCAL" />
       <updated>1717591907329</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="NF: Service sketch">
+      <created>1717593216162</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1717593216162</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -356,7 +372,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Started commit" />
     <MESSAGE value="Unresolved" />
     <MESSAGE value="NF: all main pages allowed" />
     <MESSAGE value="NF: refs for the whole site" />
@@ -381,7 +396,8 @@
     <MESSAGE value="NF: changes from Dmitriy" />
     <MESSAGE value="NF: main pages mobile" />
     <MESSAGE value="NF: just services remained" />
-    <option name="LAST_COMMIT_MESSAGE" value="NF: just services remained" />
+    <MESSAGE value="NF: Service sketch" />
+    <option name="LAST_COMMIT_MESSAGE" value="NF: Service sketch" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
