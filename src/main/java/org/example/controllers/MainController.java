@@ -150,23 +150,23 @@ public class MainController {
     @GetMapping(URL_PROJECT_REPAIR_TECHNOPARK)
     public String projectRepairTechnopark(Model model) { return "projects/repair/technopark"; }
     //projects exploitation
-    @GetMapping(URL_PROJECT_EXPLOITATION_KROVLIA)
-    public String projectExploitationKrovlia(Model model) { return "projects/exploitation/krovlia"; }
-    @GetMapping(URL_PROJECT_EXPLOITATION_SPORT)
+    @GetMapping(URL_PROJECT_REPAIR_KROVLIA)
+    public String projectExploitationKrovlia(Model model) { return "projects/repair/krovlia"; }
+    @GetMapping(URL_PROJECT_REPAIR_SPORT)
     public String projectExploitationSport(Model model) {
-        return "projects/exploitation/sport";
+        return "projects/repair/sport";
     }
-    @GetMapping(URL_PROJECT_EXPLOITATION_HALL)
+    @GetMapping(URL_PROJECT_REPAIR_HALL)
     public String projectExploitationHall(Model model) {
-        return "projects/exploitation/hall";
+        return "projects/repair/hall";
     }
-    @GetMapping(URL_PROJECT_EXPLOITATION_MEDPUNKT)
+    @GetMapping(URL_PROJECT_REPAIR_MEDPUNKT)
     public String projectExploitationMedpunkt(Model model) {
-        return "projects/exploitation/medpunkt";
+        return "projects/repair/medpunkt";
     }
-    @GetMapping(URL_PROJECT_EXPLOITATION_FASAD)
+    @GetMapping(URL_PROJECT_REPAIR_FASAD)
     public String projectExploitationFasad(Model model) {
-        return "projects/exploitation/fasad";
+        return "projects/repair/fasad";
     }
     @GetMapping(URL_PROJECT_EXPLOITATION_KITAY)
     public String projectExploitationKitay(Model model) {

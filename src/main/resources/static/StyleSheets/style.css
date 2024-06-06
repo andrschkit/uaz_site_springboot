@@ -62,7 +62,7 @@ h2 {
 }
 h3 {
     font-family: "RosatomWebBold", "Arial", sans-serif;
-    font-size: 30px;
+    font-size: 35px;
     text-align: center;
 }
 h4 {
@@ -79,6 +79,7 @@ p {
     text-indent: 50px; /* Отступ первой строки в пикселах */
     width: 100%;
     text-align: justify;
+
 }
 .p_start{
     text-align: start;

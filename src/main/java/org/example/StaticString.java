@@ -38,11 +38,11 @@ public final class StaticString {
     public static final String URL_PROJECT_REPAIR_NAGAT_UAZ = "projects/repair/nagat_uaz";
     public static final String URL_PROJECT_REPAIR_TECHNOPARK = "projects/repair/technopark";
 
-    public static final String URL_PROJECT_EXPLOITATION_KROVLIA = "projects/exploitation/krovlia";
-    public static final String URL_PROJECT_EXPLOITATION_SPORT = "projects/exploitation/sport";
-    public static final String URL_PROJECT_EXPLOITATION_HALL = "projects/exploitation/hall";
-    public static final String URL_PROJECT_EXPLOITATION_MEDPUNKT = "projects/exploitation/medpunkt";
-    public static final String URL_PROJECT_EXPLOITATION_FASAD = "projects/exploitation/fasad";
+    public static final String URL_PROJECT_REPAIR_KROVLIA = "projects/repair/krovlia";
+    public static final String URL_PROJECT_REPAIR_SPORT = "projects/repair/sport";
+    public static final String URL_PROJECT_REPAIR_HALL = "projects/repair/hall";
+    public static final String URL_PROJECT_REPAIR_MEDPUNKT = "projects/repair/medpunkt";
+    public static final String URL_PROJECT_REPAIR_FASAD = "projects/repair/fasad";
 
     public static final String URL_PROJECT_EXPLOITATION_KITAY = "projects/exploitation/kitay";
     public static final String URL_PROJECT_EXPLOITATION_VDNH = "projects/exploitation/vdnh";

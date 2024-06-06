@@ -98,6 +98,12 @@
 
 }
 @media only screen and (max-width: 545px) {
+    p{
+        word-spacing:-2px;
+    }
+    h3{
+        font-size: 28px;
+    }
     .top_header_main{
         height: 60px;
     }
@@ -191,7 +197,7 @@
         font-size: 30px;
     }
     .news-text {
-        font-size: 18px;
+        font-size: 17px;
     }
     .animate-bottom{
         margin-right: 1%;
