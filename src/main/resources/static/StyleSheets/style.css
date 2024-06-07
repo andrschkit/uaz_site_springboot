@@ -88,6 +88,10 @@ p {
 .ul_style{
     list-style-type: square;
     margin-left: 70px;
+    font-size: 21px;
+}
+li{
+    text-align: justify;
 }
 br{
     right: 20px;
