@@ -4,28 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="63d29c66-ea9a-40cb-a3d4-b579f5e1bd53" name="Changes" comment="BF: fix exploitation files">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/services_img/technical_service/dispetch2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/services_img/technical_service/dispetch2_min.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/services_img/technical_service/electro2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/services_img/technical_service/electro2_min.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/services_img/technical_service/fire2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/services_img/technical_service/fire2_min.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/services_img/technical_service/inoy2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/services_img/technical_service/inoy2_min.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/services_img/technical_service/kan2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/services_img/technical_service/kan2_min.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/services_img/technical_service/lift2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/services_img/technical_service/lift2_min.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/services_img/technical_service/teplo2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/services_img/technical_service/teplo2_min.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/services_img/technical_service/tv2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/services_img/technical_service/vod2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/services_img/technical_service/vod2_min.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/services_img/technical_service/vorota2.jpg" afterDir="false" />
+    <list default="true" id="63d29c66-ea9a-40cb-a3d4-b579f5e1bd53" name="Changes" comment="NF: manager's edits">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/services/building.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/services/building.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/services/technical_service.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/services/technical_service.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/StyleSheets/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/StyleSheets/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/StyleSheets/style_projects.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/StyleSheets/style_projects.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/projects/repair/fasad.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/projects/repair/fasad.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/projects/repair/hall.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/projects/repair/hall.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/projects/repair/krovlia.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/projects/repair/krovlia.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/projects/repair/medpunkt.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/projects/repair/medpunkt.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/projects/repair/sport.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/projects/repair/sport.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +34,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="develop" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -365,7 +353,14 @@
       <option name="project" value="LOCAL" />
       <updated>1717677647379</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="NF: manager's edits">
+      <created>1717756499379</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1717756499379</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -382,7 +377,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="develop" />
+                        <option value="master" />
                       </list>
                     </value>
                   </entry>
@@ -396,7 +391,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="NF: refs for the whole site" />
     <MESSAGE value="NF: animation complete" />
     <MESSAGE value="[NF]: validation(with nuance), migration" />
     <MESSAGE value="[BF]: fix mobile header margin" />
@@ -421,7 +415,8 @@
     <MESSAGE value="NF: Service sketch" />
     <MESSAGE value="NF: new services style" />
     <MESSAGE value="BF: fix exploitation files" />
-    <option name="LAST_COMMIT_MESSAGE" value="BF: fix exploitation files" />
+    <MESSAGE value="NF: manager's edits" />
+    <option name="LAST_COMMIT_MESSAGE" value="NF: manager's edits" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

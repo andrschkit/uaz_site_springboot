@@ -2,19 +2,34 @@
     display: inline-flex;
     flex-direction: column;
     flex-wrap: wrap;
+    max-width: 1500px;
+    width: 100%;
 }
 .container_project h3{
-    text-align: start;
     margin-top: 25px;
-    margin-left: 174px;
+}
+.project_columns{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.project_column{
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    width: 600px;
+    max-width: 1500px;
+
 }
 .selected_rout{
     font-family: "RosatomWebBold", "Arial", sans-serif;
 }
 .project_text{
     display: inline-flex;
-    margin-left: 174px;
-    margin-right: 174px;
+    margin-left: 40px;
+    margin-right: 40px;
     flex-direction: column;
     align-content: center;
     justify-content: center;
@@ -32,7 +47,8 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    margin: 1rem 140px 3rem;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 .project_gallery a{
     flex-grow: 1;
@@ -78,10 +94,19 @@
 
 }
 */
-@media only screen and (max-width: 1000px) {
-    .container_project h3{
-        margin-left:100px;
+@media only screen and (max-width: 1440px) {
+    .project_gallery a{
+        max-width: 420px;
+        max-height: 320px;
     }
+}
+@media only screen and (max-width: 1200px) {
+    .project_gallery a{
+        max-width: 350px;
+        max-height: 230px;
+    }
+}
+@media only screen and (max-width: 1000px) {
     .project_text{
         margin-left: 100px;
         margin-right: 100px;
@@ -93,9 +118,6 @@
     }
 }
 @media only screen and (max-width: 780px) {
-    .container_project h3{
-        margin-left: 40px;
-    }
     .project_text{
         margin-left: 40px;
         margin-right: 40px;
@@ -111,17 +133,23 @@
     .img_project{
         margin:5px 5px;
     }
+    .project_column{
+        width: 400px;
+    }
 
 }
 @media only screen and (max-width: 550px) {
-    .container_project h3{
-        margin-left: 20px;
-    }
     .project_text{
         margin-left: 20px;
         margin-right: 20px;
         font-size: 20px;
 
+    }
+
+}
+@media only screen and (max-width: 400px) {
+    .project_column{
+        width: 200px;
     }
 
 }
