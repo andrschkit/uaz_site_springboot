@@ -300,9 +300,7 @@ footer{
     margin-bottom: -5px;
     color: #025EA1;
 }
-.hidden{
-    display: none;
-}
+
 .contact_header{
     display: flex;
     flex-direction: column;
@@ -615,4 +613,8 @@ footer{
 
 .thumb {
     padding: 10px;
+}
+
+.hidden{
+    display: none;
 }
