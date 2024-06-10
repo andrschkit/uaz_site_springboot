@@ -262,6 +262,18 @@ footer{
     color: black;
     border-left:5px solid #025EA1;
 }
+.nav_drop_item{
+    padding-top: 5px;
+    padding-bottom:10px;
+    text-decoration: none;
+    color: #3b3b3b;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 3px 10px 0px 10px;
+}
+
 .dropdown:hover .dropdown-menu {
     display: block;
 }
