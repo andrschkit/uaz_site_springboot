@@ -314,6 +314,7 @@ footer{
     align-content: center;
     justify-content: center;
     align-items: center;
+    pointer-events: none; /* Ручка застряла! */
 }
 
 .phone-decor{
