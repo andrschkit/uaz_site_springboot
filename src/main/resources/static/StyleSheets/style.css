@@ -220,7 +220,7 @@ footer{
     justify-content: space-between;
 }
 .top_header_second{
-    height: 55px;
+    height: 56px;
     border-bottom: 2px solid #d7d7d7;
 }
 .top_header_second_flex{
@@ -238,10 +238,24 @@ footer{
     margin-right: 2rem;
 }
 
+.nav_drop_item{
+    padding-top: 5px;
+    padding-bottom:10px;
+    text-decoration: none;
+    color: #3b3b3b;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 3px 10px 0px 10px;
+}
+
 .dropdown:hover{
     padding: -7px;
     border-bottom: 5px solid #025EA1;
     margin-bottom: -5px;
+}
+.dropdown:hover  .nav_drop_item{
     color: #025EA1;
 }
 .dropdown ul{
@@ -259,22 +273,11 @@ footer{
 .dropdown-item:hover{
     transition: all ease-out 0.08s;
     background-color: white;
-    color: black;
+    color: #025EA1;
     border-left:5px solid #025EA1;
 }
-.nav_drop_item{
-    padding-top: 5px;
-    padding-bottom:10px;
-    text-decoration: none;
-    color: #3b3b3b;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 3px 10px 0px 10px;
-}
 
-.dropdown:hover .dropdown-menu {
+.dropdown_checked {
     display: block;
 }
 .mobile_item{
@@ -306,12 +309,16 @@ footer{
     border-right: 1px solid #d7d7d7;
     height: 30px;
 }
-.static_hover{
+.static_hover {
     padding: -7px;
     border-bottom: 5px solid #025EA1;
     margin-bottom: -5px;
     color: #025EA1;
 }
+.static_hover .nav_drop_item{
+    color: #025EA1;
+}
+
 
 .contact_header{
     display: flex;

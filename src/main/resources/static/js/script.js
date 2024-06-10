@@ -40,6 +40,20 @@ switch (window.location.pathname) {
     default:
 
 }
+let dropdownProjects=document.getElementById('dropdown_projects');
+
+window.addEventListener('click', function(e){
+    if (!document.getElementById('objects').contains(e.target)){
+        dropdownProjects.classList.remove("dropdown_checked");
+        objects.classList.remove('static_hover');
+    }
+    else {
+        dropdownProjects.classList.toggle("dropdown_checked");
+        objects.classList.toggle('static_hover');
+    }
+});
+
+
 // кнопка наверх страницы
 const btnUp = {
     el: document.querySelector('.btn-up'),
