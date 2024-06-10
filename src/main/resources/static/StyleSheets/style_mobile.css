@@ -70,6 +70,9 @@
     .desktop_item{
         display: none;
     }
+    .me_house {
+        padding-top: 6px;
+    }
 
 }
 @media only screen and (max-width: 650px) {
@@ -175,6 +178,7 @@
         color: #025EA1;
     }
     .navbar-toggler{
+        margin-top: 2px;
         width: 47px;
         height: 33px;
     }
@@ -187,8 +191,9 @@
         width: 25px;
     }
     .me_house {
-         width: 35px;
+         width: 37px;
          margin-left: 2rem;
+        padding-top: 9px;
      }
     .preloader {
         left: 45%;
