@@ -2,7 +2,7 @@
 let home=document.getElementById('home');
 let services=document.getElementById('services');
 let objects=document.getElementById('objects');
-let licenses=document.getElementById('licenses');
+let licence=document.getElementById('licence');
 let news=document.getElementById('news');
 let contacts=document.getElementById('contacts');
 let about=document.getElementById('about');
@@ -29,7 +29,10 @@ switch (window.location.pathname) {
         exploitation.classList.add('static_hover');
         break;
     case '/licenses':
-        licenses.classList.add('static_hover');
+        licence.classList.add('static_hover');
+        break;
+    case '/certificates':
+        licence.classList.add('static_hover');
         break;
     case '/news':
         news.classList.add('static_hover');
@@ -41,15 +44,34 @@ switch (window.location.pathname) {
 
 }
 let dropdownProjects=document.getElementById('dropdown_projects');
+let dropdownLicences=document.getElementById('dropdown_licenses');
 
 window.addEventListener('click', function(e){
     if (!document.getElementById('objects').contains(e.target)){
         dropdownProjects.classList.remove("dropdown_checked");
-        objects.classList.remove('static_hover');
+        if (window.location.pathname!=='/objects_repair'){
+            if (window.location.pathname!=='/objects_exploitation') {
+                objects.classList.remove('static_hover');
+            }
+        }
     }
     else {
         dropdownProjects.classList.toggle("dropdown_checked");
-        objects.classList.toggle('static_hover');
+        objects.classList.add('static_hover');
+    }
+
+    if (!document.getElementById('licence').contains(e.target)){
+        dropdownLicences.classList.remove("dropdown_checked");
+        if (window.location.pathname!=='/licenses'){
+            if (window.location.pathname!=='/certificates') {
+                licence.classList.remove('static_hover');
+            }
+        }
+
+    }
+    else {
+        dropdownLicences.classList.toggle("dropdown_checked");
+        licence.classList.add('static_hover');
     }
 });
 

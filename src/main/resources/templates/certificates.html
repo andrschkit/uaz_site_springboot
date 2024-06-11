@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Andrew Shcherbakov">
+    <title>Серитификаты</title>
+    <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="/fancybox-3.0/dist/jquery.fancybox.min.css" />
+    <link href="/StyleSheets/style.css" rel="stylesheet"/>
+    <link href="/StyleSheets/style_cards.css" rel="stylesheet"/>
+    <link href="/StyleSheets/style_mobile.css" rel="stylesheet"/>
+    <link rel="shortcut icon" href="/images/icons_swg/main_logo/Logo.svg" type="image/x-icon"/>
+</head>
+
+<body>
+
+<header th:insert="blocks/header.html"> </header>
+
+<main>
+    <div class="preloader"></div>
+    <div style="display:none;" id="myDiv" class="animate-bottom">
+        <div class="mx-auto text-center">
+            <h1>Серитификаты</h1>
+        </div>
+        <div class="container_squares_licenses">
+            <a href="/images/certificates/razresh_rus.jpg" data-fancybox="razresh" class="container_square_licenses news_decor" style="z-index: 4">
+                <div class="card_title_licenses_content">
+                    <h5 class="">Разрешение на знак соответсвия</h5>
+                </div>
+                <div class="licenses_card_img">
+                    <img src="/images/certificates/razresh_rus.jpg" alt="">
+                </div>
+            </a>
+            <div class="hidden">
+                <a data-fancybox="razresh" href="/images/certificates/razresh_eng.jpg"></a>
+            </div>
+
+            <a href="/images/certificates/technoprogres_rus.jpg" data-fancybox="technoprogres" class="container_square_licenses news_decor" style="z-index: 4">
+                <div class="card_title_licenses_content">
+                    <h5 class="">Сертификат №СДС.ТП.СМ.18885</h5>
+                </div>
+                <div class="licenses_card_img">
+                    <img src="/images/certificates/technoprogres_rus.jpg" alt="">
+                </div>
+            </a>
+            <div class="hidden">
+                <a data-fancybox="technoprogres" href="/images/certificates/technoprogres_eng.jpg"></a>
+            </div>
+
+            <a href="/images/certificates/energoaudit2_p1.jpg" data-fancybox="energoaudit2" class="container_square_licenses news_decor" style="z-index: 4">
+                <div class="card_title_licenses_content">
+                    <h5 class="">Свидетельство Энергоаудит</h5>
+                </div>
+                <div class="licenses_card_img">
+                    <img src="/images/certificates/energoaudit2_p1.jpg" alt="">
+                </div>
+            </a>
+            <div class="hidden">
+                <a data-fancybox="energoaudit2" href="/images/certificates/energoaudit2_p2.jpg"></a>
+            </div>
+            <div class="hidden">
+                <a data-fancybox="energoaudit2" href="/images/certificates/energoaudit2_p3.jpg"></a>
+            </div>
+
+        </div>
+    </div>
+</main>
+
+<div class="btn-up btn-up_hide"> <img src="/images/up-arrow.svg" alt=""/></div>
+
+<footer th:insert="blocks/footer.html"> </footer>
+
+<script src="/js/jquery-3.7.1.js"></script>
+<script src="/fancybox-3.0/dist/jquery-3.6.4.min.js"></script>
+<script src="/fancybox-3.0/dist/jquery.fancybox.min.js"></script>
+<script src="/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="/js/script.js"></script>
+
+</body>
+</html>

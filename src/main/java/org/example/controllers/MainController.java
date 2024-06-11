@@ -47,6 +47,10 @@ public class MainController {
     public String licensesPage(Model model) {
         return "licenses";
     }
+    @GetMapping(URL_CERTIFICATES)
+    public String certificatesPage(Model model) {
+        return "certificates";
+    }
     @GetMapping(URL_NEWS)
     public String mediaPage(Model model) {
         List<MediaPost> postList = new ArrayList<>();
