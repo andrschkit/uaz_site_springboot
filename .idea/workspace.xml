@@ -4,16 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="63d29c66-ea9a-40cb-a3d4-b579f5e1bd53" name="Changes" comment="NF: manager's edits">
+    <list default="true" id="63d29c66-ea9a-40cb-a3d4-b579f5e1bd53" name="Changes" comment="[NF]: some security">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/config/MvcConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/config/WebSecurityConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/StyleSheets/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/StyleSheets/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/StyleSheets/style_projects.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/StyleSheets/style_projects.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/projects/repair/fasad.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/projects/repair/fasad.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/projects/repair/hall.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/projects/repair/hall.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/projects/repair/krovlia.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/projects/repair/krovlia.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/projects/repair/medpunkt.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/projects/repair/medpunkt.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/projects/repair/sport.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/projects/repair/sport.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controllers/MediaPostController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controllers/MediaPostController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application-prod.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-prod.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,32 +50,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/User/Documents/GitHub/UAZ_Supplications&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;9ecfeb4f9516be01698fd41d1da6085c&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/JOB/uaz_site_springboot/src/main/java/org/example",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "spring.configuration.checksum": "43c385488b6baff9f1f826e581dbc89c",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\JOB\uaz_site_springboot\src\main\java\org\example" />
       <recent name="C:\JOB\uaz_site_springboot\src\main\resources" />
       <recent name="C:\Users\Andrew\Documents\Projects\uaz_site_springboot\src\main\resources\templates\projects" />
       <recent name="C:\Users\Andrew\Documents\Projects\uaz_site_springboot\src\main\resources" />
@@ -96,9 +94,16 @@
       <recent name="org.example" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.SiteUazApplication">
+  <component name="RunManager" selected="Spring Boot.SiteUazApplication (2)">
     <configuration name="SiteUazApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="uaz_site_springboot" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="org.example.SiteUazApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SiteUazApplication (2)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="Site_UAZ" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="org.example.SiteUazApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -150,6 +155,9 @@
       <workItem from="1715669210640" duration="16341000" />
       <workItem from="1715843074852" duration="15415000" />
       <workItem from="1717650736998" duration="17621000" />
+      <workItem from="1718261614391" duration="1159000" />
+      <workItem from="1718350485121" duration="7088000" />
+      <workItem from="1718608229976" duration="8625000" />
     </task>
     <task id="LOCAL-00001" summary="Started commit">
       <option name="closed" value="true" />
@@ -360,7 +368,14 @@
       <option name="project" value="LOCAL" />
       <updated>1717756499379</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="[BF]: fix index">
+      <created>1718002556421</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1718002556421</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -391,8 +406,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="NF: animation complete" />
-    <MESSAGE value="[NF]: validation(with nuance), migration" />
     <MESSAGE value="[BF]: fix mobile header margin" />
     <MESSAGE value="[BF]: fix margins" />
     <MESSAGE value="NF: Add WYSIWYG" />
@@ -416,7 +429,9 @@
     <MESSAGE value="NF: new services style" />
     <MESSAGE value="BF: fix exploitation files" />
     <MESSAGE value="NF: manager's edits" />
-    <option name="LAST_COMMIT_MESSAGE" value="NF: manager's edits" />
+    <MESSAGE value="[BF]: fix index" />
+    <MESSAGE value="[NF]: some security" />
+    <option name="LAST_COMMIT_MESSAGE" value="[NF]: some security" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

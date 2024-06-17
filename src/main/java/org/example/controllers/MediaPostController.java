@@ -36,7 +36,7 @@ public class MediaPostController {
             Model model) {
         MediaPost singlePost=mediaService.findPropertyById(postId);
         model.addAttribute("singlePost", singlePost);
-        return "/postEditor/singlePost";
+        return "postEditor/singlePost";
     }
     @GetMapping(URL_EDIT_POSTS)
     public String editPost(
@@ -44,7 +44,7 @@ public class MediaPostController {
             Model model) {
         MediaPost singlePost=mediaService.findPropertyById(postId);
         model.addAttribute("singlePost", singlePost);
-        return "/postEditor/editPost";
+        return "postEditor/editPost";
     }
     @PostMapping(URL_EDIT_POSTS)
     public String saveEdit(
