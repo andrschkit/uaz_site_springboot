@@ -1,8 +1,15 @@
 spring:
+
+  session:
+    jdbc:
+      initialize-schema: always
+      table-name: SPRING_SESSION
+    timeout: 1m
+
   datasource:
     url: "jdbc:postgresql://localhost:5432/Callback-UAZ-prod"
     username: "postgres"
-    password: "qwerty"
+    password: "7723"
     driver-class-name: org.postgresql.Driver
     hikari:
       auto-commit: false
@@ -29,3 +36,5 @@ server:
   port: 8093
   tomcat:
     max-http-form-post-size: 100MB
+
+

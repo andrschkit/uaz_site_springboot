@@ -23,6 +23,8 @@ public class MainController {
         this.mediaService = mediaService;
     }
 
+
+
     @GetMapping(URL_MAIN_PAGE)
     public String mainPage(Model model) {
         return "index";
