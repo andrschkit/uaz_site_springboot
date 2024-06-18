@@ -45,6 +45,9 @@ switch (cutLocName[1]) {
     case 'news':
         news.classList.add('static_hover');
         break;
+    case 'singlePost':
+        news.classList.add('static_hover');
+        break;
     case 'contacts':
         contacts.classList.add('static_hover');
         break;
