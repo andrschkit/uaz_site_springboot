@@ -37,11 +37,11 @@ public class MainController {
     }
     @GetMapping(URL_PROJECTS_REPAIR)
     public String projectsRepairPage(Model model) {
-        return "objects_repair";
+        return "projects_repair";
     }
     @GetMapping(URL_PROJECTS_EXPLOITATION)
     public String projectsExploitationPage(Model model) {
-        return "objects_exploitation";
+        return "projects_exploitation";
     }
     @GetMapping(URL_LICENSES)
     public String licensesPage(Model model) {

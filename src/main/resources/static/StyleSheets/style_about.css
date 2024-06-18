@@ -49,13 +49,19 @@
     .ul_style{
         margin-left: 10px;
     }
-}@media only screen and (max-width: 500px) {
+}@media only screen and (max-width: 545px) {
     .about_text{
+        font-size: 17px;
+    }
+    .about_text a{
         font-size: 17px;
     }
 }
 @media only screen and (max-width: 360px) {
     .about_text{
+        font-size: 14px;
+    }
+    .about_text a{
         font-size: 14px;
     }
 }

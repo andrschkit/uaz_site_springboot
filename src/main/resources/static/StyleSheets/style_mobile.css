@@ -52,9 +52,10 @@
     }
 
     .nav-item{
-        max-width: 200px;
+        max-width: 300px;
         padding-bottom:10px;
     }
+    nav_item_mobile
     .top_header_second_flex{
         margin-top: -5px;
         margin-bottom: -5px;
@@ -164,7 +165,7 @@
     }
 
     .nav-item{
-        max-width: 200px;
+        max-width:300px;
         padding-bottom:10px;
     }
     .top_header_second_flex{
@@ -208,12 +209,18 @@
         margin-right: 1%;
         margin-left: 1%;
     }
+    .ul_style {
+        font-size: 17px;
+    }
 
 }
 @media only screen and (max-width: 408px) {
     .preloader {
         width: 45px;
         height: 45px;
+    }
+    .nav-item{
+        font-size: 18px;
     }
 }
 @media only screen and (max-width: 348px) {

@@ -3,41 +3,49 @@ let home=document.getElementById('home');
 let services=document.getElementById('services');
 let objects=document.getElementById('objects');
 let licence=document.getElementById('licence');
+let licenses=document.getElementById('licenses');
+let certificates=document.getElementById('certificates');
 let news=document.getElementById('news');
 let contacts=document.getElementById('contacts');
 let about=document.getElementById('about');
 let repair=document.getElementById('repair');
 let exploitation=document.getElementById('exploitation');
 
+let locName=window.location.pathname;
+let cutLocName=locName.split("/");
+console.log(cutLocName);
 
-switch (window.location.pathname) {
-    case '/':
-        home.classList.add('static_hover');
-        break;
-    case '/about':
+if(locName==='/'){
+    home.classList.add('static_hover');
+}
+
+switch (cutLocName[1]) {
+    case 'about':
         about.classList.add('static_hover');
         break;
-    case '/services':
+    case 'services':
         services.classList.add('static_hover');
         break;
-    case '/objects_repair':
+    case 'projects_repair':
         objects.classList.add('static_hover');
         repair.classList.add('static_hover');
         break;
-    case '/objects_exploitation':
+    case 'projects_exploitation':
         objects.classList.add('static_hover');
         exploitation.classList.add('static_hover');
         break;
-    case '/licenses':
+    case 'licenses':
+        licence.classList.add('static_hover');
+        licenses.classList.add('static_hover');
+        break;
+    case 'certificates':
+        certificates.classList.add('static_hover');
         licence.classList.add('static_hover');
         break;
-    case '/certificates':
-        licence.classList.add('static_hover');
-        break;
-    case '/news':
+    case 'news':
         news.classList.add('static_hover');
         break;
-    case '/contacts':
+    case 'contacts':
         contacts.classList.add('static_hover');
         break;
     default:
@@ -49,8 +57,8 @@ let dropdownLicences=document.getElementById('dropdown_licenses');
 window.addEventListener('click', function(e){
     if (!document.getElementById('objects').contains(e.target)){
         dropdownProjects.classList.remove("dropdown_checked");
-        if (window.location.pathname!=='/objects_repair'){
-            if (window.location.pathname!=='/objects_exploitation') {
+        if (cutLocName[1]!=='projects_repair'){
+            if (cutLocName[1]!=='projects_exploitation') {
                 objects.classList.remove('static_hover');
             }
         }
@@ -62,8 +70,8 @@ window.addEventListener('click', function(e){
 
     if (!document.getElementById('licence').contains(e.target)){
         dropdownLicences.classList.remove("dropdown_checked");
-        if (window.location.pathname!=='/licenses'){
-            if (window.location.pathname!=='/certificates') {
+        if (cutLocName[1]!=='licenses'){
+            if (cutLocName[1]!=='certificates') {
                 licence.classList.remove('static_hover');
             }
         }

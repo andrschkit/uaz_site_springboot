@@ -187,7 +187,6 @@
     .card_long_title_content{
         margin-left: 2rem;
         text-align: center;
-        min-width: 380px;
     }
     .card_long_title_content h2{
         font-size: 40px;
@@ -201,6 +200,9 @@
     .container_square {
         width: 400px;
         max-width: 650px;
+    }
+    .card_long_title_content{
+        margin-right: 2rem;
     }
 }
 @media only screen and (max-width: 781px) {
@@ -247,7 +249,8 @@
         max-height: 350px;
     }
     .card_long_title_content{
-        margin-left: 0;
+        margin-left: 10px;
+        margin-right: 10px;
     }
     .card_long_title_content h2{
 

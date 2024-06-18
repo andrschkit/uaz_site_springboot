@@ -66,20 +66,28 @@
     box-shadow:0 1rem 3rem #a8a8a8;
     margin:10px 10px;
 }
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 545px) {
     .article_img{
         margin: 5px 5px;
         width: 200px;
     }
     .ul_style{
         margin-left: 10px;
-        font-size: 18px;
+        font-size: 17px;
     }
     .ul_style li{
         word-spacing:-4px;
     }
+    .container_article {
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+    }
+    .container_article_content{
+        margin-left: 0;
+        margin-right: 0;
+    }
     .container_article_content p{
-        font-size: 18px;
+        font-size: 17px;
         word-spacing:-4px;
     }
 }

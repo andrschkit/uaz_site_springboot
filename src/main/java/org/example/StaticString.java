@@ -4,8 +4,8 @@ public final class StaticString {
     public static final String URL_MAIN_PAGE = "/";
     public static final String URL_ABOUT = "/about";
     public static final String URL_SERVICES = "/services";
-    public static final String URL_PROJECTS_REPAIR = "/objects_repair";
-    public static final String URL_PROJECTS_EXPLOITATION = "/objects_exploitation";
+    public static final String URL_PROJECTS_REPAIR = "/projects_repair";
+    public static final String URL_PROJECTS_EXPLOITATION = "/projects_exploitation";
     public static final String URL_LICENSES = "/licenses";
     public static final String URL_CERTIFICATES = "/certificates";
     public static final String URL_NEWS = "/news";
@@ -29,25 +29,25 @@ public final class StaticString {
     public static final String URL_POST = "/singlePost";
 
     //projects
-    public static final String URL_PROJECT_REPAIR_GORKIY_PARK = "projects/repair/gorkiy_park";
-    public static final String URL_PROJECT_REPAIR_CMT = "projects/repair/cmt";
-    public static final String URL_PROJECT_REPAIR_KALUZHSKAYA = "projects/repair/kaluzhskaya";
-    public static final String URL_PROJECT_REPAIR_KITAI_SECOND_FLOOR = "projects/repair/kitai_second_floоr";
-    public static final String URL_PROJECT_REPAIR_KITAI_DEMONTAZH = "projects/repair/kitai_demontazh";
-    public static final String URL_PROJECT_REPAIR_DEDAL = "projects/repair/dedal";
-    public static final String URL_PROJECT_REPAIR_REP = "projects/repair/rep";
-    public static final String URL_PROJECT_REPAIR_NAGAT_UAZ = "projects/repair/nagat_uaz";
-    public static final String URL_PROJECT_REPAIR_TECHNOPARK = "projects/repair/technopark";
+    public static final String URL_PROJECT_REPAIR_GORKIY_PARK = "projects_repair/gorkiy_park";
+    public static final String URL_PROJECT_REPAIR_CMT = "projects_repair/cmt";
+    public static final String URL_PROJECT_REPAIR_KALUZHSKAYA = "projects_repair/kaluzhskaya";
+    public static final String URL_PROJECT_REPAIR_KITAI_SECOND_FLOOR = "projects_repair/kitai_second_floоr";
+    public static final String URL_PROJECT_REPAIR_KITAI_DEMONTAZH = "projects_repair/kitai_demontazh";
+    public static final String URL_PROJECT_REPAIR_DEDAL = "projects_repair/dedal";
+    public static final String URL_PROJECT_REPAIR_REP = "projects_repair/rep";
+    public static final String URL_PROJECT_REPAIR_NAGAT_UAZ = "projects_repair/nagat_uaz";
+    public static final String URL_PROJECT_REPAIR_TECHNOPARK = "projects_repair/technopark";
 
-    public static final String URL_PROJECT_REPAIR_KROVLIA = "projects/repair/krovlia";
-    public static final String URL_PROJECT_REPAIR_SPORT = "projects/repair/sport";
-    public static final String URL_PROJECT_REPAIR_HALL = "projects/repair/hall";
-    public static final String URL_PROJECT_REPAIR_MEDPUNKT = "projects/repair/medpunkt";
-    public static final String URL_PROJECT_REPAIR_FASAD = "projects/repair/fasad";
+    public static final String URL_PROJECT_REPAIR_KROVLIA = "projects_repair/krovlia";
+    public static final String URL_PROJECT_REPAIR_SPORT = "projects_repair/sport";
+    public static final String URL_PROJECT_REPAIR_HALL = "projects_repair/hall";
+    public static final String URL_PROJECT_REPAIR_MEDPUNKT = "projects_repair/medpunkt";
+    public static final String URL_PROJECT_REPAIR_FASAD = "projects_repair/fasad";
 
-    public static final String URL_PROJECT_EXPLOITATION_KITAY = "projects/exploitation/kitay";
-    public static final String URL_PROJECT_EXPLOITATION_VDNH = "projects/exploitation/vdnh";
-    public static final String URL_PROJECT_EXPLOITATION_ORDINKA = "projects/exploitation/ordinka";
+    public static final String URL_PROJECT_EXPLOITATION_KITAY = "projects_exploitation/kitay";
+    public static final String URL_PROJECT_EXPLOITATION_VDNH = "projects_exploitation/vdnh";
+    public static final String URL_PROJECT_EXPLOITATION_ORDINKA = "projects_exploitation/ordinka";
     public static final String URL_API_MESSAGE = "/api/message";
 
     public static final String MESSAGE_ENTER_NAME = "Поле имени не должно быть пустым!";
