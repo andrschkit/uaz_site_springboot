@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Andrew Shcherbakov">
+  <title>УАЗ Росатом</title>
+  <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="/StyleSheets/style_login.css" rel="stylesheet"/>
+  <link rel="shortcut icon" href="/images/icons_swg/main_logo/Logo.svg" type="image/x-icon"/>
+</head>
+
+<body>
+
+<header class="navbar navbar-expand-lg d-flex justify-content-center py-1 top_header_main">
+  <div class="container_main_head">
+    <a th:href="@{/}" class="d-flex justify-content-start head_main_logo">
+      <div><img src="/images/icons_swg/main_logo/Logo.svg" class="head_logo anim_logo" alt=""></div>
+      <div class="right_border_logo"></div>
+      <div><img src="/images/icons_swg/main_logo/Name.svg" class="head_name" alt=""></div>
+    </a>
+    <div class="header_contact_segment animate-top">
+      <div class="contact_header">
+      </div>
+      <div class="right_border_hidden"></div>
+      <div class="header_btn_group">
+      </div>
+    </div>
+  </div>
+</header>
+
+<main id="myDiv_no_preload">
+  <div class="container_login">
+
+    <div th:if="${param.error}" class="err_text">
+      Неверное имя пользоватлеля или пароль!
+    </div>
+    <div th:if="${param.logout}" class="info_text">
+      Вы вышли из аккаунта!
+    </div>
+    <div th:if="${message}" th:text="${message}" th:class="alert" th:classappend="${messageType}" role="alert">
+
+    </div>
+
+    <form th:action="@{/login}" class="login_form" method="post">
+      <div class="form_group_login">
+        <label class="col-form-label">Имя пользователя :</label>
+        <label class="input_style">
+          <input type="text" name="username" class="form-control" placeholder="User name" />
+        </label>
+      </div>
+      <div class="form_group_login">
+        <label class="col-form-label">Пароль:</label>
+        <label class="input_style">
+          <input type="password" name="password" class="form-control" placeholder="Password" />
+        </label>
+      </div>
+      <!--<a href="/registration">Add new user</a>-->
+      <button class="btn btn_login" type="submit">Войти</button>
+    </form>
+  </div>
+</main>
+
+<div class="btn-up btn-up_hide"> <img src="/images/up-arrow.svg" alt=""/></div>
+
+  <footer class="container-fluid w-auto container_footer">
+    <a th:href="@{/}" class="footer_logo">
+      <div><img src="/images/icons_swg/main_logo/Logo_footer.svg" style="height: 60px" alt=""></div>
+    </a>
+    <div class="nav_links">
+
+    </div>
+    <div class="contact_footer">
+    </div>
+  </footer>
+
+  <footer class="container-fluid w-auto uaz_copyright">
+    <a href="/images/icons_swg/main_logo/ostapenkodesign.jpg" target="_blank">© </a>2024 АО "УАЗ"
+  </footer>
+
+<script src="/js/jquery-3.7.1.js"></script>
+<script src="/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="/js/script.js"></script>
+
+
+</body>
+</html>
