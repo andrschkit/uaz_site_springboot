@@ -68,8 +68,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
 
 
-        http.csrf().disable().authorizeRequests()
-                //.antMatchers(HttpMethod.POST, "/editPost", "/addPost").hasRole("ADMIN_POST")
+        http.authorizeRequests()
+                .antMatchers(HttpMethod.POST, "/editPost", "/addPost").hasRole("ADMIN_GET")
                 .antMatchers(HttpMethod.GET, "/editPost", "/addPost").hasRole("ADMIN_GET")
                 .antMatchers(
                         "/**"
