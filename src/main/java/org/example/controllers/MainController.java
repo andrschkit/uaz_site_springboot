@@ -39,11 +39,11 @@ public class MainController {
     }
     @GetMapping(URL_PROJECTS_REPAIR)
     public String projectsRepairPage(Model model) {
-        return "projects_repair";
+        return "projectsRepair";
     }
     @GetMapping(URL_PROJECTS_EXPLOITATION)
     public String projectsExploitationPage(Model model) {
-        return "projects_exploitation";
+        return "projectsExploitation";
     }
     @GetMapping(URL_LICENSES)
     public String licensesPage(Model model) {
@@ -137,11 +137,11 @@ public class MainController {
     }
     @GetMapping(URL_PROJECT_REPAIR_KITAI_SECOND_FLOOR)
     public String projectRepairKitaiSecondFloor(Model model) {
-        return "projects/repair/kitai_second_floоr";
+        return "projects/repair/kitaiSecondFloоr";
     }
     @GetMapping(URL_PROJECT_REPAIR_KITAI_DEMONTAZH)
     public String projectRepairKitaiDemontazh(Model model) {
-        return "projects/repair/kitai_demontazh";
+        return "projects/repair/kitaiDemontazh";
     }
     @GetMapping(URL_PROJECT_REPAIR_DEDAL)
     public String projectRepairDedal(Model model) {
@@ -152,7 +152,7 @@ public class MainController {
         return "projects/repair/rep";
     }
     @GetMapping(URL_PROJECT_REPAIR_NAGAT_UAZ)
-    public String projectRepairNagatUaz(Model model) { return "projects/repair/nagat_uaz"; }
+    public String projectRepairNagatUaz(Model model) { return "nagatUAZ"; }
     @GetMapping(URL_PROJECT_REPAIR_TECHNOPARK)
     public String projectRepairTechnopark(Model model) { return "projects/repair/technopark"; }
     //projects exploitation

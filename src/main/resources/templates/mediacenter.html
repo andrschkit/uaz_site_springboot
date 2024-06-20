@@ -29,10 +29,10 @@
                     <label  class="post_id hidden" th:text="${el.getId}"></label>
                     <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
                         <h1 class="display-4 fw-bold h-2" th:utext="${el.getTitle}"></h1>
-                        <p class="lead" th:utext="${el.getShort_content}"></p>
+                        <p class="lead" th:utext="${el.getShortContent}"></p>
                     </div>
                     <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden img-shadow">
-                        <img class="rounded-lg-3 d-block" th:src="${'data:image/jpeg;base64,'+el.getTitle_image}" alt="" width="500" style="max-height: 310px; object-fit: cover;">
+                        <img class="rounded-lg-3 d-block" th:src="${'data:image/jpeg;base64,'+el.getTitleImage}" alt="" width="500" style="max-height: 310px; object-fit: cover;">
                     </div>
                 </div>
             </a>

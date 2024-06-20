@@ -3,11 +3,9 @@ package org.example.controllers;
 import org.example.domain.JsonResponse;
 import org.example.domain.Message;
 import org.example.services.MessageService;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 
@@ -40,4 +38,12 @@ public class RestController {
         return res;
 
     }
+
+    @GetMapping(URL_API_KILL_SESSION)
+    public void killSession(
+    ) {
+        SecurityContextHolder.clearContext();
+    }
+
+
 }

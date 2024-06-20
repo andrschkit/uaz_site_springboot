@@ -9,7 +9,6 @@ import org.springframework.web.multipart.MultipartFile;
 import java.io.IOException;
 import java.util.Base64;
 import java.util.List;
-import java.util.Optional;
 
 @Service
 public class MediaService {
@@ -23,11 +22,11 @@ public class MediaService {
     public void save(MultipartFile title_image, String title, String short_content, String content) {
         MediaPost p = new MediaPost();
         try {
-            p.setTitle_image(Base64.getEncoder().encodeToString(title_image.getBytes()));
+            p.setTitleImage(Base64.getEncoder().encodeToString(title_image.getBytes()));
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-        p.setShort_content(short_content);
+        p.setShortContent(short_content);
         p.setTitle(title);
         p.setContent(content);
         repo.save(p);
@@ -37,12 +36,12 @@ public class MediaService {
         MediaPost p = findPropertyById(post_id);
         try {
             if(!title_image.isEmpty()) {
-                p.setTitle_image(Base64.getEncoder().encodeToString(title_image.getBytes()));
+                p.setTitleImage(Base64.getEncoder().encodeToString(title_image.getBytes()));
             }
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-        p.setShort_content(short_content);
+        p.setShortContent(short_content);
         p.setTitle(title);
         p.setContent(content);
         repo.save(p);

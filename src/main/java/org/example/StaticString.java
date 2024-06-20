@@ -49,6 +49,7 @@ public final class StaticString {
     public static final String URL_PROJECT_EXPLOITATION_VDNH = "projects_exploitation/vdnh";
     public static final String URL_PROJECT_EXPLOITATION_ORDINKA = "projects_exploitation/ordinka";
     public static final String URL_API_MESSAGE = "/api/message";
+    public static final String URL_API_KILL_SESSION = "/api/killSession";
 
     public static final String MESSAGE_ENTER_NAME = "Поле имени не должно быть пустым!";
     public static final String MESSAGE_ENTER_PHONE_NUMBER = "Поле телефона не должно быть пустым!";

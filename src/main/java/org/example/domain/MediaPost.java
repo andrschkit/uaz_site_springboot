@@ -26,9 +26,9 @@ public class MediaPost {
     private String content;
     @Lob
     @Column(name = "title_image")
-    private String title_image;
+    private String titleImage;
     @Column(name = "short_content")
-    private String short_content;
+    private String shortContent;
 
     public String getTitle() {
         return title;
@@ -61,19 +61,19 @@ public class MediaPost {
     public void setContent(String content) {
         this.content = content;
     }
-    public String getTitle_image() {
-        return title_image;
+    public String getTitleImage() {
+        return titleImage;
     }
 
-    public void setTitle_image(String title_image) {
-        this.title_image = title_image;
+    public void setTitleImage(String title_image) {
+        this.titleImage = title_image;
     }
-    public String getShort_content() {
-        return short_content;
+    public String getShortContent() {
+        return shortContent;
     }
 
-    public void setShort_content(String short_content) {
-        this.short_content = short_content;
+    public void setShortContent(String short_content) {
+        this.shortContent = short_content;
     }
 
     public void setId(Long id) {

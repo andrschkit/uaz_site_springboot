@@ -30,9 +30,9 @@ public class MediaPostController {
     @PostMapping(URL_ADD_POSTS)
     //@PreAuthorize("hasAnyRole('ADMIN_POST')")
     public String save(
-            @RequestParam("title_image") MultipartFile title_image,
+            @RequestParam("titleImage") MultipartFile title_image,
             @RequestParam("title") String title,
-            @RequestParam("short_content") String short_content,
+            @RequestParam("shortContent") String short_content,
             @RequestParam("content") String content){
         mediaService.save(title_image, title, short_content, content);
         SecurityContextHolder.clearContext();
@@ -60,9 +60,9 @@ public class MediaPostController {
     //@PreAuthorize("hasAnyRole('ADMIN_GET')")
     public String saveEdit(
             @RequestParam("id") Long postId,
-            @RequestParam("title_image") MultipartFile title_image,
+            @RequestParam("titleImage") MultipartFile title_image,
             @RequestParam("title") String title,
-            @RequestParam("short_content") String short_content,
+            @RequestParam("shortContent") String short_content,
             @RequestParam("content") String content,
             Model model){
         mediaService.saveEdit(postId, title_image, title, short_content, content);

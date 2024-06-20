@@ -6,9 +6,9 @@
             <div class="input-file-row">
                 <label class="input-file" style="display: grid;">
                     <input type="file" id="title_image" name="file" accept="image/*"
-                           th:field="*{title_image}">
+                           th:field="*{titleImage}">
                     <div class="input-file-list-item">
-                        <img alt="" class="input-file-list-img" id="file_img" th:src="${'data:image/jpeg;base64,'+singlePost.getTitle_image()}"/>
+                        <img alt="" class="input-file-list-img" id="file_img" th:src="${'data:image/jpeg;base64,'+singlePost.getTitleImage()}"/>
                     </div>
                     <span>Выберите файл</span>
                     </input>
@@ -26,7 +26,7 @@
             <div class="form-group">
                 <label for="short_content">Короткий контент:</label>
                 <input type="text" id="short_content" placeholder="Контент" autocomplete="off" class="form-control"
-                       th:field="*{short_content}"/>
+                       th:field="*{shortContent}"/>
             </div>
         </div>
 

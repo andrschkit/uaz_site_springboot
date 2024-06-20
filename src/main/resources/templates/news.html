@@ -32,10 +32,10 @@
                   <label  class="post_id hidden" th:text="${el.getId}"></label>
                   <div class="card_long_title_content">
                       <h2 th:utext="${el.getTitle}"></h2>
-                      <p th:utext="${el.getShort_content}"></p>
+                      <p th:utext="${el.getShortContent}"></p>
                   </div>
                   <div class="card_long_img">
-                      <img  th:src="${'data:image/jpeg;base64,'+el.getTitle_image}" alt="" >
+                      <img  th:src="${'data:image/jpeg;base64,'+el.getTitleImage}" alt="" >
                   </div>
               </div>
           </a>

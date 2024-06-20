@@ -19,6 +19,9 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+
+import static org.example.StaticString.*;
+
 @Configuration
 @Order(1)
 @EnableWebSecurity
@@ -30,19 +33,13 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     public UserDetailsService userDetailsService() {
         UserDetails user =
                 User.builder()
-                        .username("getAdmin")
+                        .username("superuser")
                         .password(passwordEncoder().encode("123"))
-                        .roles("ADMIN_GET")
+                        .roles("ADMIN")
                         .build();
 
-        UserDetails user1 =
-                User.builder()
-                        .username("postAdmin")
-                        .password(passwordEncoder().encode("123"))
-                        .roles("ADMIN_POST")
-                        .build();
 
-        return new InMemoryUserDetailsManager(user, user1);
+        return new InMemoryUserDetailsManager(user);
     }
 
     @Bean
@@ -69,10 +66,10 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
 
         http.authorizeRequests()
-                .antMatchers(HttpMethod.POST, "/editPost", "/addPost").hasRole("ADMIN_GET")
-                .antMatchers(HttpMethod.GET, "/editPost", "/addPost").hasRole("ADMIN_GET")
+                .antMatchers(HttpMethod.POST, URL_ADD_POSTS, URL_EDIT_POSTS).hasRole("ADMIN")
+                .antMatchers(HttpMethod.GET, URL_ADD_POSTS, URL_EDIT_POSTS).hasRole("ADMIN")
                 .antMatchers(
-                        "/**"
+                        "/**", URL_API_KILL_SESSION
                 ).permitAll()
                 .anyRequest().authenticated()
                 .and()
