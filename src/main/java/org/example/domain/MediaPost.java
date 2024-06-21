@@ -1,10 +1,13 @@
 package org.example.domain;
 
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.multipart.MultipartFile;
 
 import javax.persistence.*;
 
+import java.io.IOException;
 import java.sql.Timestamp;
+import java.util.Base64;
 
 @Entity
 @Transactional
@@ -29,6 +32,17 @@ public class MediaPost {
     private String titleImage;
     @Column(name = "short_content")
     private String shortContent;
+
+
+    public MediaPost() {
+    }
+
+    public MediaPost(String title, String content, MultipartFile titleImage, String shortContent) throws IOException {
+        setTitleImage(titleImage);
+        this.title = title;
+        this.content = content;
+        this.shortContent = shortContent;
+    }
 
     public String getTitle() {
         return title;
@@ -68,6 +82,11 @@ public class MediaPost {
     public void setTitleImage(String title_image) {
         this.titleImage = title_image;
     }
+
+    public void setTitleImage(MultipartFile titleImage) throws IOException {
+        this.titleImage =  Base64.getEncoder().encodeToString(titleImage.getBytes());
+    }
+
     public String getShortContent() {
         return shortContent;
     }

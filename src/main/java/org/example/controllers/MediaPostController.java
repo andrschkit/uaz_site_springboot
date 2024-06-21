@@ -2,17 +2,18 @@ package org.example.controllers;
 
 import org.example.domain.MediaPost;
 import org.example.services.MediaService;
-import org.springframework.security.access.prepost.PostAuthorize;
-import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
-import javax.servlet.http.HttpServletRequest;
+import java.io.IOException;
 
 import static org.example.StaticString.*;
+
+//TODO нужно привести множество RequestParam
+// к одному DTO в методах добавления и редактирования
 
 @Controller
 public class MediaPostController {
@@ -30,11 +31,16 @@ public class MediaPostController {
     @PostMapping(URL_ADD_POSTS)
     //@PreAuthorize("hasAnyRole('ADMIN_POST')")
     public String save(
-            @RequestParam("titleImage") MultipartFile title_image,
+            @RequestParam("titleImage") MultipartFile titleImage,
             @RequestParam("title") String title,
-            @RequestParam("shortContent") String short_content,
+            @RequestParam("shortContent") String shortContent,
             @RequestParam("content") String content){
-        mediaService.save(title_image, title, short_content, content);
+        try{
+            mediaService.save(titleImage, title, shortContent, content);
+        }catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
         SecurityContextHolder.clearContext();
         return "redirect:"+URL_NEWS;
     }
@@ -42,7 +48,7 @@ public class MediaPostController {
     public String singlePost(
             @RequestParam Long postId,
             Model model) {
-        MediaPost singlePost=mediaService.findPropertyById(postId);
+        MediaPost singlePost=mediaService.findPostById(postId);
         model.addAttribute("singlePost", singlePost);
         return "postEditor/singlePost";
     }
@@ -52,7 +58,7 @@ public class MediaPostController {
     public String editPost(
             @RequestParam Long postId,
             Model model) {
-        MediaPost singlePost=mediaService.findPropertyById(postId);
+        MediaPost singlePost=mediaService.findPostById(postId);
         model.addAttribute("singlePost", singlePost);
         return "postEditor/editPost";
     }

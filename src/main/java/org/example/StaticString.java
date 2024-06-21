@@ -55,4 +55,6 @@ public final class StaticString {
     public static final String MESSAGE_ENTER_PHONE_NUMBER = "Поле телефона не должно быть пустым!";
     public static final String MESSAGE_PATTERN_PHONE_NUMBER = "Пример записи телефона: 8-xxx-xxx-xx-xx";
     public static final String MESSAGE_POST_MESSAGE_SUCCESS = "Вашее обращение зарегистрировано!";
+
+    public static final String NOT_FOUND_EXCEPTION_POST = "Новости с таким ID нет!";
 }

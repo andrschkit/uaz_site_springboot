@@ -1,7 +1,7 @@
 package org.example.services;
 
-import javassist.NotFoundException;
 import org.example.domain.MediaPost;
+import org.example.exceptions.NotFoundException;
 import org.example.repositories.MediaRepo;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
@@ -10,54 +10,40 @@ import java.io.IOException;
 import java.util.Base64;
 import java.util.List;
 
+import static org.example.StaticString.NOT_FOUND_EXCEPTION_POST;
+
 @Service
 public class MediaService {
-    private static final String NOT_FOUND_EXCEPTION_PROPERTY = "" ;
-    private MediaRepo repo;
+    private final MediaRepo repo;
 
     public MediaService(MediaRepo repo) {
         this.repo = repo;
     }
 
-    public void save(MultipartFile title_image, String title, String short_content, String content) {
-        MediaPost p = new MediaPost();
-        try {
-            p.setTitleImage(Base64.getEncoder().encodeToString(title_image.getBytes()));
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-        p.setShortContent(short_content);
-        p.setTitle(title);
-        p.setContent(content);
+    public void save(MultipartFile titleImage, String title, String short_content, String content) throws IOException {
+        MediaPost p = new MediaPost(title, content, titleImage, short_content);
         repo.save(p);
     }
 
-    public void saveEdit(Long post_id, MultipartFile title_image, String title, String short_content, String content) {
-        MediaPost p = findPropertyById(post_id);
-        try {
-            if(!title_image.isEmpty()) {
-                p.setTitleImage(Base64.getEncoder().encodeToString(title_image.getBytes()));
+    public void saveEdit(Long post_id, MultipartFile titleImage, String title, String short_content, String content) {
+        MediaPost p = findPostById(post_id);
+        if(!titleImage.isEmpty())
+            try {
+                p.setTitleImage(titleImage);
+            } catch (IOException e) {
+                throw new RuntimeException(e);
             }
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
         p.setShortContent(short_content);
         p.setTitle(title);
         p.setContent(content);
         repo.save(p);
     }
-    public void findEdit(Long post_id, MultipartFile title_image, String title, String short_content, String content) {
-        MediaPost p = findPropertyById(post_id);
-
+    public void findEdit(Long postId, MultipartFile titleImage, String title, String shortContent, String content) {
+        MediaPost p = findPostById(postId);
     }
-    public MediaPost findPropertyById(Long postId) {
-
-        try {
-            return repo.findById(postId).orElseThrow(() -> new NotFoundException(
+    public MediaPost findPostById(Long postId) {
+        return repo.findById(postId).orElseThrow(() -> new NotFoundException( NOT_FOUND_EXCEPTION_POST,
                     postId.toString()));
-        } catch (NotFoundException e) {
-            throw new RuntimeException(e);
-        }
     }
     public List<MediaPost> findAllPosts() {
         return repo.findAllByOrderByCreateDateDesc();

@@ -4,28 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="63d29c66-ea9a-40cb-a3d4-b579f5e1bd53" name="Changes" comment="[NF]: CSRF enabled, clearing context and authorisation in (edit/add)Post methods , session timeout 8h.">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/killSession.js" afterDir="false" />
+    <list default="true" id="63d29c66-ea9a-40cb-a3d4-b579f5e1bd53" name="Changes" comment="[RF]: some refactoring names&#10;[NF]: rest method killSession">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/exceptions/BasicException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/exceptions/InvalidDataException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/exceptions/NotFoundException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/StaticString.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/StaticString.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/config/WebSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controllers/LoginController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controllers/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controllers/MainController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controllers/MediaPostController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controllers/MediaPostController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controllers/RestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controllers/RestController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/domain/MediaPost.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/domain/MediaPost.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/handlers/MyCustomLoginSuccessHandler.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/services/MediaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/services/MediaService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/script_post_edit.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/script_post_edit.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/blocks/inputPost.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/blocks/inputPost.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/mediacenter.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/mediacenter.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/news.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/news.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/projects/repair/kitai_demontazh.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/projects/repair/kitaiDemontazh.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/projects/repair/kitai_second_floоr.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/projects/repair/kitaiSecondFloоr.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/projects/repair/nagat_uaz.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/projects/repair/nagatUAZ.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/projects_exploitation.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/projectsExploitation.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/projects_repair.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/projectsRepair.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +65,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/JOB/uaz_site_springboot/src/main/resources/static/js",
+    "last_opened_file_path": "C:/JOB/uaz_site_springboot/src/main/java/org/example",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -91,8 +78,8 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\JOB\uaz_site_springboot\src\main\resources\static\js" />
       <recent name="C:\JOB\uaz_site_springboot\src\main\java\org\example" />
+      <recent name="C:\JOB\uaz_site_springboot\src\main\resources\static\js" />
       <recent name="C:\JOB\uaz_site_springboot\src\main\resources" />
       <recent name="C:\Users\Andrew\Documents\Projects\uaz_site_springboot\src\main\resources\templates\projects" />
       <recent name="C:\Users\Andrew\Documents\Projects\uaz_site_springboot\src\main\resources" />
@@ -175,7 +162,8 @@
       <workItem from="1718350485121" duration="7088000" />
       <workItem from="1718608229976" duration="8625000" />
       <workItem from="1718803242911" duration="3285000" />
-      <workItem from="1718860160952" duration="7957000" />
+      <workItem from="1718860160952" duration="8236000" />
+      <workItem from="1718958241280" duration="4712000" />
     </task>
     <task id="LOCAL-00001" summary="Started commit">
       <option name="closed" value="true" />
@@ -407,7 +395,14 @@
       <option name="project" value="LOCAL" />
       <updated>1718805135780</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="[RF]: some refactoring names&#10;[NF]: rest method killSession">
+      <created>1718887143051</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1718887143051</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -438,7 +433,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="NF: Add WYSIWYG" />
     <MESSAGE value="BF: Base working with WYSIWYG" />
     <MESSAGE value="NF:Short content for title box WYSIWYG" />
     <MESSAGE value="NF: new header and footer style" />
@@ -463,7 +457,8 @@
     <MESSAGE value="[NF]: some security" />
     <MESSAGE value="NF: CSRF disabled, edit and add Post authorisation on get methods only, session timeout 1min." />
     <MESSAGE value="[NF]: CSRF enabled, clearing context and authorisation in (edit/add)Post methods , session timeout 8h." />
-    <option name="LAST_COMMIT_MESSAGE" value="[NF]: CSRF enabled, clearing context and authorisation in (edit/add)Post methods , session timeout 8h." />
+    <MESSAGE value="[RF]: some refactoring names&#10;[NF]: rest method killSession" />
+    <option name="LAST_COMMIT_MESSAGE" value="[RF]: some refactoring names&#10;[NF]: rest method killSession" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
