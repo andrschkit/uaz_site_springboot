@@ -1,4 +1,11 @@
 spring:
+
+  session:
+    jdbc:
+      initialize-schema: always
+      table-name: SPRING_SESSION
+    timeout: 8h
+
   datasource:
     url: "jdbc:postgresql://localhost:5432/Callback-UAZ-dev"
     username: "postgres"
