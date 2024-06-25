@@ -80,7 +80,22 @@
     justify-content: center;
 }
 .btn_news{
-    margin-left: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #d7d7d7;
+    width: 32px;
+    height: 32px;
+    margin-right: 8px;
+}
+.btn_news:hover{
+    border: 1px solid #414141;
+}
+.button_line{
+    display: flex;
+    justify-content: end;
+    margin-top: 50px;
+    margin-bottom: -13px;
 }
 .btn_news img{
     width: 16px;

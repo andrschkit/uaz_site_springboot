@@ -23,7 +23,6 @@
 
       <div class="mx-auto text-center header_news">
           <h1>Новости АО "УАЗ"</h1>
-          <a th:href="@{/addPost}" class="btn btn_news"><img src="/images/icons_swg/add.ico"></a>
       </div>
 
 
@@ -40,7 +39,10 @@
               </div>
           </a>
 
-  </div>  
+  </div>
+    <div class="button_line">
+        <a th:href="@{/addPost}" class="btn btn_news"><img src="/images/icons_swg/edit.ico"></a>
+    </div>
 </main>
 
 <div class="btn-up btn-up_hide"> <img src="/images/up-arrow.svg" alt=""/></div>
