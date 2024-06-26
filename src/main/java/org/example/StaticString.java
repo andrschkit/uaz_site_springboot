@@ -36,7 +36,7 @@ public final class StaticString {
     public static final String URL_PROJECT_REPAIR_KITAI_DEMONTAZH = "projects_repair/kitai_demontazh";
     public static final String URL_PROJECT_REPAIR_DEDAL = "projects_repair/dedal";
     public static final String URL_PROJECT_REPAIR_REP = "projects_repair/rep";
-    public static final String URL_PROJECT_REPAIR_NAGAT_UAZ = "projects_repair/nagatUaz";
+    public static final String URL_PROJECT_REPAIR_NAGAT_UAZ = "projects_repair/nagatUAZ";
     public static final String URL_PROJECT_REPAIR_TECHNOPARK = "projects_repair/technopark";
 
     public static final String URL_PROJECT_REPAIR_KROVLIA = "projects_repair/krovlia";
@@ -45,7 +45,7 @@ public final class StaticString {
     public static final String URL_PROJECT_REPAIR_MEDPUNKT = "projects_repair/medpunkt";
     public static final String URL_PROJECT_REPAIR_FASAD = "projects_repair/fasad";
 
-    public static final String URL_PROJECT_EXPLOITATION_KITAY = "projects_exploitation/kitay";
+public static final String URL_PROJECT_EXPLOITATION_KITAY = "projects_exploitation/kitay";
     public static final String URL_PROJECT_EXPLOITATION_VDNH = "projects_exploitation/vdnh";
     public static final String URL_PROJECT_EXPLOITATION_ORDINKA = "projects_exploitation/ordinka";
     public static final String URL_API_MESSAGE = "/api/message";

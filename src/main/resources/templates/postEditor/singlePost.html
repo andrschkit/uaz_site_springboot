@@ -22,19 +22,17 @@
     <div class="preloader"></div>
     <div th:object="${singlePost}" id="myDiv" class="animate-bottom">
         <div class="mx-auto text-center">
-            <h1 ></h1>
+            <h1></h1>
         </div>
         <div class="mx-auto text-center header_news">
             <h1 th:text="${singlePost.getTitle}"></h1>
         </div>
 
-        <div class="container-fluid">
-            <div class="container">
-                <div class="row">
-                    <div th:action="@{/singlePost}" method="get">
-                        <label  id="post_id" class="hidden" th:text="${singlePost.getId}"></label>
-                        <div th:utext="${singlePost.getContent}">Статья</div>
-                    </div>
+        <div class="container_post">
+            <div class="content_post">
+                <div th:action="@{/singlePost}" method="get">
+                    <label  id="post_id" class="hidden" th:text="${singlePost.getId}"></label>
+                    <div class="post_content" th:utext="${singlePost.getContent}">Статья</div>
                 </div>
             </div>
         </div>

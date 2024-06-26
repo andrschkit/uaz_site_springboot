@@ -100,3 +100,29 @@
 .btn_news img{
     width: 16px;
 }
+.container_post{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+}
+.content_post{
+    max-width: 1500px;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+.post_content img{
+    margin: 15px;
+}
+
+@media only screen and (max-width: 550px) {
+    .content_post{
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .post_content img{
+        margin: 5px;
+    }
+}

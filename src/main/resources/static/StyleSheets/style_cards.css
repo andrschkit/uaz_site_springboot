@@ -87,12 +87,12 @@
     top: 50px;
     object-fit: cover;
     object-position: top;
-    transition: all ease-in-out 0.2s;
+    transition: all ease-in-out 0.25s;
 }
 .container_square_licenses:hover .licenses_card_img{
 }
 .container_square_licenses:hover .licenses_card_img img{
-    transform: scale(1.092);
+    transform: scale(1.03);
 }
 /*long content*/
 .container_long_squares{

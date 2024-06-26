@@ -152,7 +152,7 @@ public class MainController {
         return "projects/repair/rep";
     }
     @GetMapping(URL_PROJECT_REPAIR_NAGAT_UAZ)
-    public String projectRepairNagatUaz(Model model) { return "projects/repair/nagatUaz"; }
+    public String projectRepairNagatUaz(Model model) { return "projects/repair/nagatUAZ"; }
     @GetMapping(URL_PROJECT_REPAIR_TECHNOPARK)
     public String projectRepairTechnopark(Model model) { return "projects/repair/technopark"; }
     //projects exploitation
