@@ -4,11 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="63d29c66-ea9a-40cb-a3d4-b579f5e1bd53" name="Changes" comment="[RF]: some refactoring names&#10;[NF]: rest method killSession">
+    <list default="true" id="63d29c66-ea9a-40cb-a3d4-b579f5e1bd53" name="Changes" comment="BF: wysiwyg fix with URLs. Style mini updates">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_19_06_2024_13_40_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_19_06_2024_13_40__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/about_img/ohrana_truda/ohrana_truda.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/images/about_img/ohrana_truda/ohrana_truda.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/about_img/providers_img/provider.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/images/about_img/providers_img/provider.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/StyleSheets/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/StyleSheets/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/StyleSheets/style_login.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/StyleSheets/style_login.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/services_img/technical_events/technical_events_uchet.JPG" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/images/services_img/technical_events/technical_events_uchet.JPG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/services_img/technical_service/electro.JPG" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/images/services_img/technical_service/electro.JPG" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/about/advantage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/about/advantage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/about/history.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/about/history.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/about/ohrana_truda.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/about/ohrana_truda.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/about/quality.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/about/quality.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,30 +55,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/JOB/uaz_site_springboot/src/main/java/org/example&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;43c385488b6baff9f1f826e581dbc89c&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "D:/Job/Projects/uaz_site_springboot",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "spring.configuration.checksum": "9ecfeb4f9516be01698fd41d1da6085c",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\JOB\uaz_site_springboot\src\main\java\org\example" />
@@ -160,6 +167,8 @@
       <workItem from="1718803242911" duration="3285000" />
       <workItem from="1718860160952" duration="8236000" />
       <workItem from="1718958241280" duration="4712000" />
+      <workItem from="1719382329514" duration="10225000" />
+      <workItem from="1719551729207" duration="4726000" />
     </task>
     <task id="LOCAL-00001" summary="Started commit">
       <option name="closed" value="true" />
@@ -398,7 +407,14 @@
       <option name="project" value="LOCAL" />
       <updated>1718887143051</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="BF: wysiwyg fix with URLs. Style mini updates">
+      <created>1719402506087</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1719402506087</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -429,7 +445,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="BF: Base working with WYSIWYG" />
     <MESSAGE value="NF:Short content for title box WYSIWYG" />
     <MESSAGE value="NF: new header and footer style" />
     <MESSAGE value="BF: mistakes after merge" />
@@ -454,7 +469,8 @@
     <MESSAGE value="NF: CSRF disabled, edit and add Post authorisation on get methods only, session timeout 1min." />
     <MESSAGE value="[NF]: CSRF enabled, clearing context and authorisation in (edit/add)Post methods , session timeout 8h." />
     <MESSAGE value="[RF]: some refactoring names&#10;[NF]: rest method killSession" />
-    <option name="LAST_COMMIT_MESSAGE" value="[RF]: some refactoring names&#10;[NF]: rest method killSession" />
+    <MESSAGE value="BF: wysiwyg fix with URLs. Style mini updates" />
+    <option name="LAST_COMMIT_MESSAGE" value="BF: wysiwyg fix with URLs. Style mini updates" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
