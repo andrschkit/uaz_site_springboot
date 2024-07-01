@@ -4,15 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="63d29c66-ea9a-40cb-a3d4-b579f5e1bd53" name="Changes" comment="[RF]: some refactoring names&#10;[NF]: rest method killSession">
-      <change afterPath="$PROJECT_DIR$/print.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/robots.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="63d29c66-ea9a-40cb-a3d4-b579f5e1bd53" name="Changes" comment="[NF]: robots.txt, deploy.sh">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/config/WebSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application-prod.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-prod.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/blocks/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/blocks/footer.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -412,7 +405,14 @@
       <option name="project" value="LOCAL" />
       <updated>1719402506087</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="[NF]: robots.txt, deploy.sh">
+      <created>1719830729418</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1719830729418</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -443,7 +443,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="NF:Short content for title box WYSIWYG" />
     <MESSAGE value="NF: new header and footer style" />
     <MESSAGE value="BF: mistakes after merge" />
     <MESSAGE value="NF: full new visual" />
@@ -468,7 +467,8 @@
     <MESSAGE value="[NF]: CSRF enabled, clearing context and authorisation in (edit/add)Post methods , session timeout 8h." />
     <MESSAGE value="[RF]: some refactoring names&#10;[NF]: rest method killSession" />
     <MESSAGE value="BF: wysiwyg fix with URLs. Style mini updates" />
-    <option name="LAST_COMMIT_MESSAGE" value="BF: wysiwyg fix with URLs. Style mini updates" />
+    <MESSAGE value="[NF]: robots.txt, deploy.sh" />
+    <option name="LAST_COMMIT_MESSAGE" value="[NF]: robots.txt, deploy.sh" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
