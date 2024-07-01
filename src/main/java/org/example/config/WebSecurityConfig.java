@@ -69,7 +69,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers(HttpMethod.POST, URL_ADD_POSTS, URL_EDIT_POSTS).hasRole("ADMIN")
                 .antMatchers(HttpMethod.GET, URL_ADD_POSTS, URL_EDIT_POSTS).hasRole("ADMIN")
                 .antMatchers(
-                        "/**", URL_API_KILL_SESSION
+                        "/**", URL_API_KILL_SESSION, "/robots.txt"
                 ).permitAll()
                 .anyRequest().authenticated()
                 .and()
