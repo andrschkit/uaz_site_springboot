@@ -116,6 +116,20 @@
 .post_content img{
     margin: 15px;
 }
+@media only screen and (max-width: 1200px) {
+    .post_content img[style]{
+        width: 50% !important;
+    }
+}
+@media only screen and (max-width: 700px) {
+    .post_content img[style]{
+        width: auto !important;
+        margin: 0;
+    }
+    .post_content p span{
+        font-size: 21px !important;
+    }
+}
 
 @media only screen and (max-width: 550px) {
     .content_post{
@@ -124,5 +138,38 @@
     }
     .post_content img{
         margin: 5px;
+    }
+    .post_content .title{
+        margin: 0 0 0 20px !important;
+    }
+    .post_content h1 span{
+        font-size: 35px !important;
+    }
+    .post_content .title span{
+        font-size: 28px !important;
+    }
+    .post_content h2 span{
+        font-size: 28px !important;
+    }
+    .post_content h3 span{
+        font-size: 28px !important;
+    }
+    .post_content h4 span{
+        font-size: 28px !important;
+    }
+
+    .post_content p span{
+        font-size: 17px !important;
+    }
+    .post_content ol span{
+        font-size: 17px !important;
+    }
+}
+@media only screen and (max-width: 360px) {
+    .post_content p span{
+        font-size: 14px !important;
+    }
+    .post_content ol span{
+        font-size: 14px !important;
     }
 }
